@@ -1,0 +1,817 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
+    <title>Dama Taxi | Airport Transfer Service</title>
+    <link rel="stylesheet" href="src/css/vanilla-calendar-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="src/js/vanilla-calendar-min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div class="header" style="background-color: #242F3E; position: relative;">
+            <div class="left-nav">
+                <div>DAMA TAXI</div>
+            </div>
+            <div class="mid-nav">
+                <nav class="nav-bar">
+                    <ul>
+                        <li style="grid-area: home;"><a href="/">Home</a></li>
+                        <li style="grid-area: pop;"><a href=#>Popular Destinations</a></li>
+                        <li style="grid-area: extra;"><a href=/extra-services>Extra Services</a></li>
+                        <li style="grid-area: about;"><a href=/about-us>About Us</a></li>
+                        <li style="grid-area: contact;"><a href=/contact-us>Contact Us</a></li>
+                        <li style="grid-area: faq;"><a href="/#faq">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right-nav"></div>
+        </div>
+        <div class="checkout-body">
+            <div class="process-div">
+                <div id="process-st" style="grid-area: st;" class="process"><b>1</b></div>
+                <div style="grid-area: stText;" class="process-text">Select Destination</div>
+                <div style="grid-area: line1;" class="process-circle-left"></div>
+                <div style="grid-area: line1;" class="process-line"></div>
+                <div style="grid-area: line1;" class="process-circle-right"></div>
+                <div id="process-nd" style="grid-area: nd;" class="process"><b>2</b></div>
+                <div style="grid-area: ndText;" class="process-text">Select Car</div>
+                <div style="grid-area: line2;" class="process-circle-left"></div>
+                <div style="grid-area: line2;" class="process-line"></div>
+                <div style="grid-area: line2;" class="process-circle-right"></div>
+                <div id="process-rd" style="grid-area: rd;" class="process"><b>3</b></div>
+                <div style="grid-area: rdText;" class="process-text">Form</div>
+            </div>
+            <div class="booking-specs">
+                <img class="specs-rate-img" src="images/tick.png" alt="review">
+                <div class="specs-rate">Travellers rate us<br>
+                    excellent
+                    <div>4.98 / 5 average   3000 reviews</div>
+                </div>
+                <img class="specs-meet-img" src="images/welcome.png" alt="meeting">
+                <div class="specs-meet">The driver will meet you<br>
+                    at the airport with a nameplate
+                </div>
+                <img class="specs-payment-img" src="images/cash.png" alt="payment">
+                <div class="specs-payment">Payment online<br>
+                    or in cash on-site
+                </div>
+            </div>
+            <div class="checkout-form-body">
+                <div class="checkout-form" id="form">
+                    <div class="form-title" style="grid-area: title1;"><b>Transfer Details</b></div>
+                    <div class="form-label" style="grid-area: label1;"><b>Flight Number</b></div>
+                    <input id="flightNumber" class="form-input" style="grid-area: input1;" type="text" placeholder="TK 123">
+                    <div class="form-label" style="grid-area: label2;"><b>Hotel Name or Address</b></div>
+                    <input id="hotelName" class="form-input" style="grid-area: input2;" type="text" placeholder="Radisson Blu Hotel">
+                    <div class="form-label" style="grid-area: label3;"><b>Date</b></div>
+                    <div style="grid-area: input3; z-index: 1;">
+                        <input id="arrivalDate" class="form-input-date" type="text" readonly placeholder="DD/MM/YYYY">
+                        <div id="myCalendar" class="vanilla-calendar form-calendar" style="grid-area:input3; margin-bottom: 20px; display: none; margin-top: 10px; position: absolute;">
+                        <div class="vanilla-calendar-header">
+                            <button type="button" class="vanilla-calendar-btn" data-calendar-toggle="previous"><svg height="24" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path class="date-btn" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path></svg></button>
+                            <div class="vanilla-calendar-header__label" data-calendar-label="month">Febuary 2020</div>
+                            <button type="button" class="vanilla-calendar-btn" data-calendar-toggle="next"><svg height="24" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path class="date-btn" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg></button>
+                        </div>
+                        <div class="vanilla-calendar-week">
+                            <span>Mon</span>
+                            <span>Tue</span>
+                            <span>Wed</span>
+                            <span>Thu</span>
+                            <span>Fri</span>
+                            <span>Sat</span>
+                            <span>Sun</span>
+                        </div>
+                        <div class="vanilla-calendar-body" data-calendar-area="month"><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sat Feb 01 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active" style="margin-left: 85.68%;"><span>1</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sun Feb 02 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>2</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Mon Feb 03 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>3</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Tue Feb 04 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>4</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Wed Feb 05 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>5</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Thu Feb 06 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>6</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Fri Feb 07 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>7</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sat Feb 08 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>8</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sun Feb 09 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>9</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Mon Feb 10 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>10</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Tue Feb 11 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>11</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Wed Feb 12 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>12</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Thu Feb 13 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>13</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Fri Feb 14 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>14</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sat Feb 15 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>15</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sun Feb 16 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>16</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Mon Feb 17 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>17</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Tue Feb 18 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>18</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Wed Feb 19 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>19</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Thu Feb 20 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>20</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Fri Feb 21 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>21</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sat Feb 22 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>22</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sun Feb 23 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>23</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Mon Feb 24 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>24</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Tue Feb 25 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>25</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Wed Feb 26 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>26</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Thu Feb 27 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>27</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Fri Feb 28 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>28</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sat Feb 29 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>29</span></div></div>
+                        </div>
+                    </div>                    
+                    <div class="form-label" style="grid-area: label4;"><b>Time</b></div>
+                    <select id="arrivalTime" class="form-time" style="grid-area: input4;">
+                        <option value="hh:mm" style="display: none;">hh:mm</option>
+                        <option value="00:00">00:00</option>
+                    </select>
+                    <div class="form-label" style="grid-area: label5;"><b>Number of Passengers</b></div>
+                    <select id="passengers" class="form-dropdown" style="grid-area: input5;">                        
+                    </select>
+                    <div class="form-label form-right" style="grid-area: label5;"><b>Lugagge</b></div>
+                    <select id="luggage" class="form-dropdown form-right" style="grid-area: input5;">                        
+                    </select>
+                    <div class="extra-service-form" style="grid-area: return;">
+                        <label class="switch" style="grid-area: check;">
+                            <input type="checkbox" name="isReturn" id="returnCheck" onchange="returnHandle(this)">
+                            <span class="slider"></span>
+                        </label>
+                        <div class="form-extra-text" style="grid-area: text;"><b>Return Transfer</b></div>
+                        <div class="form-extra-text" style="grid-area: price;"><b id="returnCost">X EUR</b></div>
+                    </div>
+                    <div id="returnDateLabel" class="form-label" style="grid-area: labelDateRet; display: none;"><b>Date</b></div>
+                    <div style="grid-area: inputDateRet; z-index: 1;">
+                        <input id="returnDate" class="form-input" style="display: none;" type="text" placeholder="DD/MM/YYYY">
+                        <div id="myCalendarReturn" class="vanilla-calendar form-calendar" style="grid-area:input3; margin-bottom: 20px; display: none; margin-top: 10px; position: absolute;">
+                            <div class="vanilla-calendar-header">
+                                <button type="button" class="vanilla-calendar-btn" data-calendar-toggle="previous"><svg height="24" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path class="date-btn" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path></svg></button>
+                                <div class="vanilla-calendar-header__label" data-calendar-label="month">Febuary 2020</div>
+                                <button type="button" class="vanilla-calendar-btn" data-calendar-toggle="next"><svg height="24" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path class="date-btn" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg></button>
+                            </div>
+                            <div class="vanilla-calendar-week">
+                                <span>Mon</span>
+                                <span>Tue</span>
+                                <span>Wed</span>
+                                <span>Thu</span>
+                                <span>Fri</span>
+                                <span>Sat</span>
+                                <span>Sun</span>
+                            </div>
+                            <div class="vanilla-calendar-body" data-calendar-area="month"><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sat Feb 01 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active" style="margin-left: 85.68%;"><span>1</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sun Feb 02 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>2</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Mon Feb 03 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>3</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Tue Feb 04 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>4</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Wed Feb 05 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>5</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Thu Feb 06 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>6</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Fri Feb 07 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>7</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sat Feb 08 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>8</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sun Feb 09 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>9</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Mon Feb 10 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>10</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Tue Feb 11 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>11</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Wed Feb 12 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>12</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Thu Feb 13 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>13</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Fri Feb 14 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>14</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sat Feb 15 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>15</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sun Feb 16 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>16</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Mon Feb 17 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>17</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Tue Feb 18 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>18</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Wed Feb 19 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>19</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Thu Feb 20 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>20</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Fri Feb 21 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>21</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sat Feb 22 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>22</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sun Feb 23 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>23</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Mon Feb 24 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>24</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Tue Feb 25 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>25</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Wed Feb 26 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>26</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Thu Feb 27 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>27</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Fri Feb 28 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>28</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sat Feb 29 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>29</span></div></div>
+                            </div>
+                    </div>                    
+                    <div id="returnTimeLabel" class="form-label" style="grid-area: labelDateRet; display: none;"><b>Time</b></div>
+                    <select id="returnTime" class="form-time" style="grid-area: inputTimeRet; display: none;">
+                        <option value="hh:mm" style="display: none;">hh:mm</option>
+                        <option value="00:00">00:00</option>
+                    </select>
+                    <div class="extra-service-form" style="grid-area: baby-seat;">
+                        <label class="switch" style="grid-area: check;">
+                            <input type="checkbox" name="isBaby" id="babySeatCheck" onchange="babySeatHandle()">
+                            <span class="slider"></span>
+                        </label>
+                        <div class="form-extra-text" style="grid-area: text;"><b>Baby Car Seat</b></div>
+                        <div class="form-extra-text" style="grid-area: price;"><b>4 EUR</b></div>
+                    </div>
+                    <div class="form-line"></div>
+                    <div class="form-title" style="grid-area: title2;"><b>Passenger Details</b></div>
+                    <div class="form-label" style="grid-area: label8;"><b>Name and Surname</b></div>
+                    <input id="name" class="form-input" style="grid-area: input8;" type="text" placeholder="Johny Bravo">
+                    <div class="form-label" style="grid-area: label9;"><b>E-Mail</b></div>
+                    <input id="email" class="form-input" style="grid-area: input9;" type="text" placeholder="john.bravo@email.com">
+                    <div class="form-desc" style="grid-area: desc1;">We will send the booking confirmation to this address.
+                        We also contact you in case we need to specify 
+                        something.
+                    </div>
+                    <div class="form-label" style="grid-area: label10;"><b>Phone Number</b></div>
+                    <input id="phone" class="form-input" style="grid-area: input10;" type="text" placeholder="XXX XXX XX XX">
+                    <div class="form-desc" style="grid-area: desc2;">This phone must be available on the 
+                        day of the transfer. We may call you if 
+                        we need to contact you urgently. 
+                        something.
+                    </div>
+                    <div class="form-label" style="grid-area: label11;"><b>Select Payment Method</b></div>
+                    <div class="payment-label" style="grid-area: cash;"><b>Cash to driver</b></div>
+                    <div class="cash-div">
+                        <img class="payment-img" src="images/cash-to.png" alt="Cash to driver">
+                    </div>
+                    <div class="payment-label" style="grid-area: credit;"><b>Credit Card</b></div>
+                    <div class="credit-div">
+                        <img class="payment-img" src="images/credit-card.png" alt="Credit Card">
+                    </div>
+                    <label class="privacy-container">
+                        <input id="privacy" type="checkbox" checked="checked">
+                        <span class="privacy-checkmark"></span>
+                        <font><b>I agree to the terms of the <a href="#" style="color: #006CFF;"><u>Privacy Policy.</u></a></b></font>
+                    </label>
+                    <button class="form-submit-button" onclick="sendBooking()"><b>Book Transfer</b></button>
+                </div>
+                <div id="card" class="form-card">
+                    <div class="form-card-title"><b>Order Details</b></div>
+                    <div class="form-card-route-line" style="grid-area: dest;"></div>
+                    <div class="form-card-route-circle-top" style="grid-area: dest;"></div>
+                    <div class="form-card-route-circle-bottom" style="grid-area: dest;"></div>
+                    <div class="form-card-dest">                        
+                        <div id="fromName" class="form-card-dest-name" style="grid-area: from;">Istanbul Airport (IST)</div>
+                        <div id="fromAddress" class="form-card-dest-address" style="grid-area: from-address;">Tayakadın, Terminal Caddesi No:1
+                            34283 Arnavutköy/İstanbul</div>
+                        <div id="toName" class="form-card-dest-name" style="grid-area: to;">Sabiha Gokcen Airport (SAW)</div>
+                        <div id="toAddress" class="form-card-dest-address" style="grid-area: to-address;">Sanayi, 34906 Pendik/İstanbul</div>
+                        <div id="arrivalDateCard" class="form-card-dest-date" style="grid-area: date;">12/01/2020</div>
+                        <div id="arrivalTimeCard" class="form-card-dest-date" style="grid-area: time; display: none;">GTM 03:30</div>
+                    </div>
+                    <div id="returnLine1" class="form-card-route-line" style="grid-area: dest-return; display: none;"></div>
+                    <div id="returnLine2" class="form-card-route-circle-top" style="grid-area: dest-return; display: none;"></div>
+                    <div id="returnLine3" class="form-card-route-circle-bottom" style="grid-area: dest-return; display: none;"></div>
+                    <div id="returnDest" class="form-card-dest-return" style="display: none;">                        
+                        <div id="fromNameReturn" class="form-card-dest-name" style="grid-area: from;">Istanbul Airport (IST)</div>
+                        <div id="fromAddressReturn" class="form-card-dest-address" style="grid-area: from-address;">Tayakadın, Terminal Caddesi No:1
+                            34283 Arnavutköy/İstanbul</div>
+                        <div id="toNameReturn" class="form-card-dest-name" style="grid-area: to;">Sabiha Gokcen Airport (SAW)</div>
+                        <div id="toAddressReturn" class="form-card-dest-address" style="grid-area: to-address;">Sanayi, 34906 Pendik/İstanbul</div>
+                        <div id="returnDateCard" class="form-card-dest-date" style="grid-area: date;">12/01/2020</div>
+                        <div id="returnTimeCard" class="form-card-dest-date" style="grid-area: time;">GTM 03:30</div>
+                    </div>                    
+                    <div id="details" class="form-card-details">
+                        <div class="form-card-details-div" style="grid-area: passengers;">
+                            <img src="images/passengers-card.png" alt="Passengers">
+                            <font id="passengersCard">2</font>
+                        </div>
+                        <div class="form-card-details-div" style="grid-area: baggage;">
+                            <img src="images/baggage-card.png" alt="Passengers">
+                            <font id="luggageCard">4</font>
+                        </div>
+                        <div id="babySeat" class="form-card-details-div" style="grid-area: baggage; display: none;">
+                            <img src="images/baby-seat-card.png" alt="Baby seat">
+                            <font>Baby Seat</font>
+                        </div>
+                        <div class="form-card-details-div" style="grid-area: car;">
+                            <img src="images/car-type-card.png" alt="Passengers">
+                            <font id="car">Sedan</font>
+                        </div>
+                    </div>
+                    <div class="form-card-details-line"></div>
+                    <div class="form-card-route">
+                        <font class="form-card-route-label">Route</font>
+                        <font class="form-card-route-dist">77km, 110min</font>
+                    </div>
+                    <div id="map" class="map"></div>
+                    <div id="price" class="form-card-price">Total Price: 34 EUR</div>
+                </div>
+            </div>
+            <div class="footer">
+                <img class="footer-bg-img" src="images/Dama-Taxi-Logo-v2-big.png">
+                <div class="footer-logo" style="grid-area: logo;">DAMA TAXI</div>
+                <div class="footer-element" style="grid-area: pop;">Popular Destinations</div>
+                <div class="footer-element" style="grid-area: extra;">Extra Servicex</div>
+                <div class="footer-element" style="grid-area: about;">About Us</div>
+                <div class="footer-element" style="grid-area: faq;">FAQ</div>
+                <div class="footer-element" style="grid-area: contact;">Contact Us</div>
+                <div class="footer-element" style="grid-area: privacy;">Privacy and Policy</div>
+                <div class="footer-element" style="grid-area: partner;">Become a Partner</div>
+                <div class="footer-curr">
+                    <select class="footer-drop">
+                        <option value="EUR"><b>EUR</b></option>
+                        <option value="USD"><b>USD</b></option>
+                        <option value="TL"><b>TL</b></option>
+                    </select>
+                </div>
+                <div class="footer-lang">                    
+                    <select class="footer-drop">
+                        <option value="EN">EN</option>
+                        <option value="RU">RU</option>
+                    </select>
+                </div>
+                <div class="footer-element" style="grid-area: mail;"><u>info@damataxi.com</u></div>
+                <div class="footer-element" style="grid-area: phone;">+90 544 901 00 10</div>
+                <div class="footer-element" style="grid-area: address;">Sultanahmet Yasemin Street 
+                    No 2/4 İstanbul, Turkey</div>
+                <div class="footer-element" style="grid-area: copyright; text-align: center;">© 2019 by Dama Taxi.</div>
+            </div>
+                </div>
+        <script>
+            let touchEvent = 'touchstart' in window ? 'touchstart' : 'click'; //Check device supports click or touch.
+
+            let vehicle = JSON.parse(localStorage.getItem('vehicle'));
+
+            let fromName = document.getElementById("fromName");
+            let fromAddress = document.getElementById("fromAddress");
+            let toName = document.getElementById("toName");
+            let toAddress = document.getElementById("toAddress");
+            let passengersCard = document.getElementById("passengersCard");
+            let luggageCard = document.getElementById("luggageCard");
+
+            fromName.innerHTML = localStorage.getItem("fromName");
+            fromAddress.innerHTML = localStorage.getItem("fromAddress");
+            toName.innerHTML = localStorage.getItem("toName");
+            toAddress.innerHTML = localStorage.getItem("toAddress");            
+            if(localStorage.getItem("passengers") <= vehicle.pax)
+                passengersCard.innerHTML = localStorage.getItem("passengers");
+            if(localStorage.getItem("luggage") <= vehicle.bags)
+                luggageCard.innerHTML = localStorage.getItem("luggage");
+
+            let arrivalTime = document.getElementById("arrivalTime");
+            let arrivalTimeOnCard = document.getElementById("arrivalTimeCard");
+
+            document.getElementById("price").innerHTML = "Total Price: " + vehicle.price + " EUR";
+            document.getElementById("car").innerHTML = vehicle.vehicleName;
+            document.getElementById("returnCost").innerHTML = vehicle.price +" EUR";
+
+            let passengersDrop = document.getElementById("passengers");
+            let luggageDrop = document.getElementById("luggage");
+
+            passengersDrop.addEventListener("change", function(e) {
+                passengersCard.innerHTML = passengersDrop.value
+            });
+
+            luggageDrop.addEventListener("change", function(e) {
+                luggageCard.innerHTML = luggageDrop.value
+            });
+
+            arrivalTime.addEventListener("change", function(e) {
+                arrivalTimeOnCard.setAttribute("style", "grid-area: time;");
+                arrivalTimeOnCard.innerHTML = "GMT " + arrivalTime.value;    
+            });
+            
+            let returnTime = document.getElementById("returnTime");
+            let returnTimeOnCard = document.getElementById("returnTimeCard");
+
+            returnTime.addEventListener("change", function(e) {
+                returnTimeOnCard.setAttribute("style", "grid-area: time;");
+                returnTimeOnCard.innerHTML = "GMT " + returnTime.value;    
+            });
+
+            let arrivalTimeValue;
+			let returnTimeValue;		
+			let timeArray = [];
+			for (let i = 0; i < 24; i++) {
+				for (let j = 0; j < 4; j++) {
+					if (i < 10) {
+						if (j === 0) {
+							timeValue = "0" + i + ":" + j * 15 + "0";
+							let options = document.createElement("option");
+							let optionsReturn = document.createElement("option");
+							options.value = timeValue;
+							options.textContent = timeValue;
+							optionsReturn.value = timeValue;
+							optionsReturn.textContent = timeValue;							
+							arrivalTime.appendChild(options);
+							returnTime.appendChild(optionsReturn);
+						} else {
+							timeValue = "0" + i + ":" + j * 15;
+							let options = document.createElement("option");
+							let optionsReturn = document.createElement("option");
+							options.value = timeValue;
+							options.textContent = timeValue;
+							optionsReturn.value = timeValue;
+							optionsReturn.textContent = timeValue;							
+							arrivalTime.appendChild(options);
+							returnTime.appendChild(optionsReturn);
+						}
+					} else {
+						if (j === 0) {
+							timeValue = i + ":" + j * 15 + "0";
+							let options = document.createElement("option");
+							let optionsReturn = document.createElement("option");
+							options.value = timeValue;
+							options.textContent = timeValue;
+							optionsReturn.value = timeValue;
+							optionsReturn.textContent = timeValue;							
+							arrivalTime.appendChild(options);
+							returnTime.appendChild(optionsReturn);						
+						} else {
+							timeValue = i + ":" + j * 15;
+							let options = document.createElement("option");
+							let optionsReturn = document.createElement("option");
+							options.value = timeValue;
+							options.textContent = timeValue;
+							optionsReturn.value = timeValue;
+							optionsReturn.textContent = timeValue;							
+							arrivalTime.appendChild(options);
+							returnTime.appendChild(optionsReturn);
+						}
+					}
+				}
+			}
+                        
+
+            for (let i = 0; i < vehicle.pax; i++)
+            {
+                let options = document.createElement("option");
+			    options.value = i + 1;
+			    options.textContent = i + 1;
+                passengersDrop.appendChild(options);                
+            }
+
+            for (let i = 0; i < vehicle.bags; i++)
+            {
+                let options = document.createElement("option");
+			    options.value = i + 1;
+			    options.textContent = i + 1;             
+                luggageDrop.appendChild(options);
+            }
+            
+
+            if(localStorage.getItem("passengers") <= vehicle.pax)            
+               passengersDrop.selectedIndex = localStorage.getItem("passengers") - 1;
+                
+            if(localStorage.getItem("luggage") <= vehicle.bags)
+                luggageDrop.selectedIndex = localStorage.getItem("luggage") - 1;
+
+            let form = document.getElementById("form");
+            let card = document.getElementById("card");
+            let returnDateLabel = document.getElementById("returnDateLabel");
+            let returnDateInput = document.getElementById("returnDate");
+            let returnTimeLabel = document.getElementById("returnTimeLabel");
+            let returnTimeInput = document.getElementById("returnTime");
+            let returnDest = document.getElementById("returnDest");
+
+            let returnLine1 = document.getElementById("returnLine1");
+            let returnLine2 = document.getElementById("returnLine2");
+            let returnLine3 = document.getElementById("returnLine3");
+
+            let isReturn = false;
+            //When return checked, enable return date and time for form and show return information on card.
+            function returnHandle(checkbox) {
+                if(checkbox.checked == true) {
+                    isReturn = true;
+                    form.setAttribute("class", "checkout-form-return");
+                    card.setAttribute("class", "form-card-return");
+                    returnDateLabel.setAttribute("style", "grid-area: labelDateRet;");
+                    returnDateInput.setAttribute("style", "grid-area: inputDateRet;");
+                    returnTimeLabel.setAttribute("style", "grid-area: labelTimeRet;");
+                    returnTimeInput.setAttribute("style", "grid-area: inputTimeRet;");
+                    returnDest.setAttribute("style", "");
+                    returnLine1.setAttribute("style", "grid-area: dest-return;");
+                    returnLine2.setAttribute("style", "grid-area: dest-return;");
+                    returnLine3.setAttribute("style", "grid-area: dest-return;");
+                    vehicle.price *= 2;
+                    document.getElementById("price").innerHTML = "Total Price: " + vehicle.price + " EUR";
+                } else {
+                    isReturn = false;
+                    form.setAttribute("class", "checkout-form");
+                    card.setAttribute("class", "form-card");
+                    returnDateLabel.setAttribute("style", "grid-area: labelDateRet; display: none;");
+                    returnDateInput.setAttribute("style", "grid-area: inputDateRet; display: none;");
+                    returnTimeLabel.setAttribute("style", "grid-area: labelTimeRet; display: none;");
+                    returnTimeInput.setAttribute("style", "grid-area: inputTimeRet; display: none;");
+                    returnDest.setAttribute("style", "display: none;");
+                    returnLine1.setAttribute("style", "grid-area: dest-return; display: none");
+                    returnLine2.setAttribute("style", "grid-area: dest-return; display: none");
+                    returnLine3.setAttribute("style", "grid-area: dest-return; display: none");
+                    vehicle.price /= 2;
+                    document.getElementById("price").innerHTML = "Total Price: " + vehicle.price + " EUR";
+                }
+            }let fromGeo = {
+                lat:40,
+                lng:40
+            };
+
+            let toGeo = {
+                lat:40,
+                lng:40
+            };
+
+            let calendarToggle = false
+		    let myCalendar = document.getElementById("myCalendar");
+		    arrivalDate.addEventListener(touchEvent, function() {
+    			if(calendarToggle)
+	    			myCalendar.setAttribute('style', 'margin-bottom: 20px; display: none;');
+			    else
+    				myCalendar.setAttribute('style', 'margin-bottom: 20px;');
+			    calendarToggle = !calendarToggle;			
+		    });
+
+		    let returnCalendarToggle = false
+		    let returnMyCalendar = document.getElementById("myCalendarReturn");
+		    let returnDate = document.getElementById("returnDate");
+		    returnDate.addEventListener(touchEvent, function() {
+    			if(returnCalendarToggle)
+				    returnMyCalendar.setAttribute('style', 'margin-bottom: 20px; display: none;');
+			    else
+    				returnMyCalendar.setAttribute('style', 'margin-bottom: 20px;');
+			    returnCalendarToggle = !returnCalendarToggle;			
+		    });
+
+            document.addEventListener(touchEvent, function(e) {
+                //console.log(e.target);
+				if(e.target == document.getElementsByClassName("date-btn")[0] || e.target == document.getElementsByClassName("date-btn")[1] ||
+				e.target == document.getElementsByClassName("date-btn")[2] || e.target == document.getElementsByClassName("date-btn")[3]) {
+					return;
+					} else if((e.target != arrivalDate && e.target != returnDate) && (calendarToggle || returnCalendarToggle)) {
+					myCalendar.setAttribute('style', 'margin-bottom: 20px; display: none;');
+					calendarToggle = false;
+					returnMyCalendar.setAttribute('style', 'margin-bottom: 20px; display: none;');
+					returnCalendarToggle = false;
+				}				
+			});
+
+            let pastDates = true, availableDates = false, availableWeekDays = false
+            let arrivalDatevalue;
+            let calendar = new VanillaCalendar({
+                selector: "#myCalendar",
+                months: ["January", "Febuary", "March", "April", "May", "Jun", "July", "Agust", "September", "October", "November", "December"],
+                shortWeekday: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                onSelect: (data, elem) => {                    
+					let dateInfo = data.date.split(' ');
+					arrivalDateValue = dateInfo[2] + " " + dateInfo[1] + " " + dateInfo[3];					
+					arrivalDate.value = arrivalDateValue;					
+					document.getElementById("arrivalDateCard").innerHTML = arrivalDateValue;
+                }
+			});
+
+            let returnDateValue
+            let calendarReturn = new VanillaCalendar({
+                selector: "#myCalendarReturn",
+                months: ["January", "Febuary", "March", "April", "May", "Jun", "July", "Agust", "September", "October", "November", "December"],
+                shortWeekday: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                onSelect: (data, elem) => {                    
+					let dateInfo = data.date.split(' ');
+					returnDateValue = dateInfo[2] + " " + dateInfo[1] + " " + dateInfo[3];					
+					returnDate.value = returnDateValue;
+					document.getElementById("returnDateCard").innerHTML = returnDateValue;
+                }
+			})
+
+            let babySeat = false;
+            function babySeatHandle() {
+                babySeat = !babySeat;
+                if(babySeat) {
+                    document.getElementById("details").setAttribute("class", "form-card-details-baby");
+                    document.getElementById("babySeat").setAttribute("style", "grid-area: baby-seat;")
+
+                    if(isReturn)
+                        vehicle.price += 8;
+                    else
+                        vehicle.price += 4;
+                } else {
+                    document.getElementById("details").setAttribute("class", "form-card-details");
+                    document.getElementById("babySeat").setAttribute("style", "grid-area: baby-seat; display: none;")
+
+                    if(isReturn)
+                        vehicle.price -= 8;
+                    else
+                        vehicle.price -= 4;
+                }
+                document.getElementById("price").innerHTML = "Total Price: " + vehicle.price + " EUR";
+            }
+
+            async function sendBooking() {
+                if(document.getElementById("name").value != "" && document.getElementById("email").value != "" &&
+	    			document.getElementById("phone").value != "" && document.getElementById("flightNumber") != "" &&
+		    		document.getElementById("arrivalDate").value != "" && arrivalTime.value != null && 
+			    	document.getElementById("privacy").checked == true) {
+                        let booking = {
+						"arrivalDate": arrivalDateValue,
+						"arrivalTime": arrivalTime.value,
+						"flightNumber": document.getElementById("flightNumber").value,
+						"from": localStorage.getItem("fromName"),
+						"to": localStorage.getItem("toName"),
+                        "passengers": parseInt(passengersDrop.options[passengersDrop.selectedIndex].value),
+                        "luggage": parseInt(luggageDrop.options[luggageDrop.selectedIndex].value),
+						"name": document.getElementById("name").value,
+						"email": document.getElementById("email").value,
+						"phone": document.getElementById("phone").value,
+						"vehicle": vehicle.vehicleName,
+						"price": vehicle.price,
+                        "isReturn": isReturn ? "Yes" : "No"
+                    };
+                    
+                    //Insert booking to the database
+					const insertBooking = '/insertBooking/' + JSON.stringify(booking);
+					const response = await fetch(insertBooking);
+					const result = await response.json();
+
+                    //Editing objecet for mailing
+					booking = {
+						"book_id": result[0].book_id,
+						"arrivalDate": arrivalDateValue,
+						"arrivalTime": arrivalTime.value,
+						"flightNumber": document.getElementById("flightNumber").value,
+						"from": localStorage.getItem("fromName"),
+                        "fromAddress": localStorage.getItem("fromAddress"),
+                        "to": localStorage.getItem("toName"),
+                        "toAddress": localStorage.getItem("toAddress"),
+                        "passengers": parseInt(passengersDrop.options[passengersDrop.selectedIndex].value),
+                        "luggage": parseInt(luggageDrop.options[luggageDrop.selectedIndex].value),
+						"name": document.getElementById("name").value,
+						"email": document.getElementById("email").value,
+						"phone": document.getElementById("phone").value,
+						"vehicle": vehicle.vehicleName,
+						"price": vehicle.price,
+                        "isReturn": isReturn ? "Yes" : "No"
+                    };
+
+                    if (isReturn) {
+						let returnBooking = {
+						"returnDate": returnDateValue,
+						"returnTime": returnTime.value,
+						"flightNumber": "-",
+						"from": localStorage.getItem("fromName"),
+						"to": localStorage.getItem("toName"),
+                        "passengers": parseInt(passengersDrop.options[passengersDrop.selectedIndex].value),
+                        "luggage": parseInt(luggageDrop.options[luggageDrop.selectedIndex].value),
+						"name": document.getElementById("name").value,
+						"email": document.getElementById("email").value,
+						"phone": document.getElementById("phone").value,
+						"vehicle": vehicle.vehicleName,
+						"price": vehicle.price / 2,
+						"isReturn": "RETURN TRANSFER"
+						};
+
+						//Insert booking to the database
+						const insertReturnBooking = '/insertReturnBooking/' + JSON.stringify(returnBooking);
+						const responseRt = await fetch(insertReturnBooking);
+						const resultRt = await responseRt.json();
+
+						//Editing objecet for mailing
+						returnBooking = {
+						"book_id": resultRt[0].book_id,
+						"arrivalDate": arrivalDateValue,
+						"arrivalTime": arrivalTime.value,
+						"flightNumber": document.getElementById("flightNumber").value,
+						"returnDate": returnDateValue,
+						"returnTime": returnTime.value,						
+                        "from": localStorage.getItem("fromName"),
+                        "fromAddress": localStorage.getItem("fromAddress"),
+                        "to": localStorage.getItem("toName"),
+                        "toAddress": localStorage.getItem("toAddress"),
+                        "passengers": parseInt(passengersDrop.options[passengersDrop.selectedIndex].value),
+                        "luggage": parseInt(luggageDrop.options[luggageDrop.selectedIndex].value),
+						"name": document.getElementById("name").value,
+						"email": document.getElementById("email").value,
+						"phone": document.getElementById("phone").value,
+						"vehicle": vehicle.vehicleName,
+						"price": vehicle.price / 2,
+						"isReturn": "RETURN TRANSFER"
+                        };
+                        localStorage.setItem("returnBooking", JSON.stringify(returnBooking)); //Save object for using in next page.
+
+						const sendReturnMail = '/sendReturnEmail/' + JSON.stringify(returnBooking);
+						const responseReturnMail = await fetch(sendReturnMail);
+					} else { 
+						const sendMail = '/sendEmail/' + JSON.stringify(booking);
+						const responseMail = await fetch(sendMail);
+					}
+                    
+                    localStorage.setItem("babySeat", babySeat);
+                    localStorage.setItem("isReturn", isReturn);                    
+					localStorage.setItem("booking", JSON.stringify(booking));				
+					window.open('book-done', '_self');
+                    
+                } else {
+                    alert("Please fill all the areas.");
+                }
+            }
+
+            // Initialize and add the map
+            async function initMap() {
+                const geocodeFrom = '/geocode/' + encodeURIComponent(localStorage.getItem("fromAddress"));
+                const responseFrom = await fetch(geocodeFrom);                
+                const jsonFromGeo = await responseFrom.json();
+                
+                fromGeo.lat = jsonFromGeo.results[0].geometry.location.lat;
+                fromGeo.lng = jsonFromGeo.results[0].geometry.location.lng;            
+
+                const geocodeTo = '/geocode/' + encodeURIComponent(localStorage.getItem("toAddress"));
+                const responseTo = await fetch(geocodeTo);                
+                const jsonToGeo = await responseTo.json();
+
+                toGeo.lat = jsonToGeo.results[0].geometry.location.lat;
+                toGeo.lng = jsonToGeo.results[0].geometry.location.lng;
+
+                // The location of Uluru                
+                // The map, centered at Uluru
+
+                //Maslak
+                let istanbul = {
+                    lat: 41.112663,
+                    lng: 29.021330
+                }
+                var map = new google.maps.Map(
+                document.getElementById('map'), {
+                    zoom: 8,
+                    center: istanbul,
+                    styles: [
+                        {
+                            "featureType": "administrative.land_parcel",
+                            "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                            ]
+                        },
+                        {
+                            "featureType": "administrative.locality",
+                            "elementType": "labels.text",
+                            "stylers": [
+                            {
+                            "color": "#242f3e"
+                            }
+                            ]
+                        },
+                        { 
+                            "featureType": "administrative.locality",
+                            "elementType": "labels.text.stroke",
+                            "stylers": [
+                            {
+                                "color": "#ffffff"
+                            }
+                            ]
+                        },
+                        {
+                            "featureType": "administrative.neighborhood",
+                            "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                        ]
+                        },
+                        {
+                            "featureType": "landscape.natural",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                            {
+                            "color": "#f0f6f0"
+                            }
+                            ]
+                        },
+                        {
+                            "featureType": "landscape.natural",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                            {
+                                "color": "#f0f6f0"
+                            }
+                            ]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "labels.text",
+                        "stylers": [
+                            {
+                        "visibility": "off"
+                            }
+                            ]
+                        },
+                          {
+                        "featureType": "poi.business",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                            ]
+                        },
+                          {
+                            "featureType": "poi.park",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                          {
+                            "color": "#f0f6f0"
+                            },
+                              {                 
+                            "visibility": "on"
+                            }
+                            ]
+                        },
+                        {
+                            "featureType": "poi.park",
+                            "elementType": "labels.text",
+                            "stylers": [
+                            {                     
+                                "visibility": "off"
+                                }                     
+                        ]
+                          },
+                        {                     
+                            "featureType": "road",
+                            "elementType": "labels",            
+                            "stylers": [
+                            {                     
+                          "visibility": "off"
+                            }
+                                ]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                            {
+                                "color": "#e0e0e0"
+                            }
+                            ]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                            {
+                                "color": "#cfcfcf"
+                            }
+                            ]
+                        },
+                        {
+                        "featureType": "water",
+                        "elementType": "labels.text",
+                        "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                        ]
+                    }
+                    ]
+                });
+                map.setOptions({
+                    draggable: false,
+                    zoomControl: false,
+                    scrollwheel: false,
+                    disableDoubleClickZoom: true,
+                    fullscreenControl: false,
+                    disableDefaultUI: true
+                });
+                // The marker, positioned at Uluru
+                var markerFrom = new google.maps.Marker({
+                    position: fromGeo,
+                    map: map,
+                    label: "A",
+                    color:"#242F3E"
+                });
+
+                var markerTo = new google.maps.Marker({
+                    position: toGeo,
+                    map: map,
+                    label: "B"
+                });
+            }
+        </script>
+ <script async defer
+ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7o4716HMOzbEHphHNqGO40s9p9Turckk&callback=initMap">
+ </script>
+
+    </body>
+</html>

@@ -1,0 +1,726 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
+    <title>Dama Taxi | Airport Transfer Service</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="src/css/vanilla-calendar-min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="src/js/vanilla-calendar-min.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="left-nav">
+                <div>DAMA TAXI</div>
+            </div>
+            <div class="mid-nav">
+                <nav class="nav-bar">
+                    <ul>
+                        <li style="grid-area: home;"><a href=>Home</a></li>
+                        <li style="grid-area: pop;"><a href=#>Popular Destinations</a></li>
+                        <li style="grid-area: extra;"><a href=/extra-services>Extra Services</a></li>
+                        <li style="grid-area: about;"><a href=/about-us>About Us</a></li>
+                        <li style="grid-area: contact;"><a href=/contact-us>Contact Us</a></li>
+                        <li style="grid-area: faq;"><a href=#faq>FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right-nav"></div>
+        </div>
+        <div class="all-body">
+            <div class="main-container">
+                <div class="main-text-div">Book taxi transfers from the 
+                    airports and hotels in Istanbul
+                </div>                
+                <div class="destination-form-div-style"></div>
+                <div class="destination-form-div">
+                    <div class="destination-form-title">Book Your Transfer</div>
+                    <div class="destination-form-dest">
+                        <div></div>
+                        <div class="dest-from">
+                            <p>From</p>
+                        </div>
+                        <div class="from-input">
+                            <input id="fromInput" class="from-input" type="text" placeholder="Airport, hotel, etc." onkeyup="getPlaceFrom()">
+                        </div>
+                        <div class="dest-line"></div>
+                        <div class="to-from">
+                            <p>To</p>
+                        </div>
+                        <div class="to-input">
+                            <input id="toInput" class="to-input" type="text" placeholder="Airport, hotel, etc." onkeyup="getPlaceTo()">
+                        </div>                        
+                    </div>
+                    <div class="dest-date-title">Date</div>
+                    <div class="dest-date-container">
+                        <input class="dest-date-input" readonly>
+                        <div id="myCalendar" class="vanilla-calendar" style="margin-bottom: 20px; display: none; margin-top: 10px; position: absolute;">
+                            <div class="vanilla-calendar-header">
+                                <button type="button" class="vanilla-calendar-btn" data-calendar-toggle="previous"><svg height="24" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path></svg></button>
+                                <div class="vanilla-calendar-header__label" data-calendar-label="month">Febuary 2020</div>
+                                <button type="button" class="vanilla-calendar-btn" data-calendar-toggle="next"><svg height="24" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg></button>
+                            </div>
+                            <div class="vanilla-calendar-week">
+                                <span>Mon</span>
+                                <span>Tue</span>
+                                <span>Wed</span>
+                                <span>Thu</span>
+                                <span>Fri</span>
+                                <span>Sat</span>
+                                <span>Sun</span>
+                            </div>
+                            <div class="vanilla-calendar-body" data-calendar-area="month"><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sat Feb 01 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active" style="margin-left: 85.68%;"><span>1</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sun Feb 02 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>2</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Mon Feb 03 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>3</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Tue Feb 04 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>4</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Wed Feb 05 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>5</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Thu Feb 06 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>6</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Fri Feb 07 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>7</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sat Feb 08 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>8</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sun Feb 09 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>9</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Mon Feb 10 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>10</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Tue Feb 11 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>11</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Wed Feb 12 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>12</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Thu Feb 13 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>13</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Fri Feb 14 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>14</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sat Feb 15 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>15</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sun Feb 16 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>16</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Mon Feb 17 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>17</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Tue Feb 18 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>18</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Wed Feb 19 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>19</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Thu Feb 20 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>20</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Fri Feb 21 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>21</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sat Feb 22 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>22</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sun Feb 23 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>23</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Mon Feb 24 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>24</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Tue Feb 25 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>25</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Wed Feb 26 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>26</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Thu Feb 27 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>27</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Fri Feb 28 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>28</span></div><div class="vanilla-calendar-date vanilla-calendar-date--active" data-calendar-date="Sat Feb 29 2020 00:31:25 GMT+0300 (GMT+03:00)" data-calendar-status="active"><span>29</span></div></div>
+                        </div>
+                    </div>                    
+                    <div class="dest-passengers-title">Passengers</div>
+                    <div class="dest-passengers">
+                        <div id="passengersPlus" class="dest-count-plus">+</div>
+                        <div id="passengersCount" class="dest-count">1</div>
+                        <div id="passengersMinus" class="dest-count-minus">-</div>
+                    </div>
+                    <div class="dest-luggage-title">Luggage</div>
+                    <div class="dest-luggage">
+                        <div id="luggagePlus" class="dest-count-plus">+</div>
+                        <div id="luggageCount" class="dest-count">1</div>
+                        <div id="luggageMinus" class="dest-count-minus">-</div>
+                    </div>
+                    <div style="grid-area: btn; margin: auto;">
+                        <button id="btn" class="search-btn">Show Prices</button>
+                    </div>
+                </div>
+                <div class="gradient-div"></div>               
+                <img class="img-container" src=images/airport-transfer-exit.jpg>
+                <div class="img-container"></div>
+            </div>
+            <div class="main-content">
+                <div class="how-it-works">
+                    <div class="how-it-title">
+                        <b>How It Works?</b>
+                    </div>
+                    <div class="how-it-step" style="grid-area: step1;">
+                        <div class="step-div">1</div>
+                        <div class="how-it-line"></div>
+                        <div class="how-it-step-desc">
+                            Schedule a time and pick up location to bring you to your destination.
+                        </div>
+                    </div>
+                    <div class="how-it-step" style="grid-area: step2;">
+                        <div class="step-div">2</div>
+                        <div class="how-it-line"></div>
+                        <div class="how-it-step-desc">
+                            Choose a car type and options to make your trip enjoyable
+                        </div>
+                    </div>
+                    <div class="how-it-step" style="grid-area: step3;">
+                        <div class="step-div">3</div>
+                        <div id="thirdLine" class="how-it-line"></div>
+                        <div class="how-it-step-desc">
+                            No hidden costs. Pay via trusted partners. No worries, we have a cancellation policy.
+                        </div>
+                    </div>
+                    <div class="how-it-desc"></div>
+                </div>
+                <div class="reviews-gradiant-line"></div>
+                <div class="reviews-bg"><img src="images/reviews-bg.png"></div>
+                <div class="reviews-gradiant"></div>
+                <div class="reviews-div">
+                    <div class="reviews-title">Reviews</div>                    
+                    <div class="reviews-container">                        
+                        <img class="reviews-back" src="images/back.png">
+                        <div style="grid-area: reviews; overflow: hidden;">
+                        <div class="reviews">
+                            <div class="review" style="grid-area: rev1;">
+                                <div class="review-title"><b>Reviews reviews</b></div>
+                                <div class="review-stars">
+                                    <div style="grid-area: star1;"></div>
+                                    <div style="grid-area: star2;"></div>
+                                    <div style="grid-area: star3;"></div>
+                                    <div style="grid-area: star4;"></div>
+                                    <div style="grid-area: star5;"></div>
+                                </div>
+                                <div class="review-comment"><i>
+                                    ''ReviewsReviewsReviewsReviews
+                                    ReviewsReviewsReviews
+                                    ReviewsReviews''</i>
+                                </div>
+                                <div class="review-author">Mr.Customer</div>
+                            </div>
+                            <div class="review" style="grid-area: rev2;">
+                                <div class="review-title"><b>Reviews reviews</b></div>
+                                <div class="review-stars">
+                                    <div style="grid-area: star1;"></div>
+                                    <div style="grid-area: star2;"></div>
+                                    <div style="grid-area: star3;"></div>
+                                    <div style="grid-area: star4;"></div>
+                                    <div style="grid-area: star5;"></div>
+                                </div>
+                                <div class="review-comment"><i>
+                                    ''ReviewsReviewsReviewsReviews
+                                    ReviewsReviewsReviews
+                                    ReviewsReviews''</i>
+                                </div>
+                                <div class="review-author">Mr.Customer</div>
+                            </div>
+                            <div class="review" style="grid-area: rev3;">
+                                <div class="review-title"><b>Reviews reviews</b></div>
+                                <div class="review-stars">
+                                    <div style="grid-area: star1;"></div>
+                                    <div style="grid-area: star2;"></div>
+                                    <div style="grid-area: star3;"></div>
+                                    <div style="grid-area: star4;"></div>
+                                    <div style="grid-area: star5;"></div>
+                                </div>
+                                <div class="review-comment"><i>
+                                    ''ReviewsReviewsReviewsReviews
+                                    ReviewsReviewsReviews
+                                    ReviewsReviews''</i>
+                                </div>
+                                <div class="review-author">Mr.Customer</div>
+                            </div>
+                        </div>
+                        </div>                    
+                        <img class="reviews-next" src="images/next.png">
+                        <div class="reviews-page">
+                            <div class="reviews-currentpage" style="grid-area: p1;"></div>
+                            <div class="reviews-otherpage" style="grid-area: p2;"></div>
+                            <div class="reviews-otherpage" style="grid-area: p3;"></div>
+                        </div>                        
+                    </div>
+                    <div class="reviews-live">
+                        <div style="grid-area: live1;">A customer booked a taxi from Londres Luton Aéroport to Wolverhampton, UK.</div>
+                        <div style="grid-area: live2;">A customer booked a taxi from Londres Luton Aéroport to Wolverhampton, UK.</div>
+                        <div style="grid-area: live3;">A customer booked a taxi from Londres Luton Aéroport to Wolverhampton, UK.</div>
+                        <div style="grid-area: live4;">A customer booked a taxi from Londres Luton Aéroport to Wolverhampton, UK.</div>
+                    </div>
+                    <div class="other-reviews">
+                        <div style="grid-area: rev1;"><img src="images/google-review.png"></div>
+                        <div style="grid-area: rev2;"><img src="images/google-review.png"></div>
+                        <div style="grid-area: rev3;"><img src="images/google-review.png"></div>
+                    </div>
+                </div>
+                <div class="fleet-div">
+                    <div class="fleet-title">Fleet</div>
+                    <div class="fleet-vehicles">
+                        <img class="fleet-back" src="images/back.png">
+                        <img style="grid-area: veh1;" class="fleet-vehicle" src="images/sedan.png">
+                        <div style="grid-area: tit1;" class="fleet-vehicle-title"><b>Sedan</b></div>
+                        <div style="grid-area: desc1;" class="fleet-vehicle-desc">For a couple or a family with a child.</div>
+                        <img style="grid-area: veh2;" class="fleet-vehicle" src="images/vito.png">
+                        <div style="grid-area: tit2;" class="fleet-vehicle-title"><b>Minivan</b></div>
+                        <div style="grid-area: desc2;" class="fleet-vehicle-desc">For groups of up to 19 people or large baggage.</div>
+                        <img style="grid-area: veh3;" class="fleet-vehicle" src="images/vip.png">
+                        <div style="grid-area: tit3;" class="fleet-vehicle-title"><b>Business</b></div>
+                        <div style="grid-area: desc3;" class="fleet-vehicle-desc">For comfortable business trips.</div>
+                        <img class="fleet-next" src="images/next.png">
+                    </div>
+                    <div class="fleet-extra-line"></div>
+                    <div class="fleet-extra">
+                        <div class="fleet-extra-title"><b>Additional services</b></div>
+                        <div class="fleet-extra-service-water">
+                            <div class="fleet-extra-service-text">Drinking water</div>
+                        </div>
+                        <div class="fleet-extra-service-seat">
+                            <div class="fleet-extra-service-text">Child seat</div>
+                        </div>
+                        <div class="fleet-extra-service-waiting">
+                            <div class="fleet-extra-service-text">Extra hour of waiting</div>
+                        </div>
+                        <div class="fleet-extra-service-eng">
+                            <div class="fleet-extra-service-text">English-speaking driver</div>
+                        </div>
+                        <div class="fleet-extra-service-desc">
+                            Available for an extra fee depending on the route.
+                        </div>
+                    </div>
+                </div>
+                <div class="good-service">
+                    <div class="service-text"><i>"We make sure everything goes according to your plan"</i></div>
+                    <div class="service-us">G-Travel</div>
+                </div>
+                <div class="popular-destinations">
+                    <div class="popular-title">Popular Destinations</div>
+                    <div class="popular-dests">
+                        <div style="grid-area: pop1;" class="popular-dest">
+                            <div class="popular-dest-text" style="grid-area: dest1;">Istanbul Airport (IST)</div>
+                            <div class="popular-dest-text" style="grid-area: dest2;">Sultanahmet</div>
+                            <div class="popular-dest-price">From 33 <font>EUR</font></div>
+                        </div>
+                        <div style="grid-area: pop2;" class="popular-dest">
+                            <div class="popular-dest-text" style="grid-area: dest1;">Istanbul Airport (IST)</div>
+                            <div class="popular-dest-text" style="grid-area: dest2;">Taksim</div>
+                            <div class="popular-dest-price">From 33 <font>EUR</font></div>
+                        </div>
+                        <div style="grid-area: pop3;" class="popular-dest">
+                            <div class="popular-dest-text" style="grid-area: dest1;">Sabiha Gokcen Airport</div>
+                            <div class="popular-dest-text" style="grid-area: dest2;">Sultanahmet</div>
+                            <div class="popular-dest-price">From 33 <font>EUR</font></div>
+                        </div>
+                        <div style="grid-area: pop4;" class="popular-dest">
+                            <div class="popular-dest-text" style="grid-area: dest1;">Sabiha Gokcen Airport)</div>
+                            <div class="popular-dest-text" style="grid-area: dest2;">Taksim</div>
+                            <div class="popular-dest-price">From 33 <font>EUR</font></div>
+                        </div>
+                        <div style="grid-area: pop5;" class="popular-dest">
+                            <div class="popular-dest-text" style="grid-area: dest1;">Istanbul Airport (IST)</div>
+                            <div class="popular-dest-text" style="grid-area: dest2;">Beyoglu</div>
+                            <div class="popular-dest-price">From 33 <font>EUR</font></div>
+                        </div>
+                        <div style="grid-area: pop6;" class="popular-dest">
+                            <div class="popular-dest-text" style="grid-area: dest1;">Sabiha Gokcen Airport</div>
+                            <div class="popular-dest-text" style="grid-area: dest2;">Beyoglu</div>
+                            <div class="popular-dest-price">From 33 <font>EUR</font></div>
+                        </div>
+                        <div style="grid-area: pop7;" class="popular-dest">
+                            <div class="popular-dest-text" style="grid-area: dest1;">Istanbul Airport (IST)</div>
+                            <div class="popular-dest-text" style="grid-area: dest2;">Besiktas</div>
+                            <div class="popular-dest-price">From 33 <font>EUR</font></div>
+                        </div>
+                    </div>
+                    <div class="popular-destinations-img">
+                        <img src="images/istanbul.jpg" alt="Istanbul">
+                    </div>
+                </div>
+                <div></div>
+                <img id="istImg" class="ist-img" src="images/istanbul--black.png">
+                <div class="extra-services-div">
+                    <div class="extra-services-title">Extra Services</div>
+                    <div class="extra-services">
+                        <div style="grid-area: title1;" class="extra-service-title">
+                            <b>Portable Wifi Modem</b>
+                        </div>
+                        <div style="grid-area: service1;" class="extra-service">
+                            <img src="images/wifi-extra.png" alt="wi-fi">
+                        </div>
+                        <div style="grid-area: line1;" class="extra-service-line"></div>
+                        <div style="grid-area: desc1;" class="extra-service-desc">
+                            Portable Wifi Modem
+                        </div>
+                        <div style="grid-area: title2;" class="extra-service-title">
+                            <b>Tour</b>
+                        </div>
+                        <div style="grid-area: service2;" class="extra-service">
+                            <img src="images/tour-extra.png" alt="tour">
+                        </div>
+                        <div style="grid-area: line2;" class="extra-service-line"></div>
+                        <div style="grid-area: desc2;" 
+                        class="extra-service-desc">
+                            Tour
+                        </div>
+                        <div style="grid-area: title3;" class="extra-service-title">
+                            <b>Photo Shoot</b>
+                        </div>
+                        <div style="grid-area: service3;" class="extra-service">
+                            <img src="images/photo-shoot-extra.png" alt="Photo Shoot">
+                        </div>
+                        <div style="grid-area: line3;" class="extra-service-line"></div>
+                        <div style="grid-area: desc3;" class="extra-service-desc">
+                            Photo Shoot
+                        </div>
+                    </div>
+                </div>
+                <div id="faq" class="faq-div">
+                    <div class="faq-title">FAQ</div>
+                    <div class="faq">
+                        <div style="grid-area: q1;" class="question">How do I find and book a transfer?</div>
+                        <div style="grid-area: q2;" class="question">How do I find and book a transfer?</div>
+                        <div style="grid-area: q3;" class="question">How do I find and book a transfer?</div>
+                        <div style="grid-area: q4;" class="question">How do I find and book a transfer?</div>
+                        <div style="grid-area: q5;" class="question">How do I find and book a transfer?</div>
+                    </div>
+                     <div class="contact-div">
+                         <div class="contact-div-title"><b>Help</b></div>
+                         <div style="grid-area: text1;" class="contact-div-text"><b>For any questions</b></div>
+                         <div style="grid-area: mail;" class="contact-div-link"><u>info@damataxi.com</u></div>
+                         <div style="grid-area: consultant;" class="contact-div-link"><u>Ask our consultant</u></div>
+                         <div style="grid-area: text2;" class="contact-div-text"><b>Need help with your booking?</b></div>
+                         <div style="grid-area: text2;" class="contact-div-text-mini">We are avaible 24/7</div>
+                         <div style="grid-area: phone;" class="contact-div-link"><u>+90 544 901 00 10</u></div>
+                     </div>
+                </div>
+                <div class="img-info-div">
+                    <div style="grid-area: text1;" class="img-info-text">
+                        <b>We make sure everything goes according to your plan</b>
+                    </div>
+                    <div style="grid-area: text2;" class="img-info-text">
+                        <b>Ticket sales, travel guides,<br>
+                            and travel discounts in your inbox
+                            </b>
+                    </div>
+                    <div class="img-info-btn">                        
+                        <button>BOOK NOW</button>
+                    </div>
+                </div>
+                <div class="img-info-div-style"></div>
+                <div class="img-info-img">
+                    <img src="images/family.jpg" alt="Family trip">
+                </div>
+                <div class="advantages-div">
+                    <div class="advantages-title"><b>Advantages</b></div>
+                    <div style="grid-area: tit1;" class="advantages-tit"><b>Transfer is booked in advance</b></div>
+                    <div style="grid-area: desc1;" class="advantages-desc">
+                        The carrier knows beforehand when you
+                        arrive at the airport: the taxi will already be waiting for
+                        you at the taxi rank, and the taxi driver will meet you as
+                        close to the arrivals area as the airport rules allow. 
+                    </div>
+                    <div style="grid-area: tit2;" class="advantages-tit"><b>Transfer is booked in advance</b></div>
+                    <div style="grid-area: desc2;" class="advantages-desc">
+                        The carrier knows beforehand when you
+                        arrive at the airport: the taxi will already be waiting for
+                        you at the taxi rank, and the taxi driver will meet you as
+                        close to the arrivals area as the airport rules allow. 
+                    </div>
+                    <div style="grid-area: tit3;" class="advantages-tit"><b>Transfer is booked in advance</b></div>
+                    <div style="grid-area: desc3;" class="advantages-desc">
+                        The carrier knows beforehand when you
+                        arrive at the airport: the taxi will already be waiting for
+                        you at the taxi rank, and the taxi driver will meet you as
+                        close to the arrivals area as the airport rules allow. 
+                    </div>
+                    <div style="grid-area: tit4;" class="advantages-tit"><b>Transfer is booked in advance</b></div>
+                    <div style="grid-area: desc4;" class="advantages-desc">
+                        The carrier knows beforehand when you
+                        arrive at the airport: the taxi will already be waiting for
+                        you at the taxi rank, and the taxi driver will meet you as
+                        close to the arrivals area as the airport rules allow. 
+                    </div>
+                    <div style="grid-area: tit5;" class="advantages-tit"><b>Transfer is booked in advance</b></div>
+                    <div style="grid-area: desc5;" class="advantages-desc">
+                        The carrier knows beforehand when you
+                        arrive at the airport: the taxi will already be waiting for
+                        you at the taxi rank, and the taxi driver will meet you as
+                        close to the arrivals area as the airport rules allow. 
+                    </div>
+                    <div style="grid-area: tit6;" class="advantages-tit"><b>Transfer is booked in advance</b></div>
+                    <div style="grid-area: desc6;" class="advantages-desc">
+                        The carrier knows beforehand when you
+                        arrive at the airport: the taxi will already be waiting for
+                        you at the taxi rank, and the taxi driver will meet you as
+                        close to the arrivals area as the airport rules allow. 
+                    </div>
+                </div>
+                <div class="last-week-div">
+                    <div class="last-week-circle">
+                        <div>
+                            Last Week
+                        <br>
+                        1606
+                        <br>
+                        Transportations
+                        </div>                        
+                    </div>
+                </div>
+            </div>            
+            <div class="footer">
+                <img class="footer-bg-img" src="images/Dama-Taxi-Logo-v2-big.png">
+                <div class="footer-logo" style="grid-area: logo;">DAMA TAXI</div>
+                <div class="footer-element" style="grid-area: pop;">Popular Destinations</div>
+                <div class="footer-element" style="grid-area: extra;">Extra Servicex</div>
+                <div class="footer-element" style="grid-area: about;">About Us</div>
+                <div class="footer-element" style="grid-area: faq;">FAQ</div>
+                <div class="footer-element" style="grid-area: contact;">Contact Us</div>
+                <div class="footer-element" style="grid-area: privacy;">Privacy and Policy</div>
+                <div class="footer-element" style="grid-area: partner;">Become a Partner</div>
+                <div class="footer-curr">
+                    <select class="footer-drop">
+                        <option value="EUR"><b>EUR</b></option>
+                        <option value="USD"><b>USD</b></option>
+                        <option value="TL"><b>TL</b></option>
+                    </select>
+                </div>
+                <div class="footer-lang">                    
+                    <select class="footer-drop">
+                        <option value="EN">EN</option>
+                        <option value="RU">RU</option>
+                    </select>
+                </div>
+                <div class="footer-element" style="grid-area: mail;"><u>info@damataxi.com</u></div>
+                <div class="footer-element" style="grid-area: phone;">+90 544 901 00 10</div>
+                <div class="footer-element" style="grid-area: address;">Sultanahmet Yasemin Street 
+                    No 2/4 İstanbul, Turkey</div>
+                <div class="footer-element" style="grid-area: copyright; text-align: center;">© 2019 by Dama Taxi.</div>
+            </div>
+        </div>
+        <script>
+            let touchEvent = 'touchstart' in window ? 'touchstart' : 'click'; //Check device supports click or touch.
+
+            if (window.innerWidth <= 800) {
+                document.getElementById("thirdLine").setAttribute("style", "display: none;");
+                document.getElementById("istImg").setAttribute("style", "display: none;");
+                for (let i = 0; i < 7; i++) {
+                    document.getElementsByClassName("footer-element")[i].setAttribute("style", "display: none;");
+                }
+            }
+
+            let fromText = document.getElementById("fromInput");
+	        let toText = document.getElementById("toInput");
+
+	        let fromID, toID, fromName, toName, fromAddress, toAddress;
+
+            let passengers = 1;
+            let luggage = 1;
+	        let suggestionsFrom = [];
+	        let suggestionsTo = [];
+
+            async function getPlaceFrom() {
+		        const inputVal = fromText.value;
+		        if(inputVal.length != 0) {
+		            const apiURL = '/placesAC/' + inputVal;
+		            const response = await fetch(apiURL);
+		            const json = await response.json();
+		   
+		            suggestionsFrom = [];
+		            let index = 0;
+		            let result = json.predictions;
+		            result.forEach(function (results) {
+    			        index++;
+			            if(index == 5)
+    				        return;
+			            let cityFilter = false;
+			            let pass = false;       
+			            if(inputVal.startsWith("ai")) {
+    				        if(results.place_id === "ChIJqZW8Cvb_n0ARBuUkyCzgDDg" || results.place_id === "ChIJU6Ek9MvbyhQRdNqYgE3K76w")
+	        			        pass = true;
+			            }
+			            else
+			            pass = true;
+			            if(pass) {
+			                results.terms.forEach(function (terms) {
+			                    if(terms.value === "Istanbul" || terms.value === "İstanbul")
+				                    cityFilter = true;
+				                if(cityFilter) {
+					                let destination = {
+						                "_id": results.id,
+						                "place_id": results.place_id,
+						                "name": results.structured_formatting.main_text,
+						                "address": results.description
+					                };									
+					                suggestionsFrom.push(destination);									
+				                }
+			                });
+			            }				
+		            });			
+	            }
+	        }
+
+            async function getPlaceTo() {
+	            if(toText.value.length > 0) {							
+		            const inputVal = toText.value;
+			        const apiURL = '/placesAC/' + inputVal;
+			        const response = await fetch(apiURL);
+		            const json = await response.json();
+                    
+		            suggestionsTo = [];
+		            let index = 0;
+		            let result = json.predictions;
+		            result.forEach(function (results) {
+			            index++;
+			            if(index == 5)
+				            return;
+			            let cityFilter = false;
+			            let pass = false;
+			            if(inputVal.startsWith("ai")) {
+				            if(results.place_id === "ChIJqZW8Cvb_n0ARBuUkyCzgDDg" || results.place_id === "ChIJU6Ek9MvbyhQRdNqYgE3K76w")
+					            pass = true;
+			            }
+			            else
+				            pass = true;
+			            if(pass) {
+				            results.terms.forEach(function (terms) {
+					            if(terms.value === "Istanbul" || terms.value === "İstanbul")
+						            cityFilter = true;
+					            if(cityFilter) {
+						            let destination = {
+							            "_id": results.id,
+							            "place_id": results.place_id,
+							            "name": results.structured_formatting.main_text,
+							            "address": results.description
+						            };									
+						            suggestionsTo.push(destination);									
+				    	            }
+			    	            });
+		    	            }				
+	    	            });	
+    	            }			
+	            }
+
+
+                function AutoCompleteFrom() {
+	                let suggestionMain, suggestionBox, currentFocus;
+
+	                fromText.addEventListener("input", function(e) {
+		                closeAllLists(); //Close existing lists for preventing duplicate.
+		                currentFocus = -1;
+
+		                this.parentNode.setAttribute("style", "position: relative;");
+		                toText.parentNode.setAttribute("style", "position: static;");
+
+		                suggestionMain = document.createElement("div"); //Crate main div that includes suggestions.  
+		                suggestionMain.setAttribute("id", this.id + "autoComplete-list");
+		                suggestionMain.setAttribute("class", "autoComplete-items");					
+                        
+		                this.parentNode.appendChild(suggestionMain); //Child it textbox's div.
+
+		                for(let i = 0; i < suggestionsFrom.length; i++) { //Loop through all suggestions.
+			                suggestionBox = document.createElement("div"); //Create suggestion div.
+                            suggestionBox.innerHTML = "<b style='grid-area: name'>" + suggestionsFrom[i].name +"</b>"; //Fill it with suggestion.
+                            suggestionBox.innerHTML += "<p style='grid-area: address'>" + suggestionsFrom[i].address;
+                            suggestionBox.innerHTML += "<img style='grid-area: logo;' src='images/search_plane.png' alt='Airport'>";
+                            suggestionBox.innerHTML += "<input type='hidden' class='name' value='" + suggestionsFrom[i].name +"'>";
+                            suggestionBox.innerHTML += "<input type='hidden' class='address' value='" + suggestionsFrom[i].address +"'>";
+                            suggestionBox.innerHTML += "<input type='hidden' class='place_id' value='" + suggestionsFrom[i].place_id +"'>";                            
+			   
+
+			                suggestionMain.appendChild(suggestionBox); //Make it main div's child.				
+			   
+			                if(i == 0) 
+				                suggestionBox.setAttribute("style", "border-radius: 5px 5px 0 0"); //First suggestion box's style.
+											   
+			                if(i == suggestionsFrom.length - 1)
+				                suggestionBox.setAttribute("style", "border-radius: 0 0 5px 5px"); //Last suggestion box's style.
+
+			                suggestionBox.addEventListener(touchEvent, function(e) {
+                                fromName = this.getElementsByClassName("name")[0].value;
+                                fromAddress = this.getElementsByClassName("address")[0].value;
+				                fromID = this.getElementsByClassName("place_id")[0].value;
+				                fromText.value = fromName;
+		                });
+		            }
+	            });
+            }
+
+            function AutoCompleteTo() {
+	                let suggestionMain, suggestionBox, currentFocus;
+
+	                toText.addEventListener("input", function(e) {
+		                closeAllLists(); //Close existing lists for preventing duplicate.
+		                currentFocus = -1;
+
+		                this.parentNode.setAttribute("style", "position: relative;");
+		                fromText.parentNode.setAttribute("style", "position: static;");
+
+		                suggestionMain = document.createElement("div"); //Crate main div that includes suggestions.  
+		                suggestionMain.setAttribute("id", this.id + "autoComplete-list");
+		                suggestionMain.setAttribute("class", "autoComplete-items");					
+                        
+		                this.parentNode.appendChild(suggestionMain); //Child it textbox's div.
+
+		                for(let i = 0; i < suggestionsTo.length; i++) { //Loop through all suggestions.
+			                suggestionBox = document.createElement("div"); //Create suggestion div.
+                            suggestionBox.innerHTML = "<b style='grid-area: name'>" + suggestionsTo[i].name +"</b>"; //Fill it with suggestion.
+                            suggestionBox.innerHTML += "<p style='grid-area: address'>" + suggestionsTo[i].address;
+                            suggestionBox.innerHTML += "<img style='grid-area: logo;' src='images/search_plane.png' alt='Airport'>";
+                            suggestionBox.innerHTML += "<input type='hidden' class='name' value='" + suggestionsTo[i].name +"'>";
+                            suggestionBox.innerHTML += "<input type='hidden' class='address' value='" + suggestionsTo[i].address +"'>";
+                            suggestionBox.innerHTML += "<input type='hidden' class='place_id' value='" + suggestionsTo[i].place_id +"'>";                            
+			   
+
+			                suggestionMain.appendChild(suggestionBox); //Make it main div's child.				
+			   
+			                if(i == 0) 
+				                suggestionBox.setAttribute("style", "border-radius: 5px 5px 0 0"); //First suggestion box's style.
+											   
+			                if(i == suggestionsTo.length - 1)
+				                suggestionBox.setAttribute("style", "border-radius: 0 0 5px 5px"); //Last suggestion box's style.
+
+			                suggestionBox.addEventListener(touchEvent, function(e) {
+                                toName = this.getElementsByClassName("name")[0].value;
+                                toAddress = this.getElementsByClassName("address")[0].value;
+                                toID = this.getElementsByClassName("place_id")[0].value;                                
+				                toText.value = toName;
+		                });
+		            }
+	            });
+            }
+
+            function closeAllLists(element) {
+	           let list = document.getElementsByClassName("autoComplete-items");
+	           for(let i = 0; i < list.length; i++) {
+		            if(element != list[i] && element != fromText)
+			            list[i].parentNode.removeChild(list[i]);
+	            }
+            }
+
+            document.addEventListener(touchEvent, function(e) {
+	            closeAllLists(e.target);
+            });
+
+            AutoCompleteFrom();
+            AutoCompleteTo();
+
+            //Passengers and luggage
+
+            let passengersMinus = document.getElementById("passengersMinus");
+            let passengersPlus = document.getElementById("passengersPlus");
+            let luggageMinus = document.getElementById("luggageMinus");
+            let luggagePlus = document.getElementById("luggagePlus");
+
+            let passengersCount = document.getElementById("passengersCount");
+            let luggageCount = document.getElementById("luggageCount");
+
+            passengersMinus.addEventListener(touchEvent, function(e) {
+                if(passengers > 1) {                
+                    passengers--;
+                    passengersCount.innerHTML = passengers;
+                }
+            });
+
+            passengersPlus.addEventListener(touchEvent, function(e) {                
+                    passengers++;
+                    passengersCount.innerHTML = passengers;                
+            });
+
+            luggageMinus.addEventListener(touchEvent, function(e) {
+                if(luggage > 1) {                
+                    luggage--;
+                    luggageCount.innerHTML = luggage;
+                }
+            });
+
+            luggagePlus.addEventListener(touchEvent, function(e) {               
+                    luggage++;
+                    luggageCount.innerHTML = luggage;
+                
+            });
+
+
+            btn.addEventListener(touchEvent, function(e) {
+                localStorage.setItem("fromID", fromID);
+                localStorage.setItem("fromName", fromName);
+                localStorage.setItem("fromAddress", fromAddress);
+                localStorage.setItem("toID", toID);
+                localStorage.setItem("toName", toName);
+                localStorage.setItem("toAddress", toAddress);
+                localStorage.setItem("passengers", passengers);
+                localStorage.setItem("luggage", luggage);
+
+                window.open('booking', '_self');
+            });
+
+            let pastDates = true, availableDates = false, availableWeekDays = false
+            
+            let calendar = new VanillaCalendar({
+                selector: "#myCalendar",
+                months: ["January", "Febuary", "March", "April", "May", "Jun", "July", "Agust", "September", "October", "November", "December"],
+                shortWeekday: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                onSelect: (data, elem) => {                    
+					let dateInfo = data.date.split(' ');
+					arrivalDateValue = dateInfo[2] + " " + dateInfo[1] + " " + dateInfo[3];					
+					arrivalDate.value = arrivalDateValue;
+					document.getElementById("arriveDateDiv").setAttribute('style', 'grid-area: date;');
+					document.getElementById("arriveDate").innerHTML = arrivalDateValue;
+					let cardHeight = document.getElementById("checkoutCard").clientHeight;
+					// Get the element's height with margins included
+					if(!arrivalDateSelected) {
+						arrivalDateSelected = true;
+						let elementHeight = document.getElementById("arriveDateDiv").clientHeight +
+						parseInt(getComputedStyle(document.getElementById("arriveDateDiv")).marginTop) +
+						parseInt(getComputedStyle(document.getElementById("arriveDateDiv")).marginBottom);
+						document.getElementById("checkoutCard").style.height = cardHeight + elementHeight + "px";
+					}
+                }
+			})
+        </script>
+
+    </body>
+</html>

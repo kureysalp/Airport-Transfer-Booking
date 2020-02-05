@@ -1,0 +1,495 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
+    <title>Dama Taxi | Airport Transfer Service</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div class="header" style="background-color: #242F3E; position: relative;">
+            <div class="left-nav">
+                <div>DAMA TAXI</div>
+            </div>
+            <div class="mid-nav">
+                <nav class="nav-bar">
+                    <ul>
+                        <li style="grid-area: home;"><a href="/">Home</a></li>
+                        <li style="grid-area: pop;"><a href=#>Popular Destinations</a></li>
+                        <li style="grid-area: extra;"><a href=/extra-services>Extra Services</a></li>
+                        <li style="grid-area: about;"><a href=/about-us>About Us</a></li>
+                        <li style="grid-area: contact;"><a href=/contact-us>Contact Us</a></li>
+                        <li style="grid-area: faq;"><a href=#faq>FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right-nav"></div>
+        </div>
+        <div class="booking-body">
+            <div class="process-div">
+                <div id="process-st" style="grid-area: st;" class="process"><b>1</b></div>
+                <div style="grid-area: stText;" class="process-text">Select Destination</div>
+                <div style="grid-area: line1;" class="process-circle-left"></div>
+                <div style="grid-area: line1;" class="process-line"></div>
+                <div style="grid-area: line1;" class="process-circle-right"></div>
+                <div id="process-nd" style="grid-area: nd;" class="process"><b>2</b></div>
+                <div style="grid-area: ndText;" class="process-text">Select Car</div>
+                <div style="grid-area: line2;" class="process-circle-left"></div>
+                <div style="grid-area: line2;" class="process-line"></div>
+                <div style="grid-area: line2;" class="process-circle-right"></div>
+                <div id="process-rd" style="grid-area: rd;" class="process"><b>3</b></div>
+                <div style="grid-area: rdText;" class="process-text">Form</div>
+            </div>
+            <div class="booking-specs">
+                <img class="specs-rate-img" src="images/tick.png" alt="review">
+                <div class="specs-rate">Travellers rate us<br>
+                    excellent
+                    <div>4.98 / 5 average   3000 reviews</div>
+                </div>
+                <img class="specs-meet-img" src="images/welcome.png" alt="meeting">
+                <div class="specs-meet">The driver will meet you<br>
+                    at the airport with a nameplate
+                </div>
+                <img class="specs-payment-img" src="images/cash.png" alt="payment">
+                <div class="specs-payment">Payment online<br>
+                    or in cash on-site
+                </div>
+            </div>
+            <div class="booking-content">
+                <div id="booking" class="booking">
+                    <div id="carCard" class="car-card">
+                        <div class="car">
+                            <img class="car-img" src="images/sedan.png">
+                            <div class="car-brand"><div class="brand">-Car Brand-</div></div>
+                        </div>
+                        <div id="carLine" class="car-line"></div>
+                        <div class="car-info">
+                            <div class="car-info-title">-Car Type-</div>
+                            <div class="car-info-pax"><img src="images/passengers.png" alt="Passengers"><div class="pax">2</div></div>
+                            <div class="car-info-bags"><img src="images/suitcase.png" alt="Baggages"><div class="bags">4</div></div>
+                            <div class="car-specs">
+                                <img class="car-specs-img1" src="images/cancel.png" alt="Cancellation">
+                                <div class="car-specs-text1">Free Cancellation</div>
+                                <img class="car-specs-img2" src="images/clock.png" alt="Waiting Hour">
+                                <div class="car-specs-text2">1 hour of waiting included</div>                            
+                            </div>
+                            <div class="specs-text">Available for an extra fee
+                                depending on the route.</div>
+                        </div>
+                        <div class="price-bg"></div>
+                        <div class="price-div">
+                            <div class="price"><b class="priceTxt">35 EUR</b></div>
+                            <button class="car-btn"><b class="car-text">Select</b></button>
+                            <div class="payment-div">
+                                <img class="payment-img1" src="images/in-cash.png" alt="In cash">
+                                <img class="payment-img2" src="images/mastercard.png" alt="Mastercard">
+                                <img class="payment-img3" src="images/visa.png" alt="Visa">
+                            </div>
+                        </div>                    
+                    </div>
+                    <div id="card" class="car-check-card">
+                        <div class="form-card-title"><b>Transfer Details</b></div>
+                        <div class="form-card-route-line" style="grid-area: dest;"></div>
+                        <div class="form-card-route-circle-top" style="grid-area: dest;"></div>
+                        <div class="form-card-route-circle-bottom" style="grid-area: dest;"></div>
+                        <div class="form-card-dest">                        
+                            <div id="fromName" class="form-card-dest-name" style="grid-area: from;">Istanbul Airport (IST)</div>
+                            <div id="fromAddress" class="form-card-dest-address" style="grid-area: from-address;">Tayakadın, Terminal Caddesi No:1
+                                34283 Arnavutköy/İstanbul</div>
+                            <div id="toName" class="form-card-dest-name" style="grid-area: to;">Sabiha Gokcen Airport (SAW)</div>
+                            <div id="toAddress" class="form-card-dest-address" style="grid-area: to-address;">Sanayi, 34906 Pendik/İstanbul</div>
+                            <div id="date" class="form-card-dest-date" style="grid-area: date;">12/01/2020</div>                            
+                        </div>                        
+                        <div class="form-card-details">
+                            <div class="form-card-details-div" style="grid-area: passengers;">
+                                <img src="images/passengers-card.png" alt="Passengers">
+                                <font id="passengers">2</font>
+                            </div>
+                            <div class="form-card-details-div" style="grid-area: baggage;">
+                                <img src="images/baggage-card.png" alt="Passengers">
+                                <font id="luggage">4</font>
+                            </div>                            
+                        </div>
+                        <div class="form-card-details-line"></div>
+                        <div class="form-card-route">
+                            <font class="form-card-route-label">Route</font>
+                            <font id="distance" class="form-card-route-dist">77km, 110min</font>
+                        </div>
+                        <div id="map" class="map">
+                        </div>
+                    </div>
+                </div>                    
+                <div class="booking-extra-line"></div>
+                <div class="booking-extra">
+                    <div class="booking-extra-title"><b>Additional services</b></div>
+                    <div class="booking-extra-service-water">
+                        <div class="booking-extra-service-text">Drinking water</div>
+                        </div>
+                    <div class="booking-extra-service-seat">
+                        <div class="booking-extra-service-text">Child seat</div>
+                    </div>
+                    <div class="booking-extra-service-waiting">
+                        <div class="booking-extra-service-text">Extra hour of waiting</div>
+                    </div>
+                    <div class="booking-extra-service-eng">
+                        <div class="booking-extra-service-text">English-speaking driver</div>
+                    </div>
+                    <div class="booking-extra-service-desc">
+                        Available for an extra fee depending on the route.
+                    </div>
+                </div>
+                <div class="after-booking">
+                    <div class="after-booking-title"><b>After Bookings</b></div>
+                    <div class="after-booking-content">
+                        The carrier knows beforehand when you arrive at the airport: the taxi will already be waiting for you at the taxi rank, 
+and the taxi driver will meet you as close to the arrivals area as the airport rules allow. The carrier knows beforehand
+when you arrive at the airport: the taxi will already be waiting for you at the taxi rank, and the taxi driver will meet you
+as close to the arrivals area as the airport rules allow. The carrier knows beforehand when you arrive at the airport:
+the taxi will already be waiting for you at the taxi rank, and the taxi driver will meet you as close to the arrivals area 
+as the airport rules allow. The carrier knows beforehand when you arrive at the airport: the taxi will already be waiting 
+for you at the taxi rank, and the taxi driver will meet you as close to the arrivals area as the airport rules allow. 
+The carrier knows beforehand when you arrive at the airport: the taxi will already be waiting for you at the taxi rank, 
+and the taxi driver will meet you as close to the arrivals area as the airport rules allow.   
+                    </div>
+                </div>
+                <div class="faq-div">
+                    <div class="faq-title">FAQ</div>
+                    <div class="faq">
+                        <div style="grid-area: q1;" class="question">How do I find and book a transfer?</div>
+                        <div style="grid-area: q2;" class="question">How do I find and book a transfer?</div>
+                        <div style="grid-area: q3;" class="question">How do I find and book a transfer?</div>
+                        <div style="grid-area: q4;" class="question">How do I find and book a transfer?</div>
+                        <div style="grid-area: q5;" class="question">How do I find and book a transfer?</div>
+                    </div>
+                     <div class="contact-div">
+                         <div class="contact-div-title"><b>Help</b></div>
+                         <div style="grid-area: text1;" class="contact-div-text"><b>For any questions</b></div>
+                         <div style="grid-area: mail;" class="contact-div-link"><u>info@damataxi.com</u></div>
+                         <div style="grid-area: consultant;" class="contact-div-link"><u>Ask our consultant</u></div>
+                         <div style="grid-area: text2;" class="contact-div-text"><b>Need help with your booking?</b></div>
+                         <div style="grid-area: text2;" class="contact-div-text-mini">We are avaible 24/7</div>
+                         <div style="grid-area: phone;" class="contact-div-link"><u>+90 544 901 00 10</u></div>
+                     </div>
+                </div>  
+            </div>
+            <div class="footer">
+                <img class="footer-bg-img" src="images/Dama-Taxi-Logo-v2-big.png">
+                <div class="footer-logo" style="grid-area: logo;">DAMA TAXI</div>
+                <div class="footer-element" style="grid-area: pop;">Popular Destinations</div>
+                <div class="footer-element" style="grid-area: extra;">Extra Servicex</div>
+                <div class="footer-element" style="grid-area: about;">About Us</div>
+                <div class="footer-element" style="grid-area: faq;">FAQ</div>
+                <div class="footer-element" style="grid-area: contact;">Contact Us</div>
+                <div class="footer-element" style="grid-area: privacy;">Privacy and Policy</div>
+                <div class="footer-element" style="grid-area: partner;">Become a Partner</div>
+                <div class="footer-curr">
+                    <select class="footer-drop">
+                        <option value="EUR"><b>EUR</b></option>
+                        <option value="USD"><b>USD</b></option>
+                        <option value="TL"><b>TL</b></option>
+                    </select>
+                </div>
+                <div class="footer-lang">                    
+                    <select class="footer-drop">
+                        <option value="EN">EN</option>
+                        <option value="RU">RU</option>
+                    </select>
+                </div>
+                <div class="footer-element" style="grid-area: mail;"><u>info@damataxi.com</u></div>
+                <div class="footer-element" style="grid-area: phone;">+90 544 901 00 10</div>
+                <div class="footer-element" style="grid-area: address;">Sultanahmet Yasemin Street 
+                    No 2/4 İstanbul, Turkey</div>
+                <div class="footer-element" style="grid-area: copyright; text-align: center;">© 2019 by Dama Taxi.</div>
+            </div>
+        </div>        
+        <script>
+            if (window.innerWidth <= 800) {
+                document.getElementById("carLine").setAttribute("style", "display: none;");
+            }
+
+            let touchEvent = 'touchstart' in window ? 'touchstart' : 'click'; //Check device supports click or touch.
+
+            let fromName = document.getElementById("fromName");
+            let fromAddress = document.getElementById("fromAddress");
+            let toName = document.getElementById("toName");
+            let toAddress = document.getElementById("toAddress");
+            let passengers = document.getElementById("passengers");
+            let luggage = document.getElementById("luggage");
+
+            fromName.innerHTML = localStorage.getItem("fromName");
+            fromAddress.innerHTML = localStorage.getItem("fromAddress");
+            toName.innerHTML = localStorage.getItem("toName");
+            toAddress.innerHTML = localStorage.getItem("toAddress");
+            passengers.innerHTML = localStorage.getItem("passengers");
+            luggage.innerHTML = localStorage.getItem("luggage");
+
+
+            let distanceKm, durationMin;				
+			async function getDistance() {
+				let from = localStorage.getItem("fromName");
+				let to = localStorage.getItem("toName");					
+				const apiURL = '/distanceMatrix/' + localStorage.getItem("fromID") + "," 
+				+ localStorage.getItem("toID");
+                
+                const response = await fetch(apiURL);
+                const json = await response.json();                                            
+
+				distanceKm = (json.rows[0].elements[0].distance.value / 1000).toFixed(2);
+				durationMin = (json.rows[0].elements[0].duration.value / 60).toFixed(0);
+
+				document.getElementById("distance").innerHTML = distanceKm + " km, " + durationMin + " min.";
+
+                getCarInfo();
+            }
+
+            let buttons = [];
+			let allVehicles = [];
+            
+            async function getCarInfo() {
+				const URL = '/getCars';
+				const response = await fetch(URL);					
+				const result = await response.json();
+										
+				let vehicleCard = document.getElementById("carCard"); //Pre designed vehicle var.					
+				for (let i = 0; i < result.length; i++) {
+                    let clone = vehicleCard.cloneNode(true); //Clone the card.
+                    vehicleCard.setAttribute("style","");
+                    if(i==2) {
+                        clone.setAttribute("style", "margin-top:" + (vehicleCard.clientHeight * i + 60 * i) + "px; border: 4px solid #F9AC1A; box-shadow: 0px 0px 12px 1px rgba(249,172,26,1);"); //Give them margin to list them (it will change to grid after.)
+                        clone.getElementsByClassName("price-bg")[0].setAttribute("style", "border: 1px solid #F9AC1A;");
+                    } else
+					    clone.setAttribute("style", "margin-top:" + (vehicleCard.clientHeight * i + 60 * i) + "px;"); //Give them margin to list them (it will change to grid after.)
+					vehicleCard.setAttribute("style","display:none");						
+					let mainBody = document.getElementById("booking"); //Get the main div of vehicle cards.
+					mainBody.appendChild(clone); //Child card to main div.
+						
+					clone.getElementsByClassName("car-img")[0]
+					.setAttribute("style", "content:url('"+ result[i].image_URL +"');"); //Set the image of car.
+					clone.getElementsByClassName("car-info-title")[0].innerHTML = "<b>" +result[i].vehicle_Name + "</b>"; //Set the name of car.
+					clone.getElementsByClassName("brand")[0].innerHTML = result[i].brand; //Set brand of car.
+					clone.getElementsByClassName("pax")[0].innerHTML = result[i].pax; //Set max passengers of car.
+					clone.getElementsByClassName("bags")[0].innerHTML = result[i].bags; //Set max baggages of car.
+				
+					//Calculate price at server and get it.
+					const priceURL = '/calculatePrice/' + distanceKm + "," + result[i].vehicle_Name; 
+					const response = await fetch(priceURL);
+					const price = await response.json();
+
+                    clone.getElementsByClassName("priceTxt")[0].innerHTML = price + " EUR"; //Set the price of the car
+                    clone.getElementsByClassName("car-btn")[0].setAttribute("id", i);
+                    clone.getElementsByClassName("car-text")[0].setAttribute("id", i);
+					buttons[i] = clone.getElementsByClassName("car-btn")[0]; //Get each button of cards.
+
+					let vehicleSpecs = {
+    					"vehicleName": result[i].vehicle_Name,
+	    				"pax": result[i].pax,
+						"bags": result[i].bags,
+						"price": price, 
+						"brand": result[i].brand
+					}
+					allVehicles.push(vehicleSpecs);						
+
+                    buttons[i].addEventListener(touchEvent, function(e) {							                        
+                        localStorage.setItem("vehicle", JSON.stringify(allVehicles[e.target.id]));                        
+						window.open('checkout', '_self');
+                    });
+				}
+			}
+
+            getDistance();            
+
+            let fromGeo = {
+                lat:40,
+                lng:40
+            };
+
+            let toGeo = {
+                lat:40,
+                lng:40
+            };                        
+
+            // Initialize and add the map
+            async function initMap() {
+
+                const geocodeFrom = '/geocode/' + encodeURIComponent(localStorage.getItem("fromAddress"));
+                const responseFrom = await fetch(geocodeFrom);                
+                const jsonFromGeo = await responseFrom.json();
+                
+                fromGeo.lat = jsonFromGeo.results[0].geometry.location.lat;
+                fromGeo.lng = jsonFromGeo.results[0].geometry.location.lng;            
+
+                const geocodeTo = '/geocode/' + encodeURIComponent(localStorage.getItem("toAddress"));
+                const responseTo = await fetch(geocodeTo);                
+                const jsonToGeo = await responseTo.json();
+
+                toGeo.lat = jsonToGeo.results[0].geometry.location.lat;
+                toGeo.lng = jsonToGeo.results[0].geometry.location.lng;
+
+                // The location of Uluru                
+                // The map, centered at Uluru
+
+                //Maslak
+                let istanbul = {
+                    lat: 41.112663,
+                    lng: 29.021330
+                }
+                var map = new google.maps.Map(
+                document.getElementById('map'), {
+                    zoom: 8,
+                    center: istanbul,
+                    styles: [
+                        {
+                            "featureType": "administrative.land_parcel",
+                            "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                            ]
+                        },
+                        {
+                            "featureType": "administrative.locality",
+                            "elementType": "labels.text",
+                            "stylers": [
+                            {
+                            "color": "#242f3e"
+                            }
+                            ]
+                        },
+                        { 
+                            "featureType": "administrative.locality",
+                            "elementType": "labels.text.stroke",
+                            "stylers": [
+                            {
+                                "color": "#ffffff"
+                            }
+                            ]
+                        },
+                        {
+                            "featureType": "administrative.neighborhood",
+                            "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                        ]
+                        },
+                        {
+                            "featureType": "landscape.natural",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                            {
+                            "color": "#f0f6f0"
+                            }
+                            ]
+                        },
+                        {
+                            "featureType": "landscape.natural",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                            {
+                                "color": "#f0f6f0"
+                            }
+                            ]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "labels.text",
+                        "stylers": [
+                            {
+                        "visibility": "off"
+                            }
+                            ]
+                        },
+                          {
+                        "featureType": "poi.business",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                            ]
+                        },
+                          {
+                            "featureType": "poi.park",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                          {
+                            "color": "#f0f6f0"
+                            },
+                              {                 
+                            "visibility": "on"
+                            }
+                            ]
+                        },
+                        {
+                            "featureType": "poi.park",
+                            "elementType": "labels.text",
+                            "stylers": [
+                            {                     
+                                "visibility": "off"
+                                }                     
+                        ]
+                          },
+                        {                     
+                            "featureType": "road",
+                            "elementType": "labels",            
+                            "stylers": [
+                            {                     
+                          "visibility": "off"
+                            }
+                                ]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                            {
+                                "color": "#e0e0e0"
+                            }
+                            ]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                            {
+                                "color": "#cfcfcf"
+                            }
+                            ]
+                        },
+                        {
+                        "featureType": "water",
+                        "elementType": "labels.text",
+                        "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                        ]
+                    }
+                    ]
+                });
+                map.setOptions({
+                    draggable: false,
+                    zoomControl: false,
+                    scrollwheel: false,
+                    disableDoubleClickZoom: true,
+                    fullscreenControl: false,
+                    disableDefaultUI: true
+                });
+                // The marker, positioned at Uluru
+                var markerFrom = new google.maps.Marker({
+                    position: fromGeo,
+                    map: map,
+                    label: "A",
+                    color:"#242F3E"
+                });
+
+                var markerTo = new google.maps.Marker({
+                    position: toGeo,
+                    map: map,
+                    label: "B"
+                });
+            }
+        </script>
+ <script async defer
+ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7o4716HMOzbEHphHNqGO40s9p9Turckk&callback=initMap">
+ </script>
+    </body>
+</html>

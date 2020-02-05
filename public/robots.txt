@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: 
+Allow: /
+
+Sitemap: https://damataxi.com/sitemap.xml

@@ -1,1 +1,1 @@
-# Dama-Taxi-New
+Dama Taxi developed by Kureyş Alp Kılıç

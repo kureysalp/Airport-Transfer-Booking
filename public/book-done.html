@@ -1,0 +1,289 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+	    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
+        <title>Dama Taxi | Airport Transfer Service</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div class="header" style="background-color: #242F3E; position: relative;">
+            <div class="left-nav">
+                <div>DAMA TAXI</div>
+            </div>
+            <div class="mid-nav">
+                <nav class="nav-bar">
+                    <ul>
+                        <li style="grid-area: home;"><a href="/">Home</a></li>
+                        <li style="grid-area: pop;"><a href=#>Popular Destinations</a></li>
+                        <li style="grid-area: extra;"><a href=/extra-services>Extra Services</a></li>
+                        <li style="grid-area: about;"><a href=/about-us>About Us</a></li>
+                        <li style="grid-area: contact;"><a href=/contact-us>Contact Us</a></li>
+                        <li style="grid-area: faq;"><a href=#faq>FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right-nav"></div>
+        </div>
+        <div id="body" class="book-done-body">
+            <div id="voucher" class="voucher">
+                <div class="voucher-title"><b>Your Transfer Has Booked!</b> </div>
+                <div class="voucher-transfer" style="grid-area: arrival;">
+                    <div class="voucher-dest">
+                        <div class="voucher-name" style="grid-area: from-name;"><b id="fromNameArrival">Istanbul Airport</b></div>
+                        <div id="fromAddressArrival" class="voucher-address" style="grid-area: from-address;">Tayakadın, Terminal Caddesi No:1
+                            34283 Arnavutköy/İstanbul</div>
+                        <div class="voucher-name" style="grid-area: to-name;"><b id="toNameArrival">Sabiha Gokcen Airport (SAW)</b id="toNameArrival"></div>
+                        <div id="toAddressArrival" class="voucher-address" style="grid-area: to-address;">Sanayi, 34906 Pendik/İstanbul</div>
+                    </div>
+                    <div class="voucher-date">
+                        <b id="arrivalDate">12/01/2020</b>
+                        <br>
+                        <b id="arrivalTime">GTM: 03:30</b>
+                    </div>
+                    <div class="voucher-price"><b id="arrivalPrice">30 EUR</b></div>
+                    <div id="details" class="voucher-details">
+                        <div class="voucher-detail" style="grid-area: pax;">
+                            <img src="images/passengers-voucher.png" alt="passengers">
+                            <p><b id="pax">4</b></p>
+                        </div>
+                        <div class="voucher-detail" style="grid-area: bags;">
+                            <img src="images/baggage-voucher.png" alt="luggage">
+                            <p><b id="bags">4</b></p>
+                        </div>
+                        <div class="voucher-detail" style="grid-area: car;">
+                            <img src="images/car-type-voucher.png" alt="Vehicle">
+                            <p><b id="car">Sedan</b></p>
+                        </div>
+                        <div id="babySeat" class="voucher-detail" style="grid-area: baby-seat; display: none;">
+                            <img src="images/baby-seat-voucher.png" alt="Baby seat">
+                            <p><b>Baby Seat</b></p>
+                        </div>
+                        <div class="voucher-detail" style="grid-area: cash;">
+                            <img src="images/cash-to-voucher.png" alt="Cash">
+                            <p><b>Cash to driver</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="return-transfer" class="voucher-transfer" style="grid-area: return; display: none;">
+                    <div class="voucher-dest">
+                        <div class="voucher-name" style="grid-area: from-name;"><b id="fromNameReturn">Istanbul Airport</b></div>
+                        <div id="fromAddressReturn" class="voucher-address" style="grid-area: from-address;">Tayakadın, Terminal Caddesi No:1
+                            34283 Arnavutköy/İstanbul</div>
+                        <div class="voucher-name" style="grid-area: to-name;"><b id="toNameReturn">Sabiha Gokcen Airport (SAW)</b></div>
+                        <div id="toAddressReturn" class="voucher-address" style="grid-area: to-address;">Sanayi, 34906 Pendik/İstanbul</div>
+                    </div>
+                    <div class="voucher-date">
+                        <b id="returnDate">12/01/2020</b>
+                        <br>
+                        <b id="returnTime">GTM: 03:30</b>
+                    </div>
+                    <div class="voucher-price"><b id="returnPrice">30 EUR</b></div>
+                    <div id="detailsR" class="voucher-details">
+                        <div class="voucher-detail" style="grid-area: pax;">
+                            <img src="images/passengers-voucher.png" alt="passengers">
+                            <p><b id="paxR">4</b></p>
+                        </div>
+                        <div class="voucher-detail" style="grid-area: bags;">
+                            <img src="images/baggage-voucher.png" alt="baggage">
+                            <p><b id="bagsR">4</b></p>
+                        </div>
+                        <div class="voucher-detail" style="grid-area: car;">
+                            <img src="images/car-type-voucher.png" alt="vehicle">
+                            <p><b id="carR">Sedan</b></p>
+                        </div>
+                        <div id="babySeatR" class="voucher-detail" style="grid-area: baby-seat; display: none;">
+                            <img src="images/baby-seat-voucher.png" alt="Baby seat">
+                            <p><b>Baby Seat</b></p>
+                        </div>
+                        <div class="voucher-detail" style="grid-area: cash;">
+                            <img src="images/cash-to-voucher.png" alt="cash">
+                            <p><b>Cash to driver</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="voucher-total">
+                    <div><u><b id="totalPrice">Total Price: 50 EUR</b></u></div>
+                </div>
+                <div class="voucher-help">
+                    <div class="voucher-help-element" style="grid-area: mail;">
+                        <img src="images/mail-voucher.png" alt="email">
+                        <p><u>info@damataxi.com</u></p>
+                    </div>
+                    <div class="voucher-help-element" style="grid-area: ask;">
+                        <img src="images/ask-voucher.png" alt="ask">
+                        <p><u>Ask our consultant</u></p>
+                    </div>
+                    <div class="voucher-help-element" style="grid-area: phone;">
+                        <img src="images/call-voucher.png" alt="phone">
+                        <p><u>+90 544 251 57 55</u></p>
+                    </div>
+                    <div class="voucher-help-element" style="grid-area: live;">
+                        <img src="images/247-voucher.png" alt="24/7">
+                        <p style="color: #56585B;">We are availbe 24/7</p>
+                    </div>
+                </div>
+            </div>
+            <div class="after-booking">
+                <div class="after-booking-title"><b>After Bookings</b></div>
+                <div class="after-booking-content">
+                    The carrier knows beforehand when you arrive at the airport: the taxi will already be waiting for you at the taxi rank, 
+and the taxi driver will meet you as close to the arrivals area as the airport rules allow. The carrier knows beforehand
+when you arrive at the airport: the taxi will already be waiting for you at the taxi rank, and the taxi driver will meet you
+as close to the arrivals area as the airport rules allow. The carrier knows beforehand when you arrive at the airport:
+the taxi will already be waiting for you at the taxi rank, and the taxi driver will meet you as close to the arrivals area 
+as the airport rules allow. The carrier knows beforehand when you arrive at the airport: the taxi will already be waiting 
+for you at the taxi rank, and the taxi driver will meet you as close to the arrivals area as the airport rules allow. 
+The carrier knows beforehand when you arrive at the airport: the taxi will already be waiting for you at the taxi rank, 
+and the taxi driver will meet you as close to the arrivals area as the airport rules allow.   
+                </div>
+            </div>
+            <img id="istImg" class="ist-img" src="images/istanbul--black.png">
+            <div class="extra-services-div">
+                <div class="extra-services-title">Extra Services</div>
+                <div class="extra-services">
+                    <div style="grid-area: title1;" class="extra-service-title">
+                        <b>Portable Wifi Modem</b>
+                    </div>
+                    <div style="grid-area: service1;" class="extra-service">
+                        <img src="images/wifi-extra.png" alt="wi-fi">
+                    </div>
+                    <div style="grid-area: line1;" class="extra-service-line"></div>
+                    <div style="grid-area: desc1;" class="extra-service-desc">
+                        Portable Wifi Modem
+                    </div>
+                    <div style="grid-area: title2;" class="extra-service-title">
+                        <b>Tour</b>
+                    </div>
+                    <div style="grid-area: service2;" class="extra-service">
+                        <img src="images/tour-extra.png" alt="tour">
+                    </div>
+                    <div style="grid-area: line2;" class="extra-service-line"></div>
+                    <div style="grid-area: desc2;" 
+                    class="extra-service-desc">
+                        Tour
+                    </div>
+                    <div style="grid-area: title3;" class="extra-service-title">
+                        <b>Photo Shoot</b>
+                    </div>
+                    <div style="grid-area: service3;" class="extra-service">
+                        <img src="images/photo-shoot-extra.png" alt="Photo Shoot">
+                    </div>
+                    <div style="grid-area: line3;" class="extra-service-line"></div>
+                    <div style="grid-area: desc3;" class="extra-service-desc">
+                        Photo Shoot
+                    </div>
+                </div>
+            </div>
+            <div id="faq" class="faq-div">
+                <div class="faq-title">FAQ</div>
+                <div class="faq">
+                    <div style="grid-area: q1;" class="question">How do I find and book a transfer?</div>
+                    <div style="grid-area: q2;" class="question">How do I find and book a transfer?</div>
+                    <div style="grid-area: q3;" class="question">How do I find and book a transfer?</div>
+                    <div style="grid-area: q4;" class="question">How do I find and book a transfer?</div>
+                    <div style="grid-area: q5;" class="question">How do I find and book a transfer?</div>
+                </div>
+                 <div class="contact-div">
+                     <div class="contact-div-title"><b>Help</b></div>
+                     <div style="grid-area: text1;" class="contact-div-text"><b>For any questions</b></div>
+                     <div style="grid-area: mail;" class="contact-div-link"><u>info@damataxi.com</u></div>
+                     <div style="grid-area: consultant;" class="contact-div-link"><u>Ask our consultant</u></div>
+                     <div style="grid-area: text2;" class="contact-div-text"><b>Need help with your booking?</b></div>
+                     <div style="grid-area: text2;" class="contact-div-text-mini">We are avaible 24/7</div>
+                     <div style="grid-area: phone;" class="contact-div-link"><u>+90 544 901 00 10</u></div>
+                 </div>
+            </div id="faq">
+            <div class="footer">
+                <img class="footer-bg-img" src="images/Dama-Taxi-Logo-v2-big.png">
+                <div class="footer-logo" style="grid-area: logo;">DAMA TAXI</div>
+                <div class="footer-element" style="grid-area: pop;">Popular Destinations</div>
+                <div class="footer-element" style="grid-area: extra;">Extra Servicex</div>
+                <div class="footer-element" style="grid-area: about;">About Us</div>
+                <div class="footer-element" style="grid-area: faq;">FAQ</div>
+                <div class="footer-element" style="grid-area: contact;">Contact Us</div>
+                <div class="footer-element" style="grid-area: privacy;">Privacy and Policy</div>
+                <div class="footer-element" style="grid-area: partner;">Become a Partner</div>
+                <div class="footer-curr">
+                    <select class="footer-drop">
+                        <option value="EUR"><b>EUR</b></option>
+                        <option value="USD"><b>USD</b></option>
+                        <option value="TL"><b>TL</b></option>
+                    </select>
+                </div>
+                <div class="footer-lang">                    
+                    <select class="footer-drop">
+                        <option value="EN">EN</option>
+                        <option value="RU">RU</option>
+                    </select>
+                </div>
+                <div class="footer-element" style="grid-area: mail;"><u>info@damataxi.com</u></div>
+                <div class="footer-element" style="grid-area: phone;">+90 544 901 00 10</div>
+                <div class="footer-element" style="grid-area: address;">Sultanahmet Yasemin Street 
+                    No 2/4 İstanbul, Turkey</div>
+                <div class="footer-element" style="grid-area: copyright; text-align: center;">© 2019 by Dama Taxi.</div>
+            </div>
+        </div>
+        <script>
+            if (window.innerWidth <= 800) {
+                document.getElementById("istImg").setAttribute("style", "display: none;");
+            }
+
+            if(localStorage.getItem("isReturn") == "true") {
+                document.getElementById("body").setAttribute("class", "book-done-body-return");
+                document.getElementById("voucher").setAttribute("class", "voucher-return");
+                document.getElementById("return-transfer").setAttribute("style", "grid-area: return;");
+
+                let returnBooking = JSON.parse(localStorage.getItem("returnBooking"));
+                
+                if(localStorage.getItem("babySeat") == "true") {
+                    document.getElementById("details").setAttribute("class", "voucher-details-baby");
+                    document.getElementById("babySeat").setAttribute("style", "grid-area: baby-seat");
+                    document.getElementById("detailsR").setAttribute("class", "voucher-details-baby");
+                    document.getElementById("babySeatR").setAttribute("style", "grid-area: baby-seat");
+                }
+
+                document.getElementById("fromNameArrival").innerHTML = returnBooking.from;
+                document.getElementById("fromAddressArrival").innerHTML = returnBooking.fromAddress;
+                document.getElementById("toNameArrival").innerHTML = returnBooking.to;
+                document.getElementById("toAddressArrival").innerHTML = returnBooking.toAddress;
+                document.getElementById("fromNameReturn").innerHTML = returnBooking.to;
+                document.getElementById("fromAddressReturn").innerHTML = returnBooking.toAddress;
+                document.getElementById("toNameReturn").innerHTML = returnBooking.from;
+                document.getElementById("toAddressReturn").innerHTML = returnBooking.fromAddress;
+                document.getElementById("arrivalDate").innerHTML = returnBooking.arrivalDate;
+                document.getElementById("arrivalTime").innerHTML = "GTM: " + returnBooking.arrivalTime;
+                document.getElementById("returnDate").innerHTML = returnBooking.returnDate;
+                document.getElementById("returnTime").innerHTML = "GTM: " + returnBooking.returnTime;
+                document.getElementById("pax").innerHTML = returnBooking.passengers;
+                document.getElementById("bags").innerHTML = returnBooking.luggage;
+                document.getElementById("car").innerHTML = returnBooking.vehicle;
+                document.getElementById("paxR").innerHTML = returnBooking.passengers;
+                document.getElementById("bagsR").innerHTML = returnBooking.luggage;
+                document.getElementById("carR").innerHTML = returnBooking.vehicle;
+                document.getElementById("arrivalPrice").innerHTML = returnBooking.price + " EUR";
+                document.getElementById("returnPrice").innerHTML = returnBooking.price + " EUR";
+                document.getElementById("totalPrice").innerHTML = "Total Price: " + returnBooking.price * 2 + " EUR";
+
+            } else {                
+                let booking = JSON.parse(localStorage.getItem("booking"));
+
+                if(localStorage.getItem("babySeat") == "true") {
+                    document.getElementById("details").setAttribute("class", "voucher-details-baby");
+                    document.getElementById("babySeat").setAttribute("style", "grid-area: baby-seat");
+                }
+
+                document.getElementById("fromNameArrival").innerHTML = booking.from;
+                document.getElementById("fromAddressArrival").innerHTML = booking.fromAddress;
+                document.getElementById("toNameArrival").innerHTML = booking.to;
+                document.getElementById("toAddressArrival").innerHTML = booking.toAddress;
+                document.getElementById("arrivalDate").innerHTML = booking.arrivalDate;
+                document.getElementById("arrivalTime").innerHTML = "GTM: " + booking.arrivalTime;
+                document.getElementById("pax").innerHTML = booking.passengers;
+                document.getElementById("bags").innerHTML = booking.luggage;
+                document.getElementById("car").innerHTML = booking.vehicle;
+                document.getElementById("arrivalPrice").innerHTML = booking.price + " EUR";
+                document.getElementById("totalPrice").innerHTML = "Total Price: " + booking.price + " EUR";
+            }
+        </script>
+    </body>
+</html>
