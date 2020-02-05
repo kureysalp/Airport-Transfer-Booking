@@ -7,25 +7,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="src/js/vanilla-calendar-min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div class="header" style="background-color: #242F3E; position: relative;">
             <div class="left-nav">
                 <div>DAMA TAXI</div>
             </div>
-            <div class="mid-nav">
-                <nav class="nav-bar">
-                    <ul>
-                        <li style="grid-area: home;"><a href="/">Home</a></li>
-                        <li style="grid-area: pop;"><a href=#>Popular Destinations</a></li>
-                        <li style="grid-area: extra;"><a href=/extra-services>Extra Services</a></li>
-                        <li style="grid-area: about;"><a href=/about-us>About Us</a></li>
-                        <li style="grid-area: contact;"><a href=/contact-us>Contact Us</a></li>
-                        <li style="grid-area: faq;"><a href="/#faq">FAQ</a></li>
-                    </ul>
-                </nav>
+            <nav id="navBar" class="nav-bar">
+                <ul>
+                    <li style="grid-area: home;"><a href="/">Home</a></li>
+                        <li style="grid-area: pop;"><a href=/popular-destinations>Popular Destinations</a></li>
+                    <li style="grid-area: extra;"><a href=/extra-services>Extra Services</a></li>
+                    <li style="grid-area: about;"><a href=/about-us>About Us</a></li>
+                    <li style="grid-area: contact;"><a href=/contact-us>Contact Us</a></li>
+                    <li style="grid-area: faq;"><a href=#faq>FAQ</a></li>
+                    <div class="nav-bar-line mobile"></div> 
+                    <select class="nav-bar-dropdown mobile">
+                        <option>EN</option>
+                    </select>
+                    <select class="nav-bar-dropdown mobile">
+                        <option>EUR</option>
+                    </select>
+                    <br><br><br><br><br>
+                    <li><a href=/privacy-policy class="mobile">Privacy Policy</a></li>
+                    <li><a href=/become-partner class="mobile">Become a Partner</a></li>
+                    <div class="nav-bar-copy mobile">© 2019 by Dama Taxi.</div>
+                </ul>
+            </nav>
             </div>
-            <div class="right-nav"></div>
+            <div class="right-nav">
+                <div id="menuToggle" class="menu-toggle">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+            </div>
         </div>
         <div class="checkout-body">
             <div class="process-div">
@@ -256,6 +271,16 @@
                 </div>
         <script>
             let touchEvent = 'touchstart' in window ? 'touchstart' : 'click'; //Check device supports click or touch.
+
+            if (window.innerWidth <= 800) {
+                for (let i = 0; i < 7; i++) {
+                    document.getElementsByClassName("footer-element")[i].setAttribute("style", "display: none;");
+                }
+            } else {
+                for (let i = 0; i < document.getElementsByClassName("mobile").length; i++) {
+                    document.getElementsByClassName("mobile")[i].setAttribute("style", "display: none")
+                }
+            }            
 
             let vehicle = JSON.parse(localStorage.getItem('vehicle'));
 
@@ -808,7 +833,19 @@
                     label: "B"
                 });
             }
+
+            let menuToggle = false;
+            document.getElementById("menuToggle").addEventListener(touchEvent, function(e) {                
+                if(!menuToggle) {
+                    document.getElementById("navBar").setAttribute("style", "top: 0;");
+                } else {
+                    document.getElementById("navBar").setAttribute("style", "top: -900px;");
+                }
+                menuToggle = !menuToggle;
+            }); 
+
         </script>
+
  <script async defer
  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7o4716HMOzbEHphHNqGO40s9p9Turckk&callback=initMap">
  </script>

@@ -11,14 +11,25 @@
                 <div>DAMA TAXI</div>
             </div>
             <div class="mid-nav">
-                <nav class="nav-bar">
+                <nav id="navBar" class="nav-bar">
                     <ul>
-                        <li style="grid-area: home;"><a href=>Home</a></li>
-                        <li style="grid-area: pop;"><a href=#>Popular Destinations</a></li>
+                        <li style="grid-area: home;"><a href="/">Home</a></li>
+                        <li style="grid-area: pop;"><a href=/popular-destinations>Popular Destinations</a></li>
                         <li style="grid-area: extra;"><a href=/extra-services>Extra Services</a></li>
                         <li style="grid-area: about;"><a href=/about-us>About Us</a></li>
                         <li style="grid-area: contact;"><a href=/contact-us>Contact Us</a></li>
                         <li style="grid-area: faq;"><a href=#faq>FAQ</a></li>
+                        <div class="nav-bar-line mobile"></div> 
+                        <select class="nav-bar-dropdown mobile">
+                            <option>EN</option>
+                        </select>
+                        <select class="nav-bar-dropdown mobile">
+                            <option>EUR</option>
+                        </select>
+                        <br><br><br><br><br>
+                        <li><a href=/privacy-policy class="mobile">Privacy Policy</a></li>
+                        <li><a href=/become-partner class="mobile">Become a Partner</a></li>
+                        <div class="nav-bar-copy mobile">© 2019 by Dama Taxi.</div>
                     </ul>
                 </nav>
             </div>
@@ -224,5 +235,16 @@
                 <div class="footer-element" style="grid-area: copyright; text-align: center;">© 2019 by Dama Taxi.</div>
             </div>
         </div>
+        <script>
+             if (window.innerWidth <= 800) {
+                for (let i = 0; i < 7; i++) {
+                    document.getElementsByClassName("footer-element")[i].setAttribute("style", "display: none;");
+                } 
+            } else {
+                for (let i = 0; i < document.getElementsByClassName("mobile").length; i++) {
+                    document.getElementsByClassName("mobile")[i].setAttribute("style", "display: none")
+                }
+            }
+        </script>
     </body>
 </html>
