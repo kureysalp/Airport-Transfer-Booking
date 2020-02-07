@@ -141,9 +141,9 @@
                 <div class="reviews-div">
                     <div class="reviews-title">Reviews</div>                    
                     <div class="reviews-container">                        
-                        <img class="reviews-back" src="images/back.png">
+                        <img id="reviewsBack" class="reviews-back" src="images/back.png">
                         <div style="grid-area: reviews; overflow: hidden;">
-                        <div class="reviews">
+                        <div id="reviews" class="reviews">
                             <div class="review" style="grid-area: rev1;">
                                 <div class="review-title"><b>Reviews reviews</b></div>
                                 <div class="review-stars">
@@ -194,7 +194,7 @@
                             </div>
                         </div>
                         </div>                    
-                        <img class="reviews-next" src="images/next.png">
+                        <img id="reviewsNext" class="reviews-next" src="images/next.png">
                         <div class="reviews-page">
                             <div class="reviews-currentpage" style="grid-area: p1;"></div>
                             <div class="reviews-otherpage" style="grid-area: p2;"></div>
@@ -215,18 +215,28 @@
                 </div>
                 <div class="fleet-div">
                     <div class="fleet-title">Fleet</div>
-                    <div class="fleet-vehicles">
-                        <img class="fleet-back" src="images/back.png">
-                        <img style="grid-area: veh1;" class="fleet-vehicle" src="images/sedan.png">
-                        <div style="grid-area: tit1;" class="fleet-vehicle-title"><b>Sedan</b></div>
-                        <div style="grid-area: desc1;" class="fleet-vehicle-desc">For a couple or a family with a child.</div>
-                        <img style="grid-area: veh2;" class="fleet-vehicle" src="images/vito.png">
-                        <div style="grid-area: tit2;" class="fleet-vehicle-title"><b>Minivan</b></div>
-                        <div style="grid-area: desc2;" class="fleet-vehicle-desc">For groups of up to 19 people or large baggage.</div>
-                        <img style="grid-area: veh3;" class="fleet-vehicle" src="images/vip.png">
-                        <div style="grid-area: tit3;" class="fleet-vehicle-title"><b>Business</b></div>
-                        <div style="grid-area: desc3;" class="fleet-vehicle-desc">For comfortable business trips.</div>
-                        <img class="fleet-next" src="images/next.png">
+                    <div class="fleet-vehicles-container">
+                        <img id="vehiclesBack" class="fleet-back" src="images/back.png">
+                        <div style="grid-area: vehicles; overflow: hidden;">
+                            <div id="vehicles" class="fleet-vehicles">
+                                <div style="grid-area: veh1;"class="fleet-vehicle-box">
+                                    <img class="fleet-vehicle" src="images/sedan.png">
+                                    <div class="fleet-vehicle-title"><b>Sedan</b></div>
+                                    <div class="fleet-vehicle-desc">For a couple or a family with a child.</div>
+                                </div>
+                                <div style="grid-area: veh2;"class="fleet-vehicle-box">
+                                    <img class="fleet-vehicle" src="images/vito.png">
+                                    <div class="fleet-vehicle-title"><b>Minivan</b></div>
+                                    <div class="fleet-vehicle-desc">For groups of up to 19 people or large baggage.</div>
+                                </div>
+                                <div style="grid-area: veh3;"class="fleet-vehicle-box">
+                                    <img class="fleet-vehicle" src="images/vip.png">
+                                    <div class="fleet-vehicle-title"><b>Business</b></div>
+                                    <div class="fleet-vehicle-desc">For comfortable business trips.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <img id="vehiclesNext" class="fleet-next" src="images/next.png">
                     </div>
                     <div class="fleet-extra-line"></div>
                     <div class="fleet-extra">
@@ -748,7 +758,44 @@
                     document.getElementById("navBar").setAttribute("style", "top: -900px;");
                 }
                 menuToggle = !menuToggle;
-            });            
+            });
+
+            let reviewsPage = 0;
+            let reviews = document.getElementById("reviews");
+            let reviewsBackBtn = document.getElementById("reviewsBack");
+            let reviewsNextBtn = document.getElementById("reviewsNext");
+            reviewsBackBtn.addEventListener(touchEvent, function(e) {
+                if(reviewsPage > 0) {
+                    reviewsPage -= 100;
+                    reviews.setAttribute("style", "margin-left: -"+ reviewsPage + "%;");
+                }
+            });
+
+            reviewsNextBtn.addEventListener(touchEvent, function(e) {
+                if(reviewsPage < 200) {
+                    reviewsPage += 100;
+                    reviews.setAttribute("style", "margin-left: -"+ reviewsPage + "%;");
+                }
+            });
+
+            let vehiclesPage = 0;
+            let vehicles = document.getElementById("vehicles");
+            let vehiclesBackBtn = document.getElementById("vehiclesBack");
+            let vehiclesNextBtn = document.getElementById("vehiclesNext");
+            vehiclesBackBtn.addEventListener(touchEvent, function(e) {
+                if(vehiclesPage > 0) {
+                    vehiclesPage -= 100;
+                    vehicles.setAttribute("style", "margin-left: -"+ vehiclesPage + "%;");
+                }
+            });
+
+            vehiclesNextBtn.addEventListener(touchEvent, function(e) {
+                if(vehiclesPage < 200) {
+                    vehiclesPage += 100;
+                    vehicles.setAttribute("style", "margin-left: -"+ vehiclesPage + "%;");
+                }
+            });
+
         </script>
 
     </body>
