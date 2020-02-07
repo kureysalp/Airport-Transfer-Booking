@@ -1,12 +1,17 @@
 :root {
-    --vanilla-calendar-bg-color: #fff;
+    --vanilla-calendar-bg-color: #fbfbfb;
     --vanilla-calendar-border-radius: 5px;
     --vanilla-calendar-border-color: #e7e9ed;
     --vanilla-calendar-today-bg-color: #E7E9ED;
     --vanilla-calendar-today-color: #333;
-    --vanilla-calendar-selected-bg-color: #538fcd;
+    --vanilla-calendar-selected-bg-color: #242F3E;
     --vanilla-calendar-selected-color: #fff;
     --vanilla-calendar-selected-radius: 5px;
+}
+
+@font-face {
+    font-family: "Questiral";
+    src: url('../fonts/Questrial-Regular.ttf') format('truetype');
 }
 
 .vanilla-calendar *, .vanilla-calendar *:before, .vanilla-calendar *:after {
@@ -63,6 +68,7 @@
     font-weight: bold;
     text-align: center;
     width: 100%;
+    font-family: Questrial;
 }
 
 .vanilla-calendar .vanilla-calendar-week {
@@ -75,24 +81,27 @@
     color: var(--vanilla-calendar-selected-color);
     flex-direction: column;
     flex: 0 0 14.28%;
-    font-size: 1em;
+    font-size: 12px;
     font-weight: bold;
     max-width: 14.28%;
     padding: 15px 0px;
     text-align: center;
     text-transform: uppercase;
+    font-family: Questrial;
 }
 
 .vanilla-calendar .vanilla-calendar-body {
     background-color: rgba(var(--vanilla-calendar-selected-bg-color), 0.3);
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 10px
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-family: Questrial;
 }
 
 .vanilla-calendar .vanilla-calendar-date {
     align-items: center;
-    background-color: #fff;
+    background-color: #fbfbfb;
     border-radius: var(--vanilla-calendar-border-radius);
     display: flex;
     flex-direction: column;

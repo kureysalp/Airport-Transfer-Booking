@@ -1,8 +1,28 @@
 body{margin: 0;}
 
 @font-face {
-    font-family: "Questiral";
-    src: url('../fonts/Questrial-Regular.ttf') format('truetype');
+    font-family: "OpenSans-Regular";
+    src: url('../fonts/OpenSans-Regular-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Montez";
+    src: url('../fonts/Montez-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: url('../fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "OpenSans-Bold";
+    src: url('../fonts/Open_Sans/OpenSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "OpenSans-Extra-Bold";
+    src: url('../fonts/Open_Sans/OpenSans-ExtraBold.ttf') format('truetype');
 }
 
 a:hover, a:visited, a:link, a:active
@@ -27,12 +47,21 @@ a:hover, a:visited, a:link, a:active
 
 .left-nav div
 {
-    width: 130px;
-    height: 40px;
-    font-family: 'Segoe UI';
-    font-size: 25px;
+    width: 150px;
+    height: 40px;    
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 28px;
     color: #FFFFFF;
-    margin: 5px auto;
+    margin: 5px 80px ;
+}
+
+.dama-logo
+{
+    width: 50px;
+    margin-top: 12px;
+    margin-left: 15px;
+    float: left;
 }
 
 .mid-nav
@@ -59,7 +88,7 @@ a:hover, a:visited, a:link, a:active
 
 .nav-bar ul
 {
-    width: 100%;
+    width: 750px;
     height: 25px;
     white-space: nowrap;
     display: inline-block;
@@ -92,9 +121,48 @@ a:hover, a:visited, a:link, a:active
 
 .right-nav
 {    
-    width: 15%;
-    height: 100%;
+    width: 15%;    
     float: left;
+}
+
+.right-menu
+{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto 30% 30% auto;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+    ". curr lang .";
+}
+
+.right-menu-curr
+{
+    grid-area: curr;
+    width: 70px;
+    height: 20px;
+    margin: auto;
+    font-family: OpenSans-Regular;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.right-menu-curr svg
+{
+    margin: auto;
+}
+
+.right-menu-lang
+{
+    grid-area: lang;
+    width: 70px;
+    height: 20px;
+    margin: auto;
+}
+
+.right-menu-lang svg
+{
+    margin: auto;
 }
 
 .img-container
@@ -123,7 +191,7 @@ a:hover, a:visited, a:link, a:active
     height: 580px; 
     grid-area: dest;  
     display: grid;
-    grid-template-columns: auto 750px 450px auto;
+    grid-template-columns: auto 950px 350px auto;
     grid-template-rows: 100%;
     grid-template-areas: 
     ". main-text book .";
@@ -134,23 +202,32 @@ a:hover, a:visited, a:link, a:active
     width: 700px;
     height: 126px;
     grid-area: main-text;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 50px;
     color: #FFFFFF;
     margin: 100px 0px;
     z-index: 99;
+    font-weight: bold;
+}
+
+.main-reviews
+{
+    grid-area: main-text;    
+    z-index: 1;
+    margin-top: 300px;
+    margin-left: 0;
 }
 
 .destination-form-div
 {
-    width: 400px;
-    height: 550px;
+    width: 350px;
+    height: 470px;
     grid-area: book;
     margin-top: 100px;
     z-index: 100;   
     display: grid;
     grid-template-columns: 5% 90% 5%;
-    grid-template-rows: 50px 150px 115px 115px 120px;
+    grid-template-rows: 50px 130px 95px 95px 100px;
     grid-template-areas: 
     ". title ."
     ". dest ."
@@ -161,8 +238,8 @@ a:hover, a:visited, a:link, a:active
 
 .destination-form-div-style
 {
-    width: 400px;
-    height: 550px;
+    width: 350px;
+    height: 470px;
     grid-area: book;
     margin-top: 100px;
     z-index: 100;
@@ -178,7 +255,7 @@ a:hover, a:visited, a:link, a:active
 {
     width: 230px;
     height: 28px;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 25px;
     color: #FFFFFF;
     grid-area: title;
@@ -187,14 +264,14 @@ a:hover, a:visited, a:link, a:active
 
 .destination-form-dest
 {
-    width: 361px;
+    width: 315px;
     height: 104px;
-    border: 2px solid #FFFFFF;
+    border: 1px solid #FFFFFF;
     border-radius: 4px;
     grid-area: dest;
     margin: auto 0;
     display: grid;
-    grid-template-columns: 70px 291px;
+    grid-template-columns: 50px 265px;
     grid-template-rows: 50% 50%;
     grid-template-areas: 
     "icon from"
@@ -225,7 +302,7 @@ a:hover, a:visited, a:link, a:active
     grid-area: from;
     background-color: rgba(0,0,0,0);
     color: #FFFFFF;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 20px;
     border-color: rgba(0,0,0,0);
 }
@@ -244,7 +321,7 @@ a:hover, a:visited, a:link, a:active
     grid-area: to;
     background-color: rgba(0,0,0,0);
     color: #FFFFFF;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 20px;
     border-color: rgba(0,0,0,0);
 }
@@ -256,7 +333,7 @@ a:hover, a:visited, a:link, a:active
 
 .dest-line
 {
-    width: 246px;
+    width: 190px;
     height: 1px;
     background-color: #FFFFFF;
     margin: 0 auto;
@@ -281,10 +358,36 @@ a:hover, a:visited, a:link, a:active
 
 .dest-date-container
 {
-    width: 361px;
+    width: 315px;
+    height: 40px;
     grid-area: date;
     margin: auto;
     z-index: 1;
+    display: grid;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    grid-template-columns: 40px 275px;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+    "img input";
+    margin-top: 35px;
+}
+
+.dest-date-container img
+{
+    grid-area: img;
+    height: 30px;
+    width: 25px;    
+    margin: auto;
+}
+
+.dest-calendar
+{
+    width: 315px !important;
+    display: none;
+    margin-top: 45px !important;
+    position: absolute;
+    margin-left: -1px !important;
 }
 
 .dest-date-title
@@ -299,15 +402,21 @@ a:hover, a:visited, a:link, a:active
 
 .dest-date-input
 {
-    width: 361px;
-    height: 40px;
-    border: 2px solid #FFFFFF;
+    grid-area: input;
+    width: 295px;
+    height: 40px;    
     background-color: rgba(0,0,0,0);
     border-radius: 4px;
-    grid-area: date;
+    grid-area: input;
     margin: auto;
     z-index: 1;
+    border: none;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-family: OpenSans-Regular;
+    outline: none;
 }
+
 
 .dest-date-input:hover
 {cursor: pointer;}
@@ -326,7 +435,7 @@ a:hover, a:visited, a:link, a:active
 {
     width: 143px;
     height: 40px;
-    border: 2px solid #FFFFFF;
+    border: 1px solid #FFFFFF;
     border-radius: 4px;
     margin: auto;
     margin-left: 0;
@@ -336,13 +445,14 @@ a:hover, a:visited, a:link, a:active
     grid-template-rows: 100%;
     grid-template-areas: 
     "minus count plus";
+    margin-top: 35px;
 }
 
 .dest-luggage
 {
     width: 143px;
     height: 40px;
-    border: 2px solid #FFFFFF;
+    border: 1px solid #FFFFFF;
     border-radius: 4px;
     margin: auto;
     margin-right: 0;
@@ -352,6 +462,7 @@ a:hover, a:visited, a:link, a:active
     grid-template-rows: 100%;
     grid-template-areas: 
     "minus count plus";
+    margin-top: 35px;
 }
 
 .dest-count-plus
@@ -363,7 +474,7 @@ a:hover, a:visited, a:link, a:active
     text-align: center;
     line-height: 20px;
     vertical-align: middle;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 26px;
     color: #FFFFFF;
     user-select: none; /* supported by Chrome and Opera */
@@ -384,7 +495,7 @@ a:hover, a:visited, a:link, a:active
     text-align: center;
     line-height: 20px;
     vertical-align: middle;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 26px;
     color: #FFFFFF;
     user-select: none; /* supported by Chrome and Opera */
@@ -403,10 +514,10 @@ a:hover, a:visited, a:link, a:active
     text-align: center;
     line-height: 20px;
     vertical-align: middle;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 26px;
     color: #FFFFFF;
-    ıser-select: none; /* supported by Chrome and Opera */
+    user-select: none; /* supported by Chrome and Opera */
    -webkit-user-select: none; /* Safari */
    -khtml-user-select: none; /* Konqueror HTML */
    -moz-user-select: none; /* Firefox */
@@ -424,63 +535,67 @@ a:hover, a:visited, a:link, a:active
     font-size: 20px;
     color: #FFFFFF;
     grid-area: pax;
-    margin-left: 215px;
+    margin-left: 170px;
 }
 
 .search-btn
 {
-    width: 220px;
-    height: 55px;
+    width: 200px;
+    height: 45px;
     background-color: #6AE2A6;
     border-radius: 4px;
     border-width: 0;
-    font-family: Questiral;
-    font-size: 30px;
-    color: #FFFFFF;    
+    font-family: OpenSans-Regular;
+    font-size: 26px;
+    color: #FFFFFF;
+    font-weight: bold;
 }
 
 .gradient-div
 {    
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9808298319327731) 10%, rgba(255,255,255,0.69) 36%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%,
+    rgba(255,255,255,.9) 15%,
+    rgba(255,255,255,0.1) 80%,
+    rgba(255,255,255,0) 100%);
     width: 100%;
-    height: 365px;
+    height: 245px;
     bottom: 0;
     position: absolute;
     z-index: 99;
-    top: calc(580px - 365px);
+    top: calc(580px - 245px);
 }
 
 .autocomplete-items
 {
-    position:absolute;
-    border:1px solid #d4d4d4;
-    border-bottom:none;
-    border-top:none;
-    z-index:99;
-    top:100%;
-    left:0;
-    right:0;
-    width:230px;
-    margin-top:5px;
-    border-radius:5px
+    position: absolute;    
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 220px;
+    margin-top: 5px;
+    border-radius: 5px;
+    margin-left: 20px
 }
 
 .autocomplete-active
 {
     background-color:#1e90ff !important;
-    color:#fff
+    color: #fff
 }
 
 .autocomplete-items div
 {
-    padding:10px;
-    cursor:pointer;
-    background-color:#fff;
-    width: 230px;
-    height: 50px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    width: 205px;
+    height: auto;
     display: grid;
-    grid-template-columns: 50px 180px;
-    grid-template-rows: 20px 30px;
+    grid-template-columns: 50px 155px;
+    grid-template-rows: auto auto;
     grid-template-areas: 
     "logo name"
     "logo address";;
@@ -488,21 +603,23 @@ a:hover, a:visited, a:link, a:active
 
 .autocomplete-items div b
 {
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     color: #242F3E;
-    font-size: 12px;
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
 .autocomplete-items div p
 {
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     color: #93989E;
-    font-size: 10px
+    font-size: 12px;
+    margin-top: auto;
 }
 
 .autocomplete-items div img
 {
-    width: 40px;
+    width: 30px;
     margin: auto;
     margin-left: 0;
 }
@@ -527,8 +644,8 @@ a:hover, a:visited, a:link, a:active
     z-index: 1;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 770px 680px 500px 80px 500px 580px 500px 400px
-    550px 400px;
+    grid-template-rows: 770px 680px 500px 90px 500px 580px 500px 350px
+    580px auto;
     grid-template-areas: 
     "how-it-works"
     "reviews"
@@ -550,12 +667,12 @@ a:hover, a:visited, a:link, a:active
     height: 770px;
     grid-area: how-it-works;
     display: grid;
-    grid-template-columns: auto 400px 400px 400px auto;
+    grid-template-columns: auto 50px 50px 300px 400px 400px auto;
     grid-template-rows: 80px 200px 400px;
     grid-template-areas: 
-    ". title title title ."
-    ". step1 step2 step3 ."
-    ". desc desc desc .";
+    ". . title title title title ."
+    ". step1 step1 step1 step2 step3 ."
+    ". desc desc desc desc desc .";
     z-index: 1;
 }
 
@@ -563,9 +680,9 @@ a:hover, a:visited, a:link, a:active
 {
     grid-area: title;
     width: 346px;
-    height: 56px;
-    font-family: Questiral;
-    font-size: 44px;
+    height: 50px;
+    font-family: OpenSans-Regular;
+    font-size: 40px;
     color: #242F3E;
 }
 
@@ -592,7 +709,7 @@ a:hover, a:visited, a:link, a:active
     grid-area: step;
     margin: auto;
     text-align: center;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     color: #FFFFFF;
     font-size: 25px;
     line-height: 36px;
@@ -613,7 +730,7 @@ a:hover, a:visited, a:link, a:active
     width: 250px;
     height: 60px;
     grid-area: desc;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 14px;
     color: #595A5A;
     margin: auto;
@@ -651,10 +768,11 @@ a:hover, a:visited, a:link, a:active
 {
     width: auto;
     height: auto;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 40px;
+    font-weight: bold;
     color: #242F3E;
-    grid-area: title;
+    grid-area: title;    
 }
 
 .reviews-container
@@ -687,7 +805,7 @@ a:hover, a:visited, a:link, a:active
     width: 250px;
     height: 150px;
     background-color: #FFFFFF;
-    border: 8px solid #26A65B;
+    border: 3px solid #26A65B;
     border-radius: 15px;
     margin: auto;
     display: grid;
@@ -705,7 +823,7 @@ a:hover, a:visited, a:link, a:active
     width: auto;
     height: auto;
     margin: auto;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 16px;
     color: #242F3E;
     grid-area: title;
@@ -738,7 +856,7 @@ a:hover, a:visited, a:link, a:active
     width: 180px;
     height: 60px;
     margin: 5px auto;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 12px;
     color: #5B5B5B;
     grid-area: review;
@@ -746,10 +864,10 @@ a:hover, a:visited, a:link, a:active
 
 .review-author
 {
-    width: 80px;
+    width: 40px;
     height: 20px;
     margin: 0 0 0 180px;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 10px;
     color: #242F3E;
     grid-area: author;
@@ -758,14 +876,14 @@ a:hover, a:visited, a:link, a:active
 .reviews-back
 {
     grid-area: left-arrow;
-    width: 50px;
+    width: 30px;
     margin: auto;    
 }
 
 .reviews-next
 {
     grid-area: right-arrow;
-    width: 50px;
+    width: 30px;
     margin: auto;    
 }
 
@@ -816,6 +934,7 @@ a:hover, a:visited, a:link, a:active
     grid-area: reviews;
     margin-top: 155px;
     overflow: hidden;
+    opacity: .3;
 }
 
 .reviews-bg img
@@ -826,10 +945,10 @@ a:hover, a:visited, a:link, a:active
 .reviews-gradiant-line
 {
     width: 100%;
-    height: 10px;
+    height: 4px;
     background-color: #F9AC1A;
     grid-area: reviews;
-    margin-top: 150px;
+    margin-top: 153px;
     z-index: 1;
 }
 
@@ -851,7 +970,7 @@ a:hover, a:visited, a:link, a:active
 
 .reviews-live div
 {
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 18px;
     color: #595A5A;
     width: auto;
@@ -905,8 +1024,9 @@ a:hover, a:visited, a:link, a:active
     width: auto;
     height: auto;
     grid-area: title;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 40px;
+    font-weight: bold;
     color: #242F3E;
 }
 
@@ -951,14 +1071,14 @@ a:hover, a:visited, a:link, a:active
 
 .fleet-back
 {
-    width: 45px;
+    width: 30px;
     margin: auto;
     grid-area: back;
 }
 
 .fleet-next
 {
-    width: 45px;
+    width: 30px;
     margin: auto;
     grid-area: next;
 }
@@ -974,7 +1094,7 @@ a:hover, a:visited, a:link, a:active
 {
     width: 200px;
     margin: auto;    
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 16px;
     color: #242F3E;
     grid-area: tit;
@@ -984,7 +1104,7 @@ a:hover, a:visited, a:link, a:active
 {
     width: 200px;
     margin: auto;    
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 12px;
     color: #4E4E4E;
     grid-area: desc;
@@ -1019,7 +1139,7 @@ a:hover, a:visited, a:link, a:active
     grid-area: title;
     width: 200px;
     height: 25px;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 16px;
     color: #242F3E;
     margin-left: auto;
@@ -1031,8 +1151,16 @@ a:hover, a:visited, a:link, a:active
     width: 140px;
     height: 25px;
     background-color: rgba(38,166,91,0.3);
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     border-radius: 10px;
+}
+
+.fleet-extra-service-water img
+{
+    margin-top: 2px;
+    margin-left: 10px;
+    width: 20px;
+    float: left;
 }
 
 .fleet-extra-service-seat
@@ -1041,8 +1169,16 @@ a:hover, a:visited, a:link, a:active
     width: 120px;
     height: 25px;
     background-color: rgba(38,166,91,0.3);
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     border-radius: 10px;
+}
+
+.fleet-extra-service-seat img
+{
+    margin-top: 2px;
+    margin-left: 10px;
+    width: 20px;
+    float: left;
 }
 
 .fleet-extra-service-waiting
@@ -1051,8 +1187,16 @@ a:hover, a:visited, a:link, a:active
     width: 180px;
     height: 25px;
     background-color: rgba(38,166,91,0.3);
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     border-radius: 10px;
+}
+
+.fleet-extra-service-waiting img
+{
+    margin-top: 2px;
+    margin-left: 10px;
+    width: 20px;
+    float: left;
 }
 
 .fleet-extra-service-eng
@@ -1061,8 +1205,16 @@ a:hover, a:visited, a:link, a:active
     width: 180px;
     height: 25px;
     background-color: rgba(38,166,91,0.3);
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     border-radius: 10px;
+}
+
+.fleet-extra-service-eng img
+{
+    margin-top: 2px;
+    margin-left: 10px;
+    width: 20px;
+    float: left;
 }
 
 .fleet-extra-service-text
@@ -1073,7 +1225,7 @@ a:hover, a:visited, a:link, a:active
     line-height: 25px;
     vertical-align: middle;
     margin: auto;
-    margin-left: 40px;
+    margin-left: 35px;    
 }
 
 .fleet-extra-service-desc
@@ -1081,7 +1233,7 @@ a:hover, a:visited, a:link, a:active
     grid-area: desc;
     width: 200px;
     height: auto;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 12px;
     color: #4E4E4E;
     margin-left: auto;
@@ -1092,12 +1244,12 @@ a:hover, a:visited, a:link, a:active
 .good-service
 {
     width: 100%;
-    height: 80px;
+    height: 90px;
     grid-area: service;
     background-color: #EBECED;
     display: grid;
     grid-template-columns: auto 1100px auto;
-    grid-template-rows: 40px 40px;
+    grid-template-rows: 40px 50px;
     grid-template-areas: 
     ". text ."
     ". us .";
@@ -1105,7 +1257,7 @@ a:hover, a:visited, a:link, a:active
 
 .service-text
 {
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 28px;
     color: #707070;
     margin: auto 80px;
@@ -1114,8 +1266,8 @@ a:hover, a:visited, a:link, a:active
 
 .service-us
 {
-    font-family: Questiral;
-    font-size: 32px;
+    font-family: Montez;
+    font-size: 40px;
     color: 232321;
     margin: auto;
     margin-left: 800px;
@@ -1141,8 +1293,9 @@ a:hover, a:visited, a:link, a:active
     grid-area: title;
     width: auto;
     height: auto;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 40px;
+    font-weight: bold;
     color: #242F3E;
     grid-area: title;
     margin-top: 40px;
@@ -1182,7 +1335,7 @@ a:hover, a:visited, a:link, a:active
 
 .popular-dest-text
 {
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 16px;
     color: #242F3E;
     margin: auto;
@@ -1192,7 +1345,7 @@ a:hover, a:visited, a:link, a:active
 .popular-dest-price
 {
     grid-area: price;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 16px;
     color: #F9AC1A;
     margin: auto;
@@ -1201,7 +1354,7 @@ a:hover, a:visited, a:link, a:active
 
 .popular-dest-price font
 {
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 10px;
     color: #F9AC1A;
     margin: auto;
@@ -1217,18 +1370,27 @@ a:hover, a:visited, a:link, a:active
 .popular-destinations-img img
 {
     height: 280px;
+    border-radius: 5px;
 }
 
 .ist-img
 {
-    width: 100%;
+    width: 1903px;
     grid-area: extra;
     margin-top: -360px;
-    opacity: 0.04;
-    border-bottom-right-radius: 400px;
-    border-bottom-left-radius: 400px;
+    opacity: 0.04;    
 }
 
+.ist-img-gradiant
+{
+    width: 100%;
+    grid-area: extra;
+    background: linear-gradient(180deg, rgba(245,245,245,1) 0%,
+    rgba(245,245,245,0.6839110644257703) 35%,
+    rgba(0,212,255,0) 100%);
+    height: 200px;
+    margin-top: 646px;
+}
 /* EXTRA SERVICES */
 .extra-services-div
 {
@@ -1246,8 +1408,9 @@ a:hover, a:visited, a:link, a:active
 .extra-services-title
 {
     grid-area: title;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 40px;
+    font-weight: bold;
     color: #242F3E;
 }
 
@@ -1268,8 +1431,8 @@ a:hover, a:visited, a:link, a:active
 
 .extra-service-title
 {
-    font-family: Questiral;
-    font-size: 14px;
+    font-family: OpenSans-Regular;
+    font-size: 20px;
     color: #242F3E;
     margin: auto;
     
@@ -1283,7 +1446,7 @@ a:hover, a:visited, a:link, a:active
 
 .extra-service-line
 {
-    width: 100px;
+    width: 200px;
     height: 1px;
     background-color: #242F3E;
     margin: auto;
@@ -1291,8 +1454,8 @@ a:hover, a:visited, a:link, a:active
 
 .extra-service-desc
 {
-    font-family: Questiral;
-    font-size: 12px;
+    font-family: OpenSans-Regular;
+    font-size: 14px;
     color: #242F3E;
     margin: auto;
     
@@ -1315,8 +1478,9 @@ a:hover, a:visited, a:link, a:active
 .faq-title
 {
     grid-area: title;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 40px;
+    font-weight: bold;
     color: #242F3E;
 }
 
@@ -1341,9 +1505,10 @@ a:hover, a:visited, a:link, a:active
 {
     width: 100%;
     height: auto;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 18px;
     color: #0267C1;
+    font-weight: bold;
 }
 
 .contact-div
@@ -1368,7 +1533,7 @@ a:hover, a:visited, a:link, a:active
 .contact-div-title
 {
     grid-area: title;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 28px;
     color: #242F3E;
     margin: auto;
@@ -1377,29 +1542,47 @@ a:hover, a:visited, a:link, a:active
 
 .contact-div-text
 {    
-    font-family: Questiral;
-    font-size: 12px;
+    font-family: OpenSans-Regular;
+    font-size: 14px;
     color: #242F3E;
     margin: auto;
-    margin-left: 20px;
+    margin-left: 20px;    
 }
 
 .contact-div-text-mini
 {    
-    font-family: Questiral;
-    font-size: 10px;
+    font-family: OpenSans-Regular;
+    font-size: 12px;
     color: #242F3E;
-    margin: 60px;
-    margin-left: 30px;
+    margin-top: 60px;
+    margin-left: 40px;
+    line-height: 15px;
+    vertical-align: middle;
 }
 
 .contact-div-link
 {    
-    font-family: Questiral;
-    font-size: 12px;
+    font-family: OpenSans-Regular;
+    font-size: 14px;
     color: #0267C1;
     margin: auto;
     margin-left: 40px;
+    line-height: 28px;
+    vertical-align: middle;
+}
+
+.faq-icon
+{
+    width: 20px;
+    margin: auto;
+    margin-left: 15px;
+}
+
+.faq-icon-mini
+{
+    width: 18px;
+    margin-top: 60px;
+    margin-left: 15px;
 }
 
 /* IMG INFO */
@@ -1410,7 +1593,7 @@ a:hover, a:visited, a:link, a:active
     height: 100%;
     display: grid;
     grid-template-columns: auto 1100px auto;
-    grid-template-rows: 100px 100px 200px;
+    grid-template-rows: 100px 100px 150px;
     grid-template-areas: 
     ". text1 ."
     ". text2 ."
@@ -1422,7 +1605,7 @@ a:hover, a:visited, a:link, a:active
 {
     grid-area: img-info;
     width: 100%;
-    height: 400px;
+    height: 350px;
     background-color: #242F3E;
     opacity: 0.65;
 }
@@ -1430,7 +1613,7 @@ a:hover, a:visited, a:link, a:active
 .img-info-img
 {
     grid-area: img-info;
-    height: 400px;
+    height: 350px;
     overflow: hidden;
 }
 .img-info-img img
@@ -1442,7 +1625,7 @@ a:hover, a:visited, a:link, a:active
     height: auto;
     margin: auto;
     margin-left: 0;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 40px;
     color: #FFFFFF;
 }
@@ -1450,10 +1633,10 @@ a:hover, a:visited, a:link, a:active
 .img-info-btn
 {
     grid-area: btn;
-    width: 300px;
-    height: 70px;
+    width: 250px;
+    height: 60px;
     margin: auto;
-    margin-left: 700px;    
+    margin-left: 750px;    
 }
 
 
@@ -1463,10 +1646,11 @@ a:hover, a:visited, a:link, a:active
     height: 100%;
     border-width: 0;
     background-color: #F9AC1A;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 26px;
     color: #FFFFFF;
     border-radius: 10px;
+    font-weight: bold;
 }
 
 /* ADVANTEGES */
@@ -1477,23 +1661,25 @@ a:hover, a:visited, a:link, a:active
     height: 100%;
     grid-area: advantages;
     display: grid;
-    grid-template-columns: auto 350px auto 350px auto;
-    grid-template-rows: 100px 50px 100px 50px 100px 50px 100px;
+    margin-top: 40px;
+    grid-template-columns: auto 100px 100px 100px 350px 450px 100px 100px auto;
+    grid-template-rows: 100px 50px 80px 50px 80px 50px 80px;
     grid-template-areas: 
-    ". title . . . "
-    ". tit1 . tit2 ."
-    ". desc1 . desc2 ."
-    ". tit3 . tit4 ."
-    ". desc3 . desc4 ."
-    ". tit5 . tit6 ."
-    ". desc5 . desc6 .";
+    ". . title title title . . . . "
+    ". . . tit1 tit1 tit2 . . ."
+    ". . . desc1 desc1 desc2 . . ."
+    ". . . tit3 tit3 tit4 . . ."
+    ". . . desc3 desc3 desc4 . . ."
+    ". . . tit5 tit5 tit6 . . ."
+    ". . . desc5 desc5 desc6 . . .";
 }
 
 .advantages-title
 {
     grid-area: title;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 40px;
+    font-weight: bold;
     color: #242F3E;
     margin-top: 20px;
 }
@@ -1502,8 +1688,8 @@ a:hover, a:visited, a:link, a:active
 {    
     width: 100%;
     height: auto;
-    font-family: Questiral;
-    font-size: 20px;
+    font-family: OpenSans-Regular;
+    font-size: 22px;
     color: #242F3E;
     margin: auto;
     margin-left: 0;
@@ -1513,8 +1699,8 @@ a:hover, a:visited, a:link, a:active
 {    
     width: 100%;
     height: auto;
-    font-family: Questiral;
-    font-size: 12px;
+    font-family: OpenSans-Regular;
+    font-size: 16px;
     color: #242F3E;
     margin: auto;
     margin-left: 0;
@@ -1527,14 +1713,14 @@ a:hover, a:visited, a:link, a:active
     grid-area: last-week;
     width: 100%;
     height: 100%;
-    background-color: #37404D;
+    background-color: rgb(52, 60, 73);
     opacity: 0.95;
 }
 
 .last-week-circle
 {
-    width: 200px;
-    height: 200px;
+    width: 190px;
+    height: 190px;
     border-radius: 100%;
     border: 5px solid #6AE2A6;
     margin: auto;
@@ -1543,10 +1729,18 @@ a:hover, a:visited, a:link, a:active
 .last-week-circle div
 {
     text-align: center;
-    font-family: Questiral;
-    font-size: 26px;
+    font-family: OpenSans-Regular;
+    font-size: 24px;
     color: #FFFFFF;
-    margin-top: 50px;
+    margin-top: 30px;
+    
+}
+
+.last-week-bg
+{
+    width: 900px;
+    margin: auto;
+    margin-top: -90px;    
 }
 
 /* ----------BOOKING---------- */
@@ -1571,7 +1765,8 @@ a:hover, a:visited, a:link, a:active
     width: 100%;
     height: 70px;
     background-color: #FFFFFF;
-    border: 1px solid #e6e6e6;
+    box-shadow: 0 0.25rem 1rem rgba(55,63,71,.05);
+    border-radius: 5px;
     grid-area: process;
     margin: auto;
     display: grid;
@@ -1594,7 +1789,7 @@ a:hover, a:visited, a:link, a:active
     text-align: center;
     vertical-align: middle;
     margin: auto;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 22px;
     color: #FFFFFF;
 }
@@ -1637,7 +1832,7 @@ a:hover, a:visited, a:link, a:active
     line-height: 15px;
     text-align: center;
     vertical-align: middle;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 14px;
     color: #858080;
     margin-left: calc(-1 * (125px));
@@ -1650,6 +1845,8 @@ a:hover, a:visited, a:link, a:active
     width: 100%;
     height: 100px;
     background-color: #242F3E;
+    box-shadow: 0 0.25rem 1rem rgba(55,63,71,.05);
+    border-radius: 5px;
     grid-area: specs;
     display: grid;
     grid-template-columns: 300px 500px 300px;
@@ -1665,7 +1862,7 @@ a:hover, a:visited, a:link, a:active
     grid-area: rate;
     margin-left: 140px;
     margin-top: 10px;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 22px;
     color: #FFFFFF;
 }
@@ -1673,7 +1870,7 @@ a:hover, a:visited, a:link, a:active
 .specs-rate div
 {
     width: auto;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 12px;
     color: #A8A8A8;
     margin-top: 10px;
@@ -1694,7 +1891,7 @@ a:hover, a:visited, a:link, a:active
     grid-area: meet;
     margin-left: 170px;
     margin-top: 10px;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 22px;
     color: #FFFFFF;
 }
@@ -1714,7 +1911,7 @@ a:hover, a:visited, a:link, a:active
     grid-area: payment;
     margin-left: 140px;
     margin-top: 10px;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 22px;
     color: #FFFFFF;
 }
@@ -1736,7 +1933,7 @@ a:hover, a:visited, a:link, a:active
     grid-area: booking;
     display: grid;
     grid-template-columns: auto 1200px auto;
-    grid-template-rows: calc(100% - 1200px) 200px 500px 500px;
+    grid-template-rows: auto 240px 300px 500px;
     grid-template-areas: 
     ". booking ."
     ". extra ."
@@ -1783,15 +1980,14 @@ a:hover, a:visited, a:link, a:active
     grid-area: cars;
     width: 700px;
     height: 180px;
-    background-color: #FFFFFF;
-    margin: auto;
+    background-color: #FFFFFF;    
     margin-top: 20px;
     margin-bottom: 0;
-    border: 4px solid #6AE2A6;
+    border: 1px solid #6AE2A6;
     border-radius: 5px;
-    -webkit-box-shadow: 0px 0px 12px 1px rgba(106,226,166,1);
-    -moz-box-shadow: 0px 0px 12px 1px rgba(106,226,166,1);
-    box-shadow: 0px 0px 12px 1px rgba(106,226,166,1);
+    -webkit-box-shadow: 0px 0px 4px 1px rgba(106,226,166,1);
+    -moz-box-shadow: 0px 0px 4px 1px rgba(106,226,166,1);
+    box-shadow: 0px 0px 4px 1px rgba(106,226,166,1);
     display: grid;
     grid-template-columns: 300px 200px 200px;
     grid-template-rows: 100%;
@@ -1835,7 +2031,7 @@ a:hover, a:visited, a:link, a:active
 {
     width: auto;
     margin: 5px 0 0 10px;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 10px;
     color: #6E6F70;
 }
@@ -1870,11 +2066,11 @@ a:hover, a:visited, a:link, a:active
     grid-area: title;
     width: 170px;
     height: 20px;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 20px;
     color: #242F3E;
     margin: auto;
-    margin-left: 50px;
+    margin-left: 30px;
 }
 
 .car-info-pax
@@ -1883,12 +2079,12 @@ a:hover, a:visited, a:link, a:active
     width: auto;
     height: 20px;
     margin: auto;
-    margin-left: 50px;
+    margin-left: 30px;
 }
 
 .car-info-pax div
 {    
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 18px;
     color: #676767;
     margin-left: 25px;
@@ -1906,13 +2102,13 @@ a:hover, a:visited, a:link, a:active
     width: auto;
     height: 20px;
     margin: auto;
-    margin-left: 120px;
+    margin-left: 100px;
 }
 
 .car-info-bags div
 {
     margin-left: 25px;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 18px;
     color: #676767;
 }
@@ -1931,7 +2127,7 @@ a:hover, a:visited, a:link, a:active
     background-color: #D3EDDE;
     border-radius: 10px;
     margin: auto;
-    margin-left: 45px;
+    margin-left: 30px;
     display: grid;
     grid-template-columns: 10px 130px;
     grid-template-rows: 20px 20px;
@@ -1942,7 +2138,7 @@ a:hover, a:visited, a:link, a:active
 
 .car-specs-text1
 {
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 10px;
     color: #26A65B;
     grid-area: text1;
@@ -1961,7 +2157,7 @@ a:hover, a:visited, a:link, a:active
 .car-specs-text2
 {
     grid-area: text2;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 10px;
     color: #26A65B;
     margin: auto;
@@ -1982,8 +2178,8 @@ a:hover, a:visited, a:link, a:active
     width: 140px;
     height: auto;
     margin: auto;
-    margin-left: 45px;
-    font-family: Questiral;
+    margin-left: 30px;
+    font-family: OpenSans-Regular;
     font-size: 10px;
     color: #4E4E4E;
 }
@@ -1995,7 +2191,7 @@ a:hover, a:visited, a:link, a:active
     height: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 50px 60px 40px 30px;
+    grid-template-rows: 50px 50px 40px 40px;
     grid-template-areas: 
     "sale"
     "price"
@@ -2004,13 +2200,12 @@ a:hover, a:visited, a:link, a:active
 }
 
 .price-bg
-{
-    
+{    
     grid-area: price;
     width: 100%;
     height: 100%;
     background-color: #242F3E;
-    border: 1px solid #6AE2A6;
+    border: 2px solid #6AE2A6;
     border-top-left-radius: 70%;
 }
 
@@ -2028,7 +2223,7 @@ a:hover, a:visited, a:link, a:active
     grid-area: price;
     width: auto;
     height: auto;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 20px;
     color: #FFFFFF;
     margin: auto;
@@ -2043,7 +2238,7 @@ a:hover, a:visited, a:link, a:active
     border: none;
     border-radius: 4px;
     background-color: #F9AC1A;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 18px;
     color: #FFFFFF;
 }
@@ -2060,6 +2255,7 @@ a:hover, a:visited, a:link, a:active
     width: 30px;
     margin: auto;
     margin-left: 30px;
+    
 }
 
 .payment-img2
@@ -2067,6 +2263,7 @@ a:hover, a:visited, a:link, a:active
     width: 30px;
     margin: auto;
     margin-left: 20px;
+    
 }
 
 .payment-img3
@@ -2074,6 +2271,8 @@ a:hover, a:visited, a:link, a:active
     width: 30px;
     margin: auto;
     margin-left: 20px;
+    margin-top: 5px;
+    
 }
 
 .booking-extra-line
@@ -2105,7 +2304,7 @@ a:hover, a:visited, a:link, a:active
     grid-area: title;
     width: 300px;
     height: 25px;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 22px;
     color: #242F3E;
     margin-left: 40px;
@@ -2114,52 +2313,84 @@ a:hover, a:visited, a:link, a:active
 .booking-extra-service-water
 {
     grid-area: water;
-    width: 140px;
-    height: 25px;
+    width: 180px;
+    height: 35px;
     background-color: rgba(38,166,91,0.3);
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     border-radius: 10px;
+}
+
+.booking-extra-service-water img
+{
+    margin-top: 2px;
+    margin-left: 10px;
+    width: 30px;
+    float: left;
 }
 
 .booking-extra-service-seat
 {
     grid-area: seat;
-    width: 120px;
-    height: 25px;
+    width: 180px;
+    height: 35px;
     background-color: rgba(38,166,91,0.3);
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     border-radius: 10px;
+}
+
+.booking-extra-service-seat img
+{
+    margin-top: 2px;
+    margin-left: 10px;
+    width: 30px;
+    float: left;
 }
 
 .booking-extra-service-waiting
 {
     grid-area: waiting;
-    width: 180px;
-    height: 25px;
+    width: 250px;
+    height: 35px;
     background-color: rgba(38,166,91,0.3);
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     border-radius: 10px;
+}
+
+.booking-extra-service-waiting img
+{
+    margin-top: 2px;
+    margin-left: 10px;
+    width: 30px;
+    float: left;
 }
 
 .booking-extra-service-eng
 {
     grid-area: eng;
-    width: 180px;
-    height: 25px;
+    width: 250px;
+    height: 35px;
     background-color: rgba(38,166,91,0.3);
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     border-radius: 10px;
+}
+
+.booking-extra-service-eng img
+{
+    margin-top: 2px;
+    margin-left: 10px;
+    width: 30px;
+    float: left;
 }
 
 .booking-extra-service-text
 {
     width: auto;
-    font-size: 12px;
+    font-size: 18px;
     color: #26A65B;
-    line-height: 25px;
+    line-height: 35px;
     vertical-align: middle;
     margin: auto;
-    margin-left: 40px;
+    margin-left: 50px;
 }
 
 .booking-extra-service-desc
@@ -2167,7 +2398,7 @@ a:hover, a:visited, a:link, a:active
     grid-area: desc;
     width: 200px;
     height: auto;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 16px;
     color: #4E4E4E;
     margin-left: 40px;
@@ -2190,7 +2421,7 @@ a:hover, a:visited, a:link, a:active
 {
     width: auto;
     height: 60px;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 24px;
     color: #242F3E;
     margin: auto;
@@ -2201,7 +2432,7 @@ a:hover, a:visited, a:link, a:active
 {
     width: 1150px;
     height: 100%;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 18px;
     color: #242F3E;
     margin: auto;
@@ -2216,7 +2447,7 @@ a:hover, a:visited, a:link, a:active
 {
     width: 100%;
     height: 2400px;
-    background-color: #F9F9F9;
+    background-color: #f6f7f8;
     display: grid;
     grid-template-columns: auto 1200px auto;
     grid-template-rows: 150px 150px auto 445px;
@@ -2244,12 +2475,13 @@ a:hover, a:visited, a:link, a:active
     width: 760px;
     height: 1570px;
     grid-area: form;
-    background-color: #FFFFFF;
-    border: 1px solid #cecece;
+    background-color: #FFFFFF;    
+    box-shadow: 0 0.25rem 1rem rgba(55,63,71,.05);
     display: grid;
     grid-template-columns: 330px 430px;
-    grid-template-rows: 80px 20px 80px 20px 80px 20px 80px 20px 80px 80px 80px 
-    80px 20px 80px 20px 80px 100px 20px 20px 200px 80px 20px 200px;
+    border-radius: 5px;
+    grid-template-rows: 80px 30px 70px 30px 70px 30px 70px 30px 70px 80px 80px 
+    80px 30px 70px 30px 70px 100px 20px 20px 200px 70px 30px 200px;
     grid-template-areas: 
     "title1 ."
     "label1 ."
@@ -2282,11 +2514,11 @@ a:hover, a:visited, a:link, a:active
     height: 1670px;
     grid-area: form;
     background-color: #FFFFFF;
-    border: 1px solid #cecece;
+    box-shadow: 0 0.25rem 1rem rgba(55,63,71,.05);
     display: grid;
     grid-template-columns: 330px 430px;
-    grid-template-rows: 80px 20px 80px 20px 80px 20px 80px 20px 80px 80px 20px 80px 80px 
-    80px 20px 80px 20px 80px 100px 20px 20px 200px 80px 20px 200px;
+    grid-template-rows: 80px 30px 70px 30px 70px 30px 70px 30px 70px 80px 30px 70px 80px 
+    80px 30px 70px 30px 70px 100px 20px 20px 200px 70px 30px 200px;
     grid-template-areas: 
     "title1 ."
     "label1 ."
@@ -2319,7 +2551,7 @@ a:hover, a:visited, a:link, a:active
 {
     width: auto;
     height: 60px;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 26px;
     color: #242F3E;
     margin: 20px 0 0 30px;
@@ -2329,8 +2561,8 @@ a:hover, a:visited, a:link, a:active
 {
     width: auto;
     height: 60px;
-    font-family: Questiral;
-    font-size: 14px;
+    font-family: OpenSans-Regular;
+    font-size: 16px;
     color: #242F3E;
     margin-left: 30px;
 }
@@ -2339,7 +2571,7 @@ a:hover, a:visited, a:link, a:active
 {
     width: 300px;
     height: 60px;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 12px;
     color: #B9B9B9;
     margin-left: 30px;
@@ -2349,7 +2581,7 @@ a:hover, a:visited, a:link, a:active
 {
     width: auto;
     height: 60px;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 12px;
     color: #242F3E;
     margin-left: 30px;
@@ -2371,6 +2603,15 @@ a:hover, a:visited, a:link, a:active
     margin-left: 30px;
 }
 
+.cash-desc
+{
+    grid-area: cash-desc;
+    width: 200px;
+    font-family: OpenSans-Regular;
+    font-size: 14px;
+    margin-left: 30px;
+}
+
 .credit-div
 {
     grid-area: credit-img;
@@ -2382,6 +2623,16 @@ a:hover, a:visited, a:link, a:active
     margin-left: 30px;
 }
 
+
+.credit-desc
+{
+    grid-area: credit-desc;
+    width: 200px;
+    font-family: OpenSans-Regular;
+    font-size: 14px;
+    margin-left: 30px;
+    color: #FF0000;
+}
 .privacy-container
 {
     grid-area: privacy;
@@ -2397,7 +2648,7 @@ a:hover, a:visited, a:link, a:active
 
 .privacy-container font
 {
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 16px;
     color: #474747;
     margin-left: 30px;
@@ -2485,9 +2736,16 @@ a:hover, a:visited, a:link, a:active
 .form-input-date:hover
 {cursor: pointer;}
 
+.form-input-date::placeholder
+{
+    font-family: OpenSans-Regular;
+    font-size: 14px;
+    color: #B9B9B9;
+}
+
 .form-input::placeholder
 {
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 14px;
     color: #B9B9B9;
 }
@@ -2531,7 +2789,6 @@ a:hover, a:visited, a:link, a:active
     bottom:0;
     background-color:#E4E4E4;
     border-radius:50px;
-    border: 1px solid #A8A8A8;
     -webkit-transition:.4s;
     transition:.4s
 }
@@ -2545,7 +2802,8 @@ a:hover, a:visited, a:link, a:active
     background-color:#fff;
     border-radius:50px;
     -webkit-transition:.4s;
-    transition:.4s;    
+    transition:.4s;
+    border: 1px solid #E4E4E4;
 }
 
 input:checked+.slider
@@ -2556,16 +2814,16 @@ input:focus+.slider
 
 input:checked+.slider:before
 {
-    -webkit-transform:translateX(40px);
-    -ms-transform:translateX(40px);
-    transform:translateX(40px)
+    -webkit-transform:translateX(41px);
+    -ms-transform:translateX(41px);
+    transform:translateX(41px)
 }
 
 .form-extra-text
 {    
     width: auto;
     height: auto;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 14px;
     color: #242F3E;
     margin: auto;
@@ -2581,7 +2839,7 @@ input:checked+.slider:before
     background-color: #FFFFFF;
     margin-left: 30px;
     padding-left: 45px;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 18px;
     color: #B9B9B9;    
 }
@@ -2593,7 +2851,7 @@ input:checked+.slider:before
 }
 .form-time::placeholder
 {
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 18px;
     color: #B9B9B9;
 }
@@ -2625,7 +2883,7 @@ input:checked+.slider:before
     border-radius: 5px;
     background-color: #F9AC1A;
     border: none;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 24px;
     color: #FFFFFF;
     grid-area: btn;
@@ -2680,7 +2938,7 @@ input:checked+.slider:before
     grid-area: title;
     width: 100%;
     height: 20px;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 22px;
     color: #FFFFFF;
     margin: auto;
@@ -2693,6 +2951,7 @@ input:checked+.slider:before
     width: 100%;
     height: 100%;
     display: grid;
+    box-shadow: 0 0.25rem 1rem rgba(55,63,71,.05);
     grid-template-columns: 250px 100px;
     grid-template-rows: auto 30px auto 30px;
     grid-template-areas: 
@@ -2708,6 +2967,7 @@ input:checked+.slider:before
     width: 100%;
     height: 100%;
     display: grid;
+    box-shadow: 0 0.25rem 1rem rgba(55,63,71,.05);
     grid-template-columns: 250px 100px;
     grid-template-rows: auto 30px auto 30px;
     grid-template-areas: 
@@ -2721,7 +2981,7 @@ input:checked+.slider:before
 {
     width: calc(100% - 40px);
     height: 100%;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 16px;
     color: #FFFFFF;
     margin-left: 40px;
@@ -2729,9 +2989,9 @@ input:checked+.slider:before
 
 .form-card-dest-address
 {
-    width: 21   0px;
+    width: 210px;
     height: 100%;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 10px;
     color: #969798;
     margin-left: 40px;
@@ -2741,9 +3001,10 @@ input:checked+.slider:before
 {
     width: 100%;
     height: 100%;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 16px;
     color: #FFFFFF;
+    direction: rtl;
 }
 
 .form-card-route-line
@@ -2816,7 +3077,7 @@ input:checked+.slider:before
 
 .form-card-details-div font
 {
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 16px;
     color: #FFFFFF;
     margin-left: 10px;
@@ -2844,7 +3105,7 @@ input:checked+.slider:before
 
 .form-card-route-label
 {
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 20px;
     color: #FFFFFF;
     margin-left: 40px;
@@ -2852,7 +3113,7 @@ input:checked+.slider:before
 
 .form-card-route-dist
 {
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 14px;
     color: #969798;
     margin-left: 40px;
@@ -2872,11 +3133,17 @@ input:checked+.slider:before
     grid-area: price;
     width: 220px;
     height: 40px;
-    margin: 20px 20px 0 140px;
-    font-family: Questiral;
+    margin: 30px 20px 0 140px;
+    font-family: OpenSans-Regular;
     font-size: 22px;
     color: #FFFFFF;
     direction: rtl;
+    font-weight: bold;
+}
+
+.form-card-price font
+{
+    font-size: 16px;
 }
 
 /* BOOK DONE */
@@ -2891,7 +3158,7 @@ input:checked+.slider:before
     grid-template-areas: 
     ". voucher ."
     ". after-booking ."
-    ". extra ."
+    "extra extra extra"
     ". faq ."
     "footer footer footer";
 }
@@ -2906,7 +3173,7 @@ input:checked+.slider:before
     grid-template-areas: 
     ". voucher ."
     ". after-booking ."
-    ". extra ."
+    "extra extra extra"
     ". faq ."
     "footer footer footer";
 }
@@ -2949,7 +3216,7 @@ input:checked+.slider:before
     margin-left: 100px;
     width: 100%;
     height: 100%;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 26px;
     color: #56585B;
 }
@@ -2960,9 +3227,9 @@ input:checked+.slider:before
     width: 1000px;
     height: 100%;
     background-color: #FBF4E2;
-    background-image: linear-gradient(to right, #707070 33%, rgba(255,255,255,0) 0%);
+    background-image: linear-gradient(to right, #707070 34%, rgba(255,255,255,0) 0%);
     background-position: bottom;
-    background-size: 60px 3px;
+    background-size: 30px 1px;
     background-repeat: repeat-x;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -2992,14 +3259,14 @@ input:checked+.slider:before
 
 .voucher-name
 {
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 16px;
     color: #242F3E;
 }
 
 .voucher-address
 {
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 10px;
     color: #707070;
     width: 200px;
@@ -3009,7 +3276,7 @@ input:checked+.slider:before
 {    
     grid-area: date;
     margin-top: 20px;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 12px;
     color: #242F3E;
 }
@@ -3017,16 +3284,19 @@ input:checked+.slider:before
 .voucher-price
 {
     grid-area: price;
-    width: 150px;
+    width: 200px;
     height: 100%;
-    font-family: Questiral;
-    font-size: 30px;
+    font-family: OpenSans-Regular;
+    font-size: 24px;
     color: #242F3E;
-    float: left;    
+    float: left;
+    line-height: 70px;
+    vertical-align: middle;
 }
 
 .voucher-price b
-{margin-left: 2 0px;}
+{margin-left: 60px;}
+
 
 .voucher-price div
 {
@@ -3071,7 +3341,7 @@ input:checked+.slider:before
 
 .voucher-detail p
 {
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 18px;
     color: #242F3E;
     height: 20px;
@@ -3091,10 +3361,10 @@ input:checked+.slider:before
 
 .voucher-total div
 {
-    margin-top: 55px;
-    margin-left: 700px;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 30px;
+    margin-top: 30px;    
+    margin-left: 740px;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 24px;
     color: #242F3E;
 }
 
@@ -3111,7 +3381,7 @@ input:checked+.slider:before
     grid-template-columns: 200px 200px 200px 200px auto;
     grid-template-rows: 100%;
     grid-template-areas: 
-    "mail ask phone 24-7 .";
+    "mail ask phone live .";
 }
 
 .voucher-help-element
@@ -3130,7 +3400,7 @@ input:checked+.slider:before
 
 .voucher-help-element p
 {
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 14px;
     color: #0267C1;
     margin: auto;
@@ -3146,13 +3416,13 @@ input:checked+.slider:before
     height: auto;
     display: grid;
     grid-template-columns: auto 1200px auto;
-    grid-template-rows: 600px 500px 500px 400px 500px 400px 500px 445px;
+    grid-template-rows: 650px 500px 500px 400px 600px 400px 500px 445px;
     grid-template-areas: 
     ". about-us ."
     ". about-transfer ."
     ". fleet ."
     ". about-extra ."
-    ". extra ."
+    "extra extra extra"    
     "img-info img-info img-info"
     ". faq ."
     "footer footer footer";
@@ -3175,7 +3445,7 @@ input:checked+.slider:before
 .about-us h1
 {
     grid-area: title;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 24px;
     color: #242F3E;
 }
@@ -3183,7 +3453,7 @@ input:checked+.slider:before
 .about-us div
 {
     grid-area: content;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 20px;
     color: #242F3E;
 }
@@ -3204,7 +3474,7 @@ input:checked+.slider:before
 .about-extra h1
 {
     grid-area: title;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 24px;
     color: #242F3E;
 }
@@ -3212,7 +3482,7 @@ input:checked+.slider:before
 .about-extra div
 {
     grid-area: content;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 20px;
     color: #242F3E;
 }
@@ -3233,7 +3503,7 @@ input:checked+.slider:before
 .about-transfer h1
 {
     grid-area: title;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 24px;
     color: #242F3E;
 }
@@ -3241,7 +3511,7 @@ input:checked+.slider:before
 .about-transfer div
 {
     grid-area: content;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 20px;
     color: #242F3E;
 }
@@ -3254,7 +3524,7 @@ input:checked+.slider:before
     height: auto;
     display: grid;
     grid-template-columns: auto 1200px auto;
-    grid-template-rows: 200px 80px 830px 200px 500px 500px 445px;
+    grid-template-rows: 200px 80px 900px 200px 400px 500px 445px;
     grid-template-areas: 
     ". extra-int ."
     "service service service"
@@ -3282,7 +3552,7 @@ input:checked+.slider:before
 .extra-services-int h1
 {
     grid-area: title;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 24px;
     color: #242F3E;
 }
@@ -3290,7 +3560,7 @@ input:checked+.slider:before
 .extra-services-int div
 {
     grid-area: content;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 18px;
     color: #242F3E;
 }
@@ -3313,7 +3583,7 @@ input:checked+.slider:before
 .extra-services-content-h1
 {
     grid-area: title;    
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 20px;
     color: #242F3E;
 }
@@ -3347,7 +3617,7 @@ input:checked+.slider:before
 {
     margin-top: 40px;
     grid-area: content;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 18px;
     color: #242F3E;
     width: 600px;
@@ -3368,7 +3638,7 @@ input:checked+.slider:before
     margin: auto;
     display: grid;
     grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 20px 40px 40px;
+    grid-template-rows: 50px 60px 60px;
     grid-template-areas: 
     "title . ."
     "mail ask phone"
@@ -3378,7 +3648,7 @@ input:checked+.slider:before
 .extra-services-support h1
 {
     grid-area: title;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 20px;
     color: #242F3E;
     margin-top: 0;
@@ -3386,9 +3656,9 @@ input:checked+.slider:before
 
 .extra-services-support-link
 {
-    margin-top: auto;
+    margin-top: 16px;
     margin-left: 60px;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 18px;
     color: #0267C1;
     float: left;
@@ -3396,9 +3666,9 @@ input:checked+.slider:before
 
 .extra-services-support-text
 {
-    margin-top: auto;
+    margin-top: 16px;
     margin-left: 60px;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 18px;
     color: #56585B;
     float: left;
@@ -3444,7 +3714,7 @@ input:checked+.slider:before
 .privacy-policy-content h1
 {
     grid-area: title;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 24px;
     color: #242F3E;
 }
@@ -3452,7 +3722,7 @@ input:checked+.slider:before
 .privacy-policy-content div
 {
     grid-area: content;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 20px;
     color: #242F3E;
 }
@@ -3473,7 +3743,7 @@ input:checked+.slider:before
 .privacy-policy-about-transfer h1
 {
     grid-area: title;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 24px;
     color: #242F3E;
 }
@@ -3481,7 +3751,7 @@ input:checked+.slider:before
 .privacy-policy-about-transfer div
 {
     grid-area: content;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 20px;
     color: #242F3E;
 }
@@ -3518,7 +3788,7 @@ input:checked+.slider:before
 .partner-about h1
 {
     grid-area: title;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 24px;
     color: #242F3E;
 }
@@ -3526,9 +3796,9 @@ input:checked+.slider:before
 .partner-about div
 {
     grid-area: content;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 18px;
-    color: #242F3E;   
+    color: #242F3E;
 }
 
 .partner-form
@@ -3539,10 +3809,11 @@ input:checked+.slider:before
     width: 300px;
     height: 670px;
     background-color: #FFFFFF;
-    border: 1px solid #c7c6c6;
+    border: 1px solid #242F3E;
+    border-radius: 5px;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 50px 20px 60px 20px 60px 20px 60px 20px 60px 20px 200px 80px;
+    grid-template-rows: 50px 30px 50px 30px 50px 30px 50px 30px 50px 30px 200px 80px;
     grid-template-areas: 
     "title"
     "label1"
@@ -3560,7 +3831,7 @@ input:checked+.slider:before
 
 .partner-form h1
 {
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 20px;
     color: #242F3E;
     margin-top: 10px;
@@ -3569,8 +3840,8 @@ input:checked+.slider:before
 
 .partner-form-label
 {
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 12px;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
     color: #242F3E;
     margin-left: 20px;
 }
@@ -3605,7 +3876,7 @@ input:checked+.slider:before
     height: 35px;
     background-color: #242F3E;
     border-radius: 5px;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 14px;
     color: #FFFFFF;
     border: none;
@@ -3621,7 +3892,7 @@ input:checked+.slider:before
     height: auto;
     display: grid;
     grid-template-columns: auto 1200px auto;
-    grid-template-rows: 80px 550px 200px 400px 500px 445px;
+    grid-template-rows: 80px 650px 200px 400px 500px 445px;
     grid-template-areas: 
     ". title ."
     ". form ."
@@ -3634,10 +3905,10 @@ input:checked+.slider:before
 .contact-body-title
 {
     grid-area: title;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 24px;
     color: #242F3E;
-    margin-left: 300px;
+    margin-left: 270px;
     margin-top: 60px;
 }
 
@@ -3646,13 +3917,14 @@ input:checked+.slider:before
     width: 650px;
     height: 500px;
     grid-area: form;
-    margin: auto;    
+    margin: auto;
+    margin-top: 40px;
     background-color: #FFFFFF;
     border: 2px solid #242F3E;
     border-radius: 5px;
     display: grid;
     grid-template-columns: 350px 300px;
-    grid-template-rows: 20px 20px 60px 20px 60px 20px 200px 100px;
+    grid-template-rows: 20px 30px 50px 30px 50px 30px 190px 100px;
     grid-template-areas: 
     ". ."
     "label1 ."
@@ -3666,8 +3938,8 @@ input:checked+.slider:before
 
 .contact-form-label
 {
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 12px;
+    font-family: OpenSans-Regular;
+    font-size: 14px;
     color: #242F3E;
     margin-left: 40px;
 }
@@ -3722,12 +3994,12 @@ input:checked+.slider:before
     height: 40px;
     background-color: #242F3E;
     border-radius: 5px;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 20px;
     color: #FFFFFF;
     border: none;
     margin-left: 110px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 /* POPULAR DESTINATIONS */
@@ -3738,11 +4010,11 @@ input:checked+.slider:before
     height: auto;
     display: grid;
     grid-template-columns: auto 1200px auto;
-    grid-template-rows: 1200px 500px 580px 500px 445px;
+    grid-template-rows: 1340px 500px 580px 500px 445px;
     grid-template-areas: 
     ". pop-dest ."
     "img-info img-info img-info"
-    ". extra ."
+    "extra extra extra"
     ". faq ."
     "footer footer footer";
 }
@@ -3754,7 +4026,7 @@ input:checked+.slider:before
     height: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100px 500px;
+    grid-template-rows: 140px 1200px;
     grid-template-areas: 
     "desc"
     "pops";
@@ -3770,7 +4042,7 @@ input:checked+.slider:before
     border-radius: 10px;
     line-height: 60px;
     vertical-align: middle;
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 20px;
     color: #242F3E;
     padding-left: 20px;
@@ -3794,14 +4066,14 @@ input:checked+.slider:before
 
 .popular-dest-pop-dest
 {
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 16px;
     color: #242F3E;
 }
 
 .popular-dest-pop-price
 {
-    font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 16px;
     color: #F9AC1A;
 }
@@ -3824,7 +4096,7 @@ input:checked+.slider:before
     z-index: 1;
     grid-area: footer;
     display: grid;
-    grid-template-columns: 5% 20% 50% 20% 5%;
+    grid-template-columns: 3% 20% 50% 20% 5%;
     grid-template-rows: 65px 45px 45px 45px 45px 45px 45px 45px 65px;
     grid-template-areas: 
     ". . logo drop ."
@@ -3846,12 +4118,20 @@ input:checked+.slider:before
     margin: auto;
 }
 
+.footer-dama-logo
+{
+    width: 50px;
+    margin-top: 5px;
+    margin-left: 5px;
+    float: left;
+}
+
 .footer-element
 {
     width: 80%;
     height: auto;
     margin: auto;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 16px;
     color: #FFFFFF;
 }
@@ -3861,7 +4141,7 @@ input:checked+.slider:before
     width: auto;
     height: auto;
     margin: auto;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 24px;
     color: #FFFFFF;
 }
@@ -3891,7 +4171,7 @@ input:checked+.slider:before
     border: 1px solid #FFFFFF;
     border-radius: 4px;
     background-color: #242F3E;
-    font-family: Questiral;
+    font-family: OpenSans-Regular;
     font-size: 14px;
     color: #FFFFFF;
 }
@@ -3997,7 +4277,7 @@ input:checked+.slider:before
         background-color: rgba(0,0,0,0);
         border: 1px solid #FFFFFF;
         border-radius: 5px;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 16px;
         color: #FFFFFF;
         margin-top: 50px;
@@ -4013,7 +4293,7 @@ input:checked+.slider:before
 
     .nav-bar ul li p
     {
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         color: #FFFFFF;
         font-size: 14px;        
     }
@@ -4024,7 +4304,7 @@ input:checked+.slider:before
         margin-left: calc(40% - 40px);
         text-align: center;
         margin-bottom: auto;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         color: #FFFFFF;
         font-size: 10px;
         margin-top: 120px;
@@ -4078,7 +4358,7 @@ input:checked+.slider:before
         text-align: center;
         height: 80px;
         grid-area: main-text;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 28px;
         color: #E4E4E4;
         margin: 100px 0px;
@@ -4125,7 +4405,7 @@ input:checked+.slider:before
     {
         width: 230px;
         height: 28px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 25px;
         color: #FFFFFF;
         grid-area: title;
@@ -4172,7 +4452,7 @@ input:checked+.slider:before
         grid-area: from;
         background-color: rgba(0,0,0,0);
         color: #FFFFFF;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 20px;
         border-color: rgba(0,0,0,0);
     }
@@ -4191,7 +4471,7 @@ input:checked+.slider:before
         grid-area: to;
         background-color: rgba(0,0,0,0);
         color: #FFFFFF;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 20px;
         border-color: rgba(0,0,0,0);
     }
@@ -4310,7 +4590,7 @@ input:checked+.slider:before
         text-align: center;
         line-height: 20px;
         vertical-align: middle;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 26px;
         color: #FFFFFF;
         user-select: none; /* supported by Chrome and Opera */
@@ -4331,7 +4611,7 @@ input:checked+.slider:before
         text-align: center;
         line-height: 20px;
         vertical-align: middle;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 26px;
         color: #FFFFFF;
         user-select: none; /* supported by Chrome and Opera */
@@ -4350,7 +4630,7 @@ input:checked+.slider:before
         text-align: center;
         line-height: 20px;
         vertical-align: middle;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 26px;
         color: #FFFFFF;
         user-select: none; /* supported by Chrome and Opera */
@@ -4381,7 +4661,7 @@ input:checked+.slider:before
         background-color: #6AE2A6;
         border-radius: 4px;
         border-width: 0;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 30px;
         color: #FFFFFF;    
     }
@@ -4435,14 +4715,14 @@ input:checked+.slider:before
     
     .autocomplete-items div b
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         color: #242F3E;
         font-size: 12px;
     }
     
     .autocomplete-items div p
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         color: #93989E;
         font-size: 10px
     }
@@ -4515,7 +4795,7 @@ input:checked+.slider:before
         height: 56px;
         margin: auto;
         text-align: center;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 34px;
         color: #242F3E;
     }
@@ -4542,7 +4822,7 @@ input:checked+.slider:before
         grid-area: step;
         margin: auto;
         text-align: center;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         color: #FFFFFF;
         font-size: 25px;
         line-height: 36px;
@@ -4563,7 +4843,7 @@ input:checked+.slider:before
         width: 85%;
         height: 60px;
         grid-area: desc;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 22px;
         color: #000000;
         margin: auto;
@@ -4603,7 +4883,7 @@ input:checked+.slider:before
         width: auto;
         height: auto;
         margin: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 40px;
         color: #242F3E;
         grid-area: title;
@@ -4658,7 +4938,7 @@ input:checked+.slider:before
         width: auto;
         height: auto;
         margin: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #242F3E;
         grid-area: title;
@@ -4691,7 +4971,7 @@ input:checked+.slider:before
         width: 180px;
         height: 60px;
         margin: 5px auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 12px;
         color: #5B5B5B;
         grid-area: review;
@@ -4702,7 +4982,7 @@ input:checked+.slider:before
         width: 80px;
         height: 20px;
         margin: 0 0 0 180px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #242F3E;
         grid-area: author;
@@ -4804,7 +5084,7 @@ input:checked+.slider:before
     
     .reviews-live div
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #595A5A;
         width: auto;
@@ -4859,7 +5139,7 @@ input:checked+.slider:before
         height: auto;
         margin: auto;
         grid-area: title;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 40px;
         color: #242F3E;
     }
@@ -4905,7 +5185,7 @@ input:checked+.slider:before
     {
         width: 200px;
         margin: auto;    
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #242F3E;
     }
@@ -4914,7 +5194,7 @@ input:checked+.slider:before
     {
         width: 200px;
         margin: auto;    
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 12px;
         color: #4E4E4E;
     }
@@ -4950,7 +5230,7 @@ input:checked+.slider:before
         grid-area: title;
         width: 200px;
         height: 25px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 20px;
         color: #242F3E;
         margin: auto;
@@ -4963,7 +5243,7 @@ input:checked+.slider:before
         width: 140px;
         height: 25px;
         background-color: rgba(38,166,91,0.3);
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         border-radius: 10px;
         margin: auto;
     }
@@ -4974,7 +5254,7 @@ input:checked+.slider:before
         width: 140px;
         height: 25px;
         background-color: rgba(38,166,91,0.3);
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         border-radius: 10px;
         margin: auto;
     }
@@ -4985,7 +5265,7 @@ input:checked+.slider:before
         width: 180px;
         height: 25px;
         background-color: rgba(38,166,91,0.3);
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         border-radius: 10px;
         margin: auto;
     }
@@ -4996,7 +5276,7 @@ input:checked+.slider:before
         width: 180px;
         height: 25px;
         background-color: rgba(38,166,91,0.3);
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         border-radius: 10px;
         margin: auto;
     }
@@ -5017,7 +5297,7 @@ input:checked+.slider:before
         grid-area: desc;
         width: 200px;
         height: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #4E4E4E;
         margin: auto;
@@ -5042,7 +5322,7 @@ input:checked+.slider:before
     
     .service-text
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         width: 340px;    
         font-size: 22px;
         color: #707070;
@@ -5054,7 +5334,7 @@ input:checked+.slider:before
     
     .service-us
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 32px;
         color: 232321;
         margin: auto;
@@ -5082,7 +5362,7 @@ input:checked+.slider:before
         grid-area: title;
         width: auto;
         height: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 40px;
         color: #242F3E;
         grid-area: title;
@@ -5123,7 +5403,7 @@ input:checked+.slider:before
     
     .popular-dest-text
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #242F3E;
         margin: auto;
@@ -5133,7 +5413,7 @@ input:checked+.slider:before
     .popular-dest-price
     {
         grid-area: price;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #F9AC1A;
         margin: auto;
@@ -5142,7 +5422,7 @@ input:checked+.slider:before
     
     .popular-dest-price font
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #F9AC1A;
         margin: auto;
@@ -5189,7 +5469,7 @@ input:checked+.slider:before
     .extra-services-title
     {
         grid-area: title;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 30px;
         font-weight: bold;
         color: #242F3E;
@@ -5221,7 +5501,7 @@ input:checked+.slider:before
     
     .extra-service-title
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 24px;
         color: #242F3E;
         margin: auto;    
@@ -5243,7 +5523,7 @@ input:checked+.slider:before
     
     .extra-service-desc
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 18px;
         color: #242F3E;
         margin: auto;
@@ -5268,7 +5548,7 @@ input:checked+.slider:before
     .faq-title
     {
         grid-area: title;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 36px;
         font-weight: bold;
         margin: auto;
@@ -5296,7 +5576,7 @@ input:checked+.slider:before
     {
         width: 100%;
         height: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 18px;
         font-weight: bold;
         color: #0267C1;
@@ -5325,7 +5605,7 @@ input:checked+.slider:before
     .contact-div-title
     {
         grid-area: title;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 28px;
         color: #242F3E;
         margin: auto;
@@ -5334,7 +5614,7 @@ input:checked+.slider:before
     
     .contact-div-text
     {    
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 18px;
         color: #242F3E;
         margin: auto;
@@ -5343,7 +5623,7 @@ input:checked+.slider:before
     
     .contact-div-text-mini
     {    
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 18px;
         color: #242F3E;
         margin-top: 80px;
@@ -5352,7 +5632,7 @@ input:checked+.slider:before
     
     .contact-div-link
     {    
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 20px;
         color: #0267C1;
         margin: auto;
@@ -5397,7 +5677,7 @@ input:checked+.slider:before
         height: auto;
         margin: auto;
         margin-left: 30px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 14px;
         color: #FFFFFF;
     }
@@ -5418,7 +5698,7 @@ input:checked+.slider:before
         height: 100%;
         border-width: 0;
         background-color: #F9AC1A;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 18px;
         color: #FFFFFF;
         border-radius: 5px;
@@ -5454,7 +5734,7 @@ input:checked+.slider:before
     {
         grid-area: title;
         margin: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 34px;
         color: #242F3E;
         margin-top: 20px;
@@ -5464,7 +5744,7 @@ input:checked+.slider:before
     {    
         width: 100%;
         height: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 22px;
         color: #242F3E;
         margin: auto;
@@ -5475,7 +5755,7 @@ input:checked+.slider:before
     {    
         width: 100%;
         height: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #242F3E;
         margin: auto;
@@ -5505,7 +5785,7 @@ input:checked+.slider:before
     .last-week-circle div
     {
         text-align: center;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 20px;
         color: #FFFFFF;
         margin-top: 35px;
@@ -5556,7 +5836,7 @@ input:checked+.slider:before
         text-align: center;
         vertical-align: middle;
         margin: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 22px;
         color: #FFFFFF;
     }
@@ -5599,7 +5879,7 @@ input:checked+.slider:before
         line-height: 15px;
         text-align: center;
         vertical-align: middle;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 12px;
         color: #858080;
         
@@ -5627,7 +5907,7 @@ input:checked+.slider:before
         grid-area: rate;    
         margin-top: 20px;
         margin-left: 45px;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 12px;
         color: #FFFFFF;
     }
@@ -5635,7 +5915,7 @@ input:checked+.slider:before
     .specs-rate div
     {
         width: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #A8A8A8;
         margin-top: 10px;
@@ -5656,7 +5936,7 @@ input:checked+.slider:before
         grid-area: meet;
         margin-left: 45px;
         margin-top: 20px;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 12px;
         color: #FFFFFF;
     }
@@ -5676,7 +5956,7 @@ input:checked+.slider:before
         grid-area: payment;
         margin-left: 45px;
         margin-top: 20px;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 12px;
         color: #FFFFFF;
     }
@@ -5800,7 +6080,7 @@ input:checked+.slider:before
     {
         width: auto;
         margin: 5px 0 0 10px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 12px;
         color: #6E6F70;
     }
@@ -5834,7 +6114,7 @@ input:checked+.slider:before
     {
         grid-area: title;    
         height: 20px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 24px;
         color: #242F3E;
         margin: auto;
@@ -5852,7 +6132,7 @@ input:checked+.slider:before
     
     .car-info-pax div
     {    
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 24px;
         color: #676767;
         margin-left: 35px;
@@ -5876,7 +6156,7 @@ input:checked+.slider:before
     .car-info-bags div
     {
         margin-left: 35px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 24px;
         color: #676767;
     }
@@ -5905,7 +6185,7 @@ input:checked+.slider:before
     
     .car-specs-text1
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #26A65B;
         grid-area: text1;
@@ -5924,7 +6204,7 @@ input:checked+.slider:before
     .car-specs-text2
     {
         grid-area: text2;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #26A65B;
         margin: auto;
@@ -5946,7 +6226,7 @@ input:checked+.slider:before
         height: auto;
         margin: auto;   
         margin-top: 20px;     
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #4E4E4E;
     }
@@ -5990,7 +6270,7 @@ input:checked+.slider:before
         grid-area: price;
         width: auto;
         height: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 30px;
         color: #FFFFFF;
         margin: auto;
@@ -6005,7 +6285,7 @@ input:checked+.slider:before
         border: none;
         border-radius: 4px;
         background-color: #F9AC1A;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 30px;
         color: #FFFFFF;
     }
@@ -6074,7 +6354,7 @@ input:checked+.slider:before
         grid-area: title;
         width: 200px;
         height: 25px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 20px;
         color: #242F3E;
         margin: auto;
@@ -6087,7 +6367,7 @@ input:checked+.slider:before
         width: 140px;
         height: 25px;
         background-color: rgba(38,166,91,0.3);
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         border-radius: 10px;
     }
     
@@ -6097,7 +6377,7 @@ input:checked+.slider:before
         width: 140px;
         height: 25px;
         background-color: rgba(38,166,91,0.3);
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         border-radius: 10px;
     }
     
@@ -6107,7 +6387,7 @@ input:checked+.slider:before
         width: 180px;
         height: 25px;
         background-color: rgba(38,166,91,0.3);
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         border-radius: 10px;
     }
     
@@ -6117,7 +6397,7 @@ input:checked+.slider:before
         width: 180px;
         height: 25px;
         background-color: rgba(38,166,91,0.3);
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         border-radius: 10px;
     }
     
@@ -6137,7 +6417,7 @@ input:checked+.slider:before
         grid-area: desc;
         width: 200px;
         height: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #4E4E4E;
         margin: auto;
@@ -6161,7 +6441,7 @@ input:checked+.slider:before
     {
         width: auto;
         height: 60px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 24px;
         color: #242F3E;
         margin: auto;
@@ -6172,7 +6452,7 @@ input:checked+.slider:before
     {
         width: 100%;
         height: 100%;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 18px;
         color: #242F3E;
         margin: auto;        
@@ -6310,7 +6590,7 @@ input:checked+.slider:before
     {
         width: auto;
         height: 60px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 26px;
         color: #242F3E;
         margin: 20px 0 0 30px;
@@ -6320,7 +6600,7 @@ input:checked+.slider:before
     {
         width: auto;
         height: 60px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 14px;
         color: #242F3E;        
     }
@@ -6329,7 +6609,7 @@ input:checked+.slider:before
     {
         width: 300px;
         height: 60px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 12px;
         color: #B9B9B9;        
     }
@@ -6338,7 +6618,7 @@ input:checked+.slider:before
     {
         width: auto;
         height: 60px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 12px;
         color: #242F3E;
         margin-left: 30px;
@@ -6387,7 +6667,7 @@ input:checked+.slider:before
     
     .privacy-container font
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 14px;
         color: #474747;
         margin-left: 30px;
@@ -6475,7 +6755,7 @@ input:checked+.slider:before
     
     .form-input::placeholder
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 14px;
         color: #B9B9B9;
     }
@@ -6552,7 +6832,7 @@ input:checked+.slider:before
     {    
         width: auto;
         height: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 14px;
         color: #242F3E;
         margin: auto;
@@ -6567,7 +6847,7 @@ input:checked+.slider:before
         border-radius: 5px;
         background-color: #FFFFFF;        
         padding-left: 45px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 18px;
         color: #B9B9B9;    
     }
@@ -6578,7 +6858,7 @@ input:checked+.slider:before
     }
     .form-time::placeholder
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 18px;
         color: #B9B9B9;
     }
@@ -6609,7 +6889,7 @@ input:checked+.slider:before
         border-radius: 5px;
         background-color: #F9AC1A;
         border: none;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 24px;
         color: #FFFFFF;
         grid-area: btn;
@@ -6664,7 +6944,7 @@ input:checked+.slider:before
         grid-area: title;
         width: 100%;
         height: 20px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 22px;
         color: #FFFFFF;
         margin: auto;
@@ -6705,7 +6985,7 @@ input:checked+.slider:before
     {
         width: calc(100% - 40px);
         height: 100%;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #FFFFFF;
         margin-left: 40px;
@@ -6715,7 +6995,7 @@ input:checked+.slider:before
     {
         width: 21   0px;
         height: 100%;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #969798;
         margin-left: 40px;
@@ -6725,7 +7005,7 @@ input:checked+.slider:before
     {
         width: 100%;
         height: 100%;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #FFFFFF;
     }
@@ -6800,7 +7080,7 @@ input:checked+.slider:before
     
     .form-card-details-div font
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #FFFFFF;
         margin-left: 10px;
@@ -6828,7 +7108,7 @@ input:checked+.slider:before
     
     .form-card-route-label
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 20px;
         color: #FFFFFF;
         margin-left: 40px;
@@ -6836,7 +7116,7 @@ input:checked+.slider:before
     
     .form-card-route-dist
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 14px;
         color: #969798;
         margin-left: 40px;
@@ -6857,7 +7137,7 @@ input:checked+.slider:before
         width: 220px;
         height: 40px;
         margin: 20px 20px 0 30%;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 22px;
         color: #FFFFFF;
         direction: rtl;
@@ -6933,7 +7213,7 @@ input:checked+.slider:before
         
         width: 100%;
         height: 100%;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 26px;
         color: #56585B;
     }
@@ -6976,14 +7256,14 @@ input:checked+.slider:before
     
     .voucher-name
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #242F3E;
     }
     
     .voucher-address
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #707070;
         width: 200px;
@@ -6993,7 +7273,7 @@ input:checked+.slider:before
     {    
         grid-area: date;
         margin-top: 20px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 12px;
         color: #242F3E;
     }
@@ -7003,7 +7283,7 @@ input:checked+.slider:before
         grid-area: price;
         width: 100%;
         height: 100%;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 22px;
         color: #242F3E;
         
@@ -7052,7 +7332,7 @@ input:checked+.slider:before
     
     .voucher-detail p
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #242F3E;
         height: 20px;
@@ -7075,7 +7355,7 @@ input:checked+.slider:before
         margin-top: 55px;
         float: right;
         margin-right: 10px;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 22px;
         color: #242F3E;
     }
@@ -7113,7 +7393,7 @@ input:checked+.slider:before
     
     .voucher-help-element p
     {
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 14px;
         color: #0267C1;
         margin: auto;
@@ -7158,7 +7438,7 @@ input:checked+.slider:before
     .about-us h1
     {
         grid-area: title;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 22px;
         color: #242F3E;
     }
@@ -7166,7 +7446,7 @@ input:checked+.slider:before
     .about-us div
     {
         grid-area: content;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 20px;
         color: #242F3E;
     }
@@ -7187,7 +7467,7 @@ input:checked+.slider:before
     .about-extra h1
     {
         grid-area: title;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 24px;
         color: #242F3E;
     }
@@ -7195,7 +7475,7 @@ input:checked+.slider:before
     .about-extra div
     {
         grid-area: content;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 20px;
         color: #242F3E;
     }
@@ -7216,7 +7496,7 @@ input:checked+.slider:before
     .about-transfer h1
     {
         grid-area: title;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 24px;
         color: #242F3E;
     }
@@ -7224,7 +7504,7 @@ input:checked+.slider:before
     .about-transfer div
     {
         grid-area: content;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 20px;
         color: #242F3E;
     }
@@ -7265,7 +7545,7 @@ input:checked+.slider:before
     .extra-services-int h1
     {
         grid-area: title;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 24px;
         color: #242F3E;
     }
@@ -7273,7 +7553,7 @@ input:checked+.slider:before
     .extra-services-int div
     {
         grid-area: content;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 18px;
         color: #242F3E;
     }
@@ -7296,7 +7576,7 @@ input:checked+.slider:before
     .extra-services-content-h1
     {
         grid-area: title;    
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 24px;
         color: #242F3E;
         margin: auto;
@@ -7334,7 +7614,7 @@ input:checked+.slider:before
         margin-top: 40px;
         width: 100%;
         grid-area: content;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 18px;
         color: #242F3E;
         
@@ -7365,7 +7645,7 @@ input:checked+.slider:before
     .extra-services-support h1
     {
         grid-area: title;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 20px;
         color: #242F3E;
         margin-top: 0;
@@ -7375,7 +7655,7 @@ input:checked+.slider:before
     {
         margin: auto;
         margin-left: 40px;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 12px;
         color: #0267C1;
         float: left;
@@ -7385,7 +7665,7 @@ input:checked+.slider:before
     {
         margin: auto;
         margin-left: 40px;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 12px;
         color: #56585B;
         float: left;
@@ -7432,7 +7712,7 @@ input:checked+.slider:before
     .privacy-policy-content h1
     {
         grid-area: title;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 24px;
         color: #242F3E;
     }
@@ -7440,7 +7720,7 @@ input:checked+.slider:before
     .privacy-policy-content div
     {
         grid-area: content;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 16px;
         color: #242F3E;
     }
@@ -7461,7 +7741,7 @@ input:checked+.slider:before
     .privacy-policy-about-transfer h1
     {
         grid-area: title;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 24px;
         color: #242F3E;
     }
@@ -7469,7 +7749,7 @@ input:checked+.slider:before
     .privacy-policy-about-transfer div
     {
         grid-area: content;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 16px;
         color: #242F3E;
     }
@@ -7506,7 +7786,7 @@ input:checked+.slider:before
     .partner-about h1
     {
         grid-area: title;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 24px;
         color: #242F3E;
     }
@@ -7514,7 +7794,7 @@ input:checked+.slider:before
     .partner-about div
     {
         grid-area: content;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 18px;
         color: #242F3E;   
     }
@@ -7548,7 +7828,7 @@ input:checked+.slider:before
     
     .partner-form h1
     {
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 20px;
         color: #242F3E;
         margin-top: 10px;
@@ -7557,7 +7837,7 @@ input:checked+.slider:before
     
     .partner-form-label
     {
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 12px;
         color: #242F3E;
         margin-left: 20px;
@@ -7593,7 +7873,7 @@ input:checked+.slider:before
         height: 35px;
         background-color: #242F3E;
         border-radius: 5px;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 14px;
         color: #FFFFFF;
         border: none;
@@ -7622,7 +7902,7 @@ input:checked+.slider:before
     .contact-body-title
     {
         grid-area: title;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 24px;
         color: #242F3E;                
     }
@@ -7654,7 +7934,7 @@ input:checked+.slider:before
     
     .contact-form-label
     {
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 12px;
         color: #242F3E;        
     }
@@ -7702,7 +7982,7 @@ input:checked+.slider:before
         height: 40px;
         background-color: #242F3E;
         border-radius: 5px;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 20px;
         color: #FFFFFF;
         border: none;
@@ -7749,7 +8029,7 @@ input:checked+.slider:before
         border-radius: 10px;
         text-align: center;        
         vertical-align: middle;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 14px;
         color: #242F3E;
         padding-left: 20px;
@@ -7774,14 +8054,14 @@ input:checked+.slider:before
     
     .popular-dest-pop-dest
     {
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 12px;
         color: #242F3E;
     }
     
     .popular-dest-pop-price
     {
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 14px;
         color: #F9AC1A;
     }
@@ -7827,7 +8107,7 @@ input:checked+.slider:before
         width: 100%;
         height: auto;
         margin: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #FFFFFF;
     }
@@ -7837,7 +8117,7 @@ input:checked+.slider:before
         width: auto;
         height: auto;
         margin: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 18px;
         color: #FFFFFF;
         font-weight: bold;
@@ -7867,7 +8147,7 @@ input:checked+.slider:before
         border: 1px solid #FFFFFF;
         border-radius: 4px;
         background-color: #242F3E;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 14px;
         color: #FFFFFF;
     }
@@ -7973,7 +8253,7 @@ input:checked+.slider:before
         background-color: rgba(0,0,0,0);
         border: 1px solid #FFFFFF;
         border-radius: 5px;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 16px;
         color: #FFFFFF;
         margin-top: 50px;
@@ -7989,7 +8269,7 @@ input:checked+.slider:before
 
     .nav-bar ul li p
     {
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         color: #FFFFFF;
         font-size: 14px;        
     }
@@ -8000,7 +8280,7 @@ input:checked+.slider:before
         margin-left: calc(40% - 40px);
         text-align: center;
         margin-bottom: auto;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         color: #FFFFFF;
         font-size: 10px;
         margin-top: 120px;
@@ -8054,7 +8334,7 @@ input:checked+.slider:before
         
         height: 80px;
         grid-area: main-text;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 24px;
         color: #E4E4E4;
         margin: 100px 0px;
@@ -8100,7 +8380,7 @@ input:checked+.slider:before
     {
         width: 230px;
         height: 28px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 25px;
         color: #FFFFFF;
         grid-area: title;
@@ -8147,7 +8427,7 @@ input:checked+.slider:before
         grid-area: from;
         background-color: rgba(0,0,0,0);
         color: #FFFFFF;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 20px;
         border-color: rgba(0,0,0,0);
     }
@@ -8166,7 +8446,7 @@ input:checked+.slider:before
         grid-area: to;
         background-color: rgba(0,0,0,0);
         color: #FFFFFF;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 20px;
         border-color: rgba(0,0,0,0);
     }
@@ -8285,7 +8565,7 @@ input:checked+.slider:before
         text-align: center;
         line-height: 20px;
         vertical-align: middle;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 26px;
         color: #FFFFFF;
         user-select: none; /* supported by Chrome and Opera */
@@ -8306,7 +8586,7 @@ input:checked+.slider:before
         text-align: center;
         line-height: 20px;
         vertical-align: middle;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 26px;
         color: #FFFFFF;
         user-select: none; /* supported by Chrome and Opera */
@@ -8325,7 +8605,7 @@ input:checked+.slider:before
         text-align: center;
         line-height: 20px;
         vertical-align: middle;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 26px;
         color: #FFFFFF;
         user-select: none; /* supported by Chrome and Opera */
@@ -8356,7 +8636,7 @@ input:checked+.slider:before
         background-color: #6AE2A6;
         border-radius: 4px;
         border-width: 0;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 30px;
         color: #FFFFFF;    
     }
@@ -8410,14 +8690,14 @@ input:checked+.slider:before
     
     .autocomplete-items div b
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         color: #242F3E;
         font-size: 12px;
     }
     
     .autocomplete-items div p
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         color: #93989E;
         font-size: 10px
     }
@@ -8490,7 +8770,7 @@ input:checked+.slider:before
         height: 56px;
         margin: auto;
         text-align: center;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 34px;
         color: #242F3E;
     }
@@ -8517,7 +8797,7 @@ input:checked+.slider:before
         grid-area: step;
         margin: auto;
         text-align: center;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         color: #FFFFFF;
         font-size: 25px;
         line-height: 36px;
@@ -8538,7 +8818,7 @@ input:checked+.slider:before
         width: 85%;
         height: 60px;
         grid-area: desc;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 22px;
         color: #000000;
         margin: auto;
@@ -8578,7 +8858,7 @@ input:checked+.slider:before
         width: auto;
         height: auto;
         margin: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 40px;
         color: #242F3E;
         grid-area: title;
@@ -8633,7 +8913,7 @@ input:checked+.slider:before
         width: auto;
         height: auto;
         margin: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #242F3E;
         grid-area: title;
@@ -8666,7 +8946,7 @@ input:checked+.slider:before
         width: 180px;
         height: 60px;
         margin: 5px auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 12px;
         color: #5B5B5B;
         grid-area: review;
@@ -8677,7 +8957,7 @@ input:checked+.slider:before
         width: 80px;
         height: 20px;
         margin: 0 0 0 180px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #242F3E;
         grid-area: author;
@@ -8779,7 +9059,7 @@ input:checked+.slider:before
     
     .reviews-live div
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #595A5A;
         width: auto;
@@ -8834,7 +9114,7 @@ input:checked+.slider:before
         height: auto;
         margin: auto;
         grid-area: title;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 40px;
         color: #242F3E;
     }
@@ -8903,7 +9183,7 @@ input:checked+.slider:before
     {
         width: 200px;
         margin: auto;    
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #242F3E;
     }
@@ -8912,7 +9192,7 @@ input:checked+.slider:before
     {
         width: 200px;
         margin: auto;    
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 12px;
         color: #4E4E4E;
     }
@@ -8948,7 +9228,7 @@ input:checked+.slider:before
         grid-area: title;
         width: 200px;
         height: 25px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 20px;
         color: #242F3E;
         margin: auto;
@@ -8961,7 +9241,7 @@ input:checked+.slider:before
         width: 140px;
         height: 25px;
         background-color: rgba(38,166,91,0.3);
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         border-radius: 10px;
         margin: auto;
     }
@@ -8972,7 +9252,7 @@ input:checked+.slider:before
         width: 140px;
         height: 25px;
         background-color: rgba(38,166,91,0.3);
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         border-radius: 10px;
         margin: auto;
     }
@@ -8983,7 +9263,7 @@ input:checked+.slider:before
         width: 180px;
         height: 25px;
         background-color: rgba(38,166,91,0.3);
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         border-radius: 10px;
         margin: auto;
     }
@@ -8994,7 +9274,7 @@ input:checked+.slider:before
         width: 180px;
         height: 25px;
         background-color: rgba(38,166,91,0.3);
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         border-radius: 10px;
         margin: auto;
     }
@@ -9015,7 +9295,7 @@ input:checked+.slider:before
         grid-area: desc;
         width: 200px;
         height: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #4E4E4E;
         margin: auto;
@@ -9040,7 +9320,7 @@ input:checked+.slider:before
     
     .service-text
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         width: 340px;    
         font-size: 22px;
         color: #707070;
@@ -9052,7 +9332,7 @@ input:checked+.slider:before
     
     .service-us
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 32px;
         color: 232321;
         margin: auto;
@@ -9080,7 +9360,7 @@ input:checked+.slider:before
         grid-area: title;
         width: auto;
         height: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 40px;
         color: #242F3E;
         grid-area: title;
@@ -9121,7 +9401,7 @@ input:checked+.slider:before
     
     .popular-dest-text
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #242F3E;
         margin: auto;
@@ -9131,7 +9411,7 @@ input:checked+.slider:before
     .popular-dest-price
     {
         grid-area: price;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #F9AC1A;
         margin: auto;
@@ -9140,7 +9420,7 @@ input:checked+.slider:before
     
     .popular-dest-price font
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #F9AC1A;
         margin: auto;
@@ -9187,7 +9467,7 @@ input:checked+.slider:before
     .extra-services-title
     {
         grid-area: title;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 30px;
         font-weight: bold;
         color: #242F3E;
@@ -9219,7 +9499,7 @@ input:checked+.slider:before
     
     .extra-service-title
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 24px;
         color: #242F3E;
         margin: auto;    
@@ -9241,7 +9521,7 @@ input:checked+.slider:before
     
     .extra-service-desc
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 18px;
         color: #242F3E;
         margin: auto;
@@ -9266,7 +9546,7 @@ input:checked+.slider:before
     .faq-title
     {
         grid-area: title;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 36px;
         font-weight: bold;
         margin: auto;
@@ -9294,7 +9574,7 @@ input:checked+.slider:before
     {
         width: 100%;
         height: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 18px;
         font-weight: bold;
         color: #0267C1;
@@ -9323,7 +9603,7 @@ input:checked+.slider:before
     .contact-div-title
     {
         grid-area: title;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 28px;
         color: #242F3E;
         margin: auto;
@@ -9332,7 +9612,7 @@ input:checked+.slider:before
     
     .contact-div-text
     {    
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 18px;
         color: #242F3E;
         margin: auto;
@@ -9341,7 +9621,7 @@ input:checked+.slider:before
     
     .contact-div-text-mini
     {    
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 18px;
         color: #242F3E;
         margin-top: 80px;
@@ -9350,7 +9630,7 @@ input:checked+.slider:before
     
     .contact-div-link
     {    
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 20px;
         color: #0267C1;
         margin: auto;
@@ -9395,7 +9675,7 @@ input:checked+.slider:before
         height: auto;
         margin: auto;
         margin-left: 30px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 14px;
         color: #FFFFFF;
     }
@@ -9416,7 +9696,7 @@ input:checked+.slider:before
         height: 100%;
         border-width: 0;
         background-color: #F9AC1A;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 18px;
         color: #FFFFFF;
         border-radius: 5px;
@@ -9452,7 +9732,7 @@ input:checked+.slider:before
     {
         grid-area: title;
         margin: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 34px;
         color: #242F3E;
         margin-top: 20px;
@@ -9462,7 +9742,7 @@ input:checked+.slider:before
     {    
         width: 100%;
         height: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 22px;
         color: #242F3E;
         margin: auto;
@@ -9473,7 +9753,7 @@ input:checked+.slider:before
     {    
         width: 100%;
         height: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #242F3E;
         margin: auto;
@@ -9503,7 +9783,7 @@ input:checked+.slider:before
     .last-week-circle div
     {
         text-align: center;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 20px;
         color: #FFFFFF;
         margin-top: 35px;
@@ -9554,7 +9834,7 @@ input:checked+.slider:before
         text-align: center;
         vertical-align: middle;
         margin: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 22px;
         color: #FFFFFF;
     }
@@ -9597,7 +9877,7 @@ input:checked+.slider:before
         line-height: 15px;
         text-align: center;
         vertical-align: middle;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 12px;
         color: #858080;
         
@@ -9625,7 +9905,7 @@ input:checked+.slider:before
         grid-area: rate;    
         margin-top: 20px;
         margin-left: 45px;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 12px;
         color: #FFFFFF;
     }
@@ -9633,7 +9913,7 @@ input:checked+.slider:before
     .specs-rate div
     {
         width: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #A8A8A8;
         margin-top: 10px;
@@ -9654,7 +9934,7 @@ input:checked+.slider:before
         grid-area: meet;
         margin-left: 45px;
         margin-top: 20px;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 12px;
         color: #FFFFFF;
     }
@@ -9674,7 +9954,7 @@ input:checked+.slider:before
         grid-area: payment;
         margin-left: 45px;
         margin-top: 20px;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 12px;
         color: #FFFFFF;
     }
@@ -9798,7 +10078,7 @@ input:checked+.slider:before
     {
         width: auto;
         margin: 5px 0 0 10px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 12px;
         color: #6E6F70;
     }
@@ -9832,7 +10112,7 @@ input:checked+.slider:before
     {
         grid-area: title;    
         height: 20px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 24px;
         color: #242F3E;
         margin: auto;
@@ -9850,7 +10130,7 @@ input:checked+.slider:before
     
     .car-info-pax div
     {    
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 24px;
         color: #676767;
         margin-left: 35px;
@@ -9874,7 +10154,7 @@ input:checked+.slider:before
     .car-info-bags div
     {
         margin-left: 35px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 24px;
         color: #676767;
     }
@@ -9903,7 +10183,7 @@ input:checked+.slider:before
     
     .car-specs-text1
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #26A65B;
         grid-area: text1;
@@ -9922,7 +10202,7 @@ input:checked+.slider:before
     .car-specs-text2
     {
         grid-area: text2;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #26A65B;
         margin: auto;
@@ -9944,7 +10224,7 @@ input:checked+.slider:before
         height: auto;
         margin: auto;   
         margin-top: 20px;     
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #4E4E4E;
     }
@@ -9988,7 +10268,7 @@ input:checked+.slider:before
         grid-area: price;
         width: auto;
         height: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 30px;
         color: #FFFFFF;
         margin: auto;
@@ -10003,7 +10283,7 @@ input:checked+.slider:before
         border: none;
         border-radius: 4px;
         background-color: #F9AC1A;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 30px;
         color: #FFFFFF;
     }
@@ -10072,7 +10352,7 @@ input:checked+.slider:before
         grid-area: title;
         width: 200px;
         height: 25px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 20px;
         color: #242F3E;
         margin: auto;
@@ -10085,7 +10365,7 @@ input:checked+.slider:before
         width: 140px;
         height: 25px;
         background-color: rgba(38,166,91,0.3);
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         border-radius: 10px;
     }
     
@@ -10095,7 +10375,7 @@ input:checked+.slider:before
         width: 140px;
         height: 25px;
         background-color: rgba(38,166,91,0.3);
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         border-radius: 10px;
     }
     
@@ -10105,7 +10385,7 @@ input:checked+.slider:before
         width: 180px;
         height: 25px;
         background-color: rgba(38,166,91,0.3);
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         border-radius: 10px;
     }
     
@@ -10115,7 +10395,7 @@ input:checked+.slider:before
         width: 180px;
         height: 25px;
         background-color: rgba(38,166,91,0.3);
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         border-radius: 10px;
     }
     
@@ -10135,7 +10415,7 @@ input:checked+.slider:before
         grid-area: desc;
         width: 200px;
         height: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #4E4E4E;
         margin: auto;
@@ -10159,7 +10439,7 @@ input:checked+.slider:before
     {
         width: auto;
         height: 60px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 24px;
         color: #242F3E;
         margin: auto;
@@ -10170,7 +10450,7 @@ input:checked+.slider:before
     {
         width: 100%;
         height: 100%;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 18px;
         color: #242F3E;
         margin: auto;        
@@ -10308,7 +10588,7 @@ input:checked+.slider:before
     {
         width: auto;
         height: 60px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 26px;
         color: #242F3E;
         margin: 20px 0 0 30px;
@@ -10318,7 +10598,7 @@ input:checked+.slider:before
     {
         width: auto;
         height: 60px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 14px;
         color: #242F3E;        
     }
@@ -10327,7 +10607,7 @@ input:checked+.slider:before
     {
         width: 300px;
         height: 60px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 12px;
         color: #B9B9B9;        
     }
@@ -10336,7 +10616,7 @@ input:checked+.slider:before
     {
         width: auto;
         height: 60px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 12px;
         color: #242F3E;
         margin-left: 30px;
@@ -10385,7 +10665,7 @@ input:checked+.slider:before
     
     .privacy-container font
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 14px;
         color: #474747;
         margin-left: 30px;
@@ -10473,7 +10753,7 @@ input:checked+.slider:before
     
     .form-input::placeholder
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 14px;
         color: #B9B9B9;
     }
@@ -10550,7 +10830,7 @@ input:checked+.slider:before
     {    
         width: auto;
         height: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 14px;
         color: #242F3E;
         margin: auto;
@@ -10565,7 +10845,7 @@ input:checked+.slider:before
         border-radius: 5px;
         background-color: #FFFFFF;        
         padding-left: 45px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 18px;
         color: #B9B9B9;    
     }
@@ -10576,7 +10856,7 @@ input:checked+.slider:before
     }
     .form-time::placeholder
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 18px;
         color: #B9B9B9;
     }
@@ -10607,7 +10887,7 @@ input:checked+.slider:before
         border-radius: 5px;
         background-color: #F9AC1A;
         border: none;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 24px;
         color: #FFFFFF;
         grid-area: btn;
@@ -10662,7 +10942,7 @@ input:checked+.slider:before
         grid-area: title;
         width: 100%;
         height: 20px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 22px;
         color: #FFFFFF;
         margin: auto;
@@ -10703,7 +10983,7 @@ input:checked+.slider:before
     {
         width: calc(100% - 40px);
         height: 100%;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #FFFFFF;
         margin-left: 40px;
@@ -10713,7 +10993,7 @@ input:checked+.slider:before
     {
         width: 21   0px;
         height: 100%;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #969798;
         margin-left: 40px;
@@ -10723,7 +11003,7 @@ input:checked+.slider:before
     {
         width: 100%;
         height: 100%;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #FFFFFF;
     }
@@ -10798,7 +11078,7 @@ input:checked+.slider:before
     
     .form-card-details-div font
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #FFFFFF;
         margin-left: 10px;
@@ -10826,7 +11106,7 @@ input:checked+.slider:before
     
     .form-card-route-label
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 20px;
         color: #FFFFFF;
         margin-left: 40px;
@@ -10834,7 +11114,7 @@ input:checked+.slider:before
     
     .form-card-route-dist
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 14px;
         color: #969798;
         margin-left: 40px;
@@ -10855,7 +11135,7 @@ input:checked+.slider:before
         width: 220px;
         height: 40px;
         margin: 20px 20px 0 30%;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 22px;
         color: #FFFFFF;
         direction: rtl;
@@ -10931,7 +11211,7 @@ input:checked+.slider:before
         
         width: 100%;
         height: 100%;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 26px;
         color: #56585B;
     }
@@ -10974,14 +11254,14 @@ input:checked+.slider:before
     
     .voucher-name
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 16px;
         color: #242F3E;
     }
     
     .voucher-address
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #707070;
         width: 200px;
@@ -10991,7 +11271,7 @@ input:checked+.slider:before
     {    
         grid-area: date;
         margin-top: 20px;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 12px;
         color: #242F3E;
     }
@@ -11001,7 +11281,7 @@ input:checked+.slider:before
         grid-area: price;
         width: 100%;
         height: 100%;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 22px;
         color: #242F3E;
         
@@ -11050,7 +11330,7 @@ input:checked+.slider:before
     
     .voucher-detail p
     {
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #242F3E;
         height: 20px;
@@ -11073,7 +11353,7 @@ input:checked+.slider:before
         margin-top: 55px;
         float: right;
         margin-right: 10px;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 22px;
         color: #242F3E;
     }
@@ -11111,7 +11391,7 @@ input:checked+.slider:before
     
     .voucher-help-element p
     {
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 14px;
         color: #0267C1;
         margin: auto;
@@ -11156,7 +11436,7 @@ input:checked+.slider:before
     .about-us h1
     {
         grid-area: title;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 22px;
         color: #242F3E;
     }
@@ -11164,7 +11444,7 @@ input:checked+.slider:before
     .about-us div
     {
         grid-area: content;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 20px;
         color: #242F3E;
     }
@@ -11185,7 +11465,7 @@ input:checked+.slider:before
     .about-extra h1
     {
         grid-area: title;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 24px;
         color: #242F3E;
     }
@@ -11193,7 +11473,7 @@ input:checked+.slider:before
     .about-extra div
     {
         grid-area: content;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 20px;
         color: #242F3E;
     }
@@ -11214,7 +11494,7 @@ input:checked+.slider:before
     .about-transfer h1
     {
         grid-area: title;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 24px;
         color: #242F3E;
     }
@@ -11222,7 +11502,7 @@ input:checked+.slider:before
     .about-transfer div
     {
         grid-area: content;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 20px;
         color: #242F3E;
     }
@@ -11263,7 +11543,7 @@ input:checked+.slider:before
     .extra-services-int h1
     {
         grid-area: title;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 24px;
         color: #242F3E;
     }
@@ -11271,7 +11551,7 @@ input:checked+.slider:before
     .extra-services-int div
     {
         grid-area: content;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 18px;
         color: #242F3E;
     }
@@ -11294,7 +11574,7 @@ input:checked+.slider:before
     .extra-services-content-h1
     {
         grid-area: title;    
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 24px;
         color: #242F3E;
         margin: auto;
@@ -11332,7 +11612,7 @@ input:checked+.slider:before
         margin-top: 40px;
         width: 100%;
         grid-area: content;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 18px;
         color: #242F3E;
         
@@ -11363,7 +11643,7 @@ input:checked+.slider:before
     .extra-services-support h1
     {
         grid-area: title;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 20px;
         color: #242F3E;
         margin-top: 0;
@@ -11373,7 +11653,7 @@ input:checked+.slider:before
     {
         margin: auto;
         margin-left: 40px;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 12px;
         color: #0267C1;
         float: left;
@@ -11383,7 +11663,7 @@ input:checked+.slider:before
     {
         margin: auto;
         margin-left: 40px;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 12px;
         color: #56585B;
         float: left;
@@ -11430,7 +11710,7 @@ input:checked+.slider:before
     .privacy-policy-content h1
     {
         grid-area: title;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 24px;
         color: #242F3E;
     }
@@ -11438,7 +11718,7 @@ input:checked+.slider:before
     .privacy-policy-content div
     {
         grid-area: content;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 16px;
         color: #242F3E;
     }
@@ -11459,7 +11739,7 @@ input:checked+.slider:before
     .privacy-policy-about-transfer h1
     {
         grid-area: title;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 24px;
         color: #242F3E;
     }
@@ -11467,7 +11747,7 @@ input:checked+.slider:before
     .privacy-policy-about-transfer div
     {
         grid-area: content;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 16px;
         color: #242F3E;
     }
@@ -11504,7 +11784,7 @@ input:checked+.slider:before
     .partner-about h1
     {
         grid-area: title;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 24px;
         color: #242F3E;
     }
@@ -11512,7 +11792,7 @@ input:checked+.slider:before
     .partner-about div
     {
         grid-area: content;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 18px;
         color: #242F3E;   
     }
@@ -11546,7 +11826,7 @@ input:checked+.slider:before
     
     .partner-form h1
     {
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 20px;
         color: #242F3E;
         margin-top: 10px;
@@ -11555,7 +11835,7 @@ input:checked+.slider:before
     
     .partner-form-label
     {
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 12px;
         color: #242F3E;
         margin-left: 20px;
@@ -11591,7 +11871,7 @@ input:checked+.slider:before
         height: 35px;
         background-color: #242F3E;
         border-radius: 5px;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 14px;
         color: #FFFFFF;
         border: none;
@@ -11620,7 +11900,7 @@ input:checked+.slider:before
     .contact-body-title
     {
         grid-area: title;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 24px;
         color: #242F3E;                
     }
@@ -11652,7 +11932,7 @@ input:checked+.slider:before
     
     .contact-form-label
     {
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 12px;
         color: #242F3E;        
     }
@@ -11700,7 +11980,7 @@ input:checked+.slider:before
         height: 40px;
         background-color: #242F3E;
         border-radius: 5px;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 20px;
         color: #FFFFFF;
         border: none;
@@ -11747,7 +12027,7 @@ input:checked+.slider:before
         border-radius: 10px;
         text-align: center;        
         vertical-align: middle;
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 14px;
         color: #242F3E;
         padding-left: 20px;
@@ -11772,14 +12052,14 @@ input:checked+.slider:before
     
     .popular-dest-pop-dest
     {
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 12px;
         color: #242F3E;
     }
     
     .popular-dest-pop-price
     {
-        font-family: Questiral, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 14px;
         color: #F9AC1A;
     }
@@ -11825,7 +12105,7 @@ input:checked+.slider:before
         width: 100%;
         height: auto;
         margin: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 10px;
         color: #FFFFFF;
     }
@@ -11835,7 +12115,7 @@ input:checked+.slider:before
         width: auto;
         height: auto;
         margin: auto;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 18px;
         color: #FFFFFF;
         font-weight: bold;
@@ -11865,7 +12145,7 @@ input:checked+.slider:before
         border: 1px solid #FFFFFF;
         border-radius: 4px;
         background-color: #242F3E;
-        font-family: Questiral;
+        font-family: OpenSans-Regular;
         font-size: 14px;
         color: #FFFFFF;
     }
