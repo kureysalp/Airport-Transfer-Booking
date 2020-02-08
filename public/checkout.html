@@ -1,15 +1,21 @@
 <html>
     <head>
         <meta charset="utf-8">
-	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
-    <title>Dama Taxi | Airport Transfer Service</title>
-    <link rel="stylesheet" href="src/css/vanilla-calendar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="src/js/vanilla-calendar-min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
+        <title>Dama Taxi | Airport Transfer Service</title>
+        <link rel="stylesheet" href="src/css/vanilla-calendar.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="src/js/vanilla-calendar-min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/loader.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="shortcut icon" href="images/dama-taxi-favicon.png"/>
     </head>
     <body>
+        <div class="loader-wrapper">
+            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+        </div>
         <div class="header" style="background-color: #242F3E; position: relative;">
             <div class="left-nav">
                 <img class="dama-logo" src="images/dama-taxi-logo.png">
@@ -96,21 +102,21 @@
             </div>            
         </div>
         <div class="checkout-body">
-            <div class="process-div">
+            <div class="process-div remove">
                 <div id="process-st" style="grid-area: st;" class="process"><b>1</b></div>
-                <div style="grid-area: stText;" class="process-text">Select Destination</div>
+                <div style="grid-area: stText;" class="process-text">Destination</div>
                 <div style="grid-area: line1;" class="process-circle-left"></div>
                 <div style="grid-area: line1;" class="process-line"></div>
                 <div style="grid-area: line1;" class="process-circle-right"></div>
                 <div id="process-nd" style="grid-area: nd;" class="process"><b>2</b></div>
-                <div style="grid-area: ndText;" class="process-text">Select Car</div>
+                <div style="grid-area: ndText;" class="process-text">Car</div>
                 <div style="grid-area: line2;" class="process-circle-left"></div>
                 <div style="grid-area: line2;" class="process-line"></div>
                 <div style="grid-area: line2;" class="process-circle-right"></div>
                 <div id="process-rd" style="grid-area: rd;" class="process"><b>3</b></div>
                 <div style="grid-area: rdText;" class="process-text">Form</div>
             </div>
-            <div class="booking-specs">
+            <div class="booking-specs remove">
                 <img class="specs-rate-img" src="images/tick.png" alt="review">
                 <div class="specs-rate">Travellers rate us<br>
                     excellent
@@ -331,6 +337,10 @@
             </div>
                 </div>
         <script>
+            $(window).on("load", function() {
+                $(".loader-wrapper").fadeOut("slow");
+            });
+
             let touchEvent = 'touchstart' in window ? 'touchstart' : 'click'; //Check device supports click or touch.
 
             if (window.innerWidth <= 800) {

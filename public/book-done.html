@@ -5,8 +5,14 @@
         <title>Dama Taxi | Airport Transfer Service</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/loader.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="shortcut icon" href="images/dama-taxi-favicon.png"/>
     </head>
     <body>
+        <div class="loader-wrapper">
+            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+        </div>
         <div class="header" style="background-color: #242F3E; position: relative;">
             <div class="left-nav">
                 <img class="dama-logo" src="images/dama-taxi-logo.png">
@@ -36,7 +42,7 @@
                 </nav>
             </div>
             <div class="right-nav">
-                <<div id="mobile" class="right-menu">
+                <div id="desktop" class="right-menu mobile">
                     <div class="right-menu-curr">EUR
                         <svg style="margin-left: 5px;" xmlns="http://www.w3.org/2000/svg" width="16.022" height="8.467" viewBox="0 0 16.022 8.467">
                             <g id="down_arrow" transform="translate(0 120.979) rotate(-90)">
@@ -46,7 +52,7 @@
                             </g>
                           </svg>
                     </div>
-                    <div class="right-menu-lang">
+                    <div id="desktop" class="right-menu-lang mobile">
                         <svg style="float:left; margin-top: 5px;" xmlns="http://www.w3.org/2000/svg" width="31.109" height="16.74" viewBox="0 0 31.109 20.74">
                             <g id="uk" transform="translate(0 -85.33)">
                               <rect id="Rectangle_41" data-name="Rectangle 41" width="31.109" height="20.739" transform="translate(0 85.33)" fill="#f0f0f0"/>
@@ -172,6 +178,7 @@
                     <div><u><b id="totalPrice">Total Price: 50 EUR</b></u></div>
                 </div>
                 <div class="voucher-help">
+                    <div class="voucher-help-title">Need help with your booking?</div>
                     <div class="voucher-help-element" style="grid-area: mail;">
                         <img src="images/mail-voucher.png" alt="email">
                         <p><u>info@damataxi.com</u></p>
@@ -298,6 +305,10 @@ and the taxi driver will meet you as close to the arrivals area as the airport r
             </div>
         </div>
         <script>
+            $(window).on("load", function() {
+                $(".loader-wrapper").fadeOut("slow");
+            });
+
             let touchEvent = 'touchstart' in window ? 'touchstart' : 'click'; //Check device supports click or touch.
 
             if (window.innerWidth <= 800) {

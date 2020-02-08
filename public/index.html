@@ -1,14 +1,44 @@
 <html>
     <head>
+        <!-- 
+            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            @@@@(**************)@@@@@@@@@@@@(**************#@@@@@@@@@@@&***************%@@@@
+            @@@@(**************)@@@@@@@@@@@@(**************#@@@@@@@@@@@&***************%@@@@
+            @@@@(**************)@@@@@@@@@@@@/**************#@@@@@@@@@@@&***************%@@@@
+            @@@@(**************)@@@@@@@@@@@@/**************#@@@@@@@@@@@&***************%@@@@
+            @@@@(**************)@@@@@@@@@@@@/**************#@@@@@@@@@@@&***************%@@@@
+            @@@@(**************)&&&&&&&&&&&&/**************(&&&&&&&&&&&%***************%@@@@
+            @@@@@&&&&&&&&&&&&&/**************(&&&&&&&&&&&%***************(&&&&&&&&&&&&&@@@@@
+            @@@@@@@@@@@@@@@@@@(**************(@@@@@@@@@@@&/**************#@@@@@@@@@@@@@@@@@@
+            @@@@@@@@@@@@@@@@@@(**************(@@@@@@@@@@@&/**************#@@@@@@@@@@@@@@@@@@
+            @@@@@@@@@@@@@@@@@@(**************(@@@@@@@@@@@&/**************#@@@@@@@@@@@@@@@@@@
+            @@@@@@@@@@@@@@@@@@(**************(@@@@@@@@@@@&/**************#@@@@@@@@@@@@@@@@@@
+            @@@@@@@@@@@@@@@@@@(**************(@@@@@@@@@@@&/**************#@@@@@@@@@@@@@@@@@@
+            @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                     
+                                                                                                                                                                                                                                                                
+            _____________________  _________       __________________  _________
+            ___  __ \__    |__   |/  /__    |      ___  __/__    |_  |/ /___  _/
+            __  / / /_  /| |_  /|_/ /__  /| |      __  /  __  /| |_    / __  /  
+            _  /_/ /_  ___ |  /  / / _  ___ |      _  /   _  ___ |    | __/ /   
+            /_____/ /_/  |_/_/  /_/  /_/  |_|      /_/    /_/  |_/_/|_| /___/   
+                                                                    
+        -->
         <meta charset="utf-8">
-	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
-    <title>Dama Taxi | Airport Transfer Service</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="src/css/vanilla-calendar.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="src/js/vanilla-calendar-min.js"></script>
+	    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
+        <title>Dama Taxi | Airport Transfer Service</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">        
+        <link rel="stylesheet" href="src/css/vanilla-calendar.css">        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="src/js/vanilla-calendar-min.js"></script>
+        <link rel="stylesheet" href="css/loader.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="shortcut icon" href="images/dama-taxi-favicon.png"/>
     </head>
     <body>
+        <div class="loader-wrapper">
+            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+        </div>
         <div class="header">
             <div class="left-nav">
                 <img class="dama-logo" src="images/dama-taxi-logo.png">
@@ -22,7 +52,9 @@
                         <li style="grid-area: extra;"><a href=/extra-services>Extra Services</a></li>
                         <li style="grid-area: about;"><a href=/about-us>About Us</a></li>
                         <li style="grid-area: contact;"><a href=/contact-us>Contact Us</a></li>
-                        <li style="grid-area: faq;"><a href=#faq>FAQ</a></li>
+                        <li style="grid-area: faq;"><a href=#faq>FAQ</a></li>                        
+                        <li><a href=/privacy-policy class="mobile">Privacy Policy</a></li>
+                        <li><a href=/become-partner class="mobile">Become a Partner</a></li>
                         <div class="nav-bar-line mobile"></div> 
                         <select class="nav-bar-dropdown mobile">
                             <option>EN</option>
@@ -30,15 +62,17 @@
                         <select class="nav-bar-dropdown mobile">
                             <option>EUR</option>
                         </select>
-                        <br><br><br><br><br>
-                        <li><a href=/privacy-policy class="mobile">Privacy Policy</a></li>
-                        <li><a href=/become-partner class="mobile">Become a Partner</a></li>
+                        <br><br><br><br>                        
+                        <li><a href="#" style="font-size: 12px;" class="mobile">info@damataxi.com</a></li>
+                        <li><a href="#" style="font-size: 12px;" class="mobile">+90 544 901 00 10</a></li>
+                        <li><a href="#" style="font-size: 12px;" class="mobile">Sultanahmet Yasemin Street 
+                            No 2/4 İstanbul, Turkey</a></li>
                         <div class="nav-bar-copy mobile">© 2019 by Dama Taxi.</div>
                     </ul>
                 </nav>
             </div>
             <div class="right-nav">
-                <div id="mobile" class="right-menu">
+                <div class="right-menu">
                     <div class="right-menu-curr">EUR
                         <svg style="margin-left: 5px;" xmlns="http://www.w3.org/2000/svg" width="16.022" height="8.467" viewBox="0 0 16.022 8.467">
                             <g id="down_arrow" transform="translate(0 120.979) rotate(-90)">
@@ -46,7 +80,7 @@
                                 <path id="Path_25" data-name="Path 25" d="M113.61,8.011,120.846.775A.453.453,0,0,0,120.2.133l-7.558,7.558a.452.452,0,0,0,0,.641l7.558,7.555a.456.456,0,0,0,.319.134.442.442,0,0,0,.319-.134.452.452,0,0,0,0-.641Z" transform="translate(-112.513 0)" fill="#fff"/>
                               </g>
                             </g>
-                          </svg>
+                        </svg>
                     </div>
                     <div class="right-menu-lang">
                         <svg style="float:left; margin-top: 5px;" xmlns="http://www.w3.org/2000/svg" width="31.109" height="16.74" viewBox="0 0 31.109 20.74">
@@ -96,7 +130,7 @@
         <div class="all-body">
             <div class="main-container">
                 <div class="main-text-div">Book taxi transfers from the 
-                    airports and hotels in Istanbul
+                    airports and hotels in Turkey
                 </div>
                 <img class="main-reviews" src="images/reviews-01.png" alt="Reviews">
                 <div class="destination-form-div-style"></div>
@@ -176,17 +210,21 @@
                         <div class="step-div">2</div>
                         <div class="how-it-line"></div>
                         <div class="how-it-step-desc">
-                            Choose a car type and options to make your trip enjoyable
+                            Choose a car type and options to make your trip enjoyable.
                         </div>
                     </div>
                     <div class="how-it-step" style="grid-area: step3;">
                         <div class="step-div">3</div>
                         <div id="thirdLine" class="how-it-line"></div>
                         <div class="how-it-step-desc">
-                            No hidden costs. Pay via trusted partners. No worries, we have a cancellation policy.
+                            Fill the form with information about your flight.
                         </div>
                     </div>
-                    <div class="how-it-desc"></div>
+                    <div class="how-it-desc">
+                        <p> You can reach all the places that you want to visit in Turkey with Dama Taxi.<br><br> You can make it with three simple steps; Select the pick up and drop off location. 
+Choose a car type and options to make your trip enjoyable. Fill the form with requirement information. All done! It's that simple.<br><br> After you receive confirmation e-mail, our consultant
+will contact you and we will be waiting for you at pick up location at the time.</p>
+                    </div>
                 </div>
                 <div class="reviews-gradiant-line"></div>
                 <div class="reviews-bg"><img src="images/reviews-bg.png"></div>
@@ -196,9 +234,9 @@
                     <div class="reviews-container">                        
                         <img id="reviewsBack" class="reviews-back" src="images/back.png">
                         <div style="grid-area: reviews; overflow: hidden;">
-                        <div id="reviews" class="reviews">
-                            <div class="review" style="grid-area: rev1;">
-                                <div class="review-title"><b>Reviews reviews</b></div>
+                            <div id="reviews" class="reviews">
+                                <div class="review" style="grid-area: rev1;">
+                                <div class="review-title"><b>Good Service!</b></div>
                                 <div class="review-stars">
                                     <div style="grid-area: star1;"></div>
                                     <div style="grid-area: star2;"></div>
@@ -207,14 +245,12 @@
                                     <div style="grid-area: star5;"></div>
                                 </div>
                                 <div class="review-comment"><i>
-                                    ''ReviewsReviewsReviewsReviews
-                                    ReviewsReviewsReviews
-                                    ReviewsReviews''</i>
+                                    ''Hello we are a family of 5. We used dama taxi for our airport transfers.We were very impressed with the service.''</i>
                                 </div>
-                                <div class="review-author">Mr.Customer</div>
-                            </div>
-                            <div class="review" style="grid-area: rev2;">
-                                <div class="review-title"><b>Reviews reviews</b></div>
+                                <div class="review-author">Hasseenah</div>
+                                </div>
+                                <div class="review" style="grid-area: rev2;">
+                                <div class="review-title"><b>Really Comfortable</b></div>
                                 <div class="review-stars">
                                     <div style="grid-area: star1;"></div>
                                     <div style="grid-area: star2;"></div>
@@ -223,14 +259,12 @@
                                     <div style="grid-area: star5;"></div>
                                 </div>
                                 <div class="review-comment"><i>
-                                    ''ReviewsReviewsReviewsReviews
-                                    ReviewsReviewsReviews
-                                    ReviewsReviews''</i>
+                                    ''Really Great Service were on time and ride was really Comfortable and quick and reliable''</i>
                                 </div>
-                                <div class="review-author">Mr.Customer</div>
-                            </div>
-                            <div class="review" style="grid-area: rev3;">
-                                <div class="review-title"><b>Reviews reviews</b></div>
+                                <div class="review-author">Ashar Khan</div>
+                                </div>
+                                <div class="review" style="grid-area: rev3;">
+                                <div class="review-title"><b>Excellent!</b></div>
                                 <div class="review-stars">
                                     <div style="grid-area: star1;"></div>
                                     <div style="grid-area: star2;"></div>
@@ -239,13 +273,95 @@
                                     <div style="grid-area: star5;"></div>
                                 </div>
                                 <div class="review-comment"><i>
-                                    ''ReviewsReviewsReviewsReviews
-                                    ReviewsReviewsReviews
-                                    ReviewsReviews''</i>
+                                    ''great , fast, safe!''</i>
                                 </div>
-                                <div class="review-author">Mr.Customer</div>
+                                <div class="review-author">Kritikakis Markos</div>
+                                </div>
+                                <div class="review" style="grid-area: rev4;">
+                                    <div class="review-title"><b>Liked it</b></div>
+                                    <div class="review-stars">
+                                        <div style="grid-area: star1;"></div>
+                                        <div style="grid-area: star2;"></div>
+                                        <div style="grid-area: star3;"></div>
+                                        <div style="grid-area: star4;"></div>
+                                        <div style="grid-area: star5;"></div>
+                                    </div>
+                                    <div class="review-comment"><i>
+                                        ''The ride was great. I strongly recommend Dama Taxi. Kind driver and comfortable car.''</i>
+                                    </div>
+                                    <div class="review-author">Emily Pattson</div>
+                                </div>
+                                <div class="review" style="grid-area: rev5;">
+                                    <div class="review-title"><b>Strongly Suggested</b></div>
+                                    <div class="review-stars">
+                                        <div style="grid-area: star1;"></div>
+                                        <div style="grid-area: star2;"></div>
+                                        <div style="grid-area: star3;"></div>
+                                        <div style="grid-area: star4;"></div>
+                                        <div style="grid-area: star5;"></div>
+                                    </div>
+                                    <div class="review-comment"><i>
+                                        ''The driver was Excellent''</i>
+                                    </div>
+                                    <div class="review-author">Tomas Söderholm</div>
+                                </div>
+                                <div class="review" style="grid-area: rev6;">
+                                    <div class="review-title"><b>Good Ride</b></div>
+                                    <div class="review-stars">
+                                        <div style="grid-area: star1;"></div>
+                                        <div style="grid-area: star2;"></div>
+                                        <div style="grid-area: star3;"></div>
+                                        <div style="grid-area: star4;"></div>
+                                        <div style="grid-area: star5;"></div>
+                                    </div>
+                                    <div class="review-comment"><i>
+                                        ''The car was very clean and comfortable. The driver was so kind. Me and my family were satisfied the ride.''</i>
+                                    </div>
+                                    <div class="review-author">Ross Davidson</div>
+                                </div>
+                                <div class="review" style="grid-area: rev7;">
+                                    <div class="review-title"><b>Good</b></div>
+                                    <div class="review-stars">
+                                        <div style="grid-area: star1;"></div>
+                                        <div style="grid-area: star2;"></div>
+                                        <div style="grid-area: star3;"></div>
+                                        <div style="grid-area: star4;"></div>
+                                        <div style="grid-area: star5;"></div>
+                                    </div>
+                                    <div class="review-comment"><i>
+                                        ''Super thanks''</i>
+                                    </div>
+                                    <div class="review-author">Toufik Ammari</div>
+                                </div>
+                                <div class="review" style="grid-area: rev8;">
+                                    <div class="review-title"><b>Liked it so much</b></div>
+                                    <div class="review-stars">
+                                        <div style="grid-area: star1;"></div>
+                                        <div style="grid-area: star2;"></div>
+                                        <div style="grid-area: star3;"></div>
+                                        <div style="grid-area: star4;"></div>
+                                        <div style="grid-area: star5;"></div>
+                                    </div>
+                                    <div class="review-comment"><i>
+                                        ''The best taxi ride ever that I experienced. The driver was on the spot at the time and he was very kind. Strongly recommend it.''</i>
+                                    </div>
+                                    <div class="review-author">Michelle Pepper</div>
+                                </div>
+                                <div class="review" style="grid-area: rev9;">
+                                    <div class="review-title"><b>Enjoyed it</b></div>
+                                    <div class="review-stars">
+                                        <div style="grid-area: star1;"></div>
+                                        <div style="grid-area: star2;"></div>
+                                        <div style="grid-area: star3;"></div>
+                                        <div style="grid-area: star4;"></div>
+                                        <div style="grid-area: star5;"></div>
+                                    </div>
+                                    <div class="review-comment"><i>
+                                        ''The car was very clean and comfortable. The driver was so kind. Me and my family were satisfied the ride.''</i>
+                                    </div>
+                                    <div class="review-author">Ross Davidson</div>
+                                </div>
                             </div>
-                        </div>
                         </div>                    
                         <img id="reviewsNext" class="reviews-next" src="images/next.png">
                         <div class="reviews-page">
@@ -255,10 +371,10 @@
                         </div>                        
                     </div>
                     <div class="reviews-live">
-                        <div style="grid-area: live1;">A customer booked a taxi from Londres Luton Aéroport to Wolverhampton, UK.</div>
-                        <div style="grid-area: live2;">A customer booked a taxi from Londres Luton Aéroport to Wolverhampton, UK.</div>
-                        <div style="grid-area: live3;">A customer booked a taxi from Londres Luton Aéroport to Wolverhampton, UK.</div>
-                        <div style="grid-area: live4;">A customer booked a taxi from Londres Luton Aéroport to Wolverhampton, UK.</div>
+                        <div style="grid-area: live1;">A customer booked a taxi from Istanbul Airport (IST) to Barcelo Istanbul, Beyoglu.</div>
+                        <div style="grid-area: live2;">A customer booked a taxi from Sabiha Gokcen Airport (SAW) to Hotel Novotel.</div>
+                        <div style="grid-area: live3;">A customer booked a taxi from Istanbul Airport (IST) to Innovia Hotel.</div>
+                        <div style="grid-area: live4;">A customer booked a taxi from Radisson Blu Sisli to Istanbul Airport (IST).</div>
                     </div>
                     <div class="other-reviews">
                         <div style="grid-area: rev1;"><img src="images/google-review.png"></div>
@@ -316,7 +432,7 @@
                     </div>
                 </div>
                 <div class="good-service">
-                    <div class="service-text"><i>"We make sure everything goes according to your plan"</i></div>
+                    <div class="service-text"><i>"The single point that you can satisfy all the needs in Turkey"</i></div>
                     <div class="service-us">G-Travel</div>
                 </div>
                 <div class="popular-destinations">
@@ -377,7 +493,7 @@
                         </div>
                         <div style="grid-area: line1;" class="extra-service-line"></div>
                         <div style="grid-area: desc1;" class="extra-service-desc">
-                            Portable Wifi Modem
+                            "Portable Wifi Modem" that you can rent for daily or weekly. (Just for Istanbul)
                         </div>
                         <div style="grid-area: title2;" class="extra-service-title">
                             <b>Tour</b>
@@ -388,7 +504,7 @@
                         <div style="grid-area: line2;" class="extra-service-line"></div>
                         <div style="grid-area: desc2;" 
                         class="extra-service-desc">
-                            Tour
+                            Travel, food and shopping tour that you can design content and time of it. (Just for Istanbul)
                         </div>
                         <div style="grid-area: title3;" class="extra-service-title">
                             <b>Photo Shoot</b>
@@ -398,7 +514,7 @@
                         </div>
                         <div style="grid-area: line3;" class="extra-service-line"></div>
                         <div style="grid-area: desc3;" class="extra-service-desc">
-                            Photo Shoot
+                            Professional Photo Shoot in cultural and historical places in Istanbul.
                         </div>
                     </div>
                 </div>
@@ -406,10 +522,25 @@
                     <div class="faq-title">FAQ</div>
                     <div class="faq">
                         <div style="grid-area: q1;" class="question">How do I find and book a transfer?</div>
-                        <div style="grid-area: q2;" class="question">How do I find and book a transfer?</div>
-                        <div style="grid-area: q3;" class="question">How do I find and book a transfer?</div>
-                        <div style="grid-area: q4;" class="question">How do I find and book a transfer?</div>
-                        <div style="grid-area: q5;" class="question">How do I find and book a transfer?</div>
+                        <div style="grid-area: a1" class="answer">Specify the place of departure in the "From" field, and your destination - in the "To" field. You can choose the desired city, airport, train station, port, and hotel from the drop-down menu or enter the exact address of the place.
+
+                            Click the button "View prices". Choose the suitable transfer class and click "Book" to proceed to the booking.</div>
+                        <div style="grid-area: q2;" class="question">How do I know if my booking has gone through?</div>
+                        <div style="grid-area: a2" class="answer">After you make your booking, you will receive a confirmation email with information about your booking.
+                            <br>
+                            If you have not received the email with the confirmation, please contact our manager by email at info@damataxi.com.</div>
+                        <div style="grid-area: q3;" class="question">How can I find my driver?</div>
+                        <div style="grid-area: a3" class="answer">The driver will meet you with the sign showing your first and last names, which you specified during the booking.
+                            <br>
+                            If a pick-up place is an airport, the driver will meet you at the exit of arrivals area of the airport after you passed passport control and claimed baggage.</div>
+                        <div style="grid-area: q4;" class="question">What should I do if my flight is delayed?</div>
+                        <div style="grid-area: a4" class="answer">The driver will meet you with the sign showing your first and last names, which you specified during the booking.
+                            <br>
+                            As soon as you find out that your flight is delayed, please inform your driver by calling the phone number sent to you before, Dama Taxi support manager via email info@damataxi.com.</div>
+                        <div style="grid-area: q5;" class="question">How far in advance should I book a transfer?</div>
+                        <div style="grid-area: a5" class="answer">After you make your booking, you will receive a confirmation email with a voucher containing your booking number and all the details of your journey.
+                            <br>
+                            If you have not received the email with the confirmation, please contact our manager by email at info@damataxi.com.</div>
                     </div>
                     <div class="contact-div">
                          <div class="contact-div-title"><b>Help</b></div>
@@ -427,11 +558,10 @@
                 </div>
                 <div class="img-info-div">
                     <div style="grid-area: text1;" class="img-info-text">
-                        <b>We make sure everything goes according to your plan</b>
+                        <b>The single point that you can satisfy all the needs in Turkey</b>
                     </div>
                     <div style="grid-area: text2;" class="img-info-text">
-                        <b>Ticket sales, travel guides,<br>
-                            and travel discounts in your inbox
+                        <b>Book now for quick, comfortable,<br> quality and relaible service
                             </b>
                     </div>
                     <div class="img-info-btn">                        
@@ -526,13 +656,17 @@
                     </select>
                 </div>
                 <div class="footer-element" style="grid-area: mail;"><u>info@damataxi.com</u></div>
-                <div class="footer-element" style="grid-area: phone;">+90 544 901 00 10</div>
-                <div class="footer-element" style="grid-area: address;">Sultanahmet Yasemin Street 
+                <div class="footer-element footer-right" style="grid-area: phone;">+90 544 901 00 10</div>
+                <div class="footer-element remove" style="grid-area: address;">Sultanahmet Yasemin Street 
                     No 2/4 İstanbul, Turkey</div>
                 <div class="footer-element" style="grid-area: copyright; text-align: center;">© 2019 by Dama Taxi.</div>
             </div>
         </div>
         <script>
+            $(window).on("load", function() {
+                $(".loader-wrapper").fadeOut("slow");
+            });
+
             let touchEvent = 'touchstart' in window ? 'touchstart' : 'click'; //Check device supports click or touch.
 
             if (window.innerWidth <= 800) {
@@ -869,6 +1003,5 @@
             })
 
         </script>
-
     </body>
 </html>

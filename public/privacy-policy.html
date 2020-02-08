@@ -5,8 +5,14 @@
         <title>Dama Taxi | Airport Transfer Service</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/loader.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="shortcut icon" href="images/dama-taxi-favicon.png"/>
     </head>
     <body>
+        <div class="loader-wrapper">
+            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+        </div>
         <div class="header" style="background-color: #242F3E; position: relative;">
             <div class="left-nav">
                 <img class="dama-logo" src="images/dama-taxi-logo.png">
@@ -221,6 +227,10 @@
             </div>
         </div>
         <script>
+            $(window).on("load", function() {
+                $(".loader-wrapper").fadeOut("slow");
+            });
+
             let touchEvent = 'touchstart' in window ? 'touchstart' : 'click'; //Check device supports click or touch.
 
             if (window.innerWidth <= 800) {
