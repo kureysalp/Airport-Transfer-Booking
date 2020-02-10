@@ -129,14 +129,15 @@
             </div>
             <div class="booking-content">
                 <div id="booking" class="booking">
-                    <div id="carCard" class="car-card">
-                        <div class="car">
+                    <div id="carCard" class="car-card">                        
+                        <div class="car">              
+                            <div class="booking-title-line"></div>              
                             <img class="car-img" src="images/sedan.png">
                             <div class="car-brand"><div class="brand">-Car Brand-</div></div>
                         </div>
                         <div id="carLine" class="car-line"></div>
                         <div class="car-info">
-                            <div class="car-info-title">-Car Type-</div>
+                            <div class="car-info-title">-Car Type-</div>                            
                             <div class="car-info-pax"><img src="images/passengers.png" alt="Passengers"><div class="pax">2</div></div>
                             <div class="car-info-bags"><img src="images/suitcase.png" alt="Baggages"><div class="bags">4</div></div>
                             <div class="car-specs">
@@ -145,6 +146,7 @@
                                 <img class="car-specs-img2" src="images/clock.png" alt="Waiting Hour">
                                 <div class="car-specs-text2">1 hour of waiting included</div>                            
                             </div>
+                            <div class="car-info-line"></div>
                             <div class="specs-text">Available for an extra fee
                                 depending on the route.</div>
                         </div>
@@ -217,25 +219,36 @@
                 <div class="after-booking">
                     <div class="after-booking-title"><b>After Bookings</b></div>
                     <div class="after-booking-content">
-                        The carrier knows beforehand when you arrive at the airport: the taxi will already be waiting for you at the taxi rank, 
-and the taxi driver will meet you as close to the arrivals area as the airport rules allow. The carrier knows beforehand
-when you arrive at the airport: the taxi will already be waiting for you at the taxi rank, and the taxi driver will meet you
-as close to the arrivals area as the airport rules allow. The carrier knows beforehand when you arrive at the airport:
-the taxi will already be waiting for you at the taxi rank, and the taxi driver will meet you as close to the arrivals area 
-as the airport rules allow. The carrier knows beforehand when you arrive at the airport: the taxi will already be waiting 
-for you at the taxi rank, and the taxi driver will meet you as close to the arrivals area as the airport rules allow. 
-The carrier knows beforehand when you arrive at the airport: the taxi will already be waiting for you at the taxi rank, 
-and the taxi driver will meet you as close to the arrivals area as the airport rules allow.   
+                        Choose a car plan and fill the required information. After booking your transfer you will receive an e-mail about your transfer and our customer service will contact you.
+                        <br><br>
+                        If the pick-up place is an airport, our meeting attendant will meet you with a nameplate and accompany you to the car.
+                        <br><br>
+                        If the pick-up place is a hotel, the driver will wait for you in hotel lobby.  
                     </div>
                 </div>
                 <div class="faq-div">
                     <div class="faq-title">FAQ</div>
                     <div class="faq">
                         <div style="grid-area: q1;" class="question">How do I find and book a transfer?</div>
-                        <div style="grid-area: q2;" class="question">How do I find and book a transfer?</div>
-                        <div style="grid-area: q3;" class="question">How do I find and book a transfer?</div>
-                        <div style="grid-area: q4;" class="question">How do I find and book a transfer?</div>
-                        <div style="grid-area: q5;" class="question">How do I find and book a transfer?</div>
+                        <div style="grid-area: a1" class="answer">Specify the place of departure in the "From" field, and your destination - in the "To" field. You can choose the desired city, airport, train station, port, and hotel from the drop-down menu or enter the exact address of the place.
+
+                            Click the button "View prices". Choose the suitable transfer class and click "Book" to proceed to the booking.</div>
+                        <div style="grid-area: q2;" class="question">How do I know if my booking has gone through?</div>
+                        <div style="grid-area: a2" class="answer">After you make your booking, you will receive a confirmation email with information about your booking.
+                            <br>
+                            If you have not received the email with the confirmation, please contact our manager by email at info@damataxi.com.</div>
+                        <div style="grid-area: q3;" class="question">How can I find my driver?</div>
+                        <div style="grid-area: a3" class="answer">The driver will meet you with the sign showing your first and last names, which you specified during the booking.
+                            <br>
+                            If a pick-up place is an airport, the driver will meet you at the exit of arrivals area of the airport after you passed passport control and claimed baggage.</div>
+                        <div style="grid-area: q4;" class="question">What should I do if my flight is delayed?</div>
+                        <div style="grid-area: a4" class="answer">The driver will meet you with the sign showing your first and last names, which you specified during the booking.
+                            <br>
+                            As soon as you find out that your flight is delayed, please inform your driver by calling the phone number sent to you before, Dama Taxi support manager via email info@damataxi.com.</div>
+                        <div style="grid-area: q5;" class="question">How far in advance should I book a transfer?</div>
+                        <div style="grid-area: a5" class="answer">After you make your booking, you will receive a confirmation email with a voucher containing your booking number and all the details of your journey.
+                            <br>
+                            If you have not received the email with the confirmation, please contact our manager by email at info@damataxi.com.</div>
                     </div>
                     <div class="contact-div">
                         <div class="contact-div-title"><b>Help</b></div>
@@ -306,6 +319,7 @@ and the taxi driver will meet you as close to the arrivals area as the airport r
             let toAddress = document.getElementById("toAddress");
             let passengers = document.getElementById("passengers");
             let luggage = document.getElementById("luggage");
+            document.getElementById("date").innerHTML = localStorage.getItem("date");
 
             fromName.innerHTML = localStorage.getItem("fromName");
             fromAddress.innerHTML = localStorage.getItem("fromAddress");
@@ -376,7 +390,8 @@ and the taxi driver will meet you as close to the arrivals area as the airport r
 	    				"pax": result[i].pax,
 						"bags": result[i].bags,
 						"price": price, 
-						"brand": result[i].brand
+						"brand": result[i].brand,
+                        "image": result[i].image_URL
 					}
 					allVehicles.push(vehicleSpecs);						
 

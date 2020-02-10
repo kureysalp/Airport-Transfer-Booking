@@ -233,31 +233,10 @@ const sgMail = require('@sendgrid/mail');
 var template = fs.readFileSync('./public/email_template.hjs', 'utf-8');
 var compiledTemplate = hogan.compile(template);
 
-app.get('/sendEmail/:data', function(request, response) {
+app.get('/sendEmail/:data', async function(request, response) {    
     let jsonData = JSON.parse(request.params['data']);
-    sgMail.setApiKey("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");
-    //Customer
-    /*const emails = [
-     {
-        to: jsonData.email,
-        from: 'info@damataxi.com',
-        fromname: 'Dama Taxi',
-        subject: 'Airport Transfer Receipt',
-        html: compiledTemplate.render({book_id: jsonData.book_id, name: jsonData.name, phone: jsonData.phone, email: jsonData.email, from: jsonData.from,
-            to: jsonData.to, flight_number: jsonData.flightNumber, arrival_date: jsonData.arrivalDate,
-            arrival_time: jsonData.arrivalTime, vehicle: jsonData.vehicle, passengers: jsonData.passengers,
-            price: jsonData.price})
-     },
-     {
-        to: "damataxiservice@gmail.com",
-        from: "info@damataxi.com",
-        subject: 'Airport Transfer Receipt',
-        html: "A transfer has booked with ID: " + jsonData.book_id +"<br> Name: " + jsonData.name + "<br> From: " + jsonData.from
-        + "To: " + jsonData.to + "<br> Date: " + jsonData.arrivalDate + "<br> Time: " + jsonData.arrivalTime
-        + "<br> Flight number: " + jsonData.flightNumber
-     },
-    ];*/
-
+    console.log(jsonData);
+    /*sgMail.setApiKey("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");
     const emails = 
         {
            to: [jsonData.email, 'damataxiservice@gmail.com'],
@@ -277,7 +256,7 @@ app.get('/sendEmail/:data', function(request, response) {
         log.info(err);
         log.info(err.message);
         response.send(err.message);
-    });
+    });    */
 });
 
 var returnTemplate = fs.readFileSync('./public/email_template_return.hjs', 'utf-8');
@@ -307,6 +286,23 @@ sgMail.sendMultiple(emails).then(() => {
         log.info(err.message);
         response.send(err.message);
     });
+});
+
+
+//Contact us mail
+app.get('sendContactUs/:data', function(req, res) {
+    let jsonData = JSON.parse(request.params['data']);
+    sgMail.setApiKey("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");
+    const email = 
+    {
+        to: 'damataxiservice@gmail.com',
+        from: 'info@damataxi.com',
+        fromname: 'Dama Taxi',
+        subject: 'Contact Us',
+        html: "<p>From: "+ jsonData.email +"</p><br><p>Name: " + jsonData.name +"</p><br><p>Phone: " +
+         jsonData.phone +"</p><br><p>Message: "+ jsonData.message + "</p>"
+    };
+    sgMail.send(email);
 });
 
 //Login panel

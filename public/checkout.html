@@ -361,6 +361,7 @@
             let toAddress = document.getElementById("toAddress");
             let passengersCard = document.getElementById("passengersCard");
             let luggageCard = document.getElementById("luggageCard");
+            document.getElementById("arrivalDateCard").innerHTML = localStorage.getItem("date");
 
             fromName.innerHTML = localStorage.getItem("fromName");
             fromAddress.innerHTML = localStorage.getItem("fromAddress");
@@ -666,6 +667,8 @@
 						"email": document.getElementById("email").value,
 						"phone": document.getElementById("phone").value,
 						"vehicle": vehicle.vehicleName,
+                        "brand": vehicle.brand,
+                        "image": vehicle.image,
 						"price": vehicle.price,
                         "isReturn": isReturn ? "Yes" : "No"
                     };
@@ -682,7 +685,7 @@
 						"name": document.getElementById("name").value,
 						"email": document.getElementById("email").value,
 						"phone": document.getElementById("phone").value,
-						"vehicle": vehicle.vehicleName,
+						"vehicle": vehicle.vehicleName,                        
 						"price": vehicle.price / 2,
 						"isReturn": "RETURN TRANSFER"
 						};
@@ -710,6 +713,8 @@
 						"email": document.getElementById("email").value,
 						"phone": document.getElementById("phone").value,
 						"vehicle": vehicle.vehicleName,
+                        "brand": vehicle.brand,
+                        "image": vehicle.image,
 						"price": vehicle.price / 2,
 						"isReturn": "RETURN TRANSFER"
                         };
@@ -719,7 +724,9 @@
 						const responseReturnMail = await fetch(sendReturnMail);
 					} else { 
 						const sendMail = '/sendEmail/' + JSON.stringify(booking);
-						const responseMail = await fetch(sendMail);
+                        const responseMail = await fetch(sendMail);
+                        console.log(responseMail);
+                        console.log(booking);
 					}
                     
                     localStorage.setItem("babySeat", babySeat);
