@@ -1,1 +1,1 @@
-Dama Taxi developed by Kureyş Alp Kılıç
+Dama Taxi developed by G-Travel
