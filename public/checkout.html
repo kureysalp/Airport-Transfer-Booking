@@ -1,7 +1,8 @@
 <html>
     <head>
         <meta charset="utf-8">
-	    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
+        <meta name="theme-color" content="#242F3E"/>
         <title>Dama Taxi | Airport Transfer Service</title>
         <link rel="stylesheet" href="src/css/vanilla-calendar.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,8 +19,8 @@
         </div>
         <div class="header" style="background-color: #242F3E; position: relative;">
             <div class="left-nav">
-                <img class="dama-logo" src="images/dama-taxi-logo.png">
-                <div>DAMA TAXI</div>
+                <a href="/"><img class="dama-logo" src="images/dama-taxi-logo.png"></a>
+                <div><a href="/">DAMA TAXI</a></div>
             </div>
             <div class="mid-nav">
             <nav id="navBar" class="nav-bar">
@@ -247,9 +248,9 @@
                         in your area.
                     </div>
                     <label class="privacy-container">
-                        <input id="privacy" type="checkbox" checked="checked">
+                        <input id="privacy" type="checkbox">
                         <span class="privacy-checkmark"></span>
-                        <font><b>I agree to the terms of the <a href="#" style="color: #006CFF;"><u>Privacy Policy.</u></a></b></font>
+                        <font><b>I agree to the terms of the <a href="/privacy-policy" target="_blank" style="color: #006CFF;"><u>Privacy Policy.</u></a></b></font>
                     </label>
                     <button class="form-submit-button" onclick="sendBooking()"><b>Book Transfer</b></button>
                 </div>
@@ -362,6 +363,7 @@
             let passengersCard = document.getElementById("passengersCard");
             let luggageCard = document.getElementById("luggageCard");
             document.getElementById("arrivalDateCard").innerHTML = localStorage.getItem("date");
+            document.getElementById("arrivalDate").value = localStorage.getItem("date");
 
             fromName.innerHTML = localStorage.getItem("fromName");
             fromAddress.innerHTML = localStorage.getItem("fromAddress");
@@ -574,8 +576,9 @@
 				}
 			});
 
-            let pastDates = true, availableDates = false, availableWeekDays = false
-            let arrivalDatevalue;
+            let pastDates = false, availableDates = false, availableWeekDays = false
+            var arrivalDateValue;
+            arrivalDateValue = localStorage.getItem("date");            
             let calendar = new VanillaCalendar({
                 selector: "#myCalendar",
                 months: ["January", "Febuary", "March", "April", "May", "Jun", "July", "Agust", "September", "October", "November", "December"],
@@ -624,7 +627,7 @@
                 }
                 document.getElementById("price").innerHTML = "Total Price: " + vehicle.price + " EUR";
             }
-
+            
             async function sendBooking() {
                 if(document.getElementById("name").value != "" && document.getElementById("email").value != "" &&
 	    			document.getElementById("phone").value != "" && document.getElementById("flightNumber") != "" &&
@@ -642,7 +645,8 @@
 						"email": document.getElementById("email").value,
 						"phone": document.getElementById("phone").value,
 						"vehicle": vehicle.vehicleName,
-						"price": vehicle.price,
+                        "price": vehicle.price,
+                        "babySeat" : babySeat ? "Yes" : "No",
                         "isReturn": isReturn ? "Yes" : "No"
                     };
                     
@@ -650,7 +654,7 @@
 					const insertBooking = '/insertBooking/' + JSON.stringify(booking);
 					const response = await fetch(insertBooking);
 					const result = await response.json();
-
+                    console.log(JSON.stringify(booking));
                     //Editing objecet for mailing
 					booking = {
 						"book_id": result[0].book_id,
@@ -667,9 +671,10 @@
 						"email": document.getElementById("email").value,
 						"phone": document.getElementById("phone").value,
 						"vehicle": vehicle.vehicleName,
+                        "price": vehicle.price,
                         "brand": vehicle.brand,
                         "image": vehicle.image,
-						"price": vehicle.price,
+                        "babySeat" : babySeat ? "Yes" : "No",
                         "isReturn": isReturn ? "Yes" : "No"
                     };
 
@@ -686,7 +691,8 @@
 						"email": document.getElementById("email").value,
 						"phone": document.getElementById("phone").value,
 						"vehicle": vehicle.vehicleName,                        
-						"price": vehicle.price / 2,
+                        "price": vehicle.price / 2,
+                        "babySeat" : babySeat ? "Yes" : "No",
 						"isReturn": "RETURN TRANSFER"
 						};
 
@@ -715,20 +721,19 @@
 						"vehicle": vehicle.vehicleName,
                         "brand": vehicle.brand,
                         "image": vehicle.image,
-						"price": vehicle.price / 2,
+                        "price": vehicle.price / 2,
+                        "babySeat" : babySeat ? "Yes" : "No",
 						"isReturn": "RETURN TRANSFER"
                         };
                         localStorage.setItem("returnBooking", JSON.stringify(returnBooking)); //Save object for using in next page.
 
-						const sendReturnMail = '/sendReturnEmail/' + JSON.stringify(returnBooking);
+						const sendReturnMail = '/sendReturnEmail/' + encodeURIComponent(JSON.stringify(returnBooking));
 						const responseReturnMail = await fetch(sendReturnMail);
 					} else { 
-						const sendMail = '/sendEmail/' + JSON.stringify(booking);
+                        const sendMail = '/sendEmail/' + encodeURIComponent(JSON.stringify(booking));                        
                         const responseMail = await fetch(sendMail);
-                        console.log(responseMail);
-                        console.log(booking);
-					}
-                    
+                        console.log(responseMail);                        
+					}                    
                     localStorage.setItem("babySeat", babySeat);
                     localStorage.setItem("isReturn", isReturn);                    
 					localStorage.setItem("booking", JSON.stringify(booking));				
@@ -922,8 +927,10 @@
             let menuToggle = false;
             document.getElementById("menuToggle").addEventListener(touchEvent, function(e) {                
                 if(!menuToggle) {
+                    document.body.classList.add("stop-scrolling"); 
                     document.getElementById("navBar").setAttribute("style", "top: 0;");
                 } else {
+                    document.body.classList.remove("stop-scrolling");                     
                     document.getElementById("navBar").setAttribute("style", "top: -900px;");
                 }
                 menuToggle = !menuToggle;

@@ -25,7 +25,11 @@
                                                                     
         -->
         <meta charset="utf-8">
-	    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
+        <meta name="theme-color" content="#242F3E"/>
+        <meta name="keywords" content="taxi transfer, transfer from airport, airport shuttle, private transfer, book transfer online, transfer from airport, taxi from airport,istanbul taxi, taxi from istanbul, turkey trasnfer, istanbul transfer, istanbul cab,&amp;amp;amp;nbsp;airport transfers"/>
+	    <meta name="description" content="Book your Airport Transfer Fast and Easy! Best Experience With Best Prices. Most Comfort Transfer in Istanbul. English Speaking Drivers. 24/7 Online Support. Reliable & Safe."/>
+	    <meta name="robots" content="index, follow">
         <title>Dama Taxi | Airport Transfer Service</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">        
         <link rel="stylesheet" href="src/css/vanilla-calendar.css">        
@@ -41,8 +45,8 @@
         </div>
         <div class="header">
             <div class="left-nav">
-                <img class="dama-logo" src="images/dama-taxi-logo.png">
-                <div>DAMA TAXI</div>
+                <a href="/"><img class="dama-logo" src="images/dama-taxi-logo.png"></a>
+                <div><a href="/">DAMA TAXI</a></div>
             </div>
             <div class="mid-nav">
                 <nav id="navBar" class="nav-bar">
@@ -62,7 +66,7 @@
                         <select class="nav-bar-dropdown mobile">
                             <option>EUR</option>
                         </select>
-                        <br><br><br><br>                        
+                        <br><br><br>                 
                         <li><a href="#" style="font-size: 12px;" class="mobile">info@damataxi.com</a></li>
                         <li><a href="#" style="font-size: 12px;" class="mobile">+90 544 901 00 10</a></li>
                         <li><a href="#" style="font-size: 12px;" class="mobile">Sultanahmet Yasemin Street 
@@ -134,7 +138,7 @@
                 </div>
                 <img class="main-reviews" src="images/reviews-01.png" alt="Reviews">
                 <div class="destination-form-div-style"></div>
-                <div class="destination-form-div">
+                <div id="bookNow" class="destination-form-div">
                     <div class="destination-form-title">Book Your Transfer</div>
                     <div class="destination-form-dest">
                         <div></div>
@@ -441,37 +445,37 @@ will contact you and we will be waiting for you at pick up location at the time.
                         <div style="grid-area: pop1;" class="popular-dest">
                             <div class="popular-dest-text" style="grid-area: dest1;">Istanbul Airport (IST)</div>
                             <div class="popular-dest-text" style="grid-area: dest2;">Sultanahmet</div>
-                            <div class="popular-dest-price">From 33 <font>EUR</font></div>
+                            <div class="popular-dest-price">From 30 <font>EUR</font></div>
                         </div>
                         <div style="grid-area: pop2;" class="popular-dest">
                             <div class="popular-dest-text" style="grid-area: dest1;">Istanbul Airport (IST)</div>
                             <div class="popular-dest-text" style="grid-area: dest2;">Taksim</div>
-                            <div class="popular-dest-price">From 33 <font>EUR</font></div>
+                            <div class="popular-dest-price">From 30 <font>EUR</font></div>
                         </div>
                         <div style="grid-area: pop3;" class="popular-dest">
                             <div class="popular-dest-text" style="grid-area: dest1;">Sabiha Gokcen Airport</div>
                             <div class="popular-dest-text" style="grid-area: dest2;">Sultanahmet</div>
-                            <div class="popular-dest-price">From 33 <font>EUR</font></div>
+                            <div class="popular-dest-price">From 30 <font>EUR</font></div>
                         </div>
                         <div style="grid-area: pop4;" class="popular-dest">
                             <div class="popular-dest-text" style="grid-area: dest1;">Sabiha Gokcen Airport)</div>
                             <div class="popular-dest-text" style="grid-area: dest2;">Taksim</div>
-                            <div class="popular-dest-price">From 33 <font>EUR</font></div>
+                            <div class="popular-dest-price">From 30 <font>EUR</font></div>
                         </div>
                         <div style="grid-area: pop5;" class="popular-dest">
                             <div class="popular-dest-text" style="grid-area: dest1;">Istanbul Airport (IST)</div>
                             <div class="popular-dest-text" style="grid-area: dest2;">Beyoglu</div>
-                            <div class="popular-dest-price">From 33 <font>EUR</font></div>
+                            <div class="popular-dest-price">From 30 <font>EUR</font></div>
                         </div>
                         <div style="grid-area: pop6;" class="popular-dest">
                             <div class="popular-dest-text" style="grid-area: dest1;">Sabiha Gokcen Airport</div>
                             <div class="popular-dest-text" style="grid-area: dest2;">Beyoglu</div>
-                            <div class="popular-dest-price">From 33 <font>EUR</font></div>
+                            <div class="popular-dest-price">From 30 <font>EUR</font></div>
                         </div>
                         <div style="grid-area: pop7;" class="popular-dest">
                             <div class="popular-dest-text" style="grid-area: dest1;">Istanbul Airport (IST)</div>
                             <div class="popular-dest-text" style="grid-area: dest2;">Besiktas</div>
-                            <div class="popular-dest-price">From 33 <font>EUR</font></div>
+                            <div class="popular-dest-price">From 30 <font>EUR</font></div>
                         </div>
                     </div>
                     <div class="popular-destinations-img">
@@ -565,7 +569,7 @@ will contact you and we will be waiting for you at pick up location at the time.
                             </b>
                     </div>
                     <div class="img-info-btn">                        
-                        <button>BOOK NOW</button>
+                        <button onclick="window.location.href = '#bookNow';">BOOK NOW</button>
                     </div>
                 </div>
                 <div class="img-info-div-style"></div>
@@ -666,7 +670,12 @@ this needs from one point.
 
             let touchEvent = 'touchstart' in window ? 'touchstart' : 'click'; //Check device supports click or touch.
 
+            let fleetSlide = 3;
+            let reviewSlide = 3;
+
             if (window.innerWidth <= 800) {
+                fleetSlide = 3;
+                reviewSlide = 9;
                 document.getElementById("thirdLine").setAttribute("style", "display: none;");
                 document.getElementById("istImg").setAttribute("style", "display: none;");
                 for (let i = 0; i < 7; i++) {
@@ -791,7 +800,11 @@ this needs from one point.
 			                suggestionBox = document.createElement("div"); //Create suggestion div.
                             suggestionBox.innerHTML = "<b style='grid-area: name'>" + suggestionsFrom[i].name +"</b>"; //Fill it with suggestion.
                             suggestionBox.innerHTML += "<p style='grid-area: address'>" + suggestionsFrom[i].address;
-                            suggestionBox.innerHTML += "<img style='grid-area: logo;' src='images/search_plane.png' alt='Airport'>";
+                            if (suggestionsFrom[i].place_id == "ChIJqZW8Cvb_n0ARBuUkyCzgDDg" || suggestionsFrom[i].place_id == "ChIJU6Ek9MvbyhQRdNqYgE3K76w") {
+                                suggestionBox.innerHTML += "<img style='grid-area: logo;' src='images/search_plane.png' alt='Airport'>";
+                            } else {
+                                suggestionBox.innerHTML += "<img style='grid-area: logo;' src='images/block.png' alt='Block'>";
+                            }
                             suggestionBox.innerHTML += "<input type='hidden' class='name' value='" + suggestionsFrom[i].name +"'>";
                             suggestionBox.innerHTML += "<input type='hidden' class='address' value='" + suggestionsFrom[i].address +"'>";
                             suggestionBox.innerHTML += "<input type='hidden' class='place_id' value='" + suggestionsFrom[i].place_id +"'>";                            
@@ -799,12 +812,12 @@ this needs from one point.
 
 			                suggestionMain.appendChild(suggestionBox); //Make it main div's child.				
 			   
-			                if(i == 0) 
+			                if (i == 0) 
 				                suggestionBox.setAttribute("style", "border-radius: 5px 5px 0 0"); //First suggestion box's style.
 											   
-			                if(i == suggestionsFrom.length - 1)
+			                if (i == suggestionsFrom.length - 1)
 				                suggestionBox.setAttribute("style", "border-radius: 0 0 5px 5px"); //Last suggestion box's style.
-
+                            
 			                suggestionBox.addEventListener(touchEvent, function(e) {
                                 fromName = this.getElementsByClassName("name")[0].value;
                                 fromAddress = this.getElementsByClassName("address")[0].value;
@@ -835,7 +848,11 @@ this needs from one point.
 			                suggestionBox = document.createElement("div"); //Create suggestion div.
                             suggestionBox.innerHTML = "<b style='grid-area: name'>" + suggestionsTo[i].name +"</b>"; //Fill it with suggestion.
                             suggestionBox.innerHTML += "<p style='grid-area: address'>" + suggestionsTo[i].address;
-                            suggestionBox.innerHTML += "<img style='grid-area: logo;' src='images/search_plane.png' alt='Airport'>";
+                            if (suggestionsTo[i].place_id == "ChIJqZW8Cvb_n0ARBuUkyCzgDDg" || suggestionsTo[i].place_id == "ChIJU6Ek9MvbyhQRdNqYgE3K76w") {
+                                suggestionBox.innerHTML += "<img style='grid-area: logo;' src='images/search_plane.png' alt='Airport'>";
+                            } else {
+                                suggestionBox.innerHTML += "<img style='grid-area: logo;' src='images/block.png' alt='Block'>";
+                            }
                             suggestionBox.innerHTML += "<input type='hidden' class='name' value='" + suggestionsTo[i].name +"'>";
                             suggestionBox.innerHTML += "<input type='hidden' class='address' value='" + suggestionsTo[i].address +"'>";
                             suggestionBox.innerHTML += "<input type='hidden' class='place_id' value='" + suggestionsTo[i].place_id +"'>";                            
@@ -947,8 +964,10 @@ this needs from one point.
             let menuToggle = false;
             document.getElementById("menuToggle").addEventListener(touchEvent, function(e) {                
                 if(!menuToggle) {
+                    document.body.classList.add("stop-scrolling"); 
                     document.getElementById("navBar").setAttribute("style", "top: 0;");
                 } else {
+                    document.body.classList.remove("stop-scrolling");                     
                     document.getElementById("navBar").setAttribute("style", "top: -900px;");
                 }
                 menuToggle = !menuToggle;
@@ -966,7 +985,7 @@ this needs from one point.
             });
 
             reviewsNextBtn.addEventListener(touchEvent, function(e) {
-                if(reviewsPage < 200) {
+                if(reviewsPage < (reviewSlide - 1) * 100) {
                     reviewsPage += 100;
                     reviews.setAttribute("style", "margin-left: -"+ reviewsPage + "%;");
                 }
@@ -984,7 +1003,7 @@ this needs from one point.
             });
 
             vehiclesNextBtn.addEventListener(touchEvent, function(e) {
-                if(vehiclesPage < 200) {
+                if(vehiclesPage < (fleetSlide - 1 ) * 100) {
                     vehiclesPage += 100;
                     vehicles.setAttribute("style", "margin-left: -"+ vehiclesPage + "%;");
                 }

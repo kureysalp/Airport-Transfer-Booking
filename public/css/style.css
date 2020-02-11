@@ -1,4 +1,21 @@
-body{margin: 0;}
+body{margin: 0;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */}
+
+input:focus
+{outline: none;}
+
+button:hover{cursor: pointer;}
+
+.stop-scrolling { 
+    height: 100%; 
+    overflow: hidden; 
+} 
 
 .reviews-back:hover
 {cursor: pointer;}
@@ -41,6 +58,8 @@ a:hover, a:visited, a:link, a:active
   {
 	  text-decoration: none;
   }
+
+  a { color: inherit; } 
 @media (min-width:1024px) {
 .header
 {
@@ -3418,8 +3437,9 @@ input:checked+.slider:before
     border-bottom-right-radius: 5px;
     display: grid;
     grid-template-columns: 200px 200px 200px 200px auto;
-    grid-template-rows: 100%;
-    grid-template-areas: 
+    grid-template-rows: 10% 90%;
+    grid-template-areas:
+    "title title . . ." 
     "mail ask phone live .";
 }
 
@@ -3436,6 +3456,17 @@ input:checked+.slider:before
     width: 20px;
     float: left;
 }
+
+.voucher-help-title {
+    font-family: OpenSans-Regular;
+    font-size: 16px;
+    color: #56585B;
+    font-weight: bold;
+    grid-area: title;
+    margin: 10px 0 0 10px;
+}
+
+
 
 .voucher-help-element p
 {
@@ -11599,7 +11630,7 @@ input:checked+.slider:before
         height: auto;
         display: grid;
         grid-template-columns: 5% 90% 5%;
-        grid-template-rows: 570px 750px 1170px auto 245px;
+        grid-template-rows: auto 750px 1170px auto 245px;
         grid-template-areas: 
         ". voucher ."
         ". after-booking ."
@@ -11614,7 +11645,7 @@ input:checked+.slider:before
         height: auto;
         display: grid;
         grid-template-columns: 5% 90% 5%;
-        grid-template-rows: 820px 750px 1170px auto 245px;
+        grid-template-rows: auto 750px 1170px auto 245px;
         grid-template-areas: 
         ". voucher ."
         ". after-booking ."
@@ -12143,7 +12174,7 @@ input:checked+.slider:before
         height: auto;
         display: grid;
         grid-template-columns: 5% 90% 5%;
-        grid-template-rows: 1000px 1000px 150px auto 245px;
+        grid-template-rows: auto auto 150px auto 245px;
         grid-template-areas: 
         ". privacy-policy ."
         ". about-transfer ."    
@@ -12160,7 +12191,7 @@ input:checked+.slider:before
         margin-top: 40px;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 80px 920px;
+        grid-template-rows: 80px auto;
         grid-template-areas: 
         "title"
         "content";
@@ -12189,7 +12220,7 @@ input:checked+.slider:before
         height: 100%;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 80px 920px;
+        grid-template-rows: 80px auto;
         grid-template-areas: 
         "title"
         "content";
@@ -12233,7 +12264,7 @@ input:checked+.slider:before
         height: 100%;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 60px 320px;
+        grid-template-rows: 60px auto;
         grid-template-areas: 
         "title"
         "content";
@@ -12716,14 +12747,13 @@ input:checked+.slider:before
         position: relative;
         box-sizing: border-box;
         width: calc(80% - 40px);
-        height: 50px;
+        height: 40px;
     }
 
     .nav-bar-line
     {
         width: 90%;        
-        height: 1px;        
-        margin-top: 20px;
+        height: 1px;
         background-color: rgb(194, 194, 194);
     }
     
@@ -12737,7 +12767,7 @@ input:checked+.slider:before
         font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 16px;
         color: #FFFFFF;
-        margin-top: 50px;
+        margin-top: 10px;
         margin-left: 12%;
     }
     
@@ -13194,10 +13224,10 @@ input:checked+.slider:before
         cursor: pointer;
         background-color :#FFFFFF;
         width: 100%;
-        height: 50px;
+        height: auto;
         display: grid;
         grid-template-columns: 50px auto;
-        grid-template-rows: 15px 35px;
+        grid-template-rows: auto auto;
         grid-template-areas: 
         "logo name"
         "logo address";
@@ -13214,7 +13244,8 @@ input:checked+.slider:before
     {
         font-family: OpenSans-Regular;
         color: #93989E;
-        font-size: 10px
+        font-size: 10px;
+        margin-top: 0;
     }
     
     .autocomplete-items div img
@@ -13337,18 +13368,23 @@ input:checked+.slider:before
         font-size: 18px;
         color: #000000;
         margin: auto;
-        font-weight: bold;
+        font-weight: bold;        
     }
     
     .how-it-desc
     {
         width: 100%;
-        height: 390px;
+        height: 350px;
         background-color: #F8E9C6;
         border-radius: 4px;
         grid-area: desc;
         margin: auto;
         margin-top: 50px;
+        font-family: OpenSans-Regular;
+        font-size: 16px;
+        color: #595A5A;
+        padding-left: 10px;
+        font-weight: bold;
     }
     
     /* REVIEWS */
@@ -13400,10 +13436,10 @@ input:checked+.slider:before
         height: 100%;
         grid-area: reviews;
         display: grid;
-        grid-template-columns: 100% 100% 100%;
+        grid-template-columns: 100% 100% 100% 100% 100% 100% 100% 100% 100%;
         grid-template-rows: 100%;
         grid-template-areas: 
-        "rev1 rev2 rev3";    
+        "rev1 rev2 rev3 rev4 rev5 rev6 rev7 rev8 rev9";    
         transition: .4s;
     }
     
@@ -13473,7 +13509,7 @@ input:checked+.slider:before
     {
         width: 80px;
         height: 20px;
-        margin: 0 0 0 180px;
+        margin: 0 0 0 60%;
         font-family: OpenSans-Regular;
         font-size: 10px;
         color: #242F3E;
@@ -13912,7 +13948,7 @@ input:checked+.slider:before
         width: auto;
         height: auto;
         font-family: OpenSans-Regular;
-        font-size: 34px;
+        font-size: 28px;
         color: #242F3E;
         grid-area: title;
         margin: auto;
@@ -14319,7 +14355,7 @@ input:checked+.slider:before
         width: 100%;
         height: auto;
         font-family: OpenSans-Regular;
-        font-size: 22px;
+        font-size: 18px;
         color: #242F3E;
         margin: auto;
         margin-left: 0;
@@ -14330,9 +14366,8 @@ input:checked+.slider:before
         width: 100%;
         height: auto;
         font-family: OpenSans-Regular;
-        font-size: 16px;
-        color: #242F3E;
-        margin: auto;
+        font-size: 14px;
+        color: #242F3E;        
         margin-left: 0;
     }
     
@@ -14562,7 +14597,7 @@ input:checked+.slider:before
         grid-area: booking;
         display: grid;
         grid-template-columns: 5% 90% 5%;
-        grid-template-rows: auto 200px 650px 1000px;
+        grid-template-rows: auto 250px 400px auto;
         grid-template-areas: 
         ". booking ."
         ". extra ."
@@ -15324,7 +15359,7 @@ input:checked+.slider:before
     .privacy-container font
     {
         font-family: OpenSans-Regular;
-        font-size: 14px;
+        font-size: 13px;
         color: #474747;
         margin-left: 30px;
     }
@@ -15806,7 +15841,7 @@ input:checked+.slider:before
         height: auto;
         display: grid;
         grid-template-columns: 5% 90% 5%;
-        grid-template-rows: 570px 750px 1170px auto 245px;
+        grid-template-rows: auto 750px 1170px auto 245px;
         grid-template-areas: 
         ". voucher ."
         ". after-booking ."
@@ -15821,7 +15856,7 @@ input:checked+.slider:before
         height: auto;
         display: grid;
         grid-template-columns: 5% 90% 5%;
-        grid-template-rows: 820px 750px 1170px auto 245px;
+        grid-template-rows: auto 750px 1170px auto 245px;
         grid-template-areas: 
         ". voucher ."
         ". after-booking ."
@@ -15868,7 +15903,7 @@ input:checked+.slider:before
         width: 100%;
         height: 100%;
         font-family: OpenSans-Regular;
-        font-size: 26px;
+        font-size: 24px;
         color: #56585B;
     }
     
@@ -15895,7 +15930,7 @@ input:checked+.slider:before
     .voucher-dest
     {
         margin-top: 20px;
-        margin-left: 40px;
+        margin-left: 20px;
         width: 250px;
         height: auto;
         display: grid;
@@ -16350,7 +16385,7 @@ input:checked+.slider:before
         height: auto;
         display: grid;
         grid-template-columns: 5% 90% 5%;
-        grid-template-rows: 900px 600px 150px auto 245px;
+        grid-template-rows: auto auto 150px auto 245px;
         grid-template-areas: 
         ". privacy-policy ."
         ". about-transfer ."    
@@ -16367,7 +16402,7 @@ input:checked+.slider:before
         margin-top: 40px;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 80px 920px;
+        grid-template-rows: 80px auto;
         grid-template-areas: 
         "title"
         "content";
@@ -16396,7 +16431,7 @@ input:checked+.slider:before
         height: 100%;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 80px 920px;
+        grid-template-rows: 80px auto;
         grid-template-areas: 
         "title"
         "content";
@@ -16440,7 +16475,7 @@ input:checked+.slider:before
         height: 100%;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 60px 320px;
+        grid-template-rows: 60px auto;
         grid-template-areas: 
         "title"
         "content";
@@ -17402,10 +17437,10 @@ input:checked+.slider:before
             cursor: pointer;
             background-color: #FFFFFF;
             width: 100%;
-            height: 50px;
+            height: auto;
             display: grid;
             grid-template-columns: 30px auto;
-            grid-template-rows: 15px 35px;
+            grid-template-rows: auto auto;
             grid-template-areas: 
             "logo name"
             "logo address";;
@@ -17424,6 +17459,7 @@ input:checked+.slider:before
             color: #93989E;
             font-size: 8px;
             width: 100%;
+            margin-top: 0;
         }
         
         .autocomplete-items div img
@@ -17552,12 +17588,17 @@ input:checked+.slider:before
         .how-it-desc
         {
             width: 100%;
-            height: 390px;
+            height: 350px;
             background-color: #F8E9C6;
             border-radius: 4px;
             grid-area: desc;
             margin: auto;
             margin-top: 50px;
+            font-family: OpenSans-Regular;
+            font-size: 16px;
+            color: #595A5A;
+            padding-left: 10px;
+            font-weight: bold;
         }
         
         /* REVIEWS */
@@ -17609,10 +17650,10 @@ input:checked+.slider:before
             height: 100%;
             grid-area: reviews;
             display: grid;
-            grid-template-columns: 100% 100% 100%;
+            grid-template-columns: 100% 100% 100% 100% 100% 100% 100% 100% 100%;
             grid-template-rows: 100%;
             grid-template-areas: 
-            "rev1 rev2 rev3";    
+            "rev1 rev2 rev3 rev4 rev5 rev6 rev7 rev8 rev9";    
             transition: .4s;
         }
         
@@ -20014,7 +20055,7 @@ input:checked+.slider:before
             height: auto;
             display: grid;
             grid-template-columns: 5% 90% 5%;
-            grid-template-rows: 775px 620px 1170px auto 245px;
+            grid-template-rows: auto 620px 1170px auto 245px;
             grid-template-areas: 
             ". voucher ."
             ". after-booking ."
@@ -20029,7 +20070,7 @@ input:checked+.slider:before
             height: auto;
             display: grid;
             grid-template-columns: 5% 90% 5%;
-            grid-template-rows: 975px 620px 1170px auto 245px;
+            grid-template-rows: auto 620px 1170px auto 245px;
             grid-template-areas: 
             ". voucher ."
             ". after-booking ."
@@ -20040,7 +20081,7 @@ input:checked+.slider:before
         
         .voucher
         {
-            margin-top: 100px;
+            margin-top: 20px;
             grid-area: voucher;
             width: 100%;
             height: 100%;
@@ -20056,7 +20097,7 @@ input:checked+.slider:before
         
         .voucher-return
         {
-            margin-top: 100px;
+            margin-top: 20px;
             grid-area: voucher;
             width: 100%;
             height: 100%;
@@ -20077,8 +20118,9 @@ input:checked+.slider:before
             width: 100%;
             height: 100%;
             font-family: OpenSans-Regular;
-            font-size: 26px;
+            font-size: 20px;
             color: #56585B;
+            text-align: center;
         }
         
         .voucher-transfer
@@ -20104,7 +20146,7 @@ input:checked+.slider:before
         .voucher-dest
         {
             margin-top: 20px;
-            margin-left: 40px;
+            margin-left: 20px;
             width: 250px;
             height: auto;
             display: grid;
@@ -20240,6 +20282,15 @@ input:checked+.slider:before
             "mail ask"
             "phone live";
         }
+
+        .voucher-help-title {
+            font-family: OpenSans-Regular;
+            font-size: 16px;
+            color: #56585B;
+            font-weight: bold;
+            grid-area: title;
+            margin: 10px 0 0 10px;
+        }
         
         .voucher-help-element
         {
@@ -20257,7 +20308,7 @@ input:checked+.slider:before
         .voucher-help-element p
         {
             font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-            font-size: 14px;
+            font-size: 12px;
             color: #0267C1;
             margin: auto;
             margin-left: 5px;
@@ -20550,7 +20601,7 @@ input:checked+.slider:before
             height: auto;
             display: grid;
             grid-template-columns: 5% 90% 5%;
-            grid-template-rows: 1340px 1400px 150px auto 245px;
+            grid-template-rows: auto auto 150px auto 245px;
             grid-template-areas: 
             ". privacy-policy ."
             ". about-transfer ."    
@@ -20566,7 +20617,7 @@ input:checked+.slider:before
             height: calc(100% - 40px);            
             display: grid;
             grid-template-columns: 100%;
-            grid-template-rows: 80px 920px;
+            grid-template-rows: 80px auto;
             grid-template-areas: 
             "title"
             "content";
@@ -20595,7 +20646,7 @@ input:checked+.slider:before
             height: 100%;
             display: grid;
             grid-template-columns: 100%;
-            grid-template-rows: 80px 920px;
+            grid-template-rows: 80px auto;
             grid-template-areas: 
             "title"
             "content";

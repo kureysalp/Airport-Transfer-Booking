@@ -1,7 +1,8 @@
 <html>
     <head>
         <meta charset="utf-8">
-	    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
+        <meta name="theme-color" content="#242F3E"/>
         <title>Dama Taxi | Airport Transfer Service</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,8 +16,8 @@
         </div>
         <div class="header" style="background-color: #242F3E; position: relative;">
             <div class="left-nav">
-                <img class="dama-logo" src="images/dama-taxi-logo.png">
-                <div>DAMA TAXI</div>
+                <a href="/"><img class="dama-logo" src="images/dama-taxi-logo.png"></a>
+                <div><a href="/">DAMA TAXI</a></div>
             </div>
             <div class="mid-nav">
                 <nav id="navBar" class="nav-bar">
@@ -103,7 +104,7 @@
                 <div id="popDest" class="popular-dest-pop">
                     <div class="popular-dest-pop-dest" style="grid-area: from;">Istanbul Airport (IST)</div>
                     <div class="popular-dest-pop-dest" style="grid-area: to;">Sultanahmet</div>
-                    <div class="popular-dest-pop-price" style="grid-area: price;"><b>From 33 <font>EUR</font></b></div>
+                    <div class="popular-dest-pop-price" style="grid-area: price;"><b>From 30 <font>EUR</font></b></div>
                 </div>
             </div>
             <div class="desktop" style="width: 100%; height: 1006px; overflow: hidden; grid-area: extra;">
@@ -261,8 +262,10 @@
             let menuToggle = false;
             document.getElementById("menuToggle").addEventListener(touchEvent, function(e) {                
                 if(!menuToggle) {
+                    document.body.classList.add("stop-scrolling"); 
                     document.getElementById("navBar").setAttribute("style", "top: 0;");
                 } else {
+                    document.body.classList.remove("stop-scrolling");                     
                     document.getElementById("navBar").setAttribute("style", "top: -900px;");
                 }
                 menuToggle = !menuToggle;

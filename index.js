@@ -4,6 +4,7 @@ const httpApp = express();
 const http = require('http');
 const https = require('https');
 const fetch = require('node-fetch');
+const bcrypt = require('bcrypt');
 const hogan = require('hogan.js');
 const fs = require('fs');
 
@@ -12,7 +13,6 @@ const optionSSL = {
     cert: fs.readFileSync("./etc/ssl/damataxi.crt")
 };
 
-app.listen(8080);
 app.use(express.static('public', {
     extensions: ['html', 'htm'],
 }));
@@ -94,7 +94,7 @@ app.get('/calculatePrice/:distanceAndVehicle', async (request, response) => {
 
     if(vehicle == "Economy") {
         if (distance <= 55) 
-    		price = 34;
+    		price = 30;
 	    else if (distance > 55 && distance <= 65)
 		    price = 45;
     	else if (distance > 65 && distance <= 85)
@@ -103,7 +103,7 @@ app.get('/calculatePrice/:distanceAndVehicle', async (request, response) => {
            price = 80;
     } else if(vehicle == "Comfort") {
 	    if (distance <= 55)
-    		price = 36;
+    		price = 32;
     	else if (distance > 55 && distance <= 65)
 		    price = 48;
 	    else if (distance > 65 && distance <= 85)
@@ -112,7 +112,7 @@ app.get('/calculatePrice/:distanceAndVehicle', async (request, response) => {
             price = 83;
     } else if(vehicle == "Minivan") {
 	    if (distance <= 55)
-		    price = 38;
+		    price = 35;
 	    else if (distance > 55 && distance <= 65)
     		price = 50;
     	else if (distance > 65 && distance <= 85)
@@ -146,9 +146,9 @@ app.get('/calculatePrice/:distanceAndVehicle', async (request, response) => {
 const mysql = require('mysql');
 const db = mysql.createConnection({
     host: 'localhost',
-    //user: 'dama-admin-db',
-    //password: 'damaPass',
-    user:'root',
+    user: 'dama-admin-db',
+    password: 'damaPass',
+    //user:'root',
     database: 'dama_taxi_db'
 });
 
@@ -230,13 +230,13 @@ app.get('/getCustomers', async (req, res) => {
 //Send e-mail
 const sgMail = require('@sendgrid/mail');
 
-var template = fs.readFileSync('./public/email_template.hjs', 'utf-8');
+var template = fs.readFileSync('./public/checkoutEmail.hjs', 'utf-8');
 var compiledTemplate = hogan.compile(template);
 
 app.get('/sendEmail/:data', async function(request, response) {    
-    let jsonData = JSON.parse(request.params['data']);
+    let jsonData = JSON.parse(request.params['data']);        
+    sgMail.setApiKey("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");
     console.log(jsonData);
-    /*sgMail.setApiKey("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");
     const emails = 
         {
            to: [jsonData.email, 'damataxiservice@gmail.com'],
@@ -244,9 +244,9 @@ app.get('/sendEmail/:data', async function(request, response) {
            fromname: 'Dama Taxi',
            subject: 'Airport Transfer Receipt',
            html: compiledTemplate.render({book_id: jsonData.book_id, name: jsonData.name, phone: jsonData.phone, email: jsonData.email, from: jsonData.from,
-               to: jsonData.to, flight_number: jsonData.flightNumber, arrival_date: jsonData.arrivalDate,
-               arrival_time: jsonData.arrivalTime, vehicle: jsonData.vehicle, passengers: jsonData.passengers,
-               price: jsonData.price})
+               fromAddress: jsonData.fromAddress, to: jsonData.to, toAddress: jsonData.toAddress, flight_number: jsonData.flightNumber, arrival_date: jsonData.arrivalDate,
+               arrival_time: jsonData.arrivalTime, vehicle: jsonData.vehicle, brand: jsonData.brand, image: jsonData.image, passengers: jsonData.passengers,
+               luggage: jsonData.luggage, babySeat: jsonData.babySeat, price: jsonData.price})
         };
 
     sgMail.sendMultiple(emails).then(() => {
@@ -256,16 +256,17 @@ app.get('/sendEmail/:data', async function(request, response) {
         log.info(err);
         log.info(err.message);
         response.send(err.message);
-    });    */
+    });
 });
 
-var returnTemplate = fs.readFileSync('./public/email_template_return.hjs', 'utf-8');
+var returnTemplate = fs.readFileSync('./public/checkoutEmailReturn.hjs', 'utf-8');
 var returnCompiledTemplate = hogan.compile(returnTemplate);
 
 app.get('/sendReturnEmail/:data', function(request, response) {
     let jsonData = JSON.parse(request.params['data']);
     sgMail.setApiKey("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");
     //Customer
+    let totalPrice = parseInt(jsonData.price) * 2;
     const emails = 
     {
        to: [jsonData.email, 'damataxiservice@gmail.com'],
@@ -273,10 +274,10 @@ app.get('/sendReturnEmail/:data', function(request, response) {
        fromname: 'Dama Taxi',
        subject: 'Airport Transfer Receipt',
        html: returnCompiledTemplate.render({book_id: jsonData.book_id, name: jsonData.name, phone: jsonData.phone, email: jsonData.email, from: jsonData.to,
-        to: jsonData.from, flight_number: jsonData.flightNumber, arrival_date: jsonData.arrivalDate,
-        arrival_time: jsonData.arrivalTime, return_date: jsonData.returnDate,
-        return_time: jsonData.returnTime, vehicle: jsonData.vehicle, passengers: jsonData.passengers,
-        price: jsonData.price})
+        fromAddress: jsonData.fromAddress, to: jsonData.from, toAddress: jsonData.toAddress, flight_number: jsonData.flightNumber, arrival_date: jsonData.arrivalDate,
+        arrival_time: jsonData.arrivalTime, return_date: jsonData.returnDate, return_time: jsonData.returnTime,
+        vehicle: jsonData.vehicle, passengers: jsonData.passengers, luggage: jsonData.luggage, babySeat: jsonData.babySeat,
+        brand: jsonData.brand, image: jsonData.image, price: jsonData.price, totalPrice: totalPrice})
     };
 
 sgMail.sendMultiple(emails).then(() => {
@@ -335,19 +336,19 @@ app.post('/login-admin-panel', async (req, res) => {
 });
 
 //404 redirect
-app.use(function(req, res) {
+/*app.use(function(req, res) {
     res.status(404).redirect("/404");
     
+});*/
+
+httpApp.get("*", function(req, res, next) {
+    res.redirect("https://" + req.headers.host + req.path);
 });
 
-/*httpApp.get("*", function(req, res, next) {
-    res.redirect("https://" + req.headers.host + req.path);
-});*/
-
-/*http.createServer(httpApp).listen(80, function() {
+http.createServer(httpApp).listen(80, function() {
     console.log("Express HTTP server listening on port 80");
-});*/
+});
 
-/*https.createServer(optionSSL, app).listen(443, function() {
+https.createServer(optionSSL, app).listen(443, function() {
     console.log("Express HTTPS server listening on port 443" );
-});*/
+});
