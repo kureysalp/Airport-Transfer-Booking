@@ -1,1 +1,1 @@
-Dama Taxi developed by G-Travel
+Dama Taxi is developed by G-Travel
