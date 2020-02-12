@@ -94,7 +94,7 @@ app.get('/calculatePrice/:distanceAndVehicle', async (request, response) => {
 
     if(vehicle == "Economy") {
         if (distance <= 55) 
-    		price = 30;
+    		price = 35;
 	    else if (distance > 55 && distance <= 65)
 		    price = 45;
     	else if (distance > 65 && distance <= 85)
@@ -103,7 +103,7 @@ app.get('/calculatePrice/:distanceAndVehicle', async (request, response) => {
            price = 80;
     } else if(vehicle == "Comfort") {
 	    if (distance <= 55)
-    		price = 32;
+    		price = 38;
     	else if (distance > 55 && distance <= 65)
 		    price = 48;
 	    else if (distance > 65 && distance <= 85)
@@ -112,7 +112,7 @@ app.get('/calculatePrice/:distanceAndVehicle', async (request, response) => {
             price = 83;
     } else if(vehicle == "Minivan") {
 	    if (distance <= 55)
-		    price = 35;
+		    price = 40;
 	    else if (distance > 55 && distance <= 65)
     		price = 50;
     	else if (distance > 65 && distance <= 85)
@@ -242,7 +242,7 @@ app.get('/sendEmail/:data', async function(request, response) {
            to: [jsonData.email, 'damataxiservice@gmail.com'],
            from: 'info@damataxi.com',
            fromname: 'Dama Taxi',
-           subject: 'Airport Transfer Receipt',
+           subject: 'Airport Transfer Receipt, Booking ID: ' + jsonData.book_id,
            html: compiledTemplate.render({book_id: jsonData.book_id, name: jsonData.name, phone: jsonData.phone, email: jsonData.email, from: jsonData.from,
                fromAddress: jsonData.fromAddress, to: jsonData.to, toAddress: jsonData.toAddress, flight_number: jsonData.flightNumber, arrival_date: jsonData.arrivalDate,
                arrival_time: jsonData.arrivalTime, vehicle: jsonData.vehicle, brand: jsonData.brand, image: jsonData.image, passengers: jsonData.passengers,
@@ -272,7 +272,7 @@ app.get('/sendReturnEmail/:data', function(request, response) {
        to: [jsonData.email, 'damataxiservice@gmail.com'],
        from: 'info@damataxi.com',
        fromname: 'Dama Taxi',
-       subject: 'Airport Transfer Receipt',
+       subject: 'Airport Transfer Receipt, Booking ID: ' + jsonData.book_id,
        html: returnCompiledTemplate.render({book_id: jsonData.book_id, name: jsonData.name, phone: jsonData.phone, email: jsonData.email, from: jsonData.to,
         fromAddress: jsonData.fromAddress, to: jsonData.from, toAddress: jsonData.toAddress, flight_number: jsonData.flightNumber, arrival_date: jsonData.arrivalDate,
         arrival_time: jsonData.arrivalTime, return_date: jsonData.returnDate, return_time: jsonData.returnTime,

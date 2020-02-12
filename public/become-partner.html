@@ -1,5 +1,16 @@
 <html>
     <head>
+        <!-- Global site tag (gtag.js) - Google Ads: 668862055 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-668862055"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-668862055');
+  gtag('config', 'UA-150756020-1');
+</script>
+
         <meta charset="utf-8">
         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
         <meta name="theme-color" content="#242F3E"/>
@@ -28,6 +39,8 @@
                         <li style="grid-area: about;"><a href=/about-us>About Us</a></li>
                         <li style="grid-area: contact;"><a href=/contact-us>Contact Us</a></li>
                         <li style="grid-area: faq;"><a href=/#faq>FAQ</a></li>
+                        <li><a href=/privacy-policy class="mobile">Privacy Policy</a></li>
+                        <li><a href=/become-partner class="mobile">Become a Partner</a></li>
                         <div class="nav-bar-line mobile"></div> 
                         <select class="nav-bar-dropdown mobile">
                             <option>EN</option>
@@ -35,9 +48,11 @@
                         <select class="nav-bar-dropdown mobile">
                             <option>EUR</option>
                         </select>
-                        <br><br><br><br><br>
-                        <li><a href=/privacy-policy class="mobile">Privacy Policy</a></li>
-                        <li><a href=/become-partner class="mobile">Become a Partner</a></li>
+                        <br><br><br>                 
+                        <li><a href="mailto:info@damataxi.com?subject=Customer Service" style="font-size: 12px;" class="mobile"><u>info@damataxi.com</u></a></li>
+                        <li><a href="tel:+905449010010" style="font-size: 12px;" class="mobile"><u>+90 544 901 00 10</u></a></li>
+                        <li><a href="#" style="font-size: 12px;" class="mobile">Sultanahmet Yasemin Street 
+                            No 2/4 İstanbul, Turkey</a></li>
                         <div class="nav-bar-copy mobile">© 2019 by Dama Taxi.</div>
                     </ul>
                 </nav>
@@ -122,7 +137,7 @@ in all conditions. Please fill the asked informations without missing any. If yo
             </form>
             <div class="footer">
                 <img class="footer-bg-img" src="images/Dama-Taxi-Logo-v2-big.png">
-                <div class="footer-logo" style="grid-area: logo;"><img class="footer-dama-logo" src="images/dama-taxi-logo.png">&nbsp&nbspDAMA TAXI</div>
+                <div class="footer-logo" style="grid-area: logo;"><a href="/"><img class="footer-dama-logo" src="images/dama-taxi-logo.png"></a>&nbsp&nbsp<a href="/">DAMA TAXI</a></div>
                 <div class="footer-element" style="grid-area: pop;">Popular Destinations</div>
                 <div class="footer-element" style="grid-area: extra;">Extra Servicex</div>
                 <div class="footer-element" style="grid-area: about;">About Us</div>
@@ -143,8 +158,8 @@ in all conditions. Please fill the asked informations without missing any. If yo
                         <option value="RU">RU</option>
                     </select>
                 </div>
-                <div class="footer-element" style="grid-area: mail;"><u>info@damataxi.com</u></div>
-                <div class="footer-element" style="grid-area: phone;">+90 544 901 00 10</div>
+                <div class="footer-element" style="grid-area: mail;"><u><a href="mailto:info@damataxi.com?subject=Customer Service">info@damataxi.com</a></u></div>
+                <div class="footer-element" style="grid-area: phone;"><a href="tel:+905449010010">+90 544 901 00 10</a></div>
                 <div class="footer-element" style="grid-area: address;">Sultanahmet Yasemin Street 
                     No 2/4 İstanbul, Turkey</div>
                 <div class="footer-element" style="grid-area: copyright; text-align: center;">© 2019 by Dama Taxi.</div>
@@ -168,7 +183,7 @@ in all conditions. Please fill the asked informations without missing any. If yo
             }
 
             let menuToggle = false;
-            document.getElementById("menuToggle").addEventListener(touchEvent, function(e) {                
+            function menuToggleFnc() {
                 if(!menuToggle) {
                     document.body.classList.add("stop-scrolling"); 
                     document.getElementById("navBar").setAttribute("style", "top: 0;");
@@ -177,7 +192,11 @@ in all conditions. Please fill the asked informations without missing any. If yo
                     document.getElementById("navBar").setAttribute("style", "top: -900px;");
                 }
                 menuToggle = !menuToggle;
-            }); 
+            }
+            
+            document.getElementById("menuToggle").addEventListener(touchEvent, function(e) {                
+                menuToggleFnc();
+            });
         </script>
 
     </body>

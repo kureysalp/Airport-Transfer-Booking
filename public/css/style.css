@@ -4,10 +4,17 @@ body{margin: 0;
      -khtml-user-select: none; /* Konqueror HTML */
        -moz-user-select: none; /* Old versions of Firefox */
         -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Opera and Firefox */}
+            user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+-webkit-tap-highlight-color: transparent;
+                            }
 
 input:focus
+{outline: none;}
+
+button:focus
+{outline: none;}
+
+a:focus
 {outline: none;}
 
 button:hover{cursor: pointer;}
@@ -302,12 +309,92 @@ a:hover, a:visited, a:link, a:active
     grid-area: dest;
     margin: auto 0;
     display: grid;
-    grid-template-columns: 50px 265px;
+    grid-template-columns: 30px 295px;
     grid-template-rows: 50% 50%;
     grid-template-areas: 
     "icon from"
     "icon to";
 }
+
+.dest-icon
+{
+    width: 10px;
+    height: 61px;
+    margin: auto;
+    margin-top: 10px;
+    grid-area: icon;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10px 23px 8px 6px 5px 10px;
+    grid-template-areas: 
+    "orb"
+    "line1"
+    "line2"
+    "line3"
+    "line4"
+    "circle";
+}
+
+.dest-icon-orb
+{
+    grid-area: orb;
+    width: 100%;
+    height: 100%;
+    background-color: #6AE2A6;
+    border-radius: 100%;
+}
+
+.dest-icon-line1
+{
+    grid-area: line1;
+    width: 2px;
+    height: 20px;
+    background-color: #6AE2A6;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.dest-icon-line2
+{
+    grid-area: line2;
+    width: 2px;
+    height: 5px;
+    background-color: #6AE2A6;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.dest-icon-line3
+{
+    grid-area: line3;
+    width: 2px;
+    height: 3px;
+    background-color: #6AE2A6;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.dest-icon-line4
+{
+    grid-area: line4;
+    width: 2px;
+    height: 2px;
+    background-color: #6AE2A6;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.dest-icon-circle
+{
+    grid-area: circle;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #6AE2A6;
+    border-radius: 100%;
+    margin: auto;
+    margin-top: -3px;
+}
+
 
 .dest-from
 {
@@ -364,7 +451,7 @@ a:hover, a:visited, a:link, a:active
 
 .dest-line
 {
-    width: 190px;
+    width: 230px;
     height: 1px;
     background-color: #FFFFFF;
     margin: 0 auto;
@@ -426,7 +513,7 @@ a:hover, a:visited, a:link, a:active
     width: 38px;
     height: 24px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: #FFFFFF;
     grid-area: date;
 }
@@ -457,7 +544,7 @@ a:hover, a:visited, a:link, a:active
     width: 89px;
     height: 24px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: #FFFFFF;
     grid-area: pax;
 }
@@ -563,7 +650,7 @@ a:hover, a:visited, a:link, a:active
     width: 89px;
     height: 24px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: #FFFFFF;
     grid-area: pax;
     margin-left: 170px;
@@ -691,6 +778,13 @@ a:hover, a:visited, a:link, a:active
 }
 
 /* HOW IT WORKS */
+
+.how-it-works-new
+{
+    width: 100%;
+    height: 670px;
+    grid-area: how-it-works;
+}
 
 .how-it-works
 {
@@ -865,6 +959,7 @@ a:hover, a:visited, a:link, a:active
     font-size: 16px;
     color: #242F3E;
     grid-area: title;
+    font-style: italic;
 }
 
 .review-stars
@@ -882,11 +977,20 @@ a:hover, a:visited, a:link, a:active
 
 .review-stars div 
 {
-    width: 12px;
-    height: 12px;
-    background-color: #88D2A1;
-    /*box-shadow: 0 0 0 3px #88D2A1;*/
+    width: 14px;
+    height: 14px;
+    border: 1px solid #88D2A1;    
     border-radius: 100%;
+}
+
+.review-stars-inner
+{
+    width: 10px !important;
+    height: 10px !important;
+    background-color: #88D2A1;    
+    border-radius: 100%;
+    margin: auto;
+    margin-top: 1px;
 }
 
 .review-comment
@@ -898,6 +1002,7 @@ a:hover, a:visited, a:link, a:active
     font-size: 12px;
     color: #5B5B5B;
     grid-area: review;
+    font-weight: bold;
 }
 
 .review-author
@@ -962,7 +1067,7 @@ a:hover, a:visited, a:link, a:active
 {
     width: 100%;
     height: 480px;
-    background: linear-gradient(0deg, rgba(145,146,147,0) 0%, rgba(145,146,147,0.65) 100%);
+    background: linear-gradient(0deg, rgba(145,146,147,0) 0%, rgba(145,146,147,0.5) 100%);
     grid-area: reviews;
     margin-top: 155px;
 }
@@ -1089,10 +1194,10 @@ a:hover, a:visited, a:link, a:active
     width: 100%;
     height: 100%;
     grid-area: vehicles;
-    grid-template-columns: 250px 250px 250px;
+    grid-template-columns: 250px 250px 250px 250px 250px 250px;
     grid-template-rows: 100%;
     grid-template-areas: 
-    "veh1 veh2 veh3";
+    "veh1 veh2 veh3 veh4 veh5 veh6";
     transition: .5s;
 }
 
@@ -1716,16 +1821,16 @@ a:hover, a:visited, a:link, a:active
     grid-area: advantages;
     display: grid;
     margin-top: 40px;
-    grid-template-columns: auto 100px 100px 100px 350px 450px 100px 100px auto;
+    grid-template-columns: auto 450px 450px  auto;
     grid-template-rows: 100px 50px 180px 50px 200px 50px 150px;
     grid-template-areas: 
-    ". . title title title . . . . "
-    ". . . tit1 tit1 tit2 . . ."
-    ". . . desc1 desc1 desc2 . . ."
-    ". . . tit3 tit3 tit4 . . ."
-    ". . . desc3 desc3 desc4 . . ."
-    ". . . tit5 tit5 tit6 . . ."
-    ". . . desc5 desc5 desc6 . . .";
+    ". title title . "
+    ". tit1 tit2 ."
+    ". desc1 desc2 ."
+    ". tit3 tit4 ."
+    ". desc3 desc4 ."
+    ". tit5 tit6 ."
+    ". desc5 desc6 .";
 }
 
 .advantages-title
@@ -2939,7 +3044,7 @@ input:checked+.slider:before
     width: 250px;
     height: 60px;
     border-radius: 5px;
-    background-color: #F9AC1A;
+    background-color: #242F3E;
     border: none;
     font-family: OpenSans-Regular;
     font-size: 24px;
@@ -3212,7 +3317,7 @@ input:checked+.slider:before
     height: auto;
     display: grid;
     grid-template-columns: auto 1200px auto;
-    grid-template-rows: 600px 400px 580px 500px;
+    grid-template-rows: 600px 400px auto 500px;
     grid-template-areas: 
     ". voucher ."
     ". after-booking ."
@@ -3227,7 +3332,7 @@ input:checked+.slider:before
     height: auto;
     display: grid;
     grid-template-columns: auto 1200px auto;
-    grid-template-rows: 800px 400px 580px 500px;
+    grid-template-rows: 800px 400px auto 500px;
     grid-template-areas: 
     ". voucher ."
     ". after-booking ."
@@ -3238,7 +3343,7 @@ input:checked+.slider:before
 
 .voucher
 {
-    margin-top: 100px;
+    margin-top: 50px;
     grid-area: voucher;
     width: 100%;
     height: 100%;
@@ -3486,7 +3591,7 @@ input:checked+.slider:before
     height: auto;
     display: grid;
     grid-template-columns: auto 1200px auto;
-    grid-template-rows: 360px 400px 500px 250px 600px 400px 500px 445px;
+    grid-template-rows: 360px 400px 500px 250px 600px 400px auto 445px;
     grid-template-areas: 
     ". about-us ."
     ". about-transfer ."
@@ -3594,7 +3699,7 @@ input:checked+.slider:before
     height: auto;
     display: grid;
     grid-template-columns: auto 1200px auto;
-    grid-template-rows: 200px 80px 900px 200px 400px 500px 445px;
+    grid-template-rows: 200px 80px 900px 200px 400px auto 445px;
     grid-template-areas: 
     ". extra-int ."
     "service service service"
@@ -3758,7 +3863,7 @@ input:checked+.slider:before
     height: auto;
     display: grid;
     grid-template-columns: auto 1200px auto;
-    grid-template-rows: 600px 600px 500px 500px 445px;
+    grid-template-rows: 600px 600px 500px auto 445px;
     grid-template-areas: 
     ". privacy-policy ."
     ". about-transfer ."    
@@ -3962,7 +4067,7 @@ input:checked+.slider:before
     height: auto;
     display: grid;
     grid-template-columns: auto 1200px auto;
-    grid-template-rows: 80px 650px 200px 400px 500px 445px;
+    grid-template-rows: 80px 650px 200px 400px auto 445px;
     grid-template-areas: 
     ". title ."
     ". form ."
@@ -4080,7 +4185,7 @@ input:checked+.slider:before
     height: auto;
     display: grid;
     grid-template-columns: auto 1200px auto;
-    grid-template-rows: 1340px 500px 580px 500px 445px;
+    grid-template-rows: 1340px 500px 580px auto 445px;
     grid-template-areas: 
     ". pop-dest ."
     "img-info img-info img-info"
@@ -4523,12 +4628,91 @@ input:checked+.slider:before
         grid-area: dest;
         margin: auto 0;
         display: grid;
-        grid-template-columns: 20% 80%;
+        grid-template-columns: 15% 85%;
         grid-template-rows: 50% 50%;
         grid-template-areas: 
         "icon from"
         "icon to";
     }
+
+    .dest-icon
+{
+    width: 10px;
+    height: 61px;
+    margin: auto;
+    margin-top: 10px;
+    grid-area: icon;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10px 23px 8px 6px 5px 10px;
+    grid-template-areas: 
+    "orb"
+    "line1"
+    "line2"
+    "line3"
+    "line4"
+    "circle";
+}
+
+.dest-icon-orb
+{
+    grid-area: orb;
+    width: 100%;
+    height: 100%;
+    background-color: #6AE2A6;
+    border-radius: 100%;
+}
+
+.dest-icon-line1
+{
+    grid-area: line1;
+    width: 2px;
+    height: 20px;
+    background-color: #6AE2A6;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.dest-icon-line2
+{
+    grid-area: line2;
+    width: 2px;
+    height: 5px;
+    background-color: #6AE2A6;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.dest-icon-line3
+{
+    grid-area: line3;
+    width: 2px;
+    height: 3px;
+    background-color: #6AE2A6;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.dest-icon-line4
+{
+    grid-area: line4;
+    width: 2px;
+    height: 2px;
+    background-color: #6AE2A6;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.dest-icon-circle
+{
+    grid-area: circle;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #6AE2A6;
+    border-radius: 100%;
+    margin: auto;
+    margin-top: -3px;
+}
     
     .dest-from
     {
@@ -6201,7 +6385,7 @@ input:checked+.slider:before
         grid-area: booking;
         display: grid;
         grid-template-columns: 5% 90% 5%;
-        grid-template-rows: auto 240px 300px 500px;
+        grid-template-rows: auto 240px 300px auto;
         grid-template-areas: 
         ". booking ."
         ". extra ."
@@ -7155,7 +7339,7 @@ input:checked+.slider:before
         width: 250px;
         height: 60px;
         border-radius: 5px;
-        background-color: #F9AC1A;
+        background-color: #242F3E;
         border: none;
         font-family: OpenSans-Regular;
         font-size: 24px;
@@ -7428,7 +7612,7 @@ input:checked+.slider:before
         height: auto;
         display: grid;
         grid-template-columns: auto 1200px auto;
-        grid-template-rows: 600px 400px 580px 500px;
+        grid-template-rows: 600px 400px 580px auto;
         grid-template-areas: 
         ". voucher ."
         ". after-booking ."
@@ -7443,7 +7627,7 @@ input:checked+.slider:before
         height: auto;
         display: grid;
         grid-template-columns: auto 1200px auto;
-        grid-template-rows: 800px 400px 580px 500px;
+        grid-template-rows: 800px 400px 580px auto;
         grid-template-areas: 
         ". voucher ."
         ". after-booking ."
@@ -7690,7 +7874,7 @@ input:checked+.slider:before
         height: auto;
         display: grid;
         grid-template-columns: auto 1200px auto;
-        grid-template-rows: 360px 400px 500px 250px 600px 400px 500px 445px;
+        grid-template-rows: 360px 400px 500px 250px 600px 400px auto 445px;
         grid-template-areas: 
         ". about-us ."
         ". about-transfer ."
@@ -7798,7 +7982,7 @@ input:checked+.slider:before
         height: auto;
         display: grid;
         grid-template-columns: auto 1200px auto;
-        grid-template-rows: 200px 80px 900px 200px 400px 500px 445px;
+        grid-template-rows: 200px 80px 900px 200px 400px auto 445px;
         grid-template-areas: 
         ". extra-int ."
         "service service service"
@@ -7962,7 +8146,7 @@ input:checked+.slider:before
         height: auto;
         display: grid;
         grid-template-columns: auto 1200px auto;
-        grid-template-rows: 600px 600px 500px 500px 445px;
+        grid-template-rows: 600px 600px 500px auto 445px;
         grid-template-areas: 
         ". privacy-policy ."
         ". about-transfer ."    
@@ -8166,7 +8350,7 @@ input:checked+.slider:before
         height: auto;
         display: grid;
         grid-template-columns: auto 1200px auto;
-        grid-template-rows: 80px 650px 200px 400px 500px 445px;
+        grid-template-rows: 80px 650px 200px 400px auto 445px;
         grid-template-areas: 
         ". title ."
         ". form ."
@@ -8284,7 +8468,7 @@ input:checked+.slider:before
         height: auto;
         display: grid;
         grid-template-columns: auto 1200px auto;
-        grid-template-rows: 1340px 500px 580px 500px 445px;
+        grid-template-rows: 1340px 500px 580px auto 445px;
         grid-template-areas: 
         ". pop-dest ."
         "img-info img-info img-info"
@@ -8478,15 +8662,15 @@ input:checked+.slider:before
         font-family: Calibri;
         font-size: 20px;
         color: #FFFFFF;
-        margin: 15px 0 0 55px;
+        margin: 12px 0 0 55px;
         font-weight: bold;
     }
 
     .dama-logo
     {
         width: 40px;
-        margin-top: 20px;
-        margin-left: 05px;
+        margin-top: 15px;
+        margin-left: 5px;
         float: left;
     }
     
@@ -8648,22 +8832,23 @@ input:checked+.slider:before
         font-family: OpenSans-Regular;
         font-size: 24px;
         color: #E4E4E4;
-        margin: 100px 0px;
+        margin: 50px 0px;
         z-index: 99;
         font-weight: bold;
+        text-align: center;
     }
     
     .destination-form-div
     {
         width: 90%;
-        height: 550px;
+        height: 495px;
         grid-area: book;
         margin: auto;
-        margin-top: 100px;
+        margin-top: 40px;
         z-index: 100;   
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 50px 150px 115px 115px 120px;
+        grid-template-rows: 50px 150px 105px 105px 70px;
         grid-template-areas: 
         "title"
         "dest"
@@ -8675,10 +8860,10 @@ input:checked+.slider:before
     .destination-form-div-style
     {
         width: 100%;
-        height: 550px;
+        height: 495;
         margin: auto;
         grid-area: book;
-        margin-top: 100px;
+        margin-top: 40px;
         z-index: 100;
         background-color: #242F3E;
         opacity: .75;
@@ -8708,12 +8893,91 @@ input:checked+.slider:before
         grid-area: dest;
         margin: auto 0;
         display: grid;
-        grid-template-columns: 20% 80%;
+        grid-template-columns: 15% 85%;
         grid-template-rows: 50% 50%;
         grid-template-areas: 
         "icon from"
         "icon to";
     }
+
+    .dest-icon
+{
+    width: 10px;
+    height: 61px;
+    margin: auto;
+    margin-top: 10px;
+    grid-area: icon;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10px 23px 8px 6px 5px 10px;
+    grid-template-areas: 
+    "orb"
+    "line1"
+    "line2"
+    "line3"
+    "line4"
+    "circle";
+}
+
+.dest-icon-orb
+{
+    grid-area: orb;
+    width: 100%;
+    height: 100%;
+    background-color: #6AE2A6;
+    border-radius: 100%;
+}
+
+.dest-icon-line1
+{
+    grid-area: line1;
+    width: 2px;
+    height: 20px;
+    background-color: #6AE2A6;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.dest-icon-line2
+{
+    grid-area: line2;
+    width: 2px;
+    height: 5px;
+    background-color: #6AE2A6;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.dest-icon-line3
+{
+    grid-area: line3;
+    width: 2px;
+    height: 3px;
+    background-color: #6AE2A6;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.dest-icon-line4
+{
+    grid-area: line4;
+    width: 2px;
+    height: 2px;
+    background-color: #6AE2A6;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.dest-icon-circle
+{
+    grid-area: circle;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #6AE2A6;
+    border-radius: 100%;
+    margin: auto;
+    margin-top: -3px;
+}
     
     .dest-from
     {
@@ -9068,7 +9332,7 @@ input:checked+.slider:before
         z-index: 1;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 900px 680px 600px 120px 650px 1170px auto auto
+        grid-template-rows: 900px 680px 550px 120px 650px 1170px auto auto
         1500px 300px;
         grid-template-areas: 
         "how-it-works"
@@ -9856,7 +10120,7 @@ input:checked+.slider:before
         height: 100%;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 40px 220px 10px 80px 40px 220px 10px 80px 40px 220px 10px 80px;
+        grid-template-rows: 40px 180px 10px 80px 40px 180px 10px 80px 40px 180px 10px 80px;
         grid-template-areas: 
         "title1"
         "service1"
@@ -9875,15 +10139,20 @@ input:checked+.slider:before
     .extra-service-title
     {
         font-family: OpenSans-Regular;
-        font-size: 24px;
+        font-size: 22px;
         color: #242F3E;
         margin: auto;    
     }
     
     .extra-service
     {
-        width: 200px;
+        width: 150px;
         margin: auto;
+    }
+
+    .extra-service img
+    {
+        width: 150px;
     }
     
     .extra-service-line
@@ -9897,7 +10166,7 @@ input:checked+.slider:before
     .extra-service-desc
     {
         font-family: OpenSans-Regular;
-        font-size: 18px;
+        font-size: 16px;
         color: #242F3E;
         margin: auto;
         
@@ -10386,7 +10655,7 @@ input:checked+.slider:before
         grid-area: booking;
         display: grid;
         grid-template-columns: 5% 90% 5%;
-        grid-template-rows: auto 200px 650px 1000px;
+        grid-template-rows: auto 200px 650px auto;
         grid-template-areas: 
         ". booking ."
         ". extra ."
@@ -10624,7 +10893,7 @@ input:checked+.slider:before
     .car-specs-img1
     {
         grid-area: img1;
-        width: 14px;
+        width: 10px;
         margin: auto;
         margin-left: 5px;
     }
@@ -10642,7 +10911,7 @@ input:checked+.slider:before
     .car-specs-img2
     {
         grid-area: img2;
-        width: 14px;
+        width: 10px;
         margin: auto;
         margin-left: 5px;
     }
@@ -11367,7 +11636,7 @@ input:checked+.slider:before
         width: 250px;
         height: 60px;
         border-radius: 5px;
-        background-color: #F9AC1A;
+        background-color: #242F3E;
         border: none;
         font-family: OpenSans-Regular;
         font-size: 24px;
@@ -12685,15 +12954,15 @@ input:checked+.slider:before
         font-family: Calibri;
         font-size: 20px;
         color: #FFFFFF;
-        margin: 15px 0 0 55px;
+        margin: 12px 0 0 55px;
         font-weight: bold;
     }
 
     .dama-logo
     {
         width: 40px;
-        margin-top: 20px;
-        margin-left: 05px;
+        margin-top: 15px;
+        margin-left: 5px;
         float: left;
     }
     
@@ -12852,24 +13121,25 @@ input:checked+.slider:before
         height: 80px;
         grid-area: main-text;
         font-family: OpenSans-Regular;
-        font-size: 24px;
+        font-size: 23px;
         color: #E4E4E4;
-        margin: 100px 0px;
+        margin-top: 50px;
         z-index: 99;
         font-weight: bold;
+        text-align: center;
     }
     
     .destination-form-div
     {
         width: 90%;
-        height: 550px;
+        height: 465px;
         grid-area: book;
         margin: auto;
-        margin-top: 100px;
+        margin-top: 40px;
         z-index: 100;   
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 50px 150px 115px 115px 120px;
+        grid-template-rows: 50px 140px 95px 95px 70px;
         grid-template-areas: 
         "title"
         "dest"
@@ -12881,10 +13151,10 @@ input:checked+.slider:before
     .destination-form-div-style
     {
         width: 100%;
-        height: 550px;
+        height: 465px;
         margin: auto;
         grid-area: book;
-        margin-top: 100px;
+        margin-top: 40px;
         z-index: 100;
         background-color: #242F3E;
         opacity: .75;
@@ -12914,12 +13184,91 @@ input:checked+.slider:before
         grid-area: dest;
         margin: auto 0;
         display: grid;
-        grid-template-columns: 20% 80%;
+        grid-template-columns: 15% 85%;
         grid-template-rows: 50% 50%;
         grid-template-areas: 
         "icon from"
         "icon to";
     }
+
+.dest-icon
+{
+    width: 10px;
+    height: 61px;
+    margin: auto;
+    margin-top: 10px;
+    grid-area: icon;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10px 23px 8px 6px 5px 10px;
+    grid-template-areas: 
+    "orb"
+    "line1"
+    "line2"
+    "line3"
+    "line4"
+    "circle";
+}
+
+.dest-icon-orb
+{
+    grid-area: orb;
+    width: 100%;
+    height: 100%;
+    background-color: #6AE2A6;
+    border-radius: 100%;
+}
+
+.dest-icon-line1
+{
+    grid-area: line1;
+    width: 2px;
+    height: 20px;
+    background-color: #6AE2A6;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.dest-icon-line2
+{
+    grid-area: line2;
+    width: 2px;
+    height: 5px;
+    background-color: #6AE2A6;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.dest-icon-line3
+{
+    grid-area: line3;
+    width: 2px;
+    height: 3px;
+    background-color: #6AE2A6;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.dest-icon-line4
+{
+    grid-area: line4;
+    width: 2px;
+    height: 2px;
+    background-color: #6AE2A6;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.dest-icon-circle
+{
+    grid-area: circle;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #6AE2A6;
+    border-radius: 100%;
+    margin: auto;
+    margin-top: -3px;
+}
     
     .dest-from
     {
@@ -13004,7 +13353,7 @@ input:checked+.slider:before
         width: 38px;
         height: 24px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 20px;
+        font-size: 18px;
         color: #FFFFFF;
         grid-area: date;
     }
@@ -13067,7 +13416,7 @@ input:checked+.slider:before
         width: 89px;
         height: 24px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 20px;
+        font-size: 18px;
         color: #FFFFFF;
         grid-area: pax;
     }
@@ -13171,7 +13520,7 @@ input:checked+.slider:before
         width: 89px;
         height: 24px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 20px;
+        font-size: 18px;
         color: #FFFFFF;
         grid-area: pax;
         margin-left: 55%;
@@ -13186,7 +13535,8 @@ input:checked+.slider:before
         border-width: 0;
         font-family: OpenSans-Regular;
         font-size: 30px;
-        color: #FFFFFF;    
+        color: #FFFFFF;
+        font-weight: bold;   
     }
     
     .gradient-div
@@ -13275,7 +13625,7 @@ input:checked+.slider:before
         z-index: 1;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 900px 680px 600px 120px 650px 1170px auto auto
+        grid-template-rows: 900px 680px 550px 120px 650px 1170px auto auto
         1500px 300px;
         grid-template-areas: 
         "how-it-works"
@@ -13470,6 +13820,7 @@ input:checked+.slider:before
         font-size: 16px;
         color: #242F3E;
         grid-area: title;
+        font-style: italic;
     }
     
     .review-stars
@@ -13503,6 +13854,7 @@ input:checked+.slider:before
         font-size: 12px;
         color: #5B5B5B;
         grid-area: review;
+        font-weight: bold;
     }
     
     .review-author
@@ -14055,7 +14407,7 @@ input:checked+.slider:before
     {
         grid-area: title;
         font-family: OpenSans-Regular;
-        font-size: 30px;
+        font-size: 34px;
         font-weight: bold;
         color: #242F3E;
         margin: auto;
@@ -14068,7 +14420,7 @@ input:checked+.slider:before
         height: 100%;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 40px 220px 10px 80px 40px 220px 10px 80px 40px 220px 10px 80px;
+        grid-template-rows: 40px 180px 10px 80px 40px 180px 10px 80px 40px 180px 10px 80px;
         grid-template-areas: 
         "title1"
         "service1"
@@ -14087,15 +14439,20 @@ input:checked+.slider:before
     .extra-service-title
     {
         font-family: OpenSans-Regular;
-        font-size: 24px;
+        font-size: 18px;
         color: #242F3E;
         margin: auto;    
     }
     
     .extra-service
     {
-        width: 200px;
+        width: 150px;
         margin: auto;
+    }
+
+    .extra-service img
+    {
+        width: 150px;
     }
     
     .extra-service-line
@@ -14109,7 +14466,7 @@ input:checked+.slider:before
     .extra-service-desc
     {
         font-family: OpenSans-Regular;
-        font-size: 18px;
+        font-size: 14px;
         color: #242F3E;
         margin: auto;
         
@@ -14134,7 +14491,7 @@ input:checked+.slider:before
     {
         grid-area: title;
         font-family: OpenSans-Regular;
-        font-size: 36px;
+        font-size: 34px;
         font-weight: bold;
         margin: auto;
         color: #242F3E;
@@ -14174,7 +14531,7 @@ input:checked+.slider:before
     .answer {
         width: 100%;
         font-family: OpenSans-Regular;
-        font-size: 16px;
+        font-size: 14px;
         margin-bottom: 20px;
     }
     
@@ -14835,7 +15192,7 @@ input:checked+.slider:before
     .car-specs-img1
     {
         grid-area: img1;
-        width: 14px;
+        width: 10px;
         margin: auto;
         margin-left: 5px;
     }
@@ -14844,7 +15201,7 @@ input:checked+.slider:before
     {
         grid-area: text2;
         font-family: OpenSans-Regular;
-        font-size: 12px;
+        font-size: 10px;
         color: #26A65B;
         margin: auto;
         margin-left: 10px;
@@ -15015,7 +15372,7 @@ input:checked+.slider:before
     .booking-extra-service-water img
     {
         margin-top: 2px;
-        margin-left: 10px;
+        margin-left: 5px;
         width: 20px;
         float: left;    
     }
@@ -15033,7 +15390,7 @@ input:checked+.slider:before
     .booking-extra-service-seat img
     {
         margin-top: 2px;
-        margin-left: 10px;
+        margin-left: 5px;
         width: 20px;
         float: left;    
     }
@@ -15041,7 +15398,7 @@ input:checked+.slider:before
     .booking-extra-service-waiting
     {
         grid-area: waiting;
-        width: 180px;
+        width: 160px;
         height: 25px;
         background-color: rgba(38,166,91,0.3);
         font-family: OpenSans-Regular;
@@ -15051,7 +15408,7 @@ input:checked+.slider:before
     .booking-extra-service-waiting img
     {
         margin-top: 2px;
-        margin-left: 10px;
+        margin-left: 5px;
         width: 20px;
         float: left;    
     }
@@ -15059,7 +15416,7 @@ input:checked+.slider:before
     .booking-extra-service-eng
     {
         grid-area: eng;
-        width: 180px;
+        width: 165px;
         height: 25px;
         background-color: rgba(38,166,91,0.3);
         font-family: OpenSans-Regular;
@@ -15069,7 +15426,7 @@ input:checked+.slider:before
     .booking-extra-service-eng img
     {
         margin-top: 2px;
-        margin-left: 10px;
+        margin-left: 5px;
         width: 20px;
         float: left;    
     }
@@ -15082,7 +15439,7 @@ input:checked+.slider:before
         line-height: 25px;
         vertical-align: middle;
         margin: auto;
-        margin-left: 40px;
+        margin-left: 30px;
     }
     
     .booking-extra-service-desc
@@ -15578,7 +15935,7 @@ input:checked+.slider:before
         width: 250px;
         height: 60px;
         border-radius: 5px;
-        background-color: #F9AC1A;
+        background-color: #242F3E;
         border: none;
         font-family: OpenSans-Regular;
         font-size: 24px;
@@ -15914,7 +16271,7 @@ input:checked+.slider:before
         background-color: #FBF4E2;
         background-image: linear-gradient(to right, #707070 44%, rgba(255,255,255,0) 0%);
         background-position: bottom;
-        background-size: 40px 1px;
+        background-size: 30px 2px;
         background-repeat: repeat-x;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -16108,7 +16465,7 @@ input:checked+.slider:before
         height: auto;
         display: grid;
         grid-template-columns: 5% 90% 5%;
-        grid-template-rows: 550px 620px 520px 250px 1170px 150px auto 245px;
+        grid-template-rows: 450px 620px 520px 250px 1050px 150px auto 245px;
         grid-template-areas: 
         ". about-us ."
         ". about-transfer ."
@@ -16125,10 +16482,10 @@ input:checked+.slider:before
         margin-top: 20px;
         grid-area: about-us;
         width: 100%;
-        height: calc(100% - 80px);
+        height: calc(100% - 20px);
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 80px 520px;
+        grid-template-rows: 80px 350px;
         grid-template-areas: 
         "title"
         "content";
@@ -16138,7 +16495,7 @@ input:checked+.slider:before
     {
         grid-area: title;
         font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-        font-size: 22px;
+        font-size: 18px;
         color: #242F3E;
     }
     
@@ -16146,7 +16503,7 @@ input:checked+.slider:before
     {
         grid-area: content;
         font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-        font-size: 16px;
+        font-size: 14px;
         color: #242F3E;
     }
     
@@ -16167,7 +16524,7 @@ input:checked+.slider:before
     {
         grid-area: title;
         font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-        font-size: 22px;
+        font-size: 18px;
         color: #242F3E;
     }
     
@@ -16175,7 +16532,7 @@ input:checked+.slider:before
     {
         grid-area: content;
         font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-        font-size: 16px;
+        font-size: 14px;
         color: #242F3E;
     }
     
@@ -16196,7 +16553,7 @@ input:checked+.slider:before
     {
         grid-area: title;
         font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-        font-size: 22px;
+        font-size: 18px;
         color: #242F3E;
     }
     
@@ -16204,7 +16561,7 @@ input:checked+.slider:before
     {
         grid-area: content;
         font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-        font-size: 16px;
+        font-size: 14x;
         color: #242F3E;
     }
     
@@ -16216,7 +16573,7 @@ input:checked+.slider:before
         height: auto;
         display: grid;
         grid-template-columns: 5% 90% 5%;
-        grid-template-rows: 400px 120px 1800px 150px 150px auto 245px;
+        grid-template-rows: 280px 120px 1800px 150px 150px auto 245px;
         grid-template-areas: 
         ". extra-int ."
         "service service service"
@@ -16235,7 +16592,7 @@ input:checked+.slider:before
         grid-area: extra-int;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 80px 100px;
+        grid-template-rows: 80px 200px;
         grid-template-areas: 
         "title"
         "content";    
@@ -16253,7 +16610,7 @@ input:checked+.slider:before
     {
         grid-area: content;
         font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-        font-size: 18px;
+        font-size: 14px;
         color: #242F3E;
     }
     
@@ -16276,7 +16633,7 @@ input:checked+.slider:before
     {
         grid-area: title;    
         font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-        font-size: 24px;
+        font-size: 18px;
         color: #242F3E;
         margin: auto;
     }
@@ -16314,7 +16671,7 @@ input:checked+.slider:before
         width: 100%;
         grid-area: content;
         font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-        font-size: 16px;
+        font-size: 14px;
         color: #242F3E;
         
     }
@@ -16398,11 +16755,11 @@ input:checked+.slider:before
     {
         grid-area: privacy-policy;
         width: 100%;
-        height: calc(100% - 40px);
-        margin-top: 40px;
+        height: calc(100% - 20px);
+        margin-top: 20px;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 80px auto;
+        grid-template-rows: 60px auto;
         grid-template-areas: 
         "title"
         "content";
@@ -16412,7 +16769,7 @@ input:checked+.slider:before
     {
         grid-area: title;
         font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-        font-size: 24px;
+        font-size: 18px;
         color: #242F3E;
     }
     
@@ -16420,7 +16777,7 @@ input:checked+.slider:before
     {
         grid-area: content;
         font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-        font-size: 16px;
+        font-size: 14px;
         color: #242F3E;
     }
     
@@ -16431,7 +16788,7 @@ input:checked+.slider:before
         height: 100%;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 80px auto;
+        grid-template-rows: 60px 400px;
         grid-template-areas: 
         "title"
         "content";
@@ -16441,7 +16798,7 @@ input:checked+.slider:before
     {
         grid-area: title;
         font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-        font-size: 24px;
+        font-size: 18px;
         color: #242F3E;
     }
     
@@ -16449,7 +16806,7 @@ input:checked+.slider:before
     {
         grid-area: content;
         font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-        font-size: 16px;
+        font-size: 14px;
         color: #242F3E;
     }
     
@@ -16744,7 +17101,7 @@ input:checked+.slider:before
         display: grid;
         margin: auto;
         margin-top: 20px;        
-        grid-auto-columns: 35% 35% auto;
+        grid-auto-columns: 40% 35% auto;
         grid-template-rows: 100%;
         grid-template-areas: 
         "from to price";
@@ -16753,7 +17110,7 @@ input:checked+.slider:before
     .popular-dest-pop-dest
     {
         font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-        font-size: 12px;
+        font-size: 11px;
         color: #242F3E;
     }
     
@@ -16896,15 +17253,15 @@ input:checked+.slider:before
             font-family: Calibri;
             font-size: 20px;
             color: #FFFFFF;
-            margin: 15px 0 0 55px;
+            margin: 12px 0 0 55px;
             font-weight: bold;
         }
     
         .dama-logo
         {
             width: 40px;
-            margin-top: 20px;
-            margin-left: 05px;
+            margin-top: 15px;
+            margin-left: 5px;
             float: left;
         }
         
@@ -17063,24 +17420,25 @@ input:checked+.slider:before
             height: 80px;
             grid-area: main-text;
             font-family: OpenSans-Regular;
-            font-size: 24px;
+            font-size: 22px;
             color: #E4E4E4;
-            margin: 100px 0px;
+            margin-top: 50px;
             z-index: 99;
             font-weight: bold;
+            text-align: center;
         }
         
         .destination-form-div
         {
             width: 90%;
-            height: 550px;
+            height: 465px;
             grid-area: book;
             margin: auto;
-            margin-top: 100px;
+            margin-top: 40px;
             z-index: 100;   
             display: grid;
             grid-template-columns: 100%;
-            grid-template-rows: 50px 150px 115px 115px 120px;
+            grid-template-rows: 50px 140px 95px 95px 70px;
             grid-template-areas: 
             "title"
             "dest"
@@ -17092,10 +17450,10 @@ input:checked+.slider:before
         .destination-form-div-style
         {
             width: 100%;
-            height: 550px;
+            height: 465px;
             margin: auto;
             grid-area: book;
-            margin-top: 100px;
+            margin-top: 40px;
             z-index: 100;
             background-color: #242F3E;
             opacity: .75;
@@ -17125,12 +17483,91 @@ input:checked+.slider:before
             grid-area: dest;
             margin: auto 0;
             display: grid;
-            grid-template-columns: 20% 80%;
+            grid-template-columns: 15% 85%;
             grid-template-rows: 50% 50%;
             grid-template-areas: 
             "icon from"
             "icon to";
         }
+
+        .dest-icon
+{
+    width: 10px;
+    height: 61px;
+    margin: auto;
+    margin-top: 10px;
+    grid-area: icon;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10px 23px 8px 6px 5px 10px;
+    grid-template-areas: 
+    "orb"
+    "line1"
+    "line2"
+    "line3"
+    "line4"
+    "circle";
+}
+
+.dest-icon-orb
+{
+    grid-area: orb;
+    width: 100%;
+    height: 100%;
+    background-color: #6AE2A6;
+    border-radius: 100%;
+}
+
+.dest-icon-line1
+{
+    grid-area: line1;
+    width: 2px;
+    height: 20px;
+    background-color: #6AE2A6;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.dest-icon-line2
+{
+    grid-area: line2;
+    width: 2px;
+    height: 5px;
+    background-color: #6AE2A6;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.dest-icon-line3
+{
+    grid-area: line3;
+    width: 2px;
+    height: 3px;
+    background-color: #6AE2A6;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.dest-icon-line4
+{
+    grid-area: line4;
+    width: 2px;
+    height: 2px;
+    background-color: #6AE2A6;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.dest-icon-circle
+{
+    grid-area: circle;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #6AE2A6;
+    border-radius: 100%;
+    margin: auto;
+    margin-top: -3px;
+}
         
         .dest-from
         {
@@ -17215,7 +17652,7 @@ input:checked+.slider:before
             width: 38px;
             height: 24px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 20px;
+            font-size: 18px;
             color: #FFFFFF;
             grid-area: date;
         }
@@ -17278,7 +17715,7 @@ input:checked+.slider:before
             width: 89px;
             height: 24px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 20px;
+            font-size: 18px;
             color: #FFFFFF;
             grid-area: pax;
         }
@@ -17382,7 +17819,7 @@ input:checked+.slider:before
             width: 89px;
             height: 24px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 20px;
+            font-size: 18px;
             color: #FFFFFF;
             grid-area: pax;
             margin-left: 55%;
@@ -17397,7 +17834,8 @@ input:checked+.slider:before
             border-width: 0;
             font-family: OpenSans-Regular;
             font-size: 30px;
-            color: #FFFFFF;    
+            color: #FFFFFF;
+            font-weight: bold;
         }
         
         .gradient-div
@@ -17489,7 +17927,7 @@ input:checked+.slider:before
             z-index: 1;
             display: grid;
             grid-template-columns: 100%;
-            grid-template-rows: 900px 680px 600px 120px 650px 1170px auto auto
+            grid-template-rows: 900px 680px 550px 120px 650px 1170px auto auto
             1500px 300px;
             grid-template-areas: 
             "how-it-works"
@@ -17684,6 +18122,7 @@ input:checked+.slider:before
             font-size: 16px;
             color: #242F3E;
             grid-area: title;
+            font-style: italic;
         }
         
         .review-stars
@@ -17702,11 +18141,20 @@ input:checked+.slider:before
         .review-stars div 
         {
             width: 24px;
-            height: 24px;
-            background-color: #88D2A1;
-            /*box-shadow: 0 0 0 3px #88D2A1;*/
-            border-radius: 100%;
-        }
+    height: 24px;
+    border: 1px solid #88D2A1;    
+    border-radius: 100%;
+}
+
+.review-stars-inner
+{
+    width: 20px !important;
+    height: 20px !important;
+    background-color: #88D2A1;    
+    border-radius: 100%;
+    margin: auto;
+    margin-top: 1px;
+}
         
         .review-comment
         {
@@ -17717,6 +18165,7 @@ input:checked+.slider:before
             font-size: 12px;
             color: #5B5B5B;
             grid-area: review;
+            font-weight: bold;
         }
         
         .review-author
@@ -18269,7 +18718,7 @@ input:checked+.slider:before
         {
             grid-area: title;
             font-family: OpenSans-Regular;
-            font-size: 30px;
+            font-size: 34px;
             font-weight: bold;
             color: #242F3E;
             margin: auto;
@@ -18282,7 +18731,7 @@ input:checked+.slider:before
             height: 100%;
             display: grid;
             grid-template-columns: 100%;
-            grid-template-rows: 40px 220px 10px 80px 40px 220px 10px 80px 40px 220px 10px 80px;
+            grid-template-rows: 40px 180px 10px 80px 40px 180px 10px 80px 40px 180px 10px 80px;
             grid-template-areas: 
             "title1"
             "service1"
@@ -18301,15 +18750,20 @@ input:checked+.slider:before
         .extra-service-title
         {
             font-family: OpenSans-Regular;
-            font-size: 24px;
+            font-size: 18px;
             color: #242F3E;
             margin: auto;    
         }
         
         .extra-service
         {
-            width: 200px;
+            width: 150px;
             margin: auto;
+        }
+
+        .extra-service img
+        {
+            width: 150px;
         }
         
         .extra-service-line
@@ -18323,7 +18777,7 @@ input:checked+.slider:before
         .extra-service-desc
         {
             font-family: OpenSans-Regular;
-            font-size: 18px;
+            font-size: 14px;
             color: #242F3E;
             margin: auto;
             
@@ -18348,7 +18802,7 @@ input:checked+.slider:before
         {
             grid-area: title;
             font-family: OpenSans-Regular;
-            font-size: 36px;
+            font-size: 34px;
             font-weight: bold;
             margin: auto;
             color: #242F3E;
@@ -18388,7 +18842,7 @@ input:checked+.slider:before
     .answer {
         width: 100%;
         font-family: OpenSans-Regular;
-        font-size: 16px;
+        font-size: 14px;
         margin-bottom: 20px;
     }
         
@@ -19047,7 +19501,7 @@ input:checked+.slider:before
     .car-specs-img1
     {
         grid-area: img1;
-        width: 14px;
+        width: 10px;
         margin: auto;
         margin-left: 5px;
     }
@@ -19065,7 +19519,7 @@ input:checked+.slider:before
     .car-specs-img2
     {
         grid-area: img2;
-        width: 14px;
+        width: 10px;
         margin: auto;
         margin-left: 5px;
     }
@@ -19227,7 +19681,7 @@ input:checked+.slider:before
         .booking-extra-service-water img
         {
             margin-top: 2px;
-            margin-left: 10px;
+            margin-left: 5px;
             width: 20px;
             float: left;
         }
@@ -19245,7 +19699,7 @@ input:checked+.slider:before
         .booking-extra-service-seat img
         {
             margin-top: 2px;
-            margin-left: 10px;
+            margin-left: 5px;
             width: 20px;
             float: left;
         }
@@ -19253,7 +19707,7 @@ input:checked+.slider:before
         .booking-extra-service-waiting
         {
             grid-area: waiting;
-            width: 150px;
+            width: 140px;
             height: 25px;
             background-color: rgba(38,166,91,0.3);
             font-family: OpenSans-Regular;
@@ -19263,7 +19717,7 @@ input:checked+.slider:before
         .booking-extra-service-waiting img
         {
             margin-top: 2px;
-            margin-left: 10px;
+            margin-left: 5px;
             width: 20px;
             float: left;
         }
@@ -19271,7 +19725,7 @@ input:checked+.slider:before
         .booking-extra-service-eng
         {
             grid-area: eng;
-            width: 150px;
+            width: 140px;
             height: 25px;
             background-color: rgba(38,166,91,0.3);
             font-family: OpenSans-Regular;
@@ -19281,7 +19735,7 @@ input:checked+.slider:before
         .booking-extra-service-eng img
         {
             margin-top: 2px;
-            margin-left: 10px;
+            margin-left: 5px;
             width: 20px;
             float: left;
         }
@@ -19294,7 +19748,7 @@ input:checked+.slider:before
             line-height: 25px;
             vertical-align: middle;
             margin: auto;
-            margin-left: 40px;
+            margin-left: 30px;
         }
         
         .booking-extra-service-desc
@@ -19790,7 +20244,7 @@ input:checked+.slider:before
             width: 250px;
             height: 60px;
             border-radius: 5px;
-            background-color: #F9AC1A;
+            background-color: #242F3E;
             border: none;
             font-family: OpenSans-Regular;
             font-size: 24px;
@@ -20130,7 +20584,7 @@ input:checked+.slider:before
             background-color: #FBF4E2;
             background-image: linear-gradient(to right, #707070 44%, rgba(255,255,255,0) 0%);
             background-position: bottom;
-            background-size: 60px 3px;
+            background-size: 30px 2px;
             background-repeat: repeat-x;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
@@ -20323,7 +20777,7 @@ input:checked+.slider:before
             height: auto;
             display: grid;
             grid-template-columns: 5% 90% 5%;
-            grid-template-rows: 600px 700px 560px 300px 1170px 150px auto 245px;
+            grid-template-rows: 450px 700px 560px 300px 1050px 150px auto 245px;
             grid-template-areas: 
             ". about-us ."
             ". about-transfer ."
@@ -20353,7 +20807,7 @@ input:checked+.slider:before
         {
             grid-area: title;
             font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-            font-size: 20px;
+            font-size: 18px;
             color: #242F3E;
         }
         
@@ -20361,7 +20815,7 @@ input:checked+.slider:before
         {
             grid-area: content;
             font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-            font-size: 16px;
+            font-size: 14px;
             color: #242F3E;
         }
         
@@ -20382,7 +20836,7 @@ input:checked+.slider:before
         {
             grid-area: title;
             font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-            font-size: 20px;
+            font-size: 18px;
             color: #242F3E;
         }
         
@@ -20390,7 +20844,7 @@ input:checked+.slider:before
         {
             grid-area: content;
             font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-            font-size: 16px;
+            font-size: 14px;
             color: #242F3E;
         }
         
@@ -20431,7 +20885,7 @@ input:checked+.slider:before
             height: auto;
             display: grid;
             grid-template-columns: 5% 90% 5%;
-            grid-template-rows: 450px 120px 1800px 150px 150px auto 245px;
+            grid-template-rows: 300px 120px 1650px 150px 150px auto 245px;
             grid-template-areas: 
             ". extra-int ."
             "service service service"
@@ -20450,7 +20904,7 @@ input:checked+.slider:before
             grid-area: extra-int;
             display: grid;
             grid-template-columns: 100%;
-            grid-template-rows: 80px 100px;
+            grid-template-rows: 80px 200px;
             grid-template-areas: 
             "title"
             "content";    
@@ -20460,7 +20914,7 @@ input:checked+.slider:before
         {
             grid-area: title;
             font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-            font-size: 20px;
+            font-size: 24px;
             color: #242F3E;
         }
         
@@ -20468,7 +20922,7 @@ input:checked+.slider:before
         {
             grid-area: content;
             font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-            font-size: 18px;
+            font-size: 14px;
             color: #242F3E;
         }
         
@@ -20480,7 +20934,7 @@ input:checked+.slider:before
             height: 100%;
             display: grid;
             grid-auto-columns: 100%;
-            grid-template-rows: 560px 560px 560px;
+            grid-template-rows: 500px 500px 500px;
             grid-template-areas:     
             "wifi"
             "tour"
@@ -20491,7 +20945,7 @@ input:checked+.slider:before
         {
             grid-area: title;    
             font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-            font-size: 24px;
+            font-size: 18px;
             color: #242F3E;
             margin: auto;
         }
@@ -20529,7 +20983,7 @@ input:checked+.slider:before
             width: 100%;
             grid-area: content;
             font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-            font-size: 16px;
+            font-size: 14px;
             color: #242F3E;
             
         }
@@ -20614,10 +21068,11 @@ input:checked+.slider:before
         {
             grid-area: privacy-policy;
             width: 100%;
-            height: calc(100% - 40px);            
+            height: calc(100% - 20px);
+            margin-top: 20px;
             display: grid;
             grid-template-columns: 100%;
-            grid-template-rows: 80px auto;
+            grid-template-rows: 60px auto;
             grid-template-areas: 
             "title"
             "content";
@@ -20627,7 +21082,7 @@ input:checked+.slider:before
         {
             grid-area: title;
             font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-            font-size: 24px;
+            font-size: 18px;
             color: #242F3E;
         }
         
@@ -20635,7 +21090,7 @@ input:checked+.slider:before
         {
             grid-area: content;
             font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-            font-size: 16px;
+            font-size: 14px;
             color: #242F3E;
         }
         
@@ -20646,7 +21101,7 @@ input:checked+.slider:before
             height: 100%;
             display: grid;
             grid-template-columns: 100%;
-            grid-template-rows: 80px auto;
+            grid-template-rows: 60px 450px;
             grid-template-areas: 
             "title"
             "content";
@@ -20656,7 +21111,7 @@ input:checked+.slider:before
         {
             grid-area: title;
             font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-            font-size: 24px;
+            font-size: 18px;
             color: #242F3E;
         }
         
@@ -20664,7 +21119,7 @@ input:checked+.slider:before
         {
             grid-area: content;
             font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-            font-size: 16px;
+            font-size: 14px;
             color: #242F3E;
         }
         
@@ -20960,7 +21415,7 @@ input:checked+.slider:before
             display: grid;
             margin: auto;
             margin-top: 20px;        
-            grid-auto-columns: 35% 35% auto;
+            grid-auto-columns: 40% 35% auto;
             grid-template-rows: 100%;
             grid-template-areas: 
             "from to price";
@@ -20969,7 +21424,7 @@ input:checked+.slider:before
         .popular-dest-pop-dest
         {
             font-family: OpenSans-Regular, "Helvetica Neue", Helvetica, sans-serif;
-            font-size: 12px;
+            font-size: 11px;
             color: #242F3E;
         }
         
