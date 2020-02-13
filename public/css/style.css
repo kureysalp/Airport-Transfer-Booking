@@ -762,7 +762,7 @@ a:hover, a:visited, a:link, a:active
     z-index: 1;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 670px 680px 500px 90px 500px 580px auto 350px
+    grid-template-rows: 370px 680px 500px 90px 500px 580px auto 350px
     820px auto;
     grid-template-areas: 
     "how-it-works"
@@ -782,99 +782,130 @@ a:hover, a:visited, a:link, a:active
 .how-it-works-new
 {
     width: 100%;
-    height: 670px;
-    grid-area: how-it-works;
-}
-
-.how-it-works
-{
-    width: 100%;
-    height: 670px;
+    height: 340px;
     grid-area: how-it-works;
     display: grid;
-    grid-template-columns: auto 50px 50px 300px 400px 400px auto;
-    grid-template-rows: 80px 200px 300px;
+    grid-template-columns: auto 840px 360px auto;
+    grid-template-rows: 70px 90px 90px 90px;
     grid-template-areas: 
-    ". . title title title title ."
-    ". step1 step1 step1 step2 step3 ."
-    ". desc desc desc desc desc .";
-    z-index: 1;
+    ". title title ."
+    ". step1 img ."
+    ". step2 img ."
+    ". step3 img .";
+    z-index: 1;    
 }
 
-.how-it-title
+.how-it-works-step-new
+{
+    width: 700px;
+    height: 50px;
+    border: 1px solid #242F3E;
+    border-radius: 10px;
+    margin: auto;
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: 150px 480px 70px;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+    "title text img";
+}
+
+.how-it-works-step-title
 {
     grid-area: title;
-    width: 346px;
-    height: 50px;
     font-family: OpenSans-Regular;
-    font-size: 40px;
+    font-size: 18px;
     color: #242F3E;
-}
-
-.how-it-step
-{
-    width: 250px;
-    height: 150px;
+    font-weight: bold;
     margin: auto;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 70px 10px 70px;
-    grid-template-areas: 
-    "step"
-    "line"
-    "desc"
 }
 
-.step-div
+.how-it-works-step-text
 {
-    width: 36px;
-    height: 36px;
-    background-color: #26A65B;
-    border-radius: 100%;
-    grid-area: step;
+    grid-area: text;
+    font-family: OpenSans-Regular;
+    font-size: 14px;
+    color: #242F3E;    
+    margin: auto;
+    margin-left: 0;
+}
+
+.how-it-works-step-dec
+{
+    grid-area: title;
+    width: 20px;
+    height: 20px;
+    background-color: #242F3E;
+    margin-top: -1px;
+    margin-left: -1px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 4px;
+    line-height: 20px;
+    vertical-align: middle;
+    text-align: center;
+    font-family: OpenSans-Regular;
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.how-it-works-step-img
+{
+    grid-area: img;
+    margin: auto;
+    width: 50px;
+}
+
+.how-it-works-step-img-select
+{
+    grid-area: img;
+    margin: 10px 0 0 21px;
+    width: 60px;   
+}
+
+.how-it-works-step-img-form
+{
+    grid-area: img;    
+    margin-left: 21px;
+    margin-top: -3px;
+    width: 60px;   
+}
+
+.how-it-works-easy3
+{
+    grid-area: img;
+    width: 150px;
+    height: 20px;
+    border: 1px solid #26A65B;
+    border-radius: 5px;
+    font-family: OpenSans-Regular;
+    font-size: 14px;
+    color: #26A65B;
+    line-height: 20px;
+    vertical-align: middle;
+    text-align: center;    
+    margin-top: auto;
+    margin-left: calc(50% - 75px);
+}
+
+
+.how-it-works-laptop
+{
+    width: 300px;
+    margin: auto;
+    grid-area: img;
+}
+
+
+.how-it-title {
+    grid-area: title;
+    width: 346px;
+    height: 56px;
     margin: auto;
     text-align: center;
     font-family: OpenSans-Regular;
-    color: #FFFFFF;
-    font-size: 25px;
-    line-height: 36px;
-    vertical-align: middle;
-}
-
-.how-it-line
-{
-    width: 250px;
-    height: 1px;
-    background-color: #707070;
-    grid-area: line;
-    margin: auto;
-}
-
-.how-it-step-desc
-{
-    width: 250px;
-    height: 60px;
-    grid-area: desc;
-    font-family: OpenSans-Regular;
-    font-size: 14px;
-    color: #595A5A;
-    margin: auto;
-    font-weight: bold;
-}
-
-.how-it-desc
-{
-    width: 1100px;
-    height: 260px;
-    background-color: #F8E9C6;
-    border-radius: 10px;
-    grid-area: desc;
-    margin: auto;
-    font-family: OpenSans-Regular;
-    font-size: 22px;
-    color: #595A5A;    
-    padding-left: 20px;
-    font-weight: bold;
+    font-size: 34px;
+    color: #242F3E;
 }
 
 /* REVIEWS */
@@ -5067,7 +5098,7 @@ input:checked+.slider:before
         z-index: 1;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 900px 680px 600px 120px 650px 1170px auto auto
+        grid-template-rows: 500px 680px 600px 120px 650px 1170px auto auto
         1050px 300px;
         grid-template-areas: 
         "how-it-works"
@@ -5083,96 +5114,139 @@ input:checked+.slider:before
     }
     
     /* HOW IT WORKS */
-    
-    .how-it-works
+
+    .how-it-works-new
     {
-        width: 100%;
-        height: 830px;
-        grid-area: how-it-works;
-        display: grid;
-        grid-template-columns: 5% 90% 5%;
-        grid-template-rows: 80px 120px 120px 120px 450px;
-        grid-template-areas: 
-        ". title ."
-        ". step1 ."
-        ". step2 ." 
-        ". step3 ."
-        ". desc .";
-        z-index: 1;
-    }
+    width: 100%;
+    height: 340px;
+    grid-area: how-it-works;
+    display: grid;
+    grid-template-columns: auto 95% auto;
+    grid-template-rows: 70px 250px 60px 60px 60px;
+    grid-template-areas: 
+    ". title ."
+    ". img ."
+    ". step1 ."
+    ". step2 ."
+    ". step3 .";
+    z-index: 1;    
+}
+
+.how-it-works-step-new
+{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #242F3E;
+    border-radius: 10px;
+    margin: auto;
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: 20% 70% 10%;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+    "title text img";
+}
+
+.how-it-works-step-title
+{
+    grid-area: title;
+    font-family: OpenSans-Regular;
+    font-size: 10px;
+    color: #242F3E;
+    font-weight: bold;
+    margin: auto;
+}
+
+.how-it-works-step-text
+{
+    grid-area: text;
+    font-family: OpenSans-Regular;
+    font-size: 10px;
+    color: #242F3E;    
+    margin: auto;
+    margin-left: 0;
+}
+
+.how-it-works-step-dec
+{
+    grid-area: title;
+    width: 15px;
+    height: 15px;
+    background-color: #242F3E;
+    margin-top: -1px;
+    margin-left: -1px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 4px;
+    line-height: 15px;
+    vertical-align: middle;
+    text-align: center;
+    font-family: OpenSans-Regular;
+    font-size: 8px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.how-it-works-step-img
+{
+    grid-area: img;
+    margin: auto;
+    width: 30px;
+}
+
+.how-it-works-step-img-select
+{
+    grid-area: img;
+    margin: 10px 0 0 5px;
+    width: 30px;   
+}
+
+.how-it-works-step-img-form
+{
+    grid-area: img;    
+    margin-left: 5px;
+    margin-top: 3px;
+    width: 30px;   
+}
+
+.how-it-works-easy3
+{
+    grid-area: img;
+    width: 150px;
+    height: 20px;
+    border: 1px solid #26A65B;
+    border-radius: 5px;
+    font-family: OpenSans-Regular;
+    font-size: 14px;
+    color: #26A65B;
+    line-height: 20px;
+    vertical-align: middle;
+    text-align: center;    
+    margin-top: auto;
+    margin-left: calc(50% - 75px);
+}
+
+
+.how-it-works-laptop
+{
+    width: 300px;
+    margin: auto;
+    grid-area: img;
+    margin-top: -50px;
+}
+
+
+.how-it-title 
+{
+    grid-area: title;
+    width: 346px;
+    height: 56px;
+    margin: auto;
+    text-align: center;
+    font-family: OpenSans-Regular;
+    font-size: 34px;
+    color: #242F3E;
+}
     
-    .how-it-title
-    {
-        grid-area: title;
-        width: 346px;
-        height: 56px;
-        margin: auto;
-        text-align: center;
-        font-family: OpenSans-Regular;
-        font-size: 34px;
-        color: #242F3E;
-    }
-    
-    .how-it-step
-    {
-        width: 100%;
-        height: 120px;
-        margin: auto;
-        display: grid;
-        grid-template-columns: 10% 90%;
-        grid-template-rows: 70px 50px;
-        grid-template-areas: 
-        "step desc"
-        "line .";    
-    }
-    
-    .step-div
-    {
-        width: 36px;
-        height: 36px;
-        background-color: #26A65B;
-        border-radius: 100%;
-        grid-area: step;
-        margin: auto;
-        text-align: center;
-        font-family: OpenSans-Regular;
-        color: #FFFFFF;
-        font-size: 25px;
-        line-height: 36px;
-        vertical-align: middle;
-    }
-    
-    .how-it-line
-    {
-        width: 1px;
-        height: 50px;
-        background-color: #707070;
-        grid-area: line;
-        margin: auto;
-    }
-    
-    .how-it-step-desc
-    {
-        width: 85%;
-        height: 60px;
-        grid-area: desc;
-        font-family: OpenSans-Regular;
-        font-size: 18px;
-        color: #000000;
-        margin: auto;
-        font-weight: bold;
-    }
-    
-    .how-it-desc
-    {
-        width: 100%;
-        height: 390px;
-        background-color: #F8E9C6;
-        border-radius: 4px;
-        grid-area: desc;
-        margin: auto;
-        margin-top: 50px;
-    }
     
     /* REVIEWS */
     
@@ -9332,7 +9406,7 @@ input:checked+.slider:before
         z-index: 1;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 900px 680px 550px 120px 650px 1170px auto auto
+        grid-template-rows: 500px 680px 550px 120px 650px 1170px auto auto
         1500px 300px;
         grid-template-areas: 
         "how-it-works"
@@ -9348,28 +9422,11 @@ input:checked+.slider:before
     }
     
     /* HOW IT WORKS */
-    
-    .how-it-works
-    {
-        width: 100%;
-        height: 830px;
-        grid-area: how-it-works;
-        display: grid;
-        grid-template-columns: 5% 90% 5%;
-        grid-template-rows: 80px 120px 120px 120px 450px;
-        grid-template-areas: 
-        ". title ."
-        ". step1 ."
-        ". step2 ." 
-        ". step3 ."
-        ". desc .";
-        z-index: 1;
-    }
-    
-    .how-it-title
+
+    .how-it-title 
     {
         grid-area: title;
-        width: 346px;
+        width: 100%;
         height: 56px;
         margin: auto;
         text-align: center;
@@ -9377,44 +9434,126 @@ input:checked+.slider:before
         font-size: 34px;
         color: #242F3E;
     }
-    
-    .how-it-step
+
+    .how-it-works-new
     {
-        width: 100%;
-        height: 120px;
-        margin: auto;
-        display: grid;
-        grid-template-columns: 10% 90%;
-        grid-template-rows: 70px 50px;
-        grid-template-areas: 
-        "step desc"
-        "line .";    
-    }
-    
-    .step-div
-    {
-        width: 36px;
-        height: 36px;
-        background-color: #26A65B;
-        border-radius: 100%;
-        grid-area: step;
-        margin: auto;
-        text-align: center;
-        font-family: OpenSans-Regular;
-        color: #FFFFFF;
-        font-size: 25px;
-        line-height: 36px;
-        vertical-align: middle;
-    }
-    
-    .how-it-line
-    {
-        width: 1px;
-        height: 50px;
-        background-color: #707070;
-        grid-area: line;
-        margin: auto;
-    }
+    width: 100%;
+    height: 340px;
+    grid-area: how-it-works;
+    display: grid;
+    grid-template-columns: auto 95% auto;
+    grid-template-rows: 70px 250px 60px 60px 60px;
+    grid-template-areas: 
+    ". title ."
+    ". img ."
+    ". step1 ."
+    ". step2 ."
+    ". step3 .";
+    z-index: 1;    
+}
+
+.how-it-works-step-new
+{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #242F3E;
+    border-radius: 10px;
+    margin: auto;
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: 20% 70% 10%;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+    "title text img";
+}
+
+.how-it-works-step-title
+{
+    grid-area: title;
+    font-family: OpenSans-Regular;
+    font-size: 10px;
+    color: #242F3E;
+    font-weight: bold;
+    margin: auto;
+}
+
+.how-it-works-step-text
+{
+    grid-area: text;
+    font-family: OpenSans-Regular;
+    font-size: 10px;
+    color: #242F3E;    
+    margin: auto;
+    margin-left: 0;
+}
+
+.how-it-works-step-dec
+{
+    grid-area: title;
+    width: 15px;
+    height: 15px;
+    background-color: #242F3E;
+    margin-top: -1px;
+    margin-left: -1px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 4px;
+    line-height: 15px;
+    vertical-align: middle;
+    text-align: center;
+    font-family: OpenSans-Regular;
+    font-size: 8px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.how-it-works-step-img
+{
+    grid-area: img;
+    margin: auto;
+    width: 30px;
+}
+
+.how-it-works-step-img-select
+{
+    grid-area: img;
+    margin: 10px 0 0 5px;
+    width: 30px;   
+}
+
+.how-it-works-step-img-form
+{
+    grid-area: img;    
+    margin-left: 5px;
+    margin-top: 3px;
+    width: 30px;   
+}
+
+.how-it-works-easy3
+{
+    grid-area: img;
+    width: 150px;
+    height: 20px;
+    border: 1px solid #26A65B;
+    border-radius: 5px;
+    font-family: OpenSans-Regular;
+    font-size: 14px;
+    color: #26A65B;
+    line-height: 20px;
+    vertical-align: middle;
+    text-align: center;    
+    margin-top: auto;
+    margin-left: calc(50% - 75px);
+}
+
+
+.how-it-works-laptop
+{
+    width: 300px;
+    margin: auto;
+    grid-area: img;
+    margin-top: -50px;
+}
+
     
     .how-it-step-desc
     {
@@ -13625,7 +13764,7 @@ input:checked+.slider:before
         z-index: 1;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 900px 680px 550px 120px 650px 1170px auto auto
+        grid-template-rows: 500px 680px 550px 120px 650px 1170px auto auto
         1500px 300px;
         grid-template-areas: 
         "how-it-works"
@@ -13641,28 +13780,11 @@ input:checked+.slider:before
     }
     
     /* HOW IT WORKS */
-    
-    .how-it-works
-    {
-        width: 100%;
-        height: 830px;
-        grid-area: how-it-works;
-        display: grid;
-        grid-template-columns: 5% 90% 5%;
-        grid-template-rows: 80px 120px 120px 120px 450px;
-        grid-template-areas: 
-        ". title ."
-        ". step1 ."
-        ". step2 ." 
-        ". step3 ."
-        ". desc .";
-        z-index: 1;
-    }
-    
-    .how-it-title
+
+    .how-it-title 
     {
         grid-area: title;
-        width: 346px;
+        width: 100%;
         height: 56px;
         margin: auto;
         text-align: center;
@@ -13671,71 +13793,124 @@ input:checked+.slider:before
         color: #242F3E;
     }
     
-    .how-it-step
+    .how-it-works-new
     {
-        width: 100%;
-        height: 120px;
-        margin: auto;
-        display: grid;
-        grid-template-columns: 10% 90%;
-        grid-template-rows: 70px 50px;
-        grid-template-areas: 
-        "step desc"
-        "line .";    
-    }
-    
-    .step-div
-    {
-        width: 36px;
-        height: 36px;
-        background-color: #26A65B;
-        border-radius: 100%;
-        grid-area: step;
-        margin: auto;
-        text-align: center;
-        font-family: OpenSans-Regular;
-        color: #FFFFFF;
-        font-size: 25px;
-        line-height: 36px;
-        vertical-align: middle;
-    }
-    
-    .how-it-line
-    {
-        width: 1px;
-        height: 50px;
-        background-color: #707070;
-        grid-area: line;
-        margin: auto;
-    }
-    
-    .how-it-step-desc
-    {
-        width: 85%;
-        height: 60px;
-        grid-area: desc;
-        font-family: OpenSans-Regular;
-        font-size: 18px;
-        color: #000000;
-        margin: auto;
-        font-weight: bold;        
-    }
-    
-    .how-it-desc
-    {
-        width: 100%;
-        height: 350px;
-        background-color: #F8E9C6;
-        border-radius: 4px;
-        grid-area: desc;
-        margin: auto;
-        margin-top: 50px;
-        font-family: OpenSans-Regular;
-        font-size: 16px;
-        color: #595A5A;
-        padding-left: 10px;
-        font-weight: bold;
-    }
+    width: 100%;
+    height: 500px;
+    grid-area: how-it-works;
+    display: grid;
+    grid-template-columns: auto 95% auto;
+    grid-template-rows: 70px 250px 60px 60px 60px;
+    grid-template-areas: 
+    ". title ."
+    ". img ."
+    ". step1 ."
+    ". step2 ."
+    ". step3 .";
+    z-index: 1;    
+}
+
+.how-it-works-step-new
+{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #242F3E;
+    border-radius: 10px;
+    margin: auto;
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: 20% 70% 10%;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+    "title text img";
+}
+
+.how-it-works-step-title
+{
+    grid-area: title;
+    font-family: OpenSans-Regular;
+    font-size: 10px;
+    color: #242F3E;
+    font-weight: bold;
+    margin: auto;
+}
+
+.how-it-works-step-text
+{
+    grid-area: text;
+    font-family: OpenSans-Regular;
+    font-size: 10px;
+    color: #242F3E;    
+    margin: auto;
+    margin-left: 0;
+}
+
+.how-it-works-step-dec
+{
+    grid-area: title;
+    width: 15px;
+    height: 15px;
+    background-color: #242F3E;
+    margin-top: -1px;
+    margin-left: -1px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 4px;
+    line-height: 15px;
+    vertical-align: middle;
+    text-align: center;
+    font-family: OpenSans-Regular;
+    font-size: 8px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.how-it-works-step-img
+{
+    grid-area: img;
+    margin: auto;
+    width: 30px;
+}
+
+.how-it-works-step-img-select
+{
+    grid-area: img;
+    margin: 10px 0 0 5px;
+    width: 30px;   
+}
+
+.how-it-works-step-img-form
+{
+    grid-area: img;    
+    margin-left: 5px;
+    margin-top: 3px;
+    width: 30px;   
+}
+
+.how-it-works-easy3
+{
+    grid-area: img;
+    width: 150px;
+    height: 20px;
+    border: 1px solid #26A65B;
+    border-radius: 5px;
+    font-family: OpenSans-Regular;
+    font-size: 14px;
+    color: #26A65B;
+    line-height: 20px;
+    vertical-align: middle;
+    text-align: center;    
+    margin-top: auto;
+    margin-left: calc(50% - 75px);
+}
+
+
+.how-it-works-laptop
+{
+    width: 300px;
+    margin: auto;
+    grid-area: img;
+    margin-top: -50px;
+}
     
     /* REVIEWS */
     
@@ -17927,7 +18102,7 @@ input:checked+.slider:before
             z-index: 1;
             display: grid;
             grid-template-columns: 100%;
-            grid-template-rows: 900px 680px 550px 120px 650px 1170px auto auto
+            grid-template-rows: 500px 680px 550px 120px 650px 1170px auto auto
             1500px 300px;
             grid-template-areas: 
             "how-it-works"
@@ -17943,102 +18118,139 @@ input:checked+.slider:before
         }
         
         /* HOW IT WORKS */
+
+        .how-it-title 
+    {
+        grid-area: title;
+        width: 100%;
+        height: 56px;
+        margin: auto;
+        text-align: center;
+        font-family: OpenSans-Regular;
+        font-size: 34px;
+        color: #242F3E;
+    }
         
-        .how-it-works
-        {
-            width: 100%;
-            height: 830px;
-            grid-area: how-it-works;
-            display: grid;
-            grid-template-columns: 5% 90% 5%;
-            grid-template-rows: 80px 120px 120px 120px 450px;
-            grid-template-areas: 
-            ". title ."
-            ". step1 ."
-            ". step2 ." 
-            ". step3 ."
-            ". desc .";
-            z-index: 1;
-        }
-        
-        .how-it-title
-        {
-            grid-area: title;
-            width: 100%;
-            height: 56px;
-            margin: auto;
-            text-align: center;
-            font-family: OpenSans-Regular;
-            font-size: 34px;
-            color: #242F3E;
-        }
-        
-        .how-it-step
-        {
-            width: 100%;
-            height: 120px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: 10% 90%;
-            grid-template-rows: 70px 50px;
-            grid-template-areas: 
-            "step desc"
-            "line .";    
-        }
-        
-        .step-div
-        {
-            width: 36px;
-            height: 36px;
-            background-color: #26A65B;
-            border-radius: 100%;
-            grid-area: step;
-            margin: auto;
-            text-align: center;
-            font-family: OpenSans-Regular;
-            color: #FFFFFF;
-            font-size: 25px;
-            line-height: 36px;
-            vertical-align: middle;
-        }
-        
-        .how-it-line
-        {
-            width: 1px;
-            height: 50px;
-            background-color: #707070;
-            grid-area: line;
-            margin: auto;
-        }
-        
-        .how-it-step-desc
-        {
-            width: 85%;
-            height: 60px;
-            grid-area: desc;
-            font-family: OpenSans-Regular;
-            font-size: 18px;
-            color: #000000;
-            margin: auto;
-            font-weight: bold;
-        }
-        
-        .how-it-desc
-        {
-            width: 100%;
-            height: 350px;
-            background-color: #F8E9C6;
-            border-radius: 4px;
-            grid-area: desc;
-            margin: auto;
-            margin-top: 50px;
-            font-family: OpenSans-Regular;
-            font-size: 16px;
-            color: #595A5A;
-            padding-left: 10px;
-            font-weight: bold;
-        }
-        
+    .how-it-works-new
+    {
+    width: 100%;
+    height: 340px;
+    grid-area: how-it-works;
+    display: grid;
+    grid-template-columns: auto 95% auto;
+    grid-template-rows: 70px 250px 60px 60px 60px;
+    grid-template-areas: 
+    ". title ."
+    ". img ."
+    ". step1 ."
+    ". step2 ."
+    ". step3 .";
+    z-index: 1;    
+}
+
+.how-it-works-step-new
+{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #242F3E;
+    border-radius: 10px;
+    margin: auto;
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: 20% 70% 10%;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+    "title text img";
+}
+
+.how-it-works-step-title
+{
+    grid-area: title;
+    font-family: OpenSans-Regular;
+    font-size: 10px;
+    color: #242F3E;
+    font-weight: bold;
+    margin: auto;
+}
+
+.how-it-works-step-text
+{
+    grid-area: text;
+    font-family: OpenSans-Regular;
+    font-size: 10px;
+    color: #242F3E;    
+    margin: auto;
+    margin-left: 0;
+}
+
+.how-it-works-step-dec
+{
+    grid-area: title;
+    width: 15px;
+    height: 15px;
+    background-color: #242F3E;
+    margin-top: -1px;
+    margin-left: -1px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 4px;
+    line-height: 15px;
+    vertical-align: middle;
+    text-align: center;
+    font-family: OpenSans-Regular;
+    font-size: 8px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.how-it-works-step-img
+{
+    grid-area: img;
+    margin: auto;
+    width: 30px;
+}
+
+.how-it-works-step-img-select
+{
+    grid-area: img;
+    margin: 10px 0 0 5px;
+    width: 30px;   
+}
+
+.how-it-works-step-img-form
+{
+    grid-area: img;    
+    margin-left: 5px;
+    margin-top: 3px;
+    width: 30px;   
+}
+
+.how-it-works-easy3
+{
+    grid-area: img;
+    width: 150px;
+    height: 20px;
+    border: 1px solid #26A65B;
+    border-radius: 5px;
+    font-family: OpenSans-Regular;
+    font-size: 14px;
+    color: #26A65B;
+    line-height: 20px;
+    vertical-align: middle;
+    text-align: center;    
+    margin-top: auto;
+    margin-left: calc(50% - 75px);
+}
+
+
+.how-it-works-laptop
+{
+    width: 300px;
+    margin: auto;
+    grid-area: img;
+    margin-top: -50px;
+}
+
+    
         /* REVIEWS */
         
         .reviews-div
