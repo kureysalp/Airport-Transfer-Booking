@@ -10,10 +10,21 @@
   gtag('config', 'AW-668862055');
   gtag('config', 'UA-150756020-1');
 </script>
-<!-- Event snippet for Randevu alma conversion page -->
+<!-- Event snippet for New Booking! conversion page -->
 <script>
-    gtag('event', 'conversion', {'send_to': 'AW-668862055/9xaqCNmHr8MBEOeM-L4C'});
+    let booking;
+    if(localStorage.getItem("isReturn") == "true") {
+         booking = JSON.parse(localStorage.getItem("returnBooking"));
+    } else  {
+        booking = JSON.parse(localStorage.getItem("booking"));
+    }
+
+    gtag('event', 'conversion', {
+        'send_to': 'AW-668862055/9xaqCNmHr8MBEOeM-L4C',
+        'transaction_id': booking.book_id
+    });
   </script>
+  
         <meta charset="utf-8">
         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
         <meta name="theme-color" content="#242F3E"/>
@@ -318,7 +329,7 @@ and the taxi driver will meet you as close to the arrivals area as the airport r
                 <div class="footer-element remove" style="grid-area: contact;">Contact Us</div>
                 <div class="footer-element remove" style="grid-area: privacy;">Privacy and Policy</div>
                 <div class="footer-element remove" style="grid-area: partner;">Become a Partner</div>
-                <div class="footer-curr remove">
+                <div class="footer-curr">
                     <select class="footer-drop">
                         <option value="EUR"><b>EUR</b></option>
                         <option value="USD"><b>USD</b></option>

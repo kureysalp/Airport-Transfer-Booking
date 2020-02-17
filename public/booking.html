@@ -7,7 +7,7 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'AW-668862055');
+  gtag('config', 'AW-668862055');  
   gtag('config', 'UA-150756020-1');
 </script>
 
@@ -25,7 +25,9 @@
         <div class="loader-wrapper">
             <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
         </div>
-        <div class="header" style="background-color: #242F3E; position: relative;">
+        <div class="header" style="background-color: #242F3E; position: relative; -webkit-box-shadow: 0px 6px 18px -9px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 6px 18px -9px rgba(0,0,0,0.75);
+        box-shadow: 0px 6px 18px -9px rgba(0,0,0,0.75);">
             <div class="left-nav">
                 <a href="/"><img class="dama-logo" src="images/dama-taxi-logo.png"></a>
                 <div><a href="/">DAMA TAXI</a></div>
@@ -79,8 +81,7 @@
                                 <path id="Path_11" data-name="Path 11" d="M320.583,349.96,311.652,345v4.962Z" transform="translate(-311.652 -343.197)" fill="#0052b4"/>
                               </g>
                               <path id="Path_12" data-name="Path 12" d="M311.652,315.358l12.173,6.763v-1.912l-8.731-4.85Z" transform="translate(-292.716 -216.052)" fill="#f0f0f0"/>
-                              <path id="Path_13" data-name="Path 13" d="M311.652,315.358l12.173,6.763v-1.912l-8.731-4.85Z" transform="translate(-292.716 -216.052)" fill="#d80027"/>
-                              <g id="Group_9" data-name="Group 9" transform="translate(0 99.306)">
+                              <path id="Path_13" data-name="Path 13" d="M311.652,315.358l12.173,6.763v-1.912l-8.731-4.85Z" transform="translate(-292.716 -216.052)" fill="#d80027"/>                              <g id="Group_9" data-name="Group 9" transform="translate(0 99.306)">
                                 <path id="Path_14" data-name="Path 14" d="M5.489,315.356,0,318.406v-3.05Z" transform="translate(0 -315.356)" fill="#0052b4"/>
                                 <path id="Path_15" data-name="Path 15" d="M36.115,329.51v5.9H25.491Z" transform="translate(-23.942 -328.65)" fill="#0052b4"/>
                               </g>
@@ -117,16 +118,12 @@
             <div class="process-div">
                 <div id="process-st" style="grid-area: st;" class="process"><b>1</b></div>
                 <div style="grid-area: stText;" class="process-text">Destination</div>
-                <div style="grid-area: line1;" class="process-circle-left"></div>
-                <div style="grid-area: line1;" class="process-line"></div>
-                <div style="grid-area: line1;" class="process-circle-right"></div>
-                <div id="process-nd" style="grid-area: nd;" class="process"><b>2</b></div>
-                <div style="grid-area: ndText;" class="process-text">Car</div>
-                <div style="grid-area: line2;" class="process-circle-left"></div>
-                <div style="grid-area: line2;" class="process-line"></div>
-                <div style="grid-area: line2;" class="process-circle-right"></div>
+                
+                <div id="process-nd" style="grid-area: nd;" class="process-active-center"></div>
+                <div id="process-nd" style="grid-area: nd;" class="process-active-border"></div>
+                <div style="grid-area: ndText;" class="process-text">Select a Car</div>                
                 <div id="process-rd" style="grid-area: rd;" class="process"><b>3</b></div>
-                <div style="grid-area: rdText;" class="process-text">Form</div>
+                <div style="grid-area: rdText;" class="process-text">Fill the Form</div>
             </div>
             <div class="booking-specs remove">
                 <img class="specs-rate-img" src="images/tick.png" alt="review">
@@ -145,7 +142,8 @@
             </div>
             <div class="booking-content">
                 <div id="booking" class="booking">
-                    <div id="carCard" class="car-card">                        
+                    <div id="carCard" class="car-card">
+                        <div class="car-hat-family"></div>
                         <div class="car">              
                             <div class="booking-title-line"></div>              
                             <img class="car-img" src="images/sedan.png">
@@ -156,6 +154,7 @@
                             <div class="car-info-title">-Car Type-</div>                            
                             <div class="car-info-pax"><img src="images/passengers.png" alt="Passengers"><div class="pax">2</div></div>
                             <div class="car-info-bags"><img src="images/suitcase.png" alt="Baggages"><div class="bags">4</div></div>
+                            <div class="car-info-line-specs"></div>
                             <div class="car-specs">
                                 <img class="car-specs-img1" src="images/cancel.png" alt="Cancellation">
                                 <div class="car-specs-text1">Free Cancellation</div>
@@ -291,7 +290,7 @@
                 <div class="footer-element remove" style="grid-area: contact;">Contact Us</div>
                 <div class="footer-element remove" style="grid-area: privacy;">Privacy and Policy</div>
                 <div class="footer-element remove" style="grid-area: partner;">Become a Partner</div>
-                <div class="footer-curr remove">
+                <div class="footer-curr">
                     <select class="footer-drop">
                         <option value="EUR"><b>EUR</b></option>
                         <option value="USD"><b>USD</b></option>
@@ -316,7 +315,7 @@
                 $(".loader-wrapper").fadeOut("slow");
             });
 
-            if (window.innerWidth <= 800) {
+            if (window.innerWidth <= 800) {                
                 document.getElementById("carLine").setAttribute("style", "display: none;");                
                 for (let i = 0; i < 7; i++) {
                     document.getElementsByClassName("footer-element")[i].setAttribute("style", "display: none;");
@@ -375,11 +374,9 @@
 				for (let i = 0; i < result.length; i++) {
                     let clone = vehicleCard.cloneNode(true); //Clone the card.
                     vehicleCard.setAttribute("style","");
-                    if(i==2) {
-                        clone.setAttribute("style", "margin-top:" + (vehicleCard.clientHeight * i + 60 * i) + "px; border: 4px solid #F9AC1A; box-shadow: 0px 0px 12px 1px rgba(249,172,26,1);"); //Give them margin to list them (it will change to grid after.)
-                        clone.getElementsByClassName("price-bg")[0].setAttribute("style", "border: 1px solid #F9AC1A;");
-                    } else
-					    clone.setAttribute("style", "margin-top:" + (vehicleCard.clientHeight * i + 60 * i) + "px;"); //Give them margin to list them (it will change to grid after.)
+                    if (i == 0) 
+                        clone.setAttribute("id", "anchor");
+					clone.setAttribute("style", "margin-top:" + (vehicleCard.clientHeight * i + 60 * i) + "px;"); //Give them margin to list them (it will change to grid after.)
 					vehicleCard.setAttribute("style","display:none");						
 					let mainBody = document.getElementById("booking"); //Get the main div of vehicle cards.
 					mainBody.appendChild(clone); //Child card to main div.
@@ -415,7 +412,9 @@
                         localStorage.setItem("vehicle", JSON.stringify(allVehicles[e.target.id]));                        
 						window.open('checkout', '_self');
                     });
-				}
+                }
+                if (window.innerWidth <= 800) 
+                    window.location.href="#anchor";
 			}
 
             getDistance();            

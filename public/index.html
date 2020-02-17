@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <!-- 
@@ -35,12 +36,77 @@
   gtag('config', 'AW-668862055');
   gtag('config', 'UA-150756020-1');
 </script>
-
+<script type="application/ld+json">
+    [{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+          "@type": "Question",
+          "name": "How do I find and book a transfer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Specify the place of departure in the 'From' field, and your destination - in the 'To' field. You can choose the desired city, airport, train station, port, and hotel from the drop-down menu or enter the exact address of the place.<br><br>Click the button 'View prices'. Choose the suitable transfer class and click 'Book' to proceed to the booking."
+          }
+        }, {
+          "@type": "Question",
+          "name": "How do I know if my booking has gone through?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After you make your booking, you will receive a confirmation email with information about your booking."
+          }
+        }, {
+          "@type": "Question",
+          "name": "How can I find my driver?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The driver will meet you with the sign showing your first and last names, which you specified during the booking.<br><br>
+            If a pick-up place is an airport, the driver will meet you at the exit of arrivals area of the airport after you passed passport control and claimed baggage."
+          }
+        }, {
+          "@type": "Question",
+          "name": "What should I do if my flight is delayed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The driver will meet you with the sign showing your first and last names, which you specified during the booking.<br><br>As soon as you find out that your flight is delayed, please inform your driver by calling the phone number sent to you before, Dama Taxi support manager via email info@damataxi.com."
+          }
+        }, {
+          "@type": "Question",
+          "name": "How far in advance should I book a transfer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":"After you make your booking, you will receive a confirmation email with a voucher containing your booking number and all the details of your journey.<br><br>If you have not received the email with the confirmation, please contact our manager by email at info@damataxi.com."}
+          }]
+      },
+       {
+        "@context": "https://schema.org/",
+        "@type": "AggregateRating",
+        "itemReviewed": {
+          "@type": "LocalBusiness",
+          "priceRange": "€35 - €100",
+          "image": "http://www.damataxi.com/images/dama-taxi-logo.png",
+          "name": "Dama Taxi",        
+          "telephone": "+90 544 901 0010",
+          "address" : {
+            "@type": "PostalAddress",
+            "streetAddress": "Sultanahmet",
+            "addressLocality": "Istanbul",
+            "addressRegion": "IST",
+            "postalCode": "34000",
+            "addressCountry": "TR"
+          }
+        },
+        "ratingValue": "4,8",
+        "bestRating": "5",
+        "ratingCount": "1258"
+      }
+      ]
+    </script>
         <meta charset="utf-8">
         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
         <meta name="theme-color" content="#242F3E"/>
-        <meta name="keywords" content="taxi transfer, transfer from airport, airport shuttle, private transfer, book transfer online, transfer from airport, taxi from airport,istanbul taxi, taxi from istanbul, turkey trasnfer, istanbul transfer, istanbul cab,&amp;amp;amp;nbsp;airport transfers"/>
-	    <meta name="description" content="Book your Airport Transfer Fast and Easy! Best Experience With Best Prices. Most Comfort Transfer in Istanbul. English Speaking Drivers. 24/7 Online Support. Reliable & Safe."/>
+        <meta name="keywords" content="taxi transfer, transfer from airport, airport shuttle, private transfer, book transfer online, transfer from airport, taxi from airport,istanbul taxi, taxi from istanbul, turkey trasnfer, istanbul transfer, istanbul cab,airport transfers
+        ataturk airport shuttle, ataturk airport taxi, sabiha gokcen transfer, sabiha gokcen taxi, transfer to istanbul hotel, hotel taxi, transfer from airport to hotel in istanbul, istanbul ataturk airport transfer"/>
+	    <meta name="description" content="Istanbul Airport Transfers from Istanbul Airport to Hotel or City. Book your Istanbul Airport Taxi Fast and Easy! Best Experience With Best Prices. Taxi Istanbul. Most Comfort Transfer in Istanbul. English Speaking Drivers. 24/7 Online Support. Reliable & Safe."/>
 	    <meta name="robots" content="index, follow">
         <title>Dama Taxi | Airport Transfer Service</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">        
@@ -165,14 +231,14 @@
                             <p>From</p>
                         </div>
                         <div class="from-input">
-                            <input id="fromInput" class="from-input" type="text" placeholder="Airport, hotel, etc." onkeyup="getPlaceFrom()">
+                            <input id="fromInput" class="from-input no-border-padding" type="text" placeholder="Airport, hotel, etc." onkeyup="getPlaceFrom()">
                         </div>
                         <div class="dest-line"></div>
                         <div class="to-from">
                             <p>To</p>
                         </div>
                         <div class="to-input">
-                            <input id="toInput" class="to-input" type="text" placeholder="Airport, hotel, etc." onkeyup="getPlaceTo()">
+                            <input id="toInput" class="to-input no-border-padding" type="text" placeholder="Airport, hotel, etc." onkeyup="getPlaceTo()">
                         </div>                        
                     </div>
                     <div class="dest-date-title">Date</div>
@@ -242,43 +308,12 @@
                     </div>
                     <img class="how-it-works-laptop" alt="Transfer" src="images/how-it-laptop.png">
                     <div class="how-it-works-easy3">3 Easy Steps!</div>
-                </div>
-                <!--<div class="how-it-works">
-                    <div class="how-it-title">
-                        <b>How It Works?</b>
-                    </div>
-                    <div class="how-it-step" style="grid-area: step1;">
-                        <div class="step-div">1</div>
-                        <div class="how-it-line"></div>
-                        <div class="how-it-step-desc">
-                            Schedule a time and pick up location to bring you to your destination.
-                        </div>
-                    </div>
-                    <div class="how-it-step" style="grid-area: step2;">
-                        <div class="step-div">2</div>
-                        <div class="how-it-line"></div>
-                        <div class="how-it-step-desc">
-                            Choose a car type and options to make your trip enjoyable.
-                        </div>
-                    </div>
-                    <div class="how-it-step" style="grid-area: step3;">
-                        <div class="step-div">3</div>
-                        <div id="thirdLine" class="how-it-line"></div>
-                        <div class="how-it-step-desc">
-                            Fill the form with information about your flight.
-                        </div>
-                    </div>
-                    <div class="how-it-desc">
-                        <p> You can reach all the places that you want to visit in Turkey with Dama Taxi.<br><br> You can make it with three simple steps; Select the pick up and drop off location. 
-Choose a car type and options to make your trip enjoyable. Fill the form with requirement information. All done! It's that simple.<br><br> After you receive confirmation e-mail, our consultant
-will contact you and we will be waiting for you at pick up location at the time.</p>
-                    </div>
-                </div>-->
+                </div>              
                 <div class="reviews-gradiant-line"></div>
                 <div class="reviews-bg"><img src="images/reviews-bg.png"></div>
                 <div class="reviews-gradiant"></div>
                 <div class="reviews-div">
-                    <div class="reviews-title">Reviews</div>                    
+                    <h1 class="reviews-title">Reviews</h1>
                     <div class="reviews-container">                        
                         <img id="reviewsBack" class="reviews-back" src="images/back.png">
                         <div style="grid-area: reviews; overflow: hidden;">
@@ -431,7 +466,7 @@ will contact you and we will be waiting for you at pick up location at the time.
                     </div>
                 </div>
                 <div class="fleet-div">
-                    <div class="fleet-title">Fleet</div>
+                    <h1 class="fleet-title">Fleet</h1>
                     <div class="fleet-vehicles-container">
                         <img id="vehiclesBack" class="fleet-back" src="images/back.png">
                         <div style="grid-area: vehicles; overflow: hidden;">
@@ -442,7 +477,7 @@ will contact you and we will be waiting for you at pick up location at the time.
                                     <div class="fleet-vehicle-desc">For a couple or a family with a child.</div>
                                 </div>
                                 <div style="grid-area: veh2;"class="fleet-vehicle-box">
-                                    <img class="fleet-vehicle" src="images/vito.png">
+                                    <img class="fleet-vehicle" src="images/minivan.png">
                                     <div class="fleet-vehicle-title"><b>Minivan</b></div>
                                     <div class="fleet-vehicle-desc">For groups of up to 5 people or large baggage.</div>
                                 </div>
@@ -452,9 +487,9 @@ will contact you and we will be waiting for you at pick up location at the time.
                                     <div class="fleet-vehicle-desc">For comfortable business trips.</div>
                                 </div>
                                 <div style="grid-area: veh4;"class="fleet-vehicle-box">
-                                    <img class="fleet-vehicle" src="images/minivan.png">
-                                    <div class="fleet-vehicle-title"><b>Minivan</b></div>
-                                    <div class="fleet-vehicle-desc">For larger baggage capacity</div>
+                                    <img class="fleet-vehicle" src="images/vito.png">
+                                    <div class="fleet-vehicle-title"><b>Premium Minibus</b></div>
+                                    <div class="fleet-vehicle-desc">For larger baggage capacity and luxury.</div>
                                 </div>
                                 <div style="grid-area: veh5;"class="fleet-vehicle-box">
                                     <img class="fleet-vehicle" src="images/e-class.png">
@@ -504,37 +539,37 @@ will contact you and we will be waiting for you at pick up location at the time.
                         <div style="grid-area: pop1;" class="popular-dest">
                             <div class="popular-dest-text" style="grid-area: dest1;">Istanbul Airport (IST)</div>
                             <div class="popular-dest-text" style="grid-area: dest2;">Sultanahmet</div>
-                            <div class="popular-dest-price">From 30 <font>EUR</font></div>
+                            <div class="popular-dest-price">From 35 <font>EUR</font></div>
                         </div>
                         <div style="grid-area: pop2;" class="popular-dest">
                             <div class="popular-dest-text" style="grid-area: dest1;">Istanbul Airport (IST)</div>
                             <div class="popular-dest-text" style="grid-area: dest2;">Taksim</div>
-                            <div class="popular-dest-price">From 30 <font>EUR</font></div>
+                            <div class="popular-dest-price">From 35 <font>EUR</font></div>
                         </div>
                         <div style="grid-area: pop3;" class="popular-dest">
                             <div class="popular-dest-text" style="grid-area: dest1;">Sabiha Gokcen Airport</div>
                             <div class="popular-dest-text" style="grid-area: dest2;">Sultanahmet</div>
-                            <div class="popular-dest-price">From 30 <font>EUR</font></div>
+                            <div class="popular-dest-price">From 35 <font>EUR</font></div>
                         </div>
                         <div style="grid-area: pop4;" class="popular-dest">
                             <div class="popular-dest-text" style="grid-area: dest1;">Sabiha Gokcen Airport</div>
                             <div class="popular-dest-text" style="grid-area: dest2;">Taksim</div>
-                            <div class="popular-dest-price">From 30 <font>EUR</font></div>
+                            <div class="popular-dest-price">From 35 <font>EUR</font></div>
                         </div>
                         <div style="grid-area: pop5;" class="popular-dest">
                             <div class="popular-dest-text" style="grid-area: dest1;">Istanbul Airport (IST)</div>
                             <div class="popular-dest-text" style="grid-area: dest2;">Beyoglu</div>
-                            <div class="popular-dest-price">From 30 <font>EUR</font></div>
+                            <div class="popular-dest-price">From 35 <font>EUR</font></div>
                         </div>
                         <div style="grid-area: pop6;" class="popular-dest">
                             <div class="popular-dest-text" style="grid-area: dest1;">Sabiha Gokcen Airport</div>
                             <div class="popular-dest-text" style="grid-area: dest2;">Beyoglu</div>
-                            <div class="popular-dest-price">From 30 <font>EUR</font></div>
+                            <div class="popular-dest-price">From 35 <font>EUR</font></div>
                         </div>
                         <div style="grid-area: pop7;" class="popular-dest">
                             <div class="popular-dest-text" style="grid-area: dest1;">Istanbul Airport (IST)</div>
                             <div class="popular-dest-text" style="grid-area: dest2;">Besiktas</div>
-                            <div class="popular-dest-price">From 30 <font>EUR</font></div>
+                            <div class="popular-dest-price">From 35 <font>EUR</font></div>
                         </div>
                     </div>
                     <div class="popular-destinations-img">
@@ -702,7 +737,7 @@ this needs from one point.
                 <div class="footer-element remove" style="grid-area: contact;">Contact Us</div>
                 <div class="footer-element remove" style="grid-area: privacy;">Privacy and Policy</div>
                 <div class="footer-element remove" style="grid-area: partner;">Become a Partner</div>
-                <div class="footer-curr remove">
+                <div class="footer-curr">
                     <select class="footer-drop">
                         <option value="EUR"><b>EUR</b></option>
                         <option value="USD"><b>USD</b></option>
@@ -729,13 +764,12 @@ this needs from one point.
 
             let touchEvent = 'touchstart' in window ? 'touchstart' : 'click'; //Check device supports click or touch.
 
-            let fleetSlide = 3;
+            let fleetSlide = 2;
             let reviewSlide = 3;
 
             if (window.innerWidth <= 800) {
-                fleetSlide = 3;
-                reviewSlide = 9;
-                document.getElementById("thirdLine").setAttribute("style", "display: none;");
+                fleetSlide = 6;
+                reviewSlide = 9;                 
                 document.getElementById("istImg").setAttribute("style", "display: none;");
                 for (let i = 0; i < 7; i++) {
                     document.getElementsByClassName("footer-element")[i].setAttribute("style", "display: none;");
@@ -749,7 +783,7 @@ this needs from one point.
             let fromText = document.getElementById("fromInput");
 	        let toText = document.getElementById("toInput");
 
-	        let fromID, toID, fromName, toName, fromAddress, toAddress;
+	        let fromID, toID, fromName, toName, fromAddress, toAddress, fromCity = "", toCity = "";
 
             let passengers = 1;
             let luggage = 1;
@@ -765,16 +799,17 @@ this needs from one point.
                 let result = json.predictions;
                 result.forEach(function (results) {
                     let pass = false;			        
-    				if(results.place_id === "ChIJqZW8Cvb_n0ARBuUkyCzgDDg" || results.place_id === "ChIJU6Ek9MvbyhQRdNqYgE3K76w")
+                    if(results.place_id == "ChIJqZW8Cvb_n0ARBuUkyCzgDDg" || results.place_id == "ChIJU6Ek9MvbyhQRdNqYgE3K76w")                    
 	        		    pass = true;                    
                     if(pass) {
 			            results.terms.forEach(function (terms) {
-			                if(terms.value === "Istanbul" || terms.value === "İstanbul") {
+			                if(terms.value == "Istanbul" || terms.value == "İstanbul") {
 					            let destination = {
 						            "_id": results.id,
 						            "place_id": results.place_id,
 					                "name": results.structured_formatting.main_text,
-					                "address": results.description
+                                    "address": results.description,
+                                    "city" : terms.value
 				                };									
                             suggestionsFrom.push(destination);
                             }
@@ -783,6 +818,9 @@ this needs from one point.
                 });
                 AutoCompleteFrom();
             }
+
+            console.log(toCity);
+            console.log(fromCity);
 
             async function getPlaceFrom() {
 		        const inputVal = fromText.value;
@@ -799,29 +837,54 @@ this needs from one point.
 			            if(index == 5)
     				        return;
 			            let cityFilter = false;
-			            let pass = false;       
-			            if(inputVal.startsWith("ai")) {
-    				        if(results.place_id === "ChIJqZW8Cvb_n0ARBuUkyCzgDDg" || results.place_id === "ChIJU6Ek9MvbyhQRdNqYgE3K76w")
-	        			        pass = true;
-			            }
-			            else
-			            pass = true;
-			            if(pass) {
-			                results.terms.forEach(function (terms) {
-			                    if(terms.value === "Istanbul" || terms.value === "İstanbul")
-				                    cityFilter = true;
-				                if(cityFilter) {
-					                let destination = {
-						                "_id": results.id,
-						                "place_id": results.place_id,
-						                "name": results.structured_formatting.main_text,
-						                "address": results.description
-					                };									
-					                suggestionsFrom.push(destination);									
-				                }
-			                });
-			            }				
-		            });			
+                        let pass = false;
+                        
+                        if(toCity == "")
+                        {
+			                if(inputVal.startsWith("ai")) {
+                                if(results.place_id == "ChIJqZW8Cvb_n0ARBuUkyCzgDDg" || results.place_id == "ChIJU6Ek9MvbyhQRdNqYgE3K76w")
+	        			            pass = true;
+			                }
+			                else
+			                pass = false;
+			                if(!pass) {
+			                    results.terms.forEach(function (terms) {
+                                    if(terms.value === "Istanbul" || terms.value === "İstanbul" || terms.value === "Bodrum"  || terms.value === "Milas") {
+					                    let destination = {
+						                    "_id": results.id,
+						                    "place_id": results.place_id,
+						                    "name": results.structured_formatting.main_text,
+                                            "address": results.description,
+                                            "city": terms.value
+					                    };									
+                                        suggestionsFrom.push(destination);
+                                    }
+			                    });
+			                } else {
+                                let destination = {
+						            "_id": results.id,
+					                "place_id": results.place_id,
+				                    "name": results.structured_formatting.main_text,
+                                    "address": results.description,
+                                    "city": "Istanbul"
+                                };
+					            suggestionsFrom.push(destination);
+                            }
+                        } else {
+                            results.terms.forEach(function (terms) {                                
+                                if(toCity == terms.value) {
+                                    let destination = {
+						                    "_id": results.id,
+						                    "place_id": results.place_id,
+						                    "name": results.structured_formatting.main_text,
+                                            "address": results.description,
+                                            "city": terms.value
+					                    };									
+                                        suggestionsFrom.push(destination);
+                                }
+                            });
+                        }
+		            });
 	            }
 	        }
 
@@ -840,31 +903,55 @@ this needs from one point.
 			            if(index == 5)
 				            return;
 			            let cityFilter = false;
-			            let pass = false;
-			            if(inputVal.startsWith("ai")) {
-				            if(results.place_id === "ChIJqZW8Cvb_n0ARBuUkyCzgDDg" || results.place_id === "ChIJU6Ek9MvbyhQRdNqYgE3K76w")
-					            pass = true;
-			            }
-			            else
-				            pass = true;
-			            if(pass) {
-				            results.terms.forEach(function (terms) {
-					            if(terms.value === "Istanbul" || terms.value === "İstanbul")
-						            cityFilter = true;
-					            if(cityFilter) {
-						            let destination = {
+                        let pass = false;
+                        
+                        if(fromCity == "") {
+			                if(inputVal.startsWith("ai")) {
+				                if(results.place_id === "ChIJqZW8Cvb_n0ARBuUkyCzgDDg" || results.place_id === "ChIJU6Ek9MvbyhQRdNqYgE3K76w")
+					                pass = true;
+			                }
+			                else
+    				            pass = false;
+			                if(!pass) {
+				                results.terms.forEach(function (terms) {
+					                if(terms.value == "Istanbul" || terms.value == "İstanbul" || terms.value == "Bodrum"  || terms.value == "Milas") {
+						                let destination = {
+							                "_id": results.id,
+							                "place_id": results.place_id,
+							                "name": results.structured_formatting.main_text,
+                                            "address": results.description,
+                                            "city" : terms.value
+						                };									
+						                suggestionsTo.push(destination);									
+    				    	            }
+			    	                });
+		    	            } else {
+                                let destination = {
+						            "_id": results.id,
+					                "place_id": results.place_id,
+				                    "name": results.structured_formatting.main_text,
+                                    "address": results.description,
+                                    "city": "Istanbul"
+                                };
+					            suggestionsTo.push(destination);
+                            }
+                        } else {
+                            results.terms.forEach(function (terms) {                                
+                                if(fromCity == terms.value) {
+                                    let destination = {
 							            "_id": results.id,
 							            "place_id": results.place_id,
 							            "name": results.structured_formatting.main_text,
-							            "address": results.description
-						            };									
-						            suggestionsTo.push(destination);									
-				    	            }
-			    	            });
-		    	            }				
-	    	            });	
-    	            }			
-	            }
+                                        "address": results.description,
+                                        "city" : terms.value
+					                };									
+					                suggestionsTo.push(destination);
+                                }
+                            });
+                        }
+	    	        });	
+    	        }			
+	        }
 
 
                 function AutoCompleteFrom() {
@@ -877,7 +964,7 @@ this needs from one point.
 		                toText.parentNode.setAttribute("style", "position: static;");
 
 		                suggestionMain = document.createElement("div"); //Crate main div that includes suggestions.  
-		                suggestionMain.setAttribute("id", this.id + "autoComplete-list");
+		                suggestionMain.setAttribute("id", suggestionMain.id + "autoComplete-list");
 		                suggestionMain.setAttribute("class", "autoComplete-items");					
                         
 		                fromText.parentNode.appendChild(suggestionMain); //Child it textbox's div.
@@ -886,14 +973,16 @@ this needs from one point.
 			                suggestionBox = document.createElement("div"); //Create suggestion div.
                             suggestionBox.innerHTML = "<b style='grid-area: name'>" + suggestionsFrom[i].name +"</b>"; //Fill it with suggestion.
                             suggestionBox.innerHTML += "<p style='grid-area: address'>" + suggestionsFrom[i].address;
-                            if (suggestionsFrom[i].place_id == "ChIJqZW8Cvb_n0ARBuUkyCzgDDg" || suggestionsFrom[i].place_id == "ChIJU6Ek9MvbyhQRdNqYgE3K76w") {
+                            if (suggestionsFrom[i].place_id == "ChIJqZW8Cvb_n0ARBuUkyCzgDDg" || suggestionsFrom[i].place_id == "ChIJU6Ek9MvbyhQRdNqYgE3K76w"
+                            || suggestionsFrom[i].place_id == "ChIJHdQmLhf2vhQR0mNL2LRpO5g") {
                                 suggestionBox.innerHTML += "<img style='grid-area: logo;' src='images/search_plane.png' alt='Airport'>";
                             } else {
                                 suggestionBox.innerHTML += "<img style='grid-area: logo;' src='images/block.png' alt='Block'>";
                             }
                             suggestionBox.innerHTML += "<input type='hidden' class='name' value='" + suggestionsFrom[i].name +"'>";
                             suggestionBox.innerHTML += "<input type='hidden' class='address' value='" + suggestionsFrom[i].address +"'>";
-                            suggestionBox.innerHTML += "<input type='hidden' class='place_id' value='" + suggestionsFrom[i].place_id +"'>";                            
+                            suggestionBox.innerHTML += "<input type='hidden' class='place_id' value='" + suggestionsFrom[i].place_id +"'>";
+                            suggestionBox.innerHTML += "<input type='hidden' class='city' value='" + suggestionsFrom[i].city +"'>";
 			   
 
 			                suggestionMain.appendChild(suggestionBox); //Make it main div's child.				
@@ -907,8 +996,9 @@ this needs from one point.
 			                suggestionBox.addEventListener(touchEvent, function(e) {
                                 fromName = this.getElementsByClassName("name")[0].value;
                                 fromAddress = this.getElementsByClassName("address")[0].value;
-				                fromID = this.getElementsByClassName("place_id")[0].value;
-				                fromText.value = fromName;
+                                fromID = this.getElementsByClassName("place_id")[0].value;
+                                fromCity = this.getElementsByClassName("city")[0].value;
+                                fromText.value = fromName;                                
 		                });
 		            }	            
             }
@@ -924,7 +1014,7 @@ this needs from one point.
 		                fromText.parentNode.setAttribute("style", "position: static;");
 
 		                suggestionMain = document.createElement("div"); //Crate main div that includes suggestions.  
-		                suggestionMain.setAttribute("id", this.id + "autoComplete-list");
+		                suggestionMain.setAttribute("id", suggestionMain.id + "autoComplete-list");
 		                suggestionMain.setAttribute("class", "autoComplete-items");					
                         
 		                toText.parentNode.appendChild(suggestionMain); //Child it textbox's div.
@@ -940,7 +1030,8 @@ this needs from one point.
                             }
                             suggestionBox.innerHTML += "<input type='hidden' class='name' value='" + suggestionsTo[i].name +"'>";
                             suggestionBox.innerHTML += "<input type='hidden' class='address' value='" + suggestionsTo[i].address +"'>";
-                            suggestionBox.innerHTML += "<input type='hidden' class='place_id' value='" + suggestionsTo[i].place_id +"'>";                            
+                            suggestionBox.innerHTML += "<input type='hidden' class='place_id' value='" + suggestionsTo[i].place_id +"'>";
+                            suggestionBox.innerHTML += "<input type='hidden' class='city' value='" + suggestionsTo[i].city +"'>";
 			   
 
 			                suggestionMain.appendChild(suggestionBox); //Make it main div's child.				
@@ -954,7 +1045,8 @@ this needs from one point.
 			                suggestionBox.addEventListener(touchEvent, function(e) {
                                 toName = this.getElementsByClassName("name")[0].value;
                                 toAddress = this.getElementsByClassName("address")[0].value;
-                                toID = this.getElementsByClassName("place_id")[0].value;                                
+                                toID = this.getElementsByClassName("place_id")[0].value;
+                                toCity = this.getElementsByClassName("city")[0].value;
 				                toText.value = toName;
 		                    });
 		            }	            
@@ -1023,7 +1115,7 @@ this needs from one point.
 
             let dateInput = document.getElementById("dateInput");            
             btn.addEventListener(touchEvent, function(e) {
-                if(fromText.value != "" && toText.value != "" && dateInput.value != "") {
+                if(fromName != "" && toName != "" && dateInput.value != "") {
                     localStorage.setItem("fromID", fromID);
                     localStorage.setItem("fromName", fromName);
                     localStorage.setItem("fromAddress", fromAddress);
@@ -1034,7 +1126,7 @@ this needs from one point.
                     localStorage.setItem("luggage", luggage);
                     localStorage.setItem("date", dateInput.value);
 
-                    window.open('booking', '_self');
+                    window.open('booking#anchor', '_self');
                 } else {
                     alert("Please fill all informations.");
                 }
@@ -1121,6 +1213,6 @@ this needs from one point.
                 toggleDate = !toggleDate;
             })
 
-        </script>
+        </script>        
     </body>
 </html>
