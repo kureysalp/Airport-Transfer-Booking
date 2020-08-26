@@ -42,7 +42,7 @@ app.get('/placesAC/:input', async (request, response) => {
     const userInput = request.params['input'];    
     const placesAPI = 'https://maps.googleapis.com/maps/api/place/autocomplete/json?';
     const placeConditions = '&region=tr';
-    const APIKey = '&key=AIzaSyD7o4716HMOzbEHphHNqGO40s9p9Turckk';
+    const APIKey = '&key=API_KEY';
     const input = 'input=' + encodeURIComponent(userInput);
 
     const finalURL = placesAPI + input + placeConditions + APIKey;
@@ -59,7 +59,7 @@ app.get('/distanceMatrix/:destinations', async (request, response) => {
     const destinations = request.params['destinations'].split(',');
     const distanceMatrixAPI = 'https://maps.googleapis.com/maps/api/distancematrix/json?';    
     const parameters = "units=metric&origins=place_id:" + destinations[0] + "&destinations=place_id:" + destinations[1];
-    const APIKey = '&key=AIzaSyD7o4716HMOzbEHphHNqGO40s9p9Turckk';
+    const APIKey = '&key=API_KEY';
 
     const finalURL = distanceMatrixAPI + parameters + APIKey;    
 
@@ -75,7 +75,7 @@ app.get('/geocode/:address', async(req, res) => {
     const address = req.params['address'];
     const geocodeAPI = 'https://maps.googleapis.com/maps/api/geocode/json?';
     const parameters = 'address=' + encodeURIComponent(address);
-    const APIKey = '&key=AIzaSyD7o4716HMOzbEHphHNqGO40s9p9Turckk';
+    const APIKey = '&key=API_KEY';
     
     const finalURL = geocodeAPI + parameters + APIKey;    
 
@@ -239,9 +239,9 @@ app.get('/sendEmail/:data', async function(request, response) {
     console.log(jsonData);
     const emails = 
         {
-           to: [jsonData.email, 'damataxiservice@gmail.com'],
-           from: 'info@damataxi.com',
-           fromname: 'Dama Taxi',
+           to: [jsonData.email, 'info@example.com'],
+           from: 'info@example.com',
+           fromname: 'Example Taxi',
            subject: 'Airport Transfer Receipt, Booking ID: ' + jsonData.book_id,
            html: compiledTemplate.render({book_id: jsonData.book_id, name: jsonData.name, phone: jsonData.phone, email: jsonData.email, from: jsonData.from,
                fromAddress: jsonData.fromAddress, to: jsonData.to, toAddress: jsonData.toAddress, flight_number: jsonData.flightNumber, arrival_date: jsonData.arrivalDate,
@@ -269,9 +269,9 @@ app.get('/sendReturnEmail/:data', function(request, response) {
     let totalPrice = parseInt(jsonData.price) * 2;
     const emails = 
     {
-       to: [jsonData.email, 'damataxiservice@gmail.com'],
-       from: 'info@damataxi.com',
-       fromname: 'Dama Taxi',
+       to: [jsonData.email, 'info@example.com],
+       from: 'info@example.com',
+       fromname: 'Example Taxi',
        subject: 'Airport Transfer Receipt, Booking ID: ' + jsonData.book_id,
        html: returnCompiledTemplate.render({book_id: jsonData.book_id, name: jsonData.name, phone: jsonData.phone, email: jsonData.email, from: jsonData.to,
         fromAddress: jsonData.fromAddress, to: jsonData.from, toAddress: jsonData.toAddress, flight_number: jsonData.flightNumber, arrival_date: jsonData.arrivalDate,
@@ -296,8 +296,8 @@ app.get('sendContactUs/:data', function(req, res) {
     sgMail.setApiKey("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");
     const email = 
     {
-        to: 'damataxiservice@gmail.com',
-        from: 'info@damataxi.com',
+        to: 'info@example.com',
+        from: 'info@example.com',
         fromname: 'Dama Taxi',
         subject: 'Contact Us',
         html: "<p>From: "+ jsonData.email +"</p><br><p>Name: " + jsonData.name +"</p><br><p>Phone: " +
